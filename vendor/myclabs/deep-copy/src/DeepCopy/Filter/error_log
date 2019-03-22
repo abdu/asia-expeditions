@@ -1,0 +1,11 @@
+[19-Apr-2018 01:53:22 America/Denver] PHP Fatal error:  Interface 'DeepCopy\Filter\Filter' not found in /home3/asiagolf/public_html/vendor/myclabs/deep-copy/src/DeepCopy/Filter/SetNullFilter.php on line 11
+[12-May-2018 17:07:12 America/Denver] PHP Fatal error:  Interface 'DeepCopy\Filter\Filter' not found in /home3/asiagolf/public_html/vendor/myclabs/deep-copy/src/DeepCopy/Filter/KeepFilter.php on line 6
+[13-May-2018 08:03:26 America/Denver] PHP Fatal error:  Interface 'DeepCopy\Filter\Filter' not found in /home3/asiagolf/public_html/vendor/myclabs/deep-copy/src/DeepCopy/Filter/KeepFilter.php on line 6
+[31-May-2018 11:06:54 America/Denver] PHP Fatal error:  Interface 'DeepCopy\Filter\Filter' not found in /home3/asiagolf/public_html/vendor/myclabs/deep-copy/src/DeepCopy/Filter/ReplaceFilter.php on line 11
+[01-Jun-2018 14:17:20 America/Denver] PHP Fatal error:  Interface 'DeepCopy\Filter\Filter' not found in /home3/asiagolf/public_html/vendor/myclabs/deep-copy/src/DeepCopy/Filter/ReplaceFilter.php on line 11
+[08-Feb-2019 22:02:47 America/Denver] PHP Fatal error:  Interface 'DeepCopy\Filter\Filter' not found in /home3/asiagolf/public_html/vendor/myclabs/deep-copy/src/DeepCopy/Filter/ReplaceFilter.php on line 11
+[08-Feb-2019 22:02:47 America/Denver] PHP Fatal error:  Interface 'DeepCopy\Filter\Filter' not found in /home3/asiagolf/public_html/vendor/myclabs/deep-copy/src/DeepCopy/Filter/SetNullFilter.php on line 11
+[08-Feb-2019 22:02:48 America/Denver] PHP Fatal error:  Interface 'DeepCopy\Filter\Filter' not found in /home3/asiagolf/public_html/vendor/myclabs/deep-copy/src/DeepCopy/Filter/KeepFilter.php on line 6
+[10-Feb-2019 01:35:06 America/Denver] PHP Fatal error:  Interface 'DeepCopy\Filter\Filter' not found in /home3/asiagolf/public_html/vendor/myclabs/deep-copy/src/DeepCopy/Filter/KeepFilter.php on line 6
+[10-Feb-2019 01:35:06 America/Denver] PHP Fatal error:  Interface 'DeepCopy\Filter\Filter' not found in /home3/asiagolf/public_html/vendor/myclabs/deep-copy/src/DeepCopy/Filter/SetNullFilter.php on line 11
+[10-Feb-2019 01:35:06 America/Denver] PHP Fatal error:  Interface 'DeepCopy\Filter\Filter' not found in /home3/asiagolf/public_html/vendor/myclabs/deep-copy/src/DeepCopy/Filter/ReplaceFilter.php on line 11

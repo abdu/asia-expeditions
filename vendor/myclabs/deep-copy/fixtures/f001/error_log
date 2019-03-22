@@ -1,0 +1,2 @@
+[08-Feb-2019 21:41:30 America/Denver] PHP Fatal error:  Class 'DeepCopy\f001\A' not found in /home3/asiagolf/public_html/vendor/myclabs/deep-copy/fixtures/f001/B.php on line 6
+[10-Feb-2019 01:30:19 America/Denver] PHP Fatal error:  Class 'DeepCopy\f001\A' not found in /home3/asiagolf/public_html/vendor/myclabs/deep-copy/fixtures/f001/B.php on line 6

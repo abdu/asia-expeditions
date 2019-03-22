@@ -1,0 +1,6 @@
+[23-Jan-2019 07:12:27 America/Denver] PHP Fatal error:  Interface 'PhpParser\ErrorHandler' not found in /home3/asiagolf/public_html/vendor/nikic/php-parser/lib/PhpParser/ErrorHandler/Throwing.php on line 14
+[31-Jan-2019 11:12:44 America/Denver] PHP Fatal error:  Interface 'PhpParser\ErrorHandler' not found in /home3/asiagolf/public_html/vendor/nikic/php-parser/lib/PhpParser/ErrorHandler/Collecting.php on line 14
+[08-Feb-2019 22:02:57 America/Denver] PHP Fatal error:  Interface 'PhpParser\ErrorHandler' not found in /home3/asiagolf/public_html/vendor/nikic/php-parser/lib/PhpParser/ErrorHandler/Collecting.php on line 14
+[08-Feb-2019 22:02:58 America/Denver] PHP Fatal error:  Interface 'PhpParser\ErrorHandler' not found in /home3/asiagolf/public_html/vendor/nikic/php-parser/lib/PhpParser/ErrorHandler/Throwing.php on line 14
+[10-Feb-2019 01:35:10 America/Denver] PHP Fatal error:  Interface 'PhpParser\ErrorHandler' not found in /home3/asiagolf/public_html/vendor/nikic/php-parser/lib/PhpParser/ErrorHandler/Collecting.php on line 14
+[10-Feb-2019 01:35:11 America/Denver] PHP Fatal error:  Interface 'PhpParser\ErrorHandler' not found in /home3/asiagolf/public_html/vendor/nikic/php-parser/lib/PhpParser/ErrorHandler/Throwing.php on line 14

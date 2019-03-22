@@ -1,0 +1,8 @@
+[26-Jan-2018 15:05:01 America/Denver] PHP Fatal error:  Class 'Orchestra\Testbench\TestCase' not found in /home3/asiagolf/public_html/vendor/stevebauman/location/tests/TestCase.php on line 9
+[26-Jan-2018 15:05:33 America/Denver] PHP Fatal error:  Class 'Stevebauman\Location\Tests\TestCase' not found in /home3/asiagolf/public_html/vendor/stevebauman/location/tests/LocationTest.php on line 17
+[27-Jan-2018 20:18:27 America/Denver] PHP Fatal error:  Class 'Orchestra\Testbench\TestCase' not found in /home3/asiagolf/public_html/vendor/stevebauman/location/tests/TestCase.php on line 9
+[27-Jan-2018 20:19:19 America/Denver] PHP Fatal error:  Class 'Stevebauman\Location\Tests\TestCase' not found in /home3/asiagolf/public_html/vendor/stevebauman/location/tests/LocationTest.php on line 17
+[08-Feb-2019 21:31:48 America/Denver] PHP Fatal error:  Class 'Stevebauman\Location\Tests\TestCase' not found in /home3/asiagolf/public_html/vendor/stevebauman/location/tests/LocationTest.php on line 17
+[08-Feb-2019 21:31:50 America/Denver] PHP Fatal error:  Class 'Orchestra\Testbench\TestCase' not found in /home3/asiagolf/public_html/vendor/stevebauman/location/tests/TestCase.php on line 9
+[10-Feb-2019 01:28:08 America/Denver] PHP Fatal error:  Class 'Orchestra\Testbench\TestCase' not found in /home3/asiagolf/public_html/vendor/stevebauman/location/tests/TestCase.php on line 9
+[10-Feb-2019 01:28:08 America/Denver] PHP Fatal error:  Class 'Stevebauman\Location\Tests\TestCase' not found in /home3/asiagolf/public_html/vendor/stevebauman/location/tests/LocationTest.php on line 17

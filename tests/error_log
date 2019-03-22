@@ -1,0 +1,4 @@
+[11-May-2018 06:17:51 America/Denver] PHP Fatal error:  Class 'Illuminate\Foundation\Testing\TestCase' not found in /home3/asiagolf/public_html/tests/TestCase.php on line 4
+[11-May-2018 06:21:38 America/Denver] PHP Fatal error:  Class 'TestCase' not found in /home3/asiagolf/public_html/tests/ExampleTest.php on line 8
+[11-May-2018 14:18:57 America/Chicago] PHP Fatal error:  Class 'Illuminate\Foundation\Testing\TestCase' not found in /home3/asiagolf/public_html/tests/TestCase.php on line 3
+[11-May-2018 14:22:45 America/Chicago] PHP Fatal error:  Class 'TestCase' not found in /home3/asiagolf/public_html/tests/ExampleTest.php on line 7

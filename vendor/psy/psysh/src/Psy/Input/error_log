@@ -1,0 +1,6 @@
+[08-Feb-2019 22:06:14 America/Denver] PHP Fatal error:  Class 'Symfony\Component\Console\Input\InputArgument' not found in /home3/asiagolf/public_html/vendor/psy/psysh/src/Psy/Input/CodeArgument.php on line 31
+[08-Feb-2019 22:06:17 America/Denver] PHP Fatal error:  Class 'Symfony\Component\Console\Input\StringInput' not found in /home3/asiagolf/public_html/vendor/psy/psysh/src/Psy/Input/ShellInput.php on line 21
+[10-Feb-2019 01:36:24 America/Denver] PHP Fatal error:  Class 'Symfony\Component\Console\Input\InputArgument' not found in /home3/asiagolf/public_html/vendor/psy/psysh/src/Psy/Input/CodeArgument.php on line 31
+[10-Feb-2019 01:36:25 America/Denver] PHP Fatal error:  Class 'Symfony\Component\Console\Input\StringInput' not found in /home3/asiagolf/public_html/vendor/psy/psysh/src/Psy/Input/ShellInput.php on line 21
+[12-Feb-2019 04:39:30 America/Denver] PHP Fatal error:  Class 'Symfony\Component\Console\Input\StringInput' not found in /home3/asiagolf/public_html/vendor/psy/psysh/src/Psy/Input/ShellInput.php on line 21
+[15-Feb-2019 12:57:25 America/Denver] PHP Fatal error:  Class 'Symfony\Component\Console\Input\InputArgument' not found in /home3/asiagolf/public_html/vendor/psy/psysh/src/Psy/Input/CodeArgument.php on line 31

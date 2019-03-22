@@ -1,0 +1,2 @@
+[08-Feb-2019 22:16:35 America/Denver] PHP Fatal error:  Interface 'Illuminate\Contracts\Broadcasting\ShouldBroadcast' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Contracts/Broadcasting/ShouldBroadcastNow.php on line 6
+[10-Feb-2019 01:38:43 America/Denver] PHP Fatal error:  Interface 'Illuminate\Contracts\Broadcasting\ShouldBroadcast' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Contracts/Broadcasting/ShouldBroadcastNow.php on line 6

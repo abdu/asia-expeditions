@@ -1,0 +1,8 @@
+[08-Feb-2019 21:57:36 America/Denver] PHP Fatal error:  Interface 'Illuminate\View\ViewFinderInterface' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/View/FileViewFinder.php on line 9
+[08-Feb-2019 21:57:37 America/Denver] PHP Fatal error:  Interface 'Illuminate\Contracts\View\View' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/View/View.php on line 18
+[08-Feb-2019 21:57:37 America/Denver] PHP Fatal error:  Interface 'Illuminate\Contracts\View\Factory' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/View/Factory.php on line 18
+[08-Feb-2019 21:57:37 America/Denver] PHP Fatal error:  Class 'Illuminate\Support\ServiceProvider' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/View/ViewServiceProvider.php on line 12
+[10-Feb-2019 01:34:19 America/Denver] PHP Fatal error:  Interface 'Illuminate\Contracts\View\Factory' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/View/Factory.php on line 18
+[10-Feb-2019 01:34:20 America/Denver] PHP Fatal error:  Interface 'Illuminate\Contracts\View\View' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/View/View.php on line 18
+[10-Feb-2019 01:34:20 America/Denver] PHP Fatal error:  Interface 'Illuminate\View\ViewFinderInterface' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/View/FileViewFinder.php on line 9
+[10-Feb-2019 01:34:20 America/Denver] PHP Fatal error:  Class 'Illuminate\Support\ServiceProvider' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/View/ViewServiceProvider.php on line 12

@@ -1,0 +1,2 @@
+[08-Feb-2019 22:35:22 America/Denver] PHP Fatal error:  Class 'Symfony\Component\HttpKernel\Exception\ServiceUnavailableHttpException' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Exceptions/MaintenanceModeException.php on line 10
+[10-Feb-2019 01:41:26 America/Denver] PHP Fatal error:  Class 'Symfony\Component\HttpKernel\Exception\ServiceUnavailableHttpException' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Exceptions/MaintenanceModeException.php on line 10

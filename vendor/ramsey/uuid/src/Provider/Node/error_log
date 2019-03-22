@@ -1,0 +1,6 @@
+[08-Feb-2019 22:06:31 America/Denver] PHP Fatal error:  Interface 'Ramsey\Uuid\Provider\NodeProviderInterface' not found in /home3/asiagolf/public_html/vendor/ramsey/uuid/src/Provider/Node/FallbackNodeProvider.php on line 25
+[08-Feb-2019 22:06:32 America/Denver] PHP Fatal error:  Interface 'Ramsey\Uuid\Provider\NodeProviderInterface' not found in /home3/asiagolf/public_html/vendor/ramsey/uuid/src/Provider/Node/RandomNodeProvider.php on line 26
+[08-Feb-2019 22:06:32 America/Denver] PHP Fatal error:  Interface 'Ramsey\Uuid\Provider\NodeProviderInterface' not found in /home3/asiagolf/public_html/vendor/ramsey/uuid/src/Provider/Node/SystemNodeProvider.php on line 24
+[10-Feb-2019 01:36:10 America/Denver] PHP Fatal error:  Interface 'Ramsey\Uuid\Provider\NodeProviderInterface' not found in /home3/asiagolf/public_html/vendor/ramsey/uuid/src/Provider/Node/FallbackNodeProvider.php on line 25
+[10-Feb-2019 01:36:10 America/Denver] PHP Fatal error:  Interface 'Ramsey\Uuid\Provider\NodeProviderInterface' not found in /home3/asiagolf/public_html/vendor/ramsey/uuid/src/Provider/Node/RandomNodeProvider.php on line 26
+[10-Feb-2019 01:36:10 America/Denver] PHP Fatal error:  Interface 'Ramsey\Uuid\Provider\NodeProviderInterface' not found in /home3/asiagolf/public_html/vendor/ramsey/uuid/src/Provider/Node/SystemNodeProvider.php on line 24

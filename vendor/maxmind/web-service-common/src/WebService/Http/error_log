@@ -1,0 +1,6 @@
+[27-Jan-2018 20:38:24 America/Denver] PHP Fatal error:  Interface 'MaxMind\WebService\Http\Request' not found in /home3/asiagolf/public_html/vendor/maxmind/web-service-common/src/WebService/Http/CurlRequest.php on line 13
+[28-Jan-2018 04:18:59 America/Denver] PHP Fatal error:  Interface 'MaxMind\WebService\Http\Request' not found in /home3/asiagolf/public_html/vendor/maxmind/web-service-common/src/WebService/Http/CurlRequest.php on line 13
+[28-Jan-2018 06:27:44 America/Denver] PHP Fatal error:  Interface 'MaxMind\WebService\Http\Request' not found in /home3/asiagolf/public_html/vendor/maxmind/web-service-common/src/WebService/Http/CurlRequest.php on line 13
+[29-Jan-2018 08:45:32 America/Denver] PHP Fatal error:  Interface 'MaxMind\WebService\Http\Request' not found in /home3/asiagolf/public_html/vendor/maxmind/web-service-common/src/WebService/Http/CurlRequest.php on line 13
+[08-Feb-2019 21:57:48 America/Denver] PHP Fatal error:  Interface 'MaxMind\WebService\Http\Request' not found in /home3/asiagolf/public_html/vendor/maxmind/web-service-common/src/WebService/Http/CurlRequest.php on line 13
+[10-Feb-2019 01:34:22 America/Denver] PHP Fatal error:  Interface 'MaxMind\WebService\Http\Request' not found in /home3/asiagolf/public_html/vendor/maxmind/web-service-common/src/WebService/Http/CurlRequest.php on line 13

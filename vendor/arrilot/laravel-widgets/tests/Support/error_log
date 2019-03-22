@@ -1,0 +1,6 @@
+[04-Feb-2019 06:32:03 America/Denver] PHP Fatal error:  Class 'PHPUnit_Framework_TestCase' not found in /home3/asiagolf/public_html/vendor/arrilot/laravel-widgets/tests/Support/TestCase.php on line 9
+[04-Feb-2019 06:55:00 America/Denver] PHP Fatal error:  Interface 'Arrilot\Widgets\Contracts\ApplicationWrapperContract' not found in /home3/asiagolf/public_html/vendor/arrilot/laravel-widgets/tests/Support/TestApplicationWrapper.php on line 12
+[08-Feb-2019 21:38:28 America/Denver] PHP Fatal error:  Interface 'Arrilot\Widgets\Contracts\ApplicationWrapperContract' not found in /home3/asiagolf/public_html/vendor/arrilot/laravel-widgets/tests/Support/TestApplicationWrapper.php on line 12
+[08-Feb-2019 21:38:28 America/Denver] PHP Fatal error:  Class 'PHPUnit_Framework_TestCase' not found in /home3/asiagolf/public_html/vendor/arrilot/laravel-widgets/tests/Support/TestCase.php on line 9
+[10-Feb-2019 01:29:43 America/Denver] PHP Fatal error:  Interface 'Arrilot\Widgets\Contracts\ApplicationWrapperContract' not found in /home3/asiagolf/public_html/vendor/arrilot/laravel-widgets/tests/Support/TestApplicationWrapper.php on line 12
+[10-Feb-2019 01:29:43 America/Denver] PHP Fatal error:  Class 'PHPUnit_Framework_TestCase' not found in /home3/asiagolf/public_html/vendor/arrilot/laravel-widgets/tests/Support/TestCase.php on line 9

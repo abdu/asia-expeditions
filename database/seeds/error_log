@@ -1,0 +1,10 @@
+[09-Apr-2018 10:40:19 America/Denver] PHP Fatal error:  Class 'Illuminate\Database\Seeder' not found in /home3/asiagolf/public_html/database/seeds/DatabaseSeeder.php on line 6
+[09-Apr-2018 10:47:53 America/Denver] PHP Fatal error:  Class 'Illuminate\Database\Seeder' not found in /home3/asiagolf/public_html/database/seeds/UsersTableSeeder.php on line 6
+[09-Apr-2018 16:26:05 America/Denver] PHP Fatal error:  Class 'Illuminate\Database\Seeder' not found in /home3/asiagolf/public_html/database/seeds/DatabaseSeeder.php on line 6
+[09-Apr-2018 16:33:39 America/Denver] PHP Fatal error:  Class 'Illuminate\Database\Seeder' not found in /home3/asiagolf/public_html/database/seeds/UsersTableSeeder.php on line 6
+[09-Apr-2018 19:23:54 America/Denver] PHP Fatal error:  Class 'Illuminate\Database\Seeder' not found in /home3/asiagolf/public_html/database/seeds/DatabaseSeeder.php on line 6
+[09-Apr-2018 19:31:28 America/Denver] PHP Fatal error:  Class 'Illuminate\Database\Seeder' not found in /home3/asiagolf/public_html/database/seeds/UsersTableSeeder.php on line 6
+[10-Apr-2018 01:23:19 America/Denver] PHP Fatal error:  Class 'Illuminate\Database\Seeder' not found in /home3/asiagolf/public_html/database/seeds/DatabaseSeeder.php on line 6
+[10-Apr-2018 01:30:54 America/Denver] PHP Fatal error:  Class 'Illuminate\Database\Seeder' not found in /home3/asiagolf/public_html/database/seeds/UsersTableSeeder.php on line 6
+[10-Apr-2018 07:18:57 America/Denver] PHP Fatal error:  Class 'Illuminate\Database\Seeder' not found in /home3/asiagolf/public_html/database/seeds/DatabaseSeeder.php on line 6
+[10-Apr-2018 07:26:31 America/Denver] PHP Fatal error:  Class 'Illuminate\Database\Seeder' not found in /home3/asiagolf/public_html/database/seeds/UsersTableSeeder.php on line 6

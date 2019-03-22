@@ -1,0 +1,4 @@
+[08-Feb-2019 21:55:27 America/Denver] PHP Fatal error:  Class 'Hamcrest\AbstractMatcherTest' not found in /home3/asiagolf/public_html/vendor/hamcrest/hamcrest-php/tests/Hamcrest/Number/IsCloseToTest.php on line 5
+[08-Feb-2019 21:55:27 America/Denver] PHP Fatal error:  Class 'Hamcrest\AbstractMatcherTest' not found in /home3/asiagolf/public_html/vendor/hamcrest/hamcrest-php/tests/Hamcrest/Number/OrderingComparisonTest.php on line 5
+[10-Feb-2019 01:33:39 America/Denver] PHP Fatal error:  Class 'Hamcrest\AbstractMatcherTest' not found in /home3/asiagolf/public_html/vendor/hamcrest/hamcrest-php/tests/Hamcrest/Number/IsCloseToTest.php on line 5
+[10-Feb-2019 01:33:39 America/Denver] PHP Fatal error:  Class 'Hamcrest\AbstractMatcherTest' not found in /home3/asiagolf/public_html/vendor/hamcrest/hamcrest-php/tests/Hamcrest/Number/OrderingComparisonTest.php on line 5

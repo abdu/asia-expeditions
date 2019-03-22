@@ -1,0 +1,8 @@
+[06-Feb-2019 21:35:45 America/Denver] PHP Fatal error:  Class 'PhpSpec\ObjectBehavior' not found in /home3/asiagolf/public_html/vendor/phpspec/prophecy/spec/Prophecy/Promise/ReturnPromiseSpec.php on line 10
+[06-Feb-2019 22:21:40 America/Denver] PHP Fatal error:  Class 'PhpSpec\ObjectBehavior' not found in /home3/asiagolf/public_html/vendor/phpspec/prophecy/spec/Prophecy/Promise/CallbackPromiseSpec.php on line 10
+[06-Feb-2019 22:44:37 America/Denver] PHP Fatal error:  Class 'PhpSpec\ObjectBehavior' not found in /home3/asiagolf/public_html/vendor/phpspec/prophecy/spec/Prophecy/Promise/ReturnArgumentPromiseSpec.php on line 10
+[06-Feb-2019 22:56:06 America/Denver] PHP Fatal error:  Class 'PhpSpec\ObjectBehavior' not found in /home3/asiagolf/public_html/vendor/phpspec/prophecy/spec/Prophecy/Promise/ThrowPromiseSpec.php on line 11
+[10-Feb-2019 01:35:34 America/Denver] PHP Fatal error:  Class 'PhpSpec\ObjectBehavior' not found in /home3/asiagolf/public_html/vendor/phpspec/prophecy/spec/Prophecy/Promise/CallbackPromiseSpec.php on line 10
+[10-Feb-2019 01:35:34 America/Denver] PHP Fatal error:  Class 'PhpSpec\ObjectBehavior' not found in /home3/asiagolf/public_html/vendor/phpspec/prophecy/spec/Prophecy/Promise/ReturnArgumentPromiseSpec.php on line 10
+[10-Feb-2019 01:35:35 America/Denver] PHP Fatal error:  Class 'PhpSpec\ObjectBehavior' not found in /home3/asiagolf/public_html/vendor/phpspec/prophecy/spec/Prophecy/Promise/ReturnPromiseSpec.php on line 10
+[10-Feb-2019 01:35:35 America/Denver] PHP Fatal error:  Class 'PhpSpec\ObjectBehavior' not found in /home3/asiagolf/public_html/vendor/phpspec/prophecy/spec/Prophecy/Promise/ThrowPromiseSpec.php on line 11

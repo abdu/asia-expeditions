@@ -1,0 +1,4 @@
+[08-Feb-2019 21:42:37 America/Denver] PHP Fatal error:  Interface 'Psr\Log\LoggerInterface' not found in /home3/asiagolf/public_html/vendor/psr/log/Psr/Log/AbstractLogger.php on line 13
+[08-Feb-2019 21:42:39 America/Denver] PHP Fatal error:  Class 'Psr\Log\AbstractLogger' not found in /home3/asiagolf/public_html/vendor/psr/log/Psr/Log/NullLogger.php on line 14
+[10-Feb-2019 01:30:36 America/Denver] PHP Fatal error:  Interface 'Psr\Log\LoggerInterface' not found in /home3/asiagolf/public_html/vendor/psr/log/Psr/Log/AbstractLogger.php on line 13
+[10-Feb-2019 01:30:37 America/Denver] PHP Fatal error:  Class 'Psr\Log\AbstractLogger' not found in /home3/asiagolf/public_html/vendor/psr/log/Psr/Log/NullLogger.php on line 14

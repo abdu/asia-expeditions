@@ -1,0 +1,5 @@
+[08-Feb-2019 22:39:00 America/Denver] PHP Fatal error:  Interface 'Swift_Plugins_Reporter' not found in /home3/asiagolf/public_html/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/Reporters/HitReporter.php on line 17
+[08-Feb-2019 22:39:03 America/Denver] PHP Fatal error:  Interface 'Swift_Plugins_Reporter' not found in /home3/asiagolf/public_html/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/Reporters/HtmlReporter.php on line 17
+[09-Feb-2019 13:05:28 America/Denver] PHP Fatal error:  Interface 'Swift_Plugins_Reporter' not found in /home3/asiagolf/public_html/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/Reporters/HtmlReporter.php on line 17
+[10-Feb-2019 01:41:45 America/Denver] PHP Fatal error:  Interface 'Swift_Plugins_Reporter' not found in /home3/asiagolf/public_html/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/Reporters/HitReporter.php on line 17
+[10-Feb-2019 01:41:45 America/Denver] PHP Fatal error:  Interface 'Swift_Plugins_Reporter' not found in /home3/asiagolf/public_html/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/Reporters/HtmlReporter.php on line 17

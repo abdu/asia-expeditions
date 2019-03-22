@@ -1,0 +1,6 @@
+[08-Feb-2019 21:44:15 America/Denver] PHP Fatal error:  Class 'SebastianBergmann\CodeCoverage\Driver\Xdebug' not found in /home3/asiagolf/public_html/vendor/phpunit/php-code-coverage/src/Driver/HHVM.php on line 19
+[08-Feb-2019 21:44:16 America/Denver] PHP Fatal error:  Interface 'SebastianBergmann\CodeCoverage\Driver\Driver' not found in /home3/asiagolf/public_html/vendor/phpunit/php-code-coverage/src/Driver/PHPDBG.php on line 21
+[08-Feb-2019 21:44:16 America/Denver] PHP Fatal error:  Interface 'SebastianBergmann\CodeCoverage\Driver\Driver' not found in /home3/asiagolf/public_html/vendor/phpunit/php-code-coverage/src/Driver/Xdebug.php on line 21
+[10-Feb-2019 01:30:45 America/Denver] PHP Fatal error:  Class 'SebastianBergmann\CodeCoverage\Driver\Xdebug' not found in /home3/asiagolf/public_html/vendor/phpunit/php-code-coverage/src/Driver/HHVM.php on line 19
+[10-Feb-2019 01:30:45 America/Denver] PHP Fatal error:  Interface 'SebastianBergmann\CodeCoverage\Driver\Driver' not found in /home3/asiagolf/public_html/vendor/phpunit/php-code-coverage/src/Driver/PHPDBG.php on line 21
+[10-Feb-2019 01:30:45 America/Denver] PHP Fatal error:  Interface 'SebastianBergmann\CodeCoverage\Driver\Driver' not found in /home3/asiagolf/public_html/vendor/phpunit/php-code-coverage/src/Driver/Xdebug.php on line 21

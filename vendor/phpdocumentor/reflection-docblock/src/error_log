@@ -1,0 +1,3 @@
+[08-Feb-2019 21:31:34 America/Denver] PHP Fatal error:  Interface 'phpDocumentor\Reflection\DocBlockFactoryInterface' not found in /home3/asiagolf/public_html/vendor/phpdocumentor/reflection-docblock/src/DocBlockFactory.php on line 22
+[10-Feb-2019 01:27:57 America/Denver] PHP Fatal error:  Interface 'phpDocumentor\Reflection\DocBlockFactoryInterface' not found in /home3/asiagolf/public_html/vendor/phpdocumentor/reflection-docblock/src/DocBlockFactory.php on line 22
+[17-Feb-2019 23:37:05 America/Denver] PHP Fatal error:  Interface 'phpDocumentor\Reflection\DocBlockFactoryInterface' not found in /home3/asiagolf/public_html/vendor/phpdocumentor/reflection-docblock/src/DocBlockFactory.php on line 22

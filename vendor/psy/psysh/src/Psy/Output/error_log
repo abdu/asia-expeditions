@@ -1,0 +1,12 @@
+[08-Feb-2019 22:06:12 America/Denver] PHP Fatal error:  Interface 'Symfony\Component\Console\Output\OutputInterface' not found in /home3/asiagolf/public_html/vendor/psy/psysh/src/Psy/Output/OutputPager.php on line 21
+[08-Feb-2019 22:06:12 America/Denver] PHP Fatal error:  Class 'Symfony\Component\Console\Output\StreamOutput' not found in /home3/asiagolf/public_html/vendor/psy/psysh/src/Psy/Output/PassthruPager.php on line 20
+[08-Feb-2019 22:06:14 America/Denver] PHP Fatal error:  Class 'Symfony\Component\Console\Output\ConsoleOutput' not found in /home3/asiagolf/public_html/vendor/psy/psysh/src/Psy/Output/ShellOutput.php on line 22
+[08-Feb-2019 22:06:14 America/Denver] PHP Fatal error:  Class 'Symfony\Component\Console\Output\StreamOutput' not found in /home3/asiagolf/public_html/vendor/psy/psysh/src/Psy/Output/ProcOutputPager.php on line 24
+[10-Feb-2019 01:36:22 America/Denver] PHP Fatal error:  Interface 'Symfony\Component\Console\Output\OutputInterface' not found in /home3/asiagolf/public_html/vendor/psy/psysh/src/Psy/Output/OutputPager.php on line 21
+[10-Feb-2019 01:36:23 America/Denver] PHP Fatal error:  Class 'Symfony\Component\Console\Output\StreamOutput' not found in /home3/asiagolf/public_html/vendor/psy/psysh/src/Psy/Output/ProcOutputPager.php on line 24
+[10-Feb-2019 01:36:23 America/Denver] PHP Fatal error:  Class 'Symfony\Component\Console\Output\StreamOutput' not found in /home3/asiagolf/public_html/vendor/psy/psysh/src/Psy/Output/PassthruPager.php on line 20
+[10-Feb-2019 01:36:23 America/Denver] PHP Fatal error:  Class 'Symfony\Component\Console\Output\ConsoleOutput' not found in /home3/asiagolf/public_html/vendor/psy/psysh/src/Psy/Output/ShellOutput.php on line 22
+[13-Feb-2019 23:35:07 America/Denver] PHP Fatal error:  Class 'Symfony\Component\Console\Output\StreamOutput' not found in /home3/asiagolf/public_html/vendor/psy/psysh/src/Psy/Output/ProcOutputPager.php on line 24
+[15-Feb-2019 11:45:37 America/Denver] PHP Fatal error:  Class 'Symfony\Component\Console\Output\StreamOutput' not found in /home3/asiagolf/public_html/vendor/psy/psysh/src/Psy/Output/PassthruPager.php on line 20
+[15-Feb-2019 23:02:04 America/Denver] PHP Fatal error:  Class 'Symfony\Component\Console\Output\ConsoleOutput' not found in /home3/asiagolf/public_html/vendor/psy/psysh/src/Psy/Output/ShellOutput.php on line 22
+[16-Feb-2019 14:10:54 America/Denver] PHP Fatal error:  Interface 'Symfony\Component\Console\Output\OutputInterface' not found in /home3/asiagolf/public_html/vendor/psy/psysh/src/Psy/Output/OutputPager.php on line 21

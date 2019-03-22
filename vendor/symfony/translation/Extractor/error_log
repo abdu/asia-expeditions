@@ -1,0 +1,5 @@
+[03-Jun-2018 18:22:11 America/Denver] PHP Fatal error:  Interface 'Symfony\Component\Translation\Extractor\ExtractorInterface' not found in /home3/asiagolf/public_html/vendor/symfony/translation/Extractor/ChainExtractor.php on line 22
+[05-Jun-2018 01:12:04 America/Denver] PHP Fatal error:  Interface 'Symfony\Component\Translation\Extractor\ExtractorInterface' not found in /home3/asiagolf/public_html/vendor/symfony/translation/Extractor/ChainExtractor.php on line 22
+[30-Jan-2019 05:08:04 America/Denver] PHP Fatal error:  Interface 'Symfony\Component\Translation\Extractor\ExtractorInterface' not found in /home3/asiagolf/public_html/vendor/symfony/translation/Extractor/ChainExtractor.php on line 22
+[08-Feb-2019 21:38:22 America/Denver] PHP Fatal error:  Interface 'Symfony\Component\Translation\Extractor\ExtractorInterface' not found in /home3/asiagolf/public_html/vendor/symfony/translation/Extractor/ChainExtractor.php on line 22
+[10-Feb-2019 01:29:26 America/Denver] PHP Fatal error:  Interface 'Symfony\Component\Translation\Extractor\ExtractorInterface' not found in /home3/asiagolf/public_html/vendor/symfony/translation/Extractor/ChainExtractor.php on line 22

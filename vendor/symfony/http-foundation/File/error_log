@@ -1,0 +1,5 @@
+[03-Jun-2018 12:49:15 America/Denver] PHP Fatal error:  Class 'Symfony\Component\HttpFoundation\File\File' not found in /home3/asiagolf/public_html/vendor/symfony/http-foundation/File/UploadedFile.php on line 26
+[03-Jun-2018 19:47:50 America/Denver] PHP Fatal error:  Class 'Symfony\Component\HttpFoundation\File\File' not found in /home3/asiagolf/public_html/vendor/symfony/http-foundation/File/UploadedFile.php on line 26
+[04-Jun-2018 14:04:58 America/Denver] PHP Fatal error:  Class 'Symfony\Component\HttpFoundation\File\File' not found in /home3/asiagolf/public_html/vendor/symfony/http-foundation/File/UploadedFile.php on line 26
+[08-Feb-2019 21:34:48 America/Denver] PHP Fatal error:  Class 'Symfony\Component\HttpFoundation\File\File' not found in /home3/asiagolf/public_html/vendor/symfony/http-foundation/File/UploadedFile.php on line 26
+[10-Feb-2019 01:28:49 America/Denver] PHP Fatal error:  Class 'Symfony\Component\HttpFoundation\File\File' not found in /home3/asiagolf/public_html/vendor/symfony/http-foundation/File/UploadedFile.php on line 26

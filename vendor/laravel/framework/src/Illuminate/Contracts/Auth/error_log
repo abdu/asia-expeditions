@@ -1,0 +1,2 @@
+[08-Feb-2019 22:16:39 America/Denver] PHP Fatal error:  Interface 'Illuminate\Contracts\Auth\Guard' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Contracts/Auth/StatefulGuard.php on line 6
+[10-Feb-2019 01:38:41 America/Denver] PHP Fatal error:  Interface 'Illuminate\Contracts\Auth\Guard' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Contracts/Auth/StatefulGuard.php on line 6

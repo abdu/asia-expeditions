@@ -1,0 +1,17 @@
+[26-Jan-2018 15:18:28 America/Denver] PHP Fatal error:  Class 'PHPUnit_Framework_TestCase' not found in /home3/asiagolf/public_html/vendor/geoip2/geoip2/tests/GeoIp2/Test/Model/NameTest.php on line 8
+[26-Jan-2018 15:20:16 America/Denver] PHP Fatal error:  Class 'PHPUnit_Framework_TestCase' not found in /home3/asiagolf/public_html/vendor/geoip2/geoip2/tests/GeoIp2/Test/Model/CountryTest.php on line 8
+[26-Jan-2018 15:22:17 America/Denver] PHP Fatal error:  Class 'PHPUnit_Framework_TestCase' not found in /home3/asiagolf/public_html/vendor/geoip2/geoip2/tests/GeoIp2/Test/Model/InsightsTest.php on line 8
+[27-Jan-2018 20:33:41 America/Denver] PHP Fatal error:  Class 'PHPUnit_Framework_TestCase' not found in /home3/asiagolf/public_html/vendor/geoip2/geoip2/tests/GeoIp2/Test/Model/NameTest.php on line 8
+[27-Jan-2018 20:33:51 America/Denver] PHP Fatal error:  Class 'PHPUnit_Framework_TestCase' not found in /home3/asiagolf/public_html/vendor/geoip2/geoip2/tests/GeoIp2/Test/Model/CountryTest.php on line 8
+[27-Jan-2018 20:34:43 America/Denver] PHP Fatal error:  Class 'PHPUnit_Framework_TestCase' not found in /home3/asiagolf/public_html/vendor/geoip2/geoip2/tests/GeoIp2/Test/Model/InsightsTest.php on line 8
+[10-Jul-2018 05:53:04 America/Denver] PHP Fatal error:  Class 'PHPUnit_Framework_TestCase' not found in /home3/asiagolf/public_html/vendor/geoip2/geoip2/tests/GeoIp2/Test/Model/CountryTest.php on line 8
+[18-Jul-2018 05:23:03 America/Denver] PHP Fatal error:  Class 'PHPUnit_Framework_TestCase' not found in /home3/asiagolf/public_html/vendor/geoip2/geoip2/tests/GeoIp2/Test/Model/CountryTest.php on line 8
+[31-Jan-2019 12:59:31 America/Denver] PHP Fatal error:  Class 'PHPUnit_Framework_TestCase' not found in /home3/asiagolf/public_html/vendor/geoip2/geoip2/tests/GeoIp2/Test/Model/CountryTest.php on line 8
+[05-Feb-2019 04:27:57 America/Denver] PHP Fatal error:  Class 'PHPUnit_Framework_TestCase' not found in /home3/asiagolf/public_html/vendor/geoip2/geoip2/tests/GeoIp2/Test/Model/InsightsTest.php on line 8
+[07-Feb-2019 19:35:56 America/Denver] PHP Fatal error:  Class 'PHPUnit_Framework_TestCase' not found in /home3/asiagolf/public_html/vendor/geoip2/geoip2/tests/GeoIp2/Test/Model/NameTest.php on line 8
+[08-Feb-2019 22:09:59 America/Denver] PHP Fatal error:  Class 'PHPUnit_Framework_TestCase' not found in /home3/asiagolf/public_html/vendor/geoip2/geoip2/tests/GeoIp2/Test/Model/InsightsTest.php on line 8
+[08-Feb-2019 22:09:59 America/Denver] PHP Fatal error:  Class 'PHPUnit_Framework_TestCase' not found in /home3/asiagolf/public_html/vendor/geoip2/geoip2/tests/GeoIp2/Test/Model/NameTest.php on line 8
+[08-Feb-2019 22:09:59 America/Denver] PHP Fatal error:  Class 'PHPUnit_Framework_TestCase' not found in /home3/asiagolf/public_html/vendor/geoip2/geoip2/tests/GeoIp2/Test/Model/CountryTest.php on line 8
+[10-Feb-2019 01:38:21 America/Denver] PHP Fatal error:  Class 'PHPUnit_Framework_TestCase' not found in /home3/asiagolf/public_html/vendor/geoip2/geoip2/tests/GeoIp2/Test/Model/InsightsTest.php on line 8
+[10-Feb-2019 01:38:21 America/Denver] PHP Fatal error:  Class 'PHPUnit_Framework_TestCase' not found in /home3/asiagolf/public_html/vendor/geoip2/geoip2/tests/GeoIp2/Test/Model/CountryTest.php on line 8
+[10-Feb-2019 01:38:21 America/Denver] PHP Fatal error:  Class 'PHPUnit_Framework_TestCase' not found in /home3/asiagolf/public_html/vendor/geoip2/geoip2/tests/GeoIp2/Test/Model/NameTest.php on line 8

@@ -1,0 +1,10 @@
+[28-May-2018 08:29:35 America/Denver] PHP Fatal error:  Class 'PHPUnit\Framework\TestCase' not found in /home3/asiagolf/public_html/vendor/phpunit/phpunit/tests/Regression/GitHub/2380/Issue2380Test.php on line 5
+[28-May-2018 14:47:55 America/Denver] PHP Fatal error:  Class 'PHPUnit\Framework\TestCase' not found in /home3/asiagolf/public_html/vendor/phpunit/phpunit/tests/Regression/GitHub/2380/Issue2380Test.php on line 5
+[28-May-2018 20:35:59 America/Denver] PHP Fatal error:  Class 'PHPUnit\Framework\TestCase' not found in /home3/asiagolf/public_html/vendor/phpunit/phpunit/tests/Regression/GitHub/2380/Issue2380Test.php on line 5
+[29-May-2018 02:16:30 America/Denver] PHP Fatal error:  Class 'PHPUnit\Framework\TestCase' not found in /home3/asiagolf/public_html/vendor/phpunit/phpunit/tests/Regression/GitHub/2380/Issue2380Test.php on line 5
+[29-May-2018 08:12:08 America/Denver] PHP Fatal error:  Class 'PHPUnit\Framework\TestCase' not found in /home3/asiagolf/public_html/vendor/phpunit/phpunit/tests/Regression/GitHub/2380/Issue2380Test.php on line 5
+[01-Jul-2018 07:17:26 America/Denver] PHP Fatal error:  Class 'PHPUnit\Framework\TestCase' not found in /home3/asiagolf/public_html/vendor/phpunit/phpunit/tests/Regression/GitHub/2380/Issue2380Test.php on line 5
+[02-Jul-2018 20:07:55 America/Denver] PHP Fatal error:  Class 'PHPUnit\Framework\TestCase' not found in /home3/asiagolf/public_html/vendor/phpunit/phpunit/tests/Regression/GitHub/2380/Issue2380Test.php on line 5
+[04-Jul-2018 00:24:00 America/Denver] PHP Fatal error:  Class 'PHPUnit\Framework\TestCase' not found in /home3/asiagolf/public_html/vendor/phpunit/phpunit/tests/Regression/GitHub/2380/Issue2380Test.php on line 5
+[08-Feb-2019 22:32:59 America/Denver] PHP Fatal error:  Class 'PHPUnit\Framework\TestCase' not found in /home3/asiagolf/public_html/vendor/phpunit/phpunit/tests/Regression/GitHub/2380/Issue2380Test.php on line 5
+[10-Feb-2019 01:40:17 America/Denver] PHP Fatal error:  Class 'PHPUnit\Framework\TestCase' not found in /home3/asiagolf/public_html/vendor/phpunit/phpunit/tests/Regression/GitHub/2380/Issue2380Test.php on line 5

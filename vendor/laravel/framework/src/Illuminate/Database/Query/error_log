@@ -1,0 +1,6 @@
+[08-Feb-2019 22:17:25 America/Denver] PHP Fatal error:  Class 'Illuminate\Database\Query\Builder' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Database/Query/JoinClause.php on line 8
+[08-Feb-2019 22:17:26 America/Denver] PHP Fatal error:  Trait 'Illuminate\Support\Traits\Macroable' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php on line 22
+[08-Feb-2019 22:17:27 America/Denver] PHP Fatal error:  Class 'Illuminate\Database\Query\Expression' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Database/Query/JsonExpression.php on line 8
+[10-Feb-2019 01:38:39 America/Denver] PHP Fatal error:  Class 'Illuminate\Database\Query\Builder' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Database/Query/JoinClause.php on line 8
+[10-Feb-2019 01:38:39 America/Denver] PHP Fatal error:  Trait 'Illuminate\Support\Traits\Macroable' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php on line 22
+[10-Feb-2019 01:38:40 America/Denver] PHP Fatal error:  Class 'Illuminate\Database\Query\Expression' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Database/Query/JsonExpression.php on line 8

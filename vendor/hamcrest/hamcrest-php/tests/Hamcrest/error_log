@@ -1,0 +1,12 @@
+[08-Feb-2019 21:40:04 America/Denver] PHP Fatal error:  Class 'PHPUnit_Framework_TestCase' not found in /home3/asiagolf/public_html/vendor/hamcrest/hamcrest-php/tests/Hamcrest/AbstractMatcherTest.php on line 8
+[08-Feb-2019 21:40:04 America/Denver] PHP Fatal error:  Class 'Hamcrest\BaseMatcher' not found in /home3/asiagolf/public_html/vendor/hamcrest/hamcrest-php/tests/Hamcrest/BaseMatcherTest.php on line 6
+[08-Feb-2019 21:40:06 America/Denver] PHP Fatal error:  Class 'Hamcrest\FeatureMatcher' not found in /home3/asiagolf/public_html/vendor/hamcrest/hamcrest-php/tests/Hamcrest/FeatureMatcherTest.php on line 19
+[08-Feb-2019 21:40:06 America/Denver] PHP Fatal error:  Interface 'Hamcrest\SelfDescribing' not found in /home3/asiagolf/public_html/vendor/hamcrest/hamcrest-php/tests/Hamcrest/StringDescriptionTest.php on line 5
+[08-Feb-2019 21:40:06 America/Denver] PHP Fatal error:  Class 'PhpUnit_Framework_TestCase' not found in /home3/asiagolf/public_html/vendor/hamcrest/hamcrest-php/tests/Hamcrest/MatcherAssertTest.php on line 5
+[08-Feb-2019 21:40:07 America/Denver] PHP Fatal error:  Class 'PhpUnit_Framework_TestCase' not found in /home3/asiagolf/public_html/vendor/hamcrest/hamcrest-php/tests/Hamcrest/UtilTest.php on line 5
+[10-Feb-2019 01:29:54 America/Denver] PHP Fatal error:  Class 'PHPUnit_Framework_TestCase' not found in /home3/asiagolf/public_html/vendor/hamcrest/hamcrest-php/tests/Hamcrest/AbstractMatcherTest.php on line 8
+[10-Feb-2019 01:29:54 America/Denver] PHP Fatal error:  Class 'Hamcrest\BaseMatcher' not found in /home3/asiagolf/public_html/vendor/hamcrest/hamcrest-php/tests/Hamcrest/BaseMatcherTest.php on line 6
+[10-Feb-2019 01:29:55 America/Denver] PHP Fatal error:  Class 'PhpUnit_Framework_TestCase' not found in /home3/asiagolf/public_html/vendor/hamcrest/hamcrest-php/tests/Hamcrest/MatcherAssertTest.php on line 5
+[10-Feb-2019 01:29:55 America/Denver] PHP Fatal error:  Class 'Hamcrest\FeatureMatcher' not found in /home3/asiagolf/public_html/vendor/hamcrest/hamcrest-php/tests/Hamcrest/FeatureMatcherTest.php on line 19
+[10-Feb-2019 01:29:55 America/Denver] PHP Fatal error:  Class 'PhpUnit_Framework_TestCase' not found in /home3/asiagolf/public_html/vendor/hamcrest/hamcrest-php/tests/Hamcrest/UtilTest.php on line 5
+[10-Feb-2019 01:29:55 America/Denver] PHP Fatal error:  Interface 'Hamcrest\SelfDescribing' not found in /home3/asiagolf/public_html/vendor/hamcrest/hamcrest-php/tests/Hamcrest/StringDescriptionTest.php on line 5

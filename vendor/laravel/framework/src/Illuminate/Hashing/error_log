@@ -1,0 +1,4 @@
+[08-Feb-2019 21:56:17 America/Denver] PHP Fatal error:  Interface 'Illuminate\Contracts\Hashing\Hasher' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Hashing/BcryptHasher.php on line 9
+[08-Feb-2019 21:56:17 America/Denver] PHP Fatal error:  Class 'Illuminate\Support\ServiceProvider' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Hashing/HashServiceProvider.php on line 8
+[10-Feb-2019 01:33:58 America/Denver] PHP Fatal error:  Interface 'Illuminate\Contracts\Hashing\Hasher' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Hashing/BcryptHasher.php on line 9
+[10-Feb-2019 01:33:58 America/Denver] PHP Fatal error:  Class 'Illuminate\Support\ServiceProvider' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Hashing/HashServiceProvider.php on line 8

@@ -1,0 +1,2 @@
+[08-Feb-2019 21:38:29 America/Denver] PHP Fatal error:  Class 'Illuminate\Console\GeneratorCommand' not found in /home3/asiagolf/public_html/vendor/arrilot/laravel-widgets/src/Console/WidgetMakeCommand.php on line 11
+[10-Feb-2019 01:29:38 America/Denver] PHP Fatal error:  Class 'Illuminate\Console\GeneratorCommand' not found in /home3/asiagolf/public_html/vendor/arrilot/laravel-widgets/src/Console/WidgetMakeCommand.php on line 11

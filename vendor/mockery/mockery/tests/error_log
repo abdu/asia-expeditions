@@ -1,0 +1,8 @@
+[08-Feb-2019 21:30:52 America/Denver] PHP Fatal error:  Uncaught exception 'Exception' with message 'Please run "php composer.phar install --dev" in root directory to setup unit test dependencies before running the tests' in /home3/asiagolf/public_html/vendor/mockery/mockery/tests/Bootstrap.php:39
+Stack trace:
+#0 {main}
+  thrown in /home3/asiagolf/public_html/vendor/mockery/mockery/tests/Bootstrap.php on line 39
+[10-Feb-2019 01:27:47 America/Denver] PHP Fatal error:  Uncaught exception 'Exception' with message 'Please run "php composer.phar install --dev" in root directory to setup unit test dependencies before running the tests' in /home3/asiagolf/public_html/vendor/mockery/mockery/tests/Bootstrap.php:39
+Stack trace:
+#0 {main}
+  thrown in /home3/asiagolf/public_html/vendor/mockery/mockery/tests/Bootstrap.php on line 39

@@ -1,0 +1,4 @@
+[22-May-2018 21:14:18 America/Denver] PHP Fatal error:  Class 'PHPUnit\Framework\TestCase' not found in /home3/asiagolf/public_html/vendor/phpunit/phpunit/tests/Regression/GitHub/2382/Issue2382Test.php on line 5
+[27-May-2018 17:26:13 America/Denver] PHP Fatal error:  Class 'PHPUnit\Framework\TestCase' not found in /home3/asiagolf/public_html/vendor/phpunit/phpunit/tests/Regression/GitHub/2382/Issue2382Test.php on line 5
+[08-Feb-2019 22:32:59 America/Denver] PHP Fatal error:  Class 'PHPUnit\Framework\TestCase' not found in /home3/asiagolf/public_html/vendor/phpunit/phpunit/tests/Regression/GitHub/2382/Issue2382Test.php on line 5
+[10-Feb-2019 01:40:17 America/Denver] PHP Fatal error:  Class 'PHPUnit\Framework\TestCase' not found in /home3/asiagolf/public_html/vendor/phpunit/phpunit/tests/Regression/GitHub/2382/Issue2382Test.php on line 5

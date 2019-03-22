@@ -1,0 +1,6 @@
+[08-Feb-2019 22:38:58 America/Denver] PHP Fatal error:  Interface 'Swift_Plugins_Logger' not found in /home3/asiagolf/public_html/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/Loggers/EchoLogger.php on line 17
+[08-Feb-2019 22:38:58 America/Denver] PHP Fatal error:  Interface 'Swift_Plugins_Logger' not found in /home3/asiagolf/public_html/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/Loggers/ArrayLogger.php on line 17
+[09-Feb-2019 11:05:14 America/Denver] PHP Fatal error:  Interface 'Swift_Plugins_Logger' not found in /home3/asiagolf/public_html/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/Loggers/ArrayLogger.php on line 17
+[10-Feb-2019 01:41:44 America/Denver] PHP Fatal error:  Interface 'Swift_Plugins_Logger' not found in /home3/asiagolf/public_html/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/Loggers/ArrayLogger.php on line 17
+[10-Feb-2019 01:41:44 America/Denver] PHP Fatal error:  Interface 'Swift_Plugins_Logger' not found in /home3/asiagolf/public_html/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/Loggers/EchoLogger.php on line 17
+[10-Feb-2019 08:32:34 America/Denver] PHP Fatal error:  Interface 'Swift_Plugins_Logger' not found in /home3/asiagolf/public_html/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/Loggers/EchoLogger.php on line 17

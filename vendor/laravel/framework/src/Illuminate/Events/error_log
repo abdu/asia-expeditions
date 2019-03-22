@@ -1,0 +1,7 @@
+[08-Feb-2019 21:56:13 America/Denver] PHP Fatal error:  Class 'Illuminate\Support\ServiceProvider' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Events/EventServiceProvider.php on line 8
+[08-Feb-2019 21:56:14 America/Denver] PHP Fatal error:  Interface 'Illuminate\Contracts\Events\Dispatcher' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Events/Dispatcher.php on line 15
+[10-Feb-2019 01:33:57 America/Denver] PHP Fatal error:  Interface 'Illuminate\Contracts\Events\Dispatcher' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Events/Dispatcher.php on line 15
+[10-Feb-2019 01:33:57 America/Denver] PHP Fatal error:  Class 'Illuminate\Support\ServiceProvider' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Events/EventServiceProvider.php on line 8
+[14-Feb-2019 07:11:14 America/Denver] PHP Fatal error:  Interface 'Illuminate\Contracts\Events\Dispatcher' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Events/Dispatcher.php on line 15
+[14-Feb-2019 07:11:51 America/Denver] PHP Fatal error:  Class 'Illuminate\Support\ServiceProvider' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Events/EventServiceProvider.php on line 8
+[15-Feb-2019 14:41:50 America/Denver] PHP Fatal error:  Class 'Illuminate\Support\ServiceProvider' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Events/EventServiceProvider.php on line 8

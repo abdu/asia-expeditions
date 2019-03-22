@@ -1,0 +1,9 @@
+[08-Feb-2019 22:06:22 America/Denver] PHP Fatal error:  Interface 'Psy\VersionUpdater\Checker' not found in /home3/asiagolf/public_html/vendor/psy/psysh/src/Psy/VersionUpdater/GitHubChecker.php on line 17
+[08-Feb-2019 22:06:22 America/Denver] PHP Fatal error:  Class 'Psy\VersionUpdater\GitHubChecker' not found in /home3/asiagolf/public_html/vendor/psy/psysh/src/Psy/VersionUpdater/IntervalChecker.php on line 17
+[08-Feb-2019 22:06:23 America/Denver] PHP Fatal error:  Interface 'Psy\VersionUpdater\Checker' not found in /home3/asiagolf/public_html/vendor/psy/psysh/src/Psy/VersionUpdater/NoopChecker.php on line 20
+[09-Feb-2019 12:37:18 America/Denver] PHP Fatal error:  Interface 'Psy\VersionUpdater\Checker' not found in /home3/asiagolf/public_html/vendor/psy/psysh/src/Psy/VersionUpdater/GitHubChecker.php on line 17
+[10-Feb-2019 01:36:26 America/Denver] PHP Fatal error:  Interface 'Psy\VersionUpdater\Checker' not found in /home3/asiagolf/public_html/vendor/psy/psysh/src/Psy/VersionUpdater/GitHubChecker.php on line 17
+[10-Feb-2019 01:36:26 America/Denver] PHP Fatal error:  Class 'Psy\VersionUpdater\GitHubChecker' not found in /home3/asiagolf/public_html/vendor/psy/psysh/src/Psy/VersionUpdater/IntervalChecker.php on line 17
+[10-Feb-2019 01:36:26 America/Denver] PHP Fatal error:  Interface 'Psy\VersionUpdater\Checker' not found in /home3/asiagolf/public_html/vendor/psy/psysh/src/Psy/VersionUpdater/NoopChecker.php on line 20
+[15-Feb-2019 16:41:41 America/Denver] PHP Fatal error:  Interface 'Psy\VersionUpdater\Checker' not found in /home3/asiagolf/public_html/vendor/psy/psysh/src/Psy/VersionUpdater/NoopChecker.php on line 20
+[17-Feb-2019 23:49:30 America/Denver] PHP Fatal error:  Class 'Psy\VersionUpdater\GitHubChecker' not found in /home3/asiagolf/public_html/vendor/psy/psysh/src/Psy/VersionUpdater/IntervalChecker.php on line 17

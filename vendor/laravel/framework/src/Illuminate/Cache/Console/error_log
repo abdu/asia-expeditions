@@ -1,0 +1,4 @@
+[08-Feb-2019 22:16:30 America/Denver] PHP Fatal error:  Class 'Illuminate\Console\Command' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Cache/Console/CacheTableCommand.php on line 10
+[08-Feb-2019 22:16:30 America/Denver] PHP Fatal error:  Class 'Illuminate\Console\Command' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Cache/Console/ClearCommand.php on line 11
+[10-Feb-2019 01:38:32 America/Denver] PHP Fatal error:  Class 'Illuminate\Console\Command' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Cache/Console/CacheTableCommand.php on line 10
+[10-Feb-2019 01:38:32 America/Denver] PHP Fatal error:  Class 'Illuminate\Console\Command' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Cache/Console/ClearCommand.php on line 11

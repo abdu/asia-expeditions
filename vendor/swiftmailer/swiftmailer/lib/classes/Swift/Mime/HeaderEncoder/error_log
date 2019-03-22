@@ -1,0 +1,4 @@
+[08-Feb-2019 22:38:48 America/Denver] PHP Fatal error:  Class 'Swift_Encoder_Base64Encoder' not found in /home3/asiagolf/public_html/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/HeaderEncoder/Base64HeaderEncoder.php on line 16
+[08-Feb-2019 22:38:48 America/Denver] PHP Fatal error:  Class 'Swift_Encoder_QpEncoder' not found in /home3/asiagolf/public_html/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/HeaderEncoder/QpHeaderEncoder.php on line 16
+[10-Feb-2019 01:41:43 America/Denver] PHP Fatal error:  Class 'Swift_Encoder_Base64Encoder' not found in /home3/asiagolf/public_html/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/HeaderEncoder/Base64HeaderEncoder.php on line 16
+[10-Feb-2019 01:41:43 America/Denver] PHP Fatal error:  Class 'Swift_Encoder_QpEncoder' not found in /home3/asiagolf/public_html/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/HeaderEncoder/QpHeaderEncoder.php on line 16

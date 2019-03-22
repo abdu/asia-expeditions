@@ -1,0 +1,4 @@
+[08-Feb-2019 21:34:33 America/Denver] PHP Fatal error:  Class 'Symfony\Component\Finder\Comparator\Comparator' not found in /home3/asiagolf/public_html/vendor/symfony/finder/Comparator/DateComparator.php on line 20
+[08-Feb-2019 21:34:33 America/Denver] PHP Fatal error:  Class 'Symfony\Component\Finder\Comparator\Comparator' not found in /home3/asiagolf/public_html/vendor/symfony/finder/Comparator/NumberComparator.php on line 36
+[10-Feb-2019 01:28:46 America/Denver] PHP Fatal error:  Class 'Symfony\Component\Finder\Comparator\Comparator' not found in /home3/asiagolf/public_html/vendor/symfony/finder/Comparator/NumberComparator.php on line 36
+[10-Feb-2019 01:28:46 America/Denver] PHP Fatal error:  Class 'Symfony\Component\Finder\Comparator\Comparator' not found in /home3/asiagolf/public_html/vendor/symfony/finder/Comparator/DateComparator.php on line 20

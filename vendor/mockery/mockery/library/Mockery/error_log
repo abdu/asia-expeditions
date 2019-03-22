@@ -1,0 +1,12 @@
+[16-Jan-2019 17:10:19 America/Denver] PHP Fatal error:  Interface 'Mockery\MockInterface' not found in /home3/asiagolf/public_html/vendor/mockery/mockery/library/Mockery/Mock.php on line 26
+[16-Jan-2019 17:10:35 America/Denver] PHP Fatal error:  Class 'Mockery\Expectation' not found in /home3/asiagolf/public_html/vendor/mockery/mockery/library/Mockery/VerificationExpectation.php on line 6
+[16-Jan-2019 17:11:05 America/Denver] PHP Fatal error:  Interface 'Mockery\ExpectationInterface' not found in /home3/asiagolf/public_html/vendor/mockery/mockery/library/Mockery/Expectation.php on line 24
+[16-Jan-2019 17:11:38 America/Denver] PHP Fatal error:  Interface 'Mockery\ExpectationInterface' not found in /home3/asiagolf/public_html/vendor/mockery/mockery/library/Mockery/CompositeExpectation.php on line 24
+[08-Feb-2019 21:40:41 America/Denver] PHP Fatal error:  Interface 'Mockery\ExpectationInterface' not found in /home3/asiagolf/public_html/vendor/mockery/mockery/library/Mockery/CompositeExpectation.php on line 24
+[08-Feb-2019 21:40:42 America/Denver] PHP Fatal error:  Interface 'Mockery\ExpectationInterface' not found in /home3/asiagolf/public_html/vendor/mockery/mockery/library/Mockery/Expectation.php on line 24
+[08-Feb-2019 21:40:43 America/Denver] PHP Fatal error:  Interface 'Mockery\MockInterface' not found in /home3/asiagolf/public_html/vendor/mockery/mockery/library/Mockery/Mock.php on line 26
+[08-Feb-2019 21:40:48 America/Denver] PHP Fatal error:  Class 'Mockery\Expectation' not found in /home3/asiagolf/public_html/vendor/mockery/mockery/library/Mockery/VerificationExpectation.php on line 6
+[10-Feb-2019 01:30:09 America/Denver] PHP Fatal error:  Interface 'Mockery\ExpectationInterface' not found in /home3/asiagolf/public_html/vendor/mockery/mockery/library/Mockery/CompositeExpectation.php on line 24
+[10-Feb-2019 01:30:10 America/Denver] PHP Fatal error:  Interface 'Mockery\ExpectationInterface' not found in /home3/asiagolf/public_html/vendor/mockery/mockery/library/Mockery/Expectation.php on line 24
+[10-Feb-2019 01:30:11 America/Denver] PHP Fatal error:  Interface 'Mockery\MockInterface' not found in /home3/asiagolf/public_html/vendor/mockery/mockery/library/Mockery/Mock.php on line 26
+[10-Feb-2019 01:30:12 America/Denver] PHP Fatal error:  Class 'Mockery\Expectation' not found in /home3/asiagolf/public_html/vendor/mockery/mockery/library/Mockery/VerificationExpectation.php on line 6

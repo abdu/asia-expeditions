@@ -1,0 +1,8 @@
+[08-Feb-2019 21:44:49 America/Denver] PHP Fatal error:  Interface 'Dotenv\Exception\ExceptionInterface' not found in /home3/asiagolf/public_html/vendor/vlucas/phpdotenv/src/Exception/InvalidCallbackException.php on line 11
+[08-Feb-2019 21:44:49 America/Denver] PHP Fatal error:  Interface 'Dotenv\Exception\ExceptionInterface' not found in /home3/asiagolf/public_html/vendor/vlucas/phpdotenv/src/Exception/InvalidFileException.php on line 11
+[08-Feb-2019 21:44:49 America/Denver] PHP Fatal error:  Interface 'Dotenv\Exception\ExceptionInterface' not found in /home3/asiagolf/public_html/vendor/vlucas/phpdotenv/src/Exception/InvalidPathException.php on line 11
+[08-Feb-2019 21:44:49 America/Denver] PHP Fatal error:  Interface 'Dotenv\Exception\ExceptionInterface' not found in /home3/asiagolf/public_html/vendor/vlucas/phpdotenv/src/Exception/ValidationException.php on line 11
+[10-Feb-2019 01:33:05 America/Denver] PHP Fatal error:  Interface 'Dotenv\Exception\ExceptionInterface' not found in /home3/asiagolf/public_html/vendor/vlucas/phpdotenv/src/Exception/InvalidCallbackException.php on line 11
+[10-Feb-2019 01:33:05 America/Denver] PHP Fatal error:  Interface 'Dotenv\Exception\ExceptionInterface' not found in /home3/asiagolf/public_html/vendor/vlucas/phpdotenv/src/Exception/InvalidPathException.php on line 11
+[10-Feb-2019 01:33:05 America/Denver] PHP Fatal error:  Interface 'Dotenv\Exception\ExceptionInterface' not found in /home3/asiagolf/public_html/vendor/vlucas/phpdotenv/src/Exception/InvalidFileException.php on line 11
+[10-Feb-2019 01:33:06 America/Denver] PHP Fatal error:  Interface 'Dotenv\Exception\ExceptionInterface' not found in /home3/asiagolf/public_html/vendor/vlucas/phpdotenv/src/Exception/ValidationException.php on line 11

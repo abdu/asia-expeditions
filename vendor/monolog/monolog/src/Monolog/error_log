@@ -1,0 +1,2 @@
+[08-Feb-2019 21:40:33 America/Denver] PHP Fatal error:  Interface 'Psr\Log\LoggerInterface' not found in /home3/asiagolf/public_html/vendor/monolog/monolog/src/Monolog/Logger.php on line 28
+[10-Feb-2019 01:30:07 America/Denver] PHP Fatal error:  Interface 'Psr\Log\LoggerInterface' not found in /home3/asiagolf/public_html/vendor/monolog/monolog/src/Monolog/Logger.php on line 28

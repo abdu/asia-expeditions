@@ -1,0 +1,6 @@
+[08-Feb-2019 22:06:29 America/Denver] PHP Fatal error:  Interface 'Ramsey\Uuid\Converter\TimeConverterInterface' not found in /home3/asiagolf/public_html/vendor/ramsey/uuid/src/Converter/Time/BigNumberTimeConverter.php on line 26
+[08-Feb-2019 22:06:29 America/Denver] PHP Fatal error:  Interface 'Ramsey\Uuid\Converter\TimeConverterInterface' not found in /home3/asiagolf/public_html/vendor/ramsey/uuid/src/Converter/Time/DegradedTimeConverter.php on line 26
+[08-Feb-2019 22:06:30 America/Denver] PHP Fatal error:  Interface 'Ramsey\Uuid\Converter\TimeConverterInterface' not found in /home3/asiagolf/public_html/vendor/ramsey/uuid/src/Converter/Time/PhpTimeConverter.php on line 25
+[10-Feb-2019 01:36:10 America/Denver] PHP Fatal error:  Interface 'Ramsey\Uuid\Converter\TimeConverterInterface' not found in /home3/asiagolf/public_html/vendor/ramsey/uuid/src/Converter/Time/BigNumberTimeConverter.php on line 26
+[10-Feb-2019 01:36:10 America/Denver] PHP Fatal error:  Interface 'Ramsey\Uuid\Converter\TimeConverterInterface' not found in /home3/asiagolf/public_html/vendor/ramsey/uuid/src/Converter/Time/PhpTimeConverter.php on line 25
+[10-Feb-2019 01:36:10 America/Denver] PHP Fatal error:  Interface 'Ramsey\Uuid\Converter\TimeConverterInterface' not found in /home3/asiagolf/public_html/vendor/ramsey/uuid/src/Converter/Time/DegradedTimeConverter.php on line 26

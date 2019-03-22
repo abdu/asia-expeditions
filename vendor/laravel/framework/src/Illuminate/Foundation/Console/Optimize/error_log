@@ -1,0 +1,2 @@
+[08-Feb-2019 22:34:58 America/Denver] PHP Notice:  Undefined variable: app in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Console/Optimize/config.php on line 3
+[10-Feb-2019 01:41:25 America/Denver] PHP Notice:  Undefined variable: app in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Console/Optimize/config.php on line 3

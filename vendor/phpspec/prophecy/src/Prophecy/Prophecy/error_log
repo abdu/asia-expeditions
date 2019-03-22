@@ -1,0 +1,4 @@
+[08-Feb-2019 22:04:01 America/Denver] PHP Fatal error:  Interface 'Prophecy\Prophecy\ProphecyInterface' not found in /home3/asiagolf/public_html/vendor/phpspec/prophecy/src/Prophecy/Prophecy/ObjectProphecy.php on line 31
+[08-Feb-2019 22:04:02 America/Denver] PHP Fatal error:  Interface 'Prophecy\Prophecy\RevealerInterface' not found in /home3/asiagolf/public_html/vendor/phpspec/prophecy/src/Prophecy/Prophecy/Revealer.php on line 20
+[10-Feb-2019 01:35:41 America/Denver] PHP Fatal error:  Interface 'Prophecy\Prophecy\ProphecyInterface' not found in /home3/asiagolf/public_html/vendor/phpspec/prophecy/src/Prophecy/Prophecy/ObjectProphecy.php on line 31
+[10-Feb-2019 01:35:41 America/Denver] PHP Fatal error:  Interface 'Prophecy\Prophecy\RevealerInterface' not found in /home3/asiagolf/public_html/vendor/phpspec/prophecy/src/Prophecy/Prophecy/Revealer.php on line 20

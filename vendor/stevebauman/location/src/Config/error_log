@@ -1,0 +1,10 @@
+[26-Jan-2018 15:07:54 America/Denver] PHP Fatal error:  Call to undefined function database_path() in /home3/asiagolf/public_html/vendor/stevebauman/location/src/Config/config.php on line 72
+[27-Jan-2018 20:25:14 America/Denver] PHP Fatal error:  Call to undefined function database_path() in /home3/asiagolf/public_html/vendor/stevebauman/location/src/Config/config.php on line 72
+[18-May-2018 23:43:16 America/Denver] PHP Fatal error:  Call to undefined function database_path() in /home3/asiagolf/public_html/vendor/stevebauman/location/src/Config/config.php on line 72
+[19-May-2018 07:32:24 America/Denver] PHP Fatal error:  Call to undefined function database_path() in /home3/asiagolf/public_html/vendor/stevebauman/location/src/Config/config.php on line 72
+[19-May-2018 09:56:10 America/Denver] PHP Fatal error:  Call to undefined function database_path() in /home3/asiagolf/public_html/vendor/stevebauman/location/src/Config/config.php on line 72
+[19-May-2018 17:41:31 America/Denver] PHP Fatal error:  Call to undefined function database_path() in /home3/asiagolf/public_html/vendor/stevebauman/location/src/Config/config.php on line 72
+[19-May-2018 23:22:02 America/Denver] PHP Fatal error:  Call to undefined function database_path() in /home3/asiagolf/public_html/vendor/stevebauman/location/src/Config/config.php on line 72
+[08-Feb-2019 21:42:40 America/Denver] PHP Fatal error:  Call to undefined function database_path() in /home3/asiagolf/public_html/vendor/stevebauman/location/src/Config/config.php on line 72
+[09-Feb-2019 15:26:52 America/Denver] PHP Fatal error:  Call to undefined function database_path() in /home3/asiagolf/public_html/vendor/stevebauman/location/src/Config/config.php on line 72
+[10-Feb-2019 01:31:47 America/Denver] PHP Fatal error:  Call to undefined function database_path() in /home3/asiagolf/public_html/vendor/stevebauman/location/src/Config/config.php on line 72

@@ -1,0 +1,7 @@
+[01-Jun-2018 06:15:31 America/Denver] PHP Fatal error:  Class 'Symfony\Component\Console\Command\Command' not found in /home3/asiagolf/public_html/vendor/symfony/yaml/Command/LintCommand.php on line 30
+[01-Jun-2018 13:49:31 America/Denver] PHP Fatal error:  Class 'Symfony\Component\Console\Command\Command' not found in /home3/asiagolf/public_html/vendor/symfony/yaml/Command/LintCommand.php on line 30
+[01-Jun-2018 17:21:40 America/Denver] PHP Fatal error:  Class 'Symfony\Component\Console\Command\Command' not found in /home3/asiagolf/public_html/vendor/symfony/yaml/Command/LintCommand.php on line 30
+[03-Jun-2018 01:01:47 America/Denver] PHP Fatal error:  Class 'Symfony\Component\Console\Command\Command' not found in /home3/asiagolf/public_html/vendor/symfony/yaml/Command/LintCommand.php on line 30
+[30-Jan-2019 01:07:02 America/Denver] PHP Fatal error:  Class 'Symfony\Component\Console\Command\Command' not found in /home3/asiagolf/public_html/vendor/symfony/yaml/Command/LintCommand.php on line 30
+[08-Feb-2019 21:37:28 America/Denver] PHP Fatal error:  Class 'Symfony\Component\Console\Command\Command' not found in /home3/asiagolf/public_html/vendor/symfony/yaml/Command/LintCommand.php on line 30
+[10-Feb-2019 01:29:36 America/Denver] PHP Fatal error:  Class 'Symfony\Component\Console\Command\Command' not found in /home3/asiagolf/public_html/vendor/symfony/yaml/Command/LintCommand.php on line 30

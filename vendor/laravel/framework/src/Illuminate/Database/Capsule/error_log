@@ -1,0 +1,2 @@
+[08-Feb-2019 22:17:11 America/Denver] PHP Fatal error:  Trait 'Illuminate\Support\Traits\CapsuleManagerTrait' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Database/Capsule/Manager.php on line 15
+[10-Feb-2019 01:38:35 America/Denver] PHP Fatal error:  Trait 'Illuminate\Support\Traits\CapsuleManagerTrait' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Database/Capsule/Manager.php on line 15

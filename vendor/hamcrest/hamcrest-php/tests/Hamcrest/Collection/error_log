@@ -1,0 +1,6 @@
+[08-Feb-2019 21:55:17 America/Denver] PHP Fatal error:  Class 'Hamcrest\AbstractMatcherTest' not found in /home3/asiagolf/public_html/vendor/hamcrest/hamcrest-php/tests/Hamcrest/Collection/IsEmptyTraversableTest.php on line 7
+[08-Feb-2019 21:55:17 America/Denver] PHP Fatal error:  Class 'Hamcrest\AbstractMatcherTest' not found in /home3/asiagolf/public_html/vendor/hamcrest/hamcrest-php/tests/Hamcrest/Collection/IsTraversableWithSizeTest.php on line 5
+[10-Feb-2019 01:33:35 America/Denver] PHP Fatal error:  Class 'Hamcrest\AbstractMatcherTest' not found in /home3/asiagolf/public_html/vendor/hamcrest/hamcrest-php/tests/Hamcrest/Collection/IsEmptyTraversableTest.php on line 7
+[10-Feb-2019 01:33:36 America/Denver] PHP Fatal error:  Class 'Hamcrest\AbstractMatcherTest' not found in /home3/asiagolf/public_html/vendor/hamcrest/hamcrest-php/tests/Hamcrest/Collection/IsTraversableWithSizeTest.php on line 5
+[14-Feb-2019 21:03:07 America/Denver] PHP Fatal error:  Class 'Hamcrest\AbstractMatcherTest' not found in /home3/asiagolf/public_html/vendor/hamcrest/hamcrest-php/tests/Hamcrest/Collection/IsEmptyTraversableTest.php on line 7
+[14-Feb-2019 21:06:17 America/Denver] PHP Fatal error:  Class 'Hamcrest\AbstractMatcherTest' not found in /home3/asiagolf/public_html/vendor/hamcrest/hamcrest-php/tests/Hamcrest/Collection/IsTraversableWithSizeTest.php on line 5

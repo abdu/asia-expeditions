@@ -1,0 +1,4 @@
+[08-Feb-2019 22:02:13 America/Denver] PHP Fatal error:  Class 'PHPUnit_Framework_TestCase' not found in /home3/asiagolf/public_html/vendor/mockery/mockery/tests/Mockery/Generator/DefinedTargetClassTest.php on line 8
+[08-Feb-2019 22:02:13 America/Denver] PHP Fatal error:  Class 'PHPUnit_Framework_TestCase' not found in /home3/asiagolf/public_html/vendor/mockery/mockery/tests/Mockery/Generator/MockConfigurationTest.php on line 6
+[10-Feb-2019 01:34:55 America/Denver] PHP Fatal error:  Class 'PHPUnit_Framework_TestCase' not found in /home3/asiagolf/public_html/vendor/mockery/mockery/tests/Mockery/Generator/DefinedTargetClassTest.php on line 8
+[10-Feb-2019 01:34:55 America/Denver] PHP Fatal error:  Class 'PHPUnit_Framework_TestCase' not found in /home3/asiagolf/public_html/vendor/mockery/mockery/tests/Mockery/Generator/MockConfigurationTest.php on line 6

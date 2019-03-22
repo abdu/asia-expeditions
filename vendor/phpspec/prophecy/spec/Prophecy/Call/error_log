@@ -1,0 +1,2 @@
+[10-Feb-2019 01:35:33 America/Denver] PHP Fatal error:  Class 'PhpSpec\ObjectBehavior' not found in /home3/asiagolf/public_html/vendor/phpspec/prophecy/spec/Prophecy/Call/CallCenterSpec.php on line 12
+[10-Feb-2019 01:35:33 America/Denver] PHP Fatal error:  Class 'PhpSpec\ObjectBehavior' not found in /home3/asiagolf/public_html/vendor/phpspec/prophecy/spec/Prophecy/Call/CallSpec.php on line 8

@@ -1,0 +1,4 @@
+[08-Feb-2019 22:18:32 America/Denver] PHP Fatal error:  Class 'Illuminate\Console\GeneratorCommand' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Routing/Console/MiddlewareMakeCommand.php on line 8
+[08-Feb-2019 22:18:32 America/Denver] PHP Fatal error:  Class 'Illuminate\Console\GeneratorCommand' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Routing/Console/ControllerMakeCommand.php on line 11
+[10-Feb-2019 01:39:14 America/Denver] PHP Fatal error:  Class 'Illuminate\Console\GeneratorCommand' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Routing/Console/ControllerMakeCommand.php on line 11
+[10-Feb-2019 01:39:14 America/Denver] PHP Fatal error:  Class 'Illuminate\Console\GeneratorCommand' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Routing/Console/MiddlewareMakeCommand.php on line 8

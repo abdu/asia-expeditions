@@ -1,0 +1,6 @@
+[04-Jul-2018 10:21:27 America/Denver] PHP Fatal error:  Class 'Illuminate\Support\ServiceProvider' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php on line 9
+[08-Jul-2018 11:40:11 America/Denver] PHP Fatal error:  Class 'Illuminate\Support\ServiceProvider' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php on line 9
+[08-Feb-2019 21:56:13 America/Denver] PHP Fatal error:  Interface 'Illuminate\Contracts\Encryption\Encrypter' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Encryption/Encrypter.php on line 11
+[08-Feb-2019 21:56:13 America/Denver] PHP Fatal error:  Class 'Illuminate\Support\ServiceProvider' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php on line 9
+[10-Feb-2019 01:33:52 America/Denver] PHP Fatal error:  Class 'Illuminate\Support\ServiceProvider' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php on line 9
+[10-Feb-2019 01:33:52 America/Denver] PHP Fatal error:  Interface 'Illuminate\Contracts\Encryption\Encrypter' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Encryption/Encrypter.php on line 11

@@ -1,0 +1,12 @@
+[09-Apr-2018 10:44:06 America/Denver] PHP Notice:  Undefined variable: factory in /home3/asiagolf/public_html/database/factories/ModelFactory.php on line 15
+[09-Apr-2018 10:44:06 America/Denver] PHP Fatal error:  Call to a member function define() on null in /home3/asiagolf/public_html/database/factories/ModelFactory.php on line 15
+[09-Apr-2018 16:29:52 America/Denver] PHP Notice:  Undefined variable: factory in /home3/asiagolf/public_html/database/factories/ModelFactory.php on line 15
+[09-Apr-2018 16:29:52 America/Denver] PHP Fatal error:  Call to a member function define() on null in /home3/asiagolf/public_html/database/factories/ModelFactory.php on line 15
+[09-Apr-2018 19:27:41 America/Denver] PHP Notice:  Undefined variable: factory in /home3/asiagolf/public_html/database/factories/ModelFactory.php on line 15
+[09-Apr-2018 19:27:41 America/Denver] PHP Fatal error:  Call to a member function define() on null in /home3/asiagolf/public_html/database/factories/ModelFactory.php on line 15
+[10-Apr-2018 01:27:09 America/Denver] PHP Notice:  Undefined variable: factory in /home3/asiagolf/public_html/database/factories/ModelFactory.php on line 15
+[10-Apr-2018 01:27:09 America/Denver] PHP Fatal error:  Call to a member function define() on null in /home3/asiagolf/public_html/database/factories/ModelFactory.php on line 15
+[10-Apr-2018 07:22:44 America/Denver] PHP Notice:  Undefined variable: factory in /home3/asiagolf/public_html/database/factories/ModelFactory.php on line 15
+[10-Apr-2018 07:22:44 America/Denver] PHP Fatal error:  Call to a member function define() on null in /home3/asiagolf/public_html/database/factories/ModelFactory.php on line 15
+[12-Apr-2018 17:55:30 America/Denver] PHP Notice:  Undefined variable: factory in /home3/asiagolf/public_html/database/factories/ModelFactory.php on line 15
+[12-Apr-2018 17:55:30 America/Denver] PHP Fatal error:  Call to a member function define() on null in /home3/asiagolf/public_html/database/factories/ModelFactory.php on line 15

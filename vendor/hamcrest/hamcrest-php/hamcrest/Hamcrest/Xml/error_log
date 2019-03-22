@@ -1,0 +1,4 @@
+[08-Jul-2018 00:27:34 America/Denver] PHP Fatal error:  Class 'Hamcrest\DiagnosingMatcher' not found in /home3/asiagolf/public_html/vendor/hamcrest/hamcrest-php/hamcrest/Hamcrest/Xml/HasXPath.php on line 18
+[13-Jul-2018 16:57:53 America/Denver] PHP Fatal error:  Class 'Hamcrest\DiagnosingMatcher' not found in /home3/asiagolf/public_html/vendor/hamcrest/hamcrest-php/hamcrest/Hamcrest/Xml/HasXPath.php on line 18
+[08-Feb-2019 21:54:58 America/Denver] PHP Fatal error:  Class 'Hamcrest\DiagnosingMatcher' not found in /home3/asiagolf/public_html/vendor/hamcrest/hamcrest-php/hamcrest/Hamcrest/Xml/HasXPath.php on line 18
+[10-Feb-2019 01:33:34 America/Denver] PHP Fatal error:  Class 'Hamcrest\DiagnosingMatcher' not found in /home3/asiagolf/public_html/vendor/hamcrest/hamcrest-php/hamcrest/Hamcrest/Xml/HasXPath.php on line 18

@@ -1,0 +1,2 @@
+[08-Feb-2019 22:16:58 America/Denver] PHP Fatal error:  Interface 'Illuminate\Contracts\Pagination\Paginator' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Contracts/Pagination/LengthAwarePaginator.php on line 6
+[10-Feb-2019 01:38:47 America/Denver] PHP Fatal error:  Interface 'Illuminate\Contracts\Pagination\Paginator' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Contracts/Pagination/LengthAwarePaginator.php on line 6

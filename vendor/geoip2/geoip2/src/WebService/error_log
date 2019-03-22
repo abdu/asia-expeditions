@@ -1,0 +1,6 @@
+[26-Jan-2018 15:12:23 America/Denver] PHP Fatal error:  Interface 'GeoIp2\ProviderInterface' not found in /home3/asiagolf/public_html/vendor/geoip2/geoip2/src/WebService/Client.php on line 46
+[27-Jan-2018 20:28:29 America/Denver] PHP Fatal error:  Interface 'GeoIp2\ProviderInterface' not found in /home3/asiagolf/public_html/vendor/geoip2/geoip2/src/WebService/Client.php on line 46
+[03-May-2018 00:39:53 America/Denver] PHP Fatal error:  Interface 'GeoIp2\ProviderInterface' not found in /home3/asiagolf/public_html/vendor/geoip2/geoip2/src/WebService/Client.php on line 46
+[07-May-2018 12:06:17 America/Denver] PHP Fatal error:  Interface 'GeoIp2\ProviderInterface' not found in /home3/asiagolf/public_html/vendor/geoip2/geoip2/src/WebService/Client.php on line 46
+[08-Feb-2019 21:38:56 America/Denver] PHP Fatal error:  Interface 'GeoIp2\ProviderInterface' not found in /home3/asiagolf/public_html/vendor/geoip2/geoip2/src/WebService/Client.php on line 46
+[10-Feb-2019 01:29:51 America/Denver] PHP Fatal error:  Interface 'GeoIp2\ProviderInterface' not found in /home3/asiagolf/public_html/vendor/geoip2/geoip2/src/WebService/Client.php on line 46

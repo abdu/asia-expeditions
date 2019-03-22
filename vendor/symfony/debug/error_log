@@ -1,0 +1,11 @@
+[19-Mar-2018 03:37:56 America/Denver] PHP Fatal error:  Class 'Psr\Log\AbstractLogger' not found in /home3/asiagolf/public_html/vendor/symfony/debug/BufferingLogger.php on line 22
+[19-Mar-2018 16:46:40 America/Denver] PHP Fatal error:  Class 'Psr\Log\AbstractLogger' not found in /home3/asiagolf/public_html/vendor/symfony/debug/BufferingLogger.php on line 22
+[19-Mar-2018 16:49:14 America/Denver] PHP Fatal error:  Class 'Psr\Log\AbstractLogger' not found in /home3/asiagolf/public_html/vendor/symfony/debug/BufferingLogger.php on line 22
+[20-Mar-2018 01:47:48 America/Denver] PHP Fatal error:  Class 'Psr\Log\AbstractLogger' not found in /home3/asiagolf/public_html/vendor/symfony/debug/BufferingLogger.php on line 22
+[30-May-2018 13:05:03 America/Denver] PHP Fatal error:  Class 'Psr\Log\AbstractLogger' not found in /home3/asiagolf/public_html/vendor/symfony/debug/BufferingLogger.php on line 22
+[30-May-2018 21:13:06 America/Denver] PHP Fatal error:  Class 'Psr\Log\AbstractLogger' not found in /home3/asiagolf/public_html/vendor/symfony/debug/BufferingLogger.php on line 22
+[31-May-2018 00:52:31 America/Denver] PHP Fatal error:  Class 'Psr\Log\AbstractLogger' not found in /home3/asiagolf/public_html/vendor/symfony/debug/BufferingLogger.php on line 22
+[31-May-2018 03:31:25 America/Denver] PHP Fatal error:  Class 'Psr\Log\AbstractLogger' not found in /home3/asiagolf/public_html/vendor/symfony/debug/BufferingLogger.php on line 22
+[31-May-2018 07:41:07 America/Denver] PHP Fatal error:  Class 'Psr\Log\AbstractLogger' not found in /home3/asiagolf/public_html/vendor/symfony/debug/BufferingLogger.php on line 22
+[08-Feb-2019 21:28:20 America/Denver] PHP Fatal error:  Class 'Psr\Log\AbstractLogger' not found in /home3/asiagolf/public_html/vendor/symfony/debug/BufferingLogger.php on line 22
+[10-Feb-2019 01:27:02 America/Denver] PHP Fatal error:  Class 'Psr\Log\AbstractLogger' not found in /home3/asiagolf/public_html/vendor/symfony/debug/BufferingLogger.php on line 22

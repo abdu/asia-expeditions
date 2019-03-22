@@ -1,0 +1,7 @@
+[20-Jul-2018 18:32:34 America/Denver] PHP Fatal error:  Interface 'Illuminate\Contracts\Http\Kernel' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php on line 16
+[07-Feb-2019 05:16:22 America/Denver] PHP Fatal error:  Interface 'Illuminate\Contracts\Http\Kernel' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php on line 16
+[08-Feb-2019 22:17:48 America/Denver] PHP Fatal error:  Class 'Illuminate\Http\Request' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/FormRequest.php on line 17
+[08-Feb-2019 22:17:50 America/Denver] PHP Fatal error:  Interface 'Illuminate\Contracts\Http\Kernel' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php on line 16
+[10-Feb-2019 01:39:03 America/Denver] PHP Fatal error:  Interface 'Illuminate\Contracts\Http\Kernel' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php on line 16
+[10-Feb-2019 01:39:03 America/Denver] PHP Fatal error:  Class 'Illuminate\Http\Request' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/FormRequest.php on line 17
+[13-Feb-2019 17:16:08 America/Denver] PHP Fatal error:  Class 'Illuminate\Http\Request' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/FormRequest.php on line 17

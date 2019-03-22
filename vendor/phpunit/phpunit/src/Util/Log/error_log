@@ -1,0 +1,8 @@
+[08-Feb-2019 22:08:27 America/Denver] PHP Fatal error:  Class 'PHPUnit_Util_Printer' not found in /home3/asiagolf/public_html/vendor/phpunit/phpunit/src/Util/Log/TAP.php on line 15
+[08-Feb-2019 22:08:27 America/Denver] PHP Fatal error:  Class 'PHPUnit_Util_Printer' not found in /home3/asiagolf/public_html/vendor/phpunit/phpunit/src/Util/Log/JUnit.php on line 16
+[08-Feb-2019 22:08:27 America/Denver] PHP Fatal error:  Class 'PHPUnit_Util_Printer' not found in /home3/asiagolf/public_html/vendor/phpunit/phpunit/src/Util/Log/JSON.php on line 14
+[08-Feb-2019 22:08:31 America/Denver] PHP Fatal error:  Class 'PHPUnit_TextUI_ResultPrinter' not found in /home3/asiagolf/public_html/vendor/phpunit/phpunit/src/Util/Log/TeamCity.php on line 18
+[10-Feb-2019 01:36:01 America/Denver] PHP Fatal error:  Class 'PHPUnit_Util_Printer' not found in /home3/asiagolf/public_html/vendor/phpunit/phpunit/src/Util/Log/JUnit.php on line 16
+[10-Feb-2019 01:36:01 America/Denver] PHP Fatal error:  Class 'PHPUnit_Util_Printer' not found in /home3/asiagolf/public_html/vendor/phpunit/phpunit/src/Util/Log/TAP.php on line 15
+[10-Feb-2019 01:36:01 America/Denver] PHP Fatal error:  Class 'PHPUnit_Util_Printer' not found in /home3/asiagolf/public_html/vendor/phpunit/phpunit/src/Util/Log/JSON.php on line 14
+[10-Feb-2019 01:36:01 America/Denver] PHP Fatal error:  Class 'PHPUnit_TextUI_ResultPrinter' not found in /home3/asiagolf/public_html/vendor/phpunit/phpunit/src/Util/Log/TeamCity.php on line 18

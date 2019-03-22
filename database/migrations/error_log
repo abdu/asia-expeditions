@@ -1,0 +1,8 @@
+[08-Apr-2018 23:11:45 America/Denver] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home3/asiagolf/public_html/database/migrations/2014_10_12_000000_create_users_table.php on line 8
+[08-Apr-2018 23:15:32 America/Denver] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home3/asiagolf/public_html/database/migrations/2014_10_12_100000_create_password_resets_table.php on line 8
+[09-Apr-2018 06:30:37 America/Denver] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home3/asiagolf/public_html/database/migrations/2014_10_12_000000_create_users_table.php on line 8
+[09-Apr-2018 06:34:24 America/Denver] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home3/asiagolf/public_html/database/migrations/2014_10_12_100000_create_password_resets_table.php on line 8
+[09-Apr-2018 07:16:01 America/Denver] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home3/asiagolf/public_html/database/migrations/2014_10_12_000000_create_users_table.php on line 8
+[09-Apr-2018 13:19:38 America/Denver] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home3/asiagolf/public_html/database/migrations/2014_10_12_000000_create_users_table.php on line 8
+[09-Apr-2018 19:35:15 America/Denver] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home3/asiagolf/public_html/database/migrations/2014_10_12_000000_create_users_table.php on line 8
+[09-Apr-2018 19:54:10 America/Denver] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home3/asiagolf/public_html/database/migrations/2014_10_12_100000_create_password_resets_table.php on line 8

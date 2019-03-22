@@ -1,0 +1,12 @@
+[31-Jan-2019 01:19:22 America/Denver] PHP Fatal error:  Interface 'Illuminate\Contracts\Mail\Mailable' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Mail/Mailable.php on line 16
+[31-Jan-2019 16:03:09 America/Denver] PHP Fatal error:  Class 'Illuminate\Support\ServiceProvider' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Mail/MailServiceProvider.php on line 9
+[04-Feb-2019 18:40:29 America/Denver] PHP Fatal error:  Class 'Illuminate\Support\Manager' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Mail/TransportManager.php on line 20
+[05-Feb-2019 05:48:18 America/Denver] PHP Fatal error:  Interface 'Illuminate\Contracts\Mail\Mailer' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php on line 18
+[08-Feb-2019 21:56:32 America/Denver] PHP Fatal error:  Class 'Illuminate\Support\ServiceProvider' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Mail/MailServiceProvider.php on line 9
+[08-Feb-2019 21:56:32 America/Denver] PHP Fatal error:  Interface 'Illuminate\Contracts\Mail\Mailable' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Mail/Mailable.php on line 16
+[08-Feb-2019 21:56:34 America/Denver] PHP Fatal error:  Interface 'Illuminate\Contracts\Mail\Mailer' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php on line 18
+[08-Feb-2019 21:56:38 America/Denver] PHP Fatal error:  Class 'Illuminate\Support\Manager' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Mail/TransportManager.php on line 20
+[10-Feb-2019 01:34:02 America/Denver] PHP Fatal error:  Class 'Illuminate\Support\ServiceProvider' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Mail/MailServiceProvider.php on line 9
+[10-Feb-2019 01:34:02 America/Denver] PHP Fatal error:  Interface 'Illuminate\Contracts\Mail\Mailable' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Mail/Mailable.php on line 16
+[10-Feb-2019 01:34:02 America/Denver] PHP Fatal error:  Interface 'Illuminate\Contracts\Mail\Mailer' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php on line 18
+[10-Feb-2019 01:34:03 America/Denver] PHP Fatal error:  Class 'Illuminate\Support\Manager' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Mail/TransportManager.php on line 20

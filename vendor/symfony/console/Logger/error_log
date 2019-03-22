@@ -1,0 +1,9 @@
+[02-Jun-2018 15:07:48 America/Denver] PHP Fatal error:  Class 'Psr\Log\AbstractLogger' not found in /home3/asiagolf/public_html/vendor/symfony/console/Logger/ConsoleLogger.php on line 28
+[03-Jun-2018 00:20:09 America/Denver] PHP Fatal error:  Class 'Psr\Log\AbstractLogger' not found in /home3/asiagolf/public_html/vendor/symfony/console/Logger/ConsoleLogger.php on line 28
+[03-Jun-2018 08:13:05 America/Denver] PHP Fatal error:  Class 'Psr\Log\AbstractLogger' not found in /home3/asiagolf/public_html/vendor/symfony/console/Logger/ConsoleLogger.php on line 28
+[03-Jun-2018 23:00:45 America/Denver] PHP Fatal error:  Class 'Psr\Log\AbstractLogger' not found in /home3/asiagolf/public_html/vendor/symfony/console/Logger/ConsoleLogger.php on line 28
+[16-Jul-2018 13:59:47 America/Denver] PHP Fatal error:  Class 'Psr\Log\AbstractLogger' not found in /home3/asiagolf/public_html/vendor/symfony/console/Logger/ConsoleLogger.php on line 28
+[17-Jul-2018 19:22:35 America/Denver] PHP Fatal error:  Class 'Psr\Log\AbstractLogger' not found in /home3/asiagolf/public_html/vendor/symfony/console/Logger/ConsoleLogger.php on line 28
+[30-Jan-2019 03:01:48 America/Denver] PHP Fatal error:  Class 'Psr\Log\AbstractLogger' not found in /home3/asiagolf/public_html/vendor/symfony/console/Logger/ConsoleLogger.php on line 28
+[08-Feb-2019 21:33:47 America/Denver] PHP Fatal error:  Class 'Psr\Log\AbstractLogger' not found in /home3/asiagolf/public_html/vendor/symfony/console/Logger/ConsoleLogger.php on line 28
+[10-Feb-2019 01:28:30 America/Denver] PHP Fatal error:  Class 'Psr\Log\AbstractLogger' not found in /home3/asiagolf/public_html/vendor/symfony/console/Logger/ConsoleLogger.php on line 28

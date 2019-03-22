@@ -1,0 +1,10 @@
+[08-Feb-2019 21:41:46 America/Denver] PHP Fatal error:  Interface 'PhpParser\Builder' not found in /home3/asiagolf/public_html/vendor/nikic/php-parser/lib/PhpParser/BuilderAbstract.php on line 12
+[08-Feb-2019 21:41:54 America/Denver] PHP Fatal error:  Interface 'PhpParser\Node' not found in /home3/asiagolf/public_html/vendor/nikic/php-parser/lib/PhpParser/NodeAbstract.php on line 5
+[08-Feb-2019 21:41:58 America/Denver] PHP Fatal error:  Interface 'PhpParser\NodeTraverserInterface' not found in /home3/asiagolf/public_html/vendor/nikic/php-parser/lib/PhpParser/NodeTraverser.php on line 6
+[08-Feb-2019 21:41:59 America/Denver] PHP Fatal error:  Interface 'PhpParser\NodeVisitor' not found in /home3/asiagolf/public_html/vendor/nikic/php-parser/lib/PhpParser/NodeVisitorAbstract.php on line 9
+[08-Feb-2019 21:41:59 America/Denver] PHP Fatal error:  Interface 'PhpParser\Parser' not found in /home3/asiagolf/public_html/vendor/nikic/php-parser/lib/PhpParser/ParserAbstract.php on line 23
+[10-Feb-2019 01:30:22 America/Denver] PHP Fatal error:  Interface 'PhpParser\Builder' not found in /home3/asiagolf/public_html/vendor/nikic/php-parser/lib/PhpParser/BuilderAbstract.php on line 12
+[10-Feb-2019 01:30:23 America/Denver] PHP Fatal error:  Interface 'PhpParser\Node' not found in /home3/asiagolf/public_html/vendor/nikic/php-parser/lib/PhpParser/NodeAbstract.php on line 5
+[10-Feb-2019 01:30:23 America/Denver] PHP Fatal error:  Interface 'PhpParser\NodeTraverserInterface' not found in /home3/asiagolf/public_html/vendor/nikic/php-parser/lib/PhpParser/NodeTraverser.php on line 6
+[10-Feb-2019 01:30:24 America/Denver] PHP Fatal error:  Interface 'PhpParser\NodeVisitor' not found in /home3/asiagolf/public_html/vendor/nikic/php-parser/lib/PhpParser/NodeVisitorAbstract.php on line 9
+[10-Feb-2019 01:30:24 America/Denver] PHP Fatal error:  Interface 'PhpParser\Parser' not found in /home3/asiagolf/public_html/vendor/nikic/php-parser/lib/PhpParser/ParserAbstract.php on line 23

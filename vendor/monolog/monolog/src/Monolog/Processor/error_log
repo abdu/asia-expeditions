@@ -1,0 +1,4 @@
+[08-Feb-2019 21:58:16 America/Denver] PHP Fatal error:  Class 'Monolog\Processor\MemoryProcessor' not found in /home3/asiagolf/public_html/vendor/monolog/monolog/src/Monolog/Processor/MemoryPeakUsageProcessor.php on line 21
+[08-Feb-2019 21:58:16 America/Denver] PHP Fatal error:  Class 'Monolog\Processor\MemoryProcessor' not found in /home3/asiagolf/public_html/vendor/monolog/monolog/src/Monolog/Processor/MemoryUsageProcessor.php on line 21
+[10-Feb-2019 01:34:48 America/Denver] PHP Fatal error:  Class 'Monolog\Processor\MemoryProcessor' not found in /home3/asiagolf/public_html/vendor/monolog/monolog/src/Monolog/Processor/MemoryPeakUsageProcessor.php on line 21
+[10-Feb-2019 01:34:48 America/Denver] PHP Fatal error:  Class 'Monolog\Processor\MemoryProcessor' not found in /home3/asiagolf/public_html/vendor/monolog/monolog/src/Monolog/Processor/MemoryUsageProcessor.php on line 21

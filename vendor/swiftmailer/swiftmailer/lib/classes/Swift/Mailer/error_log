@@ -1,0 +1,2 @@
+[08-Feb-2019 22:27:52 America/Denver] PHP Fatal error:  Interface 'Swift_Mailer_RecipientIterator' not found in /home3/asiagolf/public_html/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer/ArrayRecipientIterator.php on line 17
+[10-Feb-2019 01:40:40 America/Denver] PHP Fatal error:  Interface 'Swift_Mailer_RecipientIterator' not found in /home3/asiagolf/public_html/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer/ArrayRecipientIterator.php on line 17

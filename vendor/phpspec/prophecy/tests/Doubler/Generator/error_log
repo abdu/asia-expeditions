@@ -1,0 +1,6 @@
+[12-Jun-2018 11:14:17 America/Denver] PHP Fatal error:  Class 'PHPUnit_Framework_TestCase' not found in /home3/asiagolf/public_html/vendor/phpspec/prophecy/tests/Doubler/Generator/ClassMirrorTest.php on line 8
+[12-Jun-2018 18:49:00 America/Denver] PHP Fatal error:  Class 'PHPUnit_Framework_TestCase' not found in /home3/asiagolf/public_html/vendor/phpspec/prophecy/tests/Doubler/Generator/ClassMirrorTest.php on line 8
+[13-Jun-2018 06:11:05 America/Denver] PHP Fatal error:  Class 'PHPUnit_Framework_TestCase' not found in /home3/asiagolf/public_html/vendor/phpspec/prophecy/tests/Doubler/Generator/ClassMirrorTest.php on line 8
+[13-Jun-2018 12:30:00 America/Denver] PHP Fatal error:  Class 'PHPUnit_Framework_TestCase' not found in /home3/asiagolf/public_html/vendor/phpspec/prophecy/tests/Doubler/Generator/ClassMirrorTest.php on line 8
+[08-Feb-2019 22:04:04 America/Denver] PHP Fatal error:  Class 'PHPUnit_Framework_TestCase' not found in /home3/asiagolf/public_html/vendor/phpspec/prophecy/tests/Doubler/Generator/ClassMirrorTest.php on line 8
+[10-Feb-2019 01:35:33 America/Denver] PHP Fatal error:  Class 'PHPUnit_Framework_TestCase' not found in /home3/asiagolf/public_html/vendor/phpspec/prophecy/tests/Doubler/Generator/ClassMirrorTest.php on line 8

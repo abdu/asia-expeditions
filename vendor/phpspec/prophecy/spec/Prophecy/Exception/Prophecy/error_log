@@ -1,0 +1,4 @@
+[08-Feb-2019 22:23:45 America/Denver] PHP Fatal error:  Class 'PhpSpec\ObjectBehavior' not found in /home3/asiagolf/public_html/vendor/phpspec/prophecy/spec/Prophecy/Exception/Prophecy/MethodProphecyExceptionSpec.php on line 11
+[08-Feb-2019 22:23:46 America/Denver] PHP Fatal error:  Class 'PhpSpec\ObjectBehavior' not found in /home3/asiagolf/public_html/vendor/phpspec/prophecy/spec/Prophecy/Exception/Prophecy/ObjectProphecyExceptionSpec.php on line 9
+[10-Feb-2019 01:39:53 America/Denver] PHP Fatal error:  Class 'PhpSpec\ObjectBehavior' not found in /home3/asiagolf/public_html/vendor/phpspec/prophecy/spec/Prophecy/Exception/Prophecy/MethodProphecyExceptionSpec.php on line 11
+[10-Feb-2019 01:39:53 America/Denver] PHP Fatal error:  Class 'PhpSpec\ObjectBehavior' not found in /home3/asiagolf/public_html/vendor/phpspec/prophecy/spec/Prophecy/Exception/Prophecy/ObjectProphecyExceptionSpec.php on line 9

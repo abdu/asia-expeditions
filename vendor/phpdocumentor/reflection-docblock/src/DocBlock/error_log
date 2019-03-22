@@ -1,0 +1,4 @@
+[31-May-2018 19:32:11 America/Denver] PHP Fatal error:  Interface 'phpDocumentor\Reflection\DocBlock\TagFactory' not found in /home3/asiagolf/public_html/vendor/phpdocumentor/reflection-docblock/src/DocBlock/StandardTagFactory.php on line 39
+[01-Jun-2018 21:24:13 America/Denver] PHP Fatal error:  Interface 'phpDocumentor\Reflection\DocBlock\TagFactory' not found in /home3/asiagolf/public_html/vendor/phpdocumentor/reflection-docblock/src/DocBlock/StandardTagFactory.php on line 39
+[08-Feb-2019 21:42:20 America/Denver] PHP Fatal error:  Interface 'phpDocumentor\Reflection\DocBlock\TagFactory' not found in /home3/asiagolf/public_html/vendor/phpdocumentor/reflection-docblock/src/DocBlock/StandardTagFactory.php on line 39
+[10-Feb-2019 01:30:30 America/Denver] PHP Fatal error:  Interface 'phpDocumentor\Reflection\DocBlock\TagFactory' not found in /home3/asiagolf/public_html/vendor/phpdocumentor/reflection-docblock/src/DocBlock/StandardTagFactory.php on line 39

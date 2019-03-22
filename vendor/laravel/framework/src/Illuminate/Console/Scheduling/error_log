@@ -1,0 +1,4 @@
+[08-Feb-2019 22:16:32 America/Denver] PHP Fatal error:  Class 'Illuminate\Console\Scheduling\Event' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Console/Scheduling/CallbackEvent.php on line 10
+[08-Feb-2019 22:16:33 America/Denver] PHP Fatal error:  Class 'Illuminate\Console\Command' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Console/Scheduling/ScheduleRunCommand.php on line 8
+[10-Feb-2019 01:38:34 America/Denver] PHP Fatal error:  Class 'Illuminate\Console\Scheduling\Event' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Console/Scheduling/CallbackEvent.php on line 10
+[10-Feb-2019 01:38:34 America/Denver] PHP Fatal error:  Class 'Illuminate\Console\Command' not found in /home3/asiagolf/public_html/vendor/laravel/framework/src/Illuminate/Console/Scheduling/ScheduleRunCommand.php on line 8

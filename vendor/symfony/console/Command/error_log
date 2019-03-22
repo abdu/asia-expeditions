@@ -1,0 +1,14 @@
+[02-Jun-2018 13:55:55 America/Denver] PHP Fatal error:  Class 'Symfony\Component\Console\Command\Command' not found in /home3/asiagolf/public_html/vendor/symfony/console/Command/HelpCommand.php on line 26
+[02-Jun-2018 14:18:36 America/Denver] PHP Fatal error:  Class 'Symfony\Component\Console\Command\Command' not found in /home3/asiagolf/public_html/vendor/symfony/console/Command/ListCommand.php on line 27
+[02-Jun-2018 22:00:10 America/Denver] PHP Fatal error:  Class 'Symfony\Component\Console\Command\Command' not found in /home3/asiagolf/public_html/vendor/symfony/console/Command/ListCommand.php on line 27
+[02-Jun-2018 22:26:39 America/Denver] PHP Fatal error:  Class 'Symfony\Component\Console\Command\Command' not found in /home3/asiagolf/public_html/vendor/symfony/console/Command/HelpCommand.php on line 26
+[03-Jun-2018 04:15:35 America/Denver] PHP Fatal error:  Class 'Symfony\Component\Console\Command\Command' not found in /home3/asiagolf/public_html/vendor/symfony/console/Command/HelpCommand.php on line 26
+[03-Jun-2018 04:18:31 America/Denver] PHP Fatal error:  Class 'Symfony\Component\Console\Command\Command' not found in /home3/asiagolf/public_html/vendor/symfony/console/Command/ListCommand.php on line 27
+[03-Jun-2018 06:57:24 America/Denver] PHP Fatal error:  Class 'Symfony\Component\Console\Command\Command' not found in /home3/asiagolf/public_html/vendor/symfony/console/Command/ListCommand.php on line 27
+[03-Jun-2018 07:27:40 America/Denver] PHP Fatal error:  Class 'Symfony\Component\Console\Command\Command' not found in /home3/asiagolf/public_html/vendor/symfony/console/Command/HelpCommand.php on line 26
+[03-Jun-2018 09:36:18 America/Denver] PHP Fatal error:  Class 'Symfony\Component\Console\Command\Command' not found in /home3/asiagolf/public_html/vendor/symfony/console/Command/HelpCommand.php on line 26
+[04-Jun-2018 07:27:43 America/Denver] PHP Fatal error:  Class 'Symfony\Component\Console\Command\Command' not found in /home3/asiagolf/public_html/vendor/symfony/console/Command/ListCommand.php on line 27
+[08-Feb-2019 21:33:11 America/Denver] PHP Fatal error:  Class 'Symfony\Component\Console\Command\Command' not found in /home3/asiagolf/public_html/vendor/symfony/console/Command/ListCommand.php on line 27
+[08-Feb-2019 21:33:12 America/Denver] PHP Fatal error:  Class 'Symfony\Component\Console\Command\Command' not found in /home3/asiagolf/public_html/vendor/symfony/console/Command/HelpCommand.php on line 26
+[10-Feb-2019 01:28:25 America/Denver] PHP Fatal error:  Class 'Symfony\Component\Console\Command\Command' not found in /home3/asiagolf/public_html/vendor/symfony/console/Command/HelpCommand.php on line 26
+[10-Feb-2019 01:28:25 America/Denver] PHP Fatal error:  Class 'Symfony\Component\Console\Command\Command' not found in /home3/asiagolf/public_html/vendor/symfony/console/Command/ListCommand.php on line 27

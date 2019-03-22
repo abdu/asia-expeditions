@@ -1,0 +1,4 @@
+[08-Feb-2019 22:32:08 America/Denver] PHP Fatal error:  Class 'PHPUnit_Framework_MockObject_Invocation_Static' not found in /home3/asiagolf/public_html/vendor/phpunit/phpunit-mock-objects/src/Framework/MockObject/Invocation/Object.php on line 17
+[08-Feb-2019 22:32:11 America/Denver] PHP Fatal error:  Interface 'PHPUnit_Framework_MockObject_Invocation' not found in /home3/asiagolf/public_html/vendor/phpunit/phpunit-mock-objects/src/Framework/MockObject/Invocation/Static.php on line 18
+[10-Feb-2019 01:40:08 America/Denver] PHP Fatal error:  Class 'PHPUnit_Framework_MockObject_Invocation_Static' not found in /home3/asiagolf/public_html/vendor/phpunit/phpunit-mock-objects/src/Framework/MockObject/Invocation/Object.php on line 17
+[10-Feb-2019 01:40:08 America/Denver] PHP Fatal error:  Interface 'PHPUnit_Framework_MockObject_Invocation' not found in /home3/asiagolf/public_html/vendor/phpunit/phpunit-mock-objects/src/Framework/MockObject/Invocation/Static.php on line 18

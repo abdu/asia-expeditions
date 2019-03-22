@@ -1,0 +1,4 @@
+[10-Apr-2018 07:35:29 America/Denver] PHP Parse error:  syntax error, unexpected 'version' (T_STRING) in /home3/asiagolf/public_html/vendor/phpunit/php-code-coverage/tests/_files/Report/XML/CoverageForBankAccount/BankAccount.php.xml on line 1
+[12-Apr-2018 19:00:26 America/Denver] PHP Parse error:  syntax error, unexpected 'version' (T_STRING) in /home3/asiagolf/public_html/vendor/phpunit/php-code-coverage/tests/_files/Report/XML/CoverageForBankAccount/BankAccount.php.xml on line 1
+[08-Feb-2019 22:40:08 America/Denver] PHP Parse error:  syntax error, unexpected 'version' (T_STRING) in /home3/asiagolf/public_html/vendor/phpunit/php-code-coverage/tests/_files/Report/XML/CoverageForBankAccount/BankAccount.php.xml on line 1
+[10-Feb-2019 01:41:40 America/Denver] PHP Parse error:  syntax error, unexpected 'version' (T_STRING) in /home3/asiagolf/public_html/vendor/phpunit/php-code-coverage/tests/_files/Report/XML/CoverageForBankAccount/BankAccount.php.xml on line 1

@@ -1,0 +1,2 @@
+[08-Feb-2019 21:37:02 America/Denver] PHP Fatal error:  Interface 'Symfony\Component\HttpKernel\Profiler\ProfilerStorageInterface' not found in /home3/asiagolf/public_html/vendor/symfony/http-kernel/Profiler/FileProfilerStorage.php on line 20
+[10-Feb-2019 01:29:12 America/Denver] PHP Fatal error:  Interface 'Symfony\Component\HttpKernel\Profiler\ProfilerStorageInterface' not found in /home3/asiagolf/public_html/vendor/symfony/http-kernel/Profiler/FileProfilerStorage.php on line 20
