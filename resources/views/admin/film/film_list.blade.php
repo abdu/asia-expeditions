@@ -16,7 +16,7 @@ use App\components\Shared; ?>
                     <label class="location">
                         <select class="form-control input-sm locationchange" name="loc" onchange="submit()">
                             @foreach(\App\Country::where(["web"=>1, 'country_status'=>1])->get() as $loc)
-                            <option value="{{$loc->id}}" {{$conId == $loc->id ? 'selected':''}}>{{$loc->country_name}}</option>
+                            <option value="{{$loc->id}}" {{$conId == $loc->id ? 'selected':''}}  >{{$loc->country_name}}</option>
                             @endforeach
                         </select>
                     </label>
@@ -55,6 +55,8 @@ use App\components\Shared; ?>
 <script type="text/javascript">
   $(document).ready(function(){
      $(".datatable").DataTable();
+     
+     $("#2").attr({"selected": true});
   });
 </script>
 
