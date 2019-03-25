@@ -8,6 +8,7 @@ use App\Province;
 use App\Tour;
 use App\Supplier;
 use App\User;
+use App\Film;
 class AdminController extends Controller
 {
     //''
@@ -56,6 +57,12 @@ class AdminController extends Controller
             $client->save();
             $message = ' Deactive Successfully';
         }
+        else if ($req->action == 'film') {
+            $client = Film::find($id);
+            $client->delete();
+            $message = ' Delete Successfully';
+        }
+       
         return back()->with('message', $message);
     }
 }

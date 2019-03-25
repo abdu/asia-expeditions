@@ -38,6 +38,13 @@
                     <li><a href="{{route('ourNewsForm')}}">Create News</a></li>                   
                 </ul>
             </li>
+              <li class="@yield('film')">
+                <a href="javascripe:void(0)"><i class="fa fa-globe fa-fw"></i>Film<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li><a href="{{route('filmList')}}">Film List </a></li>                   
+                    <li><a href="{{route('filmForm')}}">Create film</a></li>                   
+                </ul>
+            </li>
             <li class="@yield('slide')">
                 <a href="javascripe:void(0)"><i class="fa fa-globe fa-fw"></i> Slide Show​ <span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">

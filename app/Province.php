@@ -16,4 +16,8 @@ class Province extends Model
       public function tour(){
     	return $this->hasMany(Tour::class);
     }
+      public function film(){
+    	return $this->hasMany(Film::class);
+    }
+
 }

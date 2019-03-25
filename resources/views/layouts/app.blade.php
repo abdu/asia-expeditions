@@ -10,6 +10,7 @@
 <meta name=description content="@yield('description')">
 
 <link rel=stylesheet type=text/css href=/css/lib/csscompressed.css>
+<link rel="stylesheet" type="text/css" href="/css/style.css"> 
 <script type="text/javascript" src="/js/compressed.js"></script>
 <script type="text/javascript" src="/js/jquery.lazy.min.js"></script>
 <title>@yield('title') | {{config('app.name')}}</title>

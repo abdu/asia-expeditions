@@ -15,7 +15,7 @@ class CheckAdmin
      */
     public function handle($request, Closure $next)
     {
-        if (isset(\Auth::user()->status)){
+        if (\Auth::check()){
 
             return $next($request);
         }else{

@@ -11,11 +11,13 @@ use App\OurTeam;
 use App\OurNews;
 use App\Mail\ContactUs;
 use App\Country_facts;
+
 use App\Mail\ResetPassword;
 use Carbon\Carbon;
 use Validator;
 
-use App\Setting;    
+use App\Setting; 
+use App\Film;   
 
 use Illuminate\Support\Facades\Mail;
 
@@ -122,10 +124,14 @@ class HomeController extends Controller
         return view('newsletter.getFogort');
     }
     public function getFilm($location){
-
+         $data=Film::get();
         $con = Country::where('country_slug', $location)->first();
-        return view('film.film_list', compact('getFilm','con'));
-
+        return view('film.film_list', compact('con','data'));
+    }
+      public function film_detail($getdata){
+        
+        $data=Film::where('slug',$getdata)->first();
+        return view('film.film_detail', compact('con','data'));
     }
 
     public function doForgot(Request $req)

@@ -36,7 +36,7 @@
 				            </div>
 			            </div>	  
                         <div class="col-md-8">
-                        	<h3 style="font-size: 18px;"><a href="{{route('DetailNew', $newss->slug)}}">{{$newss['tour_name']}}</a></p></h3>
+                        	<h3 style="font-size: 18px;"><a href="{{route('DetailNew', $newss->slug)}}">{{$newss['tour_name']}}</a></h3>
                             <small>
                                 <i class="glyphicon glyphicon-time"></i> {{date('Y-F-d',strtotime($newss['created_at']))}} <span class="twitter"></span>
                                 <br>

@@ -18,6 +18,10 @@ class Country extends Model
     	return $this->hasMany(Tour::class);
     }
 
+      public function film(){
+        return $this->hasMany(Film::class);
+    }
+
     public function slide(){
         return $this->hasMany(SlideShow::class);
     }

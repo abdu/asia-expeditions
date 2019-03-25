@@ -117,6 +117,7 @@ Route::get('checkout', ['uses' => 'CartController@getChechout', 'as' => 'tour.ch
 
 
 Route::get("film/{film_locaton}", "HomeController@getFilm")->name('getFilm');
+Route::get("film/myanmar/{film_deail}", "HomeController@film_detail")->name('film_detail');
 
 Route::post('checkout', ['uses' => 'CartController@getCheckAccount', 'as' => 'check.account']);
 
@@ -156,6 +157,7 @@ Route::group(['middleware' => ['isAdmin']], function () {
 	   	Route::post('ournews/created', 'Admin\TourController@ourNewsCreate')->name('ourNewsCreate');
 
 
+
 	   	Route::get('slideshow', 'Admin\TourController@slideList')->name('slideList');
 	   	Route::get('slide/add', 'Admin\TourController@SlideForm')->name('SlideForm');
 	   	Route::post('slide/created', 'Admin\TourController@createSlide')->name('slideCreate');
@@ -178,7 +180,12 @@ Route::group(['middleware' => ['isAdmin']], function () {
 		Route::post("window/uploadfile", 'Admin\UploadController@uploadfile')->name('uploadfile');
 		Route::post("window/uploadfile/only", 'Admin\UploadController@uploadOnlyFile')->name('uploadOnlyFile');
 		Route::get("window/remove-image/logo", 'Admin\UploadController@RemoveLogo')->name('RemoveLogo');
-	   	
+
+		// film
+	   	Route::get('film', 'Admin\FilmController@filmList')->name('filmList');
+	   	Route::get('film/add', 'Admin\FilmController@filmForm')->name('filmForm');
+	   	Route::post('film/created', 'Admin\FilmController@filmCreate')->name('filmCreate');
+	 	
 	});
 });
 
