@@ -124,7 +124,7 @@ class HomeController extends Controller
         return view('newsletter.getFogort');
     }
     public function getFilm($location){
-         $data=Film::get();
+         $data=Film::paginate(5);
         $con = Country::where('country_slug', $location)->first();
         return view('film.film_list', compact('con','data'));
     }
