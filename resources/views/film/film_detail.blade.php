@@ -73,7 +73,7 @@
                         <h3 style="margin-bottom: 0px;" class="price"> {{$data->title}}</h3>
                         <div class="panel-body">
                             <div class="row">
-                                <p>{{$data->desc}}</p>
+                                <p>{!! $data->desc !!}</p>
                             </div>
                         </div>  
                     </div>  
