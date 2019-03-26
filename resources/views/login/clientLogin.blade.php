@@ -19,7 +19,7 @@
    <main>
     <center>
         <div  class="z-depth-3 y-depth-3 x-depth-3 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px; margin-top: 25px; ">
-          <img src="/img/{{config('app.logo') }}"> 
+          
           <div class="section"></div>          
             <span>Welcome For New member</span>
             @if(isset($_GET['message']))
