@@ -65,3 +65,15 @@ span.psw {
 .alink{
 	font-size: 18px; color: #03a1d1; cursor: pointer;
 }
+
+.stimg{
+  width: 100%;
+  height: 100%; 
+  position: absolute; 
+  background-repeat: no-repeat;
+   background-image: url('/img/youtube-icon.png'); 
+   background-position: center;
+}
+.stimg:hover{
+background-color: #eeeeee4f;
+}
