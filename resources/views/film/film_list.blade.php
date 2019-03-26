@@ -40,7 +40,7 @@
                   <div class="animate" style="">
                     <span class="closes" title="Close Modal">&times;</span>
                     <div class="imgcontainer">
-                     <iframe style="box-shadow: 0px 2px 10px 0px white;" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                     <iframe class="addsize" style="box-shadow: 0px 2px 10px 0px white;"  height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                   </div>
                 </div>

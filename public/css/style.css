@@ -77,3 +77,34 @@ span.psw {
 .stimg:hover{
 background-color: #eeeeee4f;
 }
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+.addsize{width: 300px}
+.stimg{background-size: 80px;}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .addsize{width: 650px;
+    height: 495px;}
+    .stimg{background-size: 80px;}
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .addsize{width: 850px;
+    height: 495px;}
+    .stimg{background-size: 40px;}
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .stimg{background-size: 40px;}
+  .addsize{width: 850px;
+    height: 495px;}
+  }
