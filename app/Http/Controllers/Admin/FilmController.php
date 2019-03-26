@@ -11,11 +11,9 @@ class FilmController extends Controller
 {
     //
     public function filmList(Request $req){
-    	$data=Film::where(['country_id'=>$req->loc])->get();
         $conId = isset($req->loc) ? $req->loc : \Auth::user()->country_id;
+    	$data=Film::where(['country_id'=> $conId])->get();
     	return view('admin.film.film_list', compact('data','conId','proId'));
-
-
     }
       public function filmForm(Request $req){
       	 $tour  = Film::find($req->eid);

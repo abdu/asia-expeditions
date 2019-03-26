@@ -17,6 +17,7 @@
     <div class="card">
         <div class="container-fliud">
             <div class="wrapper">
+<<<<<<< HEAD
      
               <div class=" col-md-12 col-xs-12" style="padding: 12px 0px;">
                 <div class="col-md-12" >            
@@ -26,15 +27,28 @@
                             <br>
                       </small>
                       <div class="panel-body">
+=======
+                <div class=" col-md-12 col-xs-12" style="padding: 12px 0px;">
+                    <div class="col-md-12" >            
+                        <h3 style="margin-bottom: 0px;" class="price"> {{$data->title}}</h3>
+                        <div class="panel-body">
+>>>>>>> 127fef05700ca5dc2c3e8ca68a645dd51dd28b71
                             <div class="row">
                                 <p>{!! $data->desc !!}</p>
                             </div>
                         </div>  
+<<<<<<< HEAD
                       </div>  
                       
                       <div class="clear"></div>
                       <div class="spacing"></div>
               </div>         
+=======
+                    </div>  
+                    <div class="clear"></div>
+                    <div class="spacing"></div>
+                </div>
+>>>>>>> 127fef05700ca5dc2c3e8ca68a645dd51dd28b71
             </div>
           <div class="clear"></div>
           <div class="spacing"></div>
