@@ -63,4 +63,7 @@ class User extends Authenticatable
     public function getUserAll(){
         return \DB::table('users');
     }
+     public function film(){
+        return $this->hasMany(Film::class);
+    }
 }

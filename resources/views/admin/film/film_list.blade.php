@@ -27,9 +27,10 @@ use App\components\Shared; ?>
             <table class="table datatable">
                 <thead>
                     <tr>
-                        <th>title</th>
-                        <th>counry</th>
-                        <th>province</th>                                        
+                        <th>Title</th>
+                        <th>User</th>
+                        <th>Counry</th>
+                        <th>Province</th>                                        
                         <th class="text-right">Status</th>
                     </tr>
                 </thead>
@@ -37,9 +38,9 @@ use App\components\Shared; ?>
                     @foreach($data as $film)        
                     <tr>
                         <td>{{str_limit($film->title,40)}}</td>
-                        <td>
-                            {{{$film->country->country_name or ''}}}
-                        </td>
+
+                        <td>{{$film->user->fullname}}</td>
+                        <td>{{{$film->country->country_name or ''}}}</td>
                         <td>{{{ $film->province->province_name or ''}}}</td>                               
                         <td class="text-right" style="width:12%;">
                             <a href="{{route('filmForm', ['eid' => $film->id, 'action'=> 'update'])}}" class="btn btn-info btn-xs"><i class="fa fa-edit (alias)"></i></a>&nbsp;
