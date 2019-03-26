@@ -35,27 +35,18 @@
     <div class="card">
         <div class="container-fliud">
             <div class="wrapper">
-     
-                      <div class=" col-md-12 col-xs-12" style="padding: 12px 0px;">
+                <div class=" col-md-12 col-xs-12" style="padding: 12px 0px;">
                     <div class="col-md-12" >            
                         <h3 style="margin-bottom: 0px;" class="price"> {{$data->title}}</h3>
                         <div class="panel-body">
                             <div class="row">
-<<<<<<< HEAD
                                 <p>{!! $data->desc !!}</p>
-=======
-                                <p>{!!$data->desc!!}</p>
->>>>>>> 0ccbd9468ab84a5e8a7a4021ec6b8ae150fd68fc
                             </div>
                         </div>  
                     </div>  
-                      
                     <div class="clear"></div>
                     <div class="spacing"></div>
-       
                 </div>
-
-         
             </div>
             <div class="clear"></div>
             <div class="spacing"></div>
