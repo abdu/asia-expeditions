@@ -35,45 +35,17 @@
     <div class="card">
         <div class="container-fliud">
             <div class="wrapper">
-                <div class="preview col-md-8 col-xs-12" style="padding: 0px;">
-                    <div class=" tab-content" style="background: none; padding:0px;">
-                        <div style="padding-top: 0px;" class="tab-pane active" id="pic" style="cursor: pointer;">
-                            <img class="lazy" data-src="{{Shared::getInstance()->urlResourceBig($data->photo, $data->user_id) }}" /></div>
-                        @if(count($img) > 1)
-                            @foreach ($img as $key => $value)
-                                <div style="padding-top: 0px;" class="tab-pane" id="{{$key}}" style="cursor: pointer;">
-                                    <img class="lazy" 
-                                    data-src="{{ Shared::getInstance()->urlResourceBig(trim($value), $data->user_id) }}" />
-                                </div>
-                            @endforeach                 
-                        @endif
-                    </div>
-                    <ul class="preview-thumbnail nav nav-tabs">
-                        <li class="active">
-                            <a data-target="#pic" data-toggle="tab" >
-                                <img style="margin-top:6px; height:61px; width: 85px;" class="lazy" data-src="{{Shared::getInstance()->urlResource($data->photo, $data->user_id)}}" />
-                            </a>
-                        </li>
-                        <?php
-                        if (count($img) > 1) {
-                            foreach ($img as $key => $value) {
-                                echo'<li>
-                                        <a data-target="#' . $key . '" data-toggle="tab">
-                                            <img style="margin-top:6px; height:61px; width: 85px;" class="lazy" data-src="' . Shared::getInstance()->urlResource(trim($value), $data->user_id) . '"/>
-                                        </a>
-                                    </li>';
-                            }
-                        }
-                        ?>
-                        <div class="clear"></div>
-                    </ul>                   
-                </div>
-                      <div class=" col-md-4 col-xs-12" style="padding: 12px 0px;">
+     
+                      <div class=" col-md-12 col-xs-12" style="padding: 12px 0px;">
                     <div class="col-md-12" >            
                         <h3 style="margin-bottom: 0px;" class="price"> {{$data->title}}</h3>
                         <div class="panel-body">
                             <div class="row">
+<<<<<<< HEAD
                                 <p>{!! $data->desc !!}</p>
+=======
+                                <p>{!!$data->desc!!}</p>
+>>>>>>> 0ccbd9468ab84a5e8a7a4021ec6b8ae150fd68fc
                             </div>
                         </div>  
                     </div>  
