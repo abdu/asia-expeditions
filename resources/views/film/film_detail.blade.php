@@ -10,9 +10,8 @@
 
 <!-- end modal send email -->
 <div class="container">
-    <h1 class="product-title" style="background: #227eac;border: solid 1px #9E9E9E;box-shadow: 0px 0px 0px 0px;color: white; padding: 12px 0px 12px 0px;">
-        <span>{{{$data->country->country_name or ''}}} film</span> / 
-        <span>{{$data->title}}</span>
+    <h1 class="product-title breadcrumb" style="text-transform: uppercase; background: #227eac;border: solid 1px #9E9E9E;box-shadow: 0px 0px 0px 0px;color: white;padding: 12px 0px 12px 12px;">
+       {{{$data->country->country_name or ''}}} film / {{$data->title}}
     </h1>
     <div class="card">
         <div class="container-fliud">
