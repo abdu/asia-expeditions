@@ -9,7 +9,7 @@
   }
 .morelink {
     display: block;
-    color: red;
+    font-weight: 700;
 }
 </style>
 
@@ -85,7 +85,7 @@
 
    $(document).ready(function(){  
        // Configure/customize these variables.
-    var showChar = 205;  // How many characters are shown by default
+    var showChar = 180;  // How many characters are shown by default
     var ellipsestext = "...";
     var moretext = "Show more >>";
     var lesstext = "Show less";
