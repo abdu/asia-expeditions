@@ -21,7 +21,6 @@
 		<div class="col-md-12">
 			<h1 class="product-title breadcrumb" style="text-transform: uppercase; background: #227eac;border: solid 1px #9E9E9E;box-shadow: 0px 0px 0px 0px;color: white;padding: 12px 0px 12px 12px;">Our News</h1>
 		</div>
-		
 		@foreach($news as $newss)
             <div class="col-xs-12 col-sm-12 col-md-12">	            	
                 <div class="list-group">	                
