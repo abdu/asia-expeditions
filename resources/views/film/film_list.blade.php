@@ -9,10 +9,9 @@
   }
 .morelink {
     display: block;
+    color: red;
 }
 </style>
-
-
 
 <div class="container">
   <div class="row"> 
@@ -27,14 +26,9 @@
           <div class="list-group-item b_list">
               <div class="col-md-12">
                 <h3 style="font-size: 16px;"><a target="_blank" href="{{route('film_detail', $getfilm1->slug)}}">{{$getfilm1->title}}</a></h3>
-                                 
-                  <div>
-                    <p style="font-size: 12px;">{!! str_limit(strip_tags($getfilm1->desc),170) !!}<a target="_blank" href="{{route('film_detail', $getfilm1->slug)}}" style="padding:3px 8px; border-radius:10px; font-weight: 500;">Read More</a></p>
-                  </div>
-                      <span class="more"  style="font-size: 12px;">
-                        {!! str_limit(strip_tags($getfilm1->desc),1000) !!}
-                      </span>
-                <div class="clearfix"></div>
+                  <span class="more"  style="font-size: 12px;">
+                    {!! str_limit(strip_tags($getfilm1->desc),1000) !!}
+                  </span>
               </div>
               <div class="clearfix"></div>
           </div>
@@ -42,7 +36,7 @@
       </div>
       <center>{{$getListText->links()}}</center>
     </div>
-</div>
+
  
     <div class="col-sm-12 col-md-4">
       <div class="b_item">
@@ -103,7 +97,6 @@
             var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
             $(this).html(html);
         }
- 
     });
     $(".morelink").click(function(){
         if($(this).hasClass("less")) {
