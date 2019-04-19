@@ -9,7 +9,7 @@
   }
 .morelink {
     display: block;
-    font-weight: 700;
+    color: red;
 }
 </style>
 
@@ -26,9 +26,10 @@
           <div class="list-group-item b_list">
               <div class="col-md-12">
                 <h3 style="font-size: 16px;"><a target="_blank" href="{{route('film_detail', $getfilm1->slug)}}">{{$getfilm1->title}}</a></h3>
-                  <span class="more"  style="font-size: 12px;">
-                    {!! str_limit(strip_tags($getfilm1->desc),1000) !!}
-                  </span>
+                <span class="more"  style="font-size: 12px;">
+                  {!! strip_tags($getfilm1->desc) !!}
+                </span>
+                <div class="clearfix"></div>
               </div>
               <div class="clearfix"></div>
           </div>
@@ -85,7 +86,7 @@
 
    $(document).ready(function(){  
        // Configure/customize these variables.
-    var showChar = 180;  // How many characters are shown by default
+    var showChar = 205;  // How many characters are shown by default
     var ellipsestext = "...";
     var moretext = "Show more >>";
     var lesstext = "Show less";
