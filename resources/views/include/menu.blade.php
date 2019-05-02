@@ -8,7 +8,7 @@
 	<div class="container">
   		<div class="row">
   			<div class="col-md-12">
-  				<div class="col-md-12">
+  			
 			  		<div class="pull-left" style="padding:5px 0px;">
 			  			<span>
 			  				<b><i class="fa fa-phone"></i></b> +855 (23) 432 007  &nbsp;&nbsp; 
@@ -133,12 +133,13 @@
 					    </span>
 			  		</div> 
 			  		<div class="clearfix"></div>
-		  		</div>
+		  		
 		  	</div>
 	  	</div>
   	</div>
 </div>
-<div class="clearfix"></div>
+<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="height: 50px;"></div>
+<div class="col-lg-6 col-md-6 col-sm-12 col-xs=12" style="height: 50px;"></div>
 <div class="wrapper-menu">
 	<div class="container">
 	  	<nav class="navbar navbar">		  	
@@ -189,4 +190,5 @@
 	  	</nav>
 	</div>
 </div>
+
 
