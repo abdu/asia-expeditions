@@ -79,6 +79,18 @@
         <span>{{{$tour->country->country_name or ''}}}</span> / 
         <span>{{$tour->tour_name}}</span>
     </h1>
+           <ul class="list-unstyled ">
+                    <li style="float: left; padding: 0px 12px; margin-left: -11px;">
+                        <div class="fb-share-button" data-href="/{{{$tour->country->country_name or ''}}}/{{ $tour->slug}}" data-layout="button" data-size="small" data-mobile-iframe="false"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=/{{{$tour->country->country_name or ''}}}/{{ $tour->slug }} &amp;src={{Shared::getInstance()->urlResourceBig($tour->tour_photo, $tour->user_id) }}">facebook</a></div>
+                    </li>
+                    <li style="float: left;">
+                        <a class="twitter-share-button" href="http://twitter.com/share?url={{route('tourDetails', ['url'=> $tour->slug])}}&amp;text={{$tour->tour_name}}&amp; hashtags=Asia Expedition &amp;">
+                        <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        </a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+
     <div class="card">
         <div class="container-fliud">
             <div class="wrapper">
@@ -142,7 +154,24 @@
                 </div>
             </div>
             <div class="clear"></div>
-            <div class="spacing"></div>
+
+            <div class="spacing">
+                
+                            <ul class="list-unstyled ">
+                        <li style="float: left; padding: 0px 12px; margin-left: -11px;">
+                            <div class="fb-share-button" data-href="/{{{$tour->country->country_name or ''}}}/{{ $tour->slug}}" data-layout="button" data-size="small" data-mobile-iframe="false"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=/{{{$tour->country->country_name or ''}}}/{{ $tour->slug }} &amp;src={{Shared::getInstance()->urlResourceBig($tour->tour_photo, $tour->user_id) }}">facebook</a></div>
+                        </li>
+                        <li style="float: left; margin-top: 2px;">
+                            <a class="twitter-share-button" href="http://twitter.com/share?url={{route('tourDetails', ['url'=> $tour->slug])}}&amp;text={{$tour->tour_name}}&amp; hashtags=Asia Expedition &amp;">
+                            <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                            </a>
+                        </li>
+                    </ul>
+            </div>
+
+    
+               
+
             <div id="content" style="margin-top: 24px; background: none;">
                 <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
                     <li class="active"><a href="#highlights" data-toggle="tab">Highlights</a></li>

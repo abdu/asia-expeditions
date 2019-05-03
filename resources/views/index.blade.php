@@ -19,6 +19,7 @@ Asia Expeditions , Myanmar & Indochina – Destination Management Company is for
 ?>
 @section('content')
 @include('include.menu')
+
 @include('include.slide')
 
 <!-- <div class="container"> -->

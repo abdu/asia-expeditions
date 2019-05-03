@@ -1642,22 +1642,21 @@ dd {
 @media (min-width: 768px) {
     .act{
         position: fixed;
-        transition: 0.5s;
         top:0;
-        z-index:3 ;
+        z-index:3;
 
     }
-    .in_act{
+    .wrapper-menu.in_act{
         position:static;
-        transition:0.5;
-        top:56px;
+        top:80px !important;
         z-index:1;
 
     }
     .wrapper-menu {
-    background: #f5f8fa;
-    width: 100%;
-    box-shadow: -1px 2px 7px -3px;
+        transition:all 0.5s;   
+        background: #f5f8fa;
+        width: 100%;
+        box-shadow: -1px 2px 7px -3px;
 
    
 }
@@ -1827,6 +1826,7 @@ pre code {
 
     }
     .wrapper-menu {
+    transition: 0.5s;   
     background: #f5f8fa;
     width: 100%;
     box-shadow: -1px 2px 7px -3px;
@@ -1849,14 +1849,15 @@ pre code {
     .in_act{
         position:fixed;
         transition:0.5;
-        top:37px;
+        top:45px;
         z-index:1 ;
 
     }
     .wrapper-menu {
-    background: #f5f8fa;
-    width: 100%;
-    box-shadow: -1px 2px 7px -3px;
+        transition: 0.5s;
+        background: #f5f8fa;
+        width: 100%;
+        box-shadow: -1px 2px 7px -3px;
    
    
 }
@@ -14780,16 +14781,17 @@ header h1 {
 
     }
     .in_act{
-        position:static;
+        position:fixed;
         transition:0.5;
-        top:75px;
+        top:80px;
         z-index:1;
 
     }
     .wrapper-menu {
-    background: #f5f8fa;
-    width: 100%;
-    box-shadow: -1px 2px 7px -3px;
+        transition: 0.5s;
+        background: #f5f8fa;
+        width: 100%;
+        box-shadow: -1px 2px 7px -3px;
    
 }
 }
@@ -14944,7 +14946,7 @@ a {
 }
 
 ul li iframe#twitter-widget-0 {
-    width: 23px!important;
+    width: 60px !important;
     height: 20px;
     margin: 4px 6px;
     border-radius: 0!important
