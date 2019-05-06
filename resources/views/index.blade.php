@@ -55,8 +55,10 @@ Asia Expeditions , Myanmar & Indochina – Destination Management Company is for
 				<li class="divider"></li>			
 			</ul>
 			<p>All arrangements and logistics for this BBC program were by Asia Expeditions.</p>
-			<iframe width="350" height="230" src="https://www.youtube.com/embed/A6I5nHqkGiw?controls=0&autoplay=1">
-			</iframe>
+			<div class="add" style="text-align: center;">			
+		        <div  class="videoFrame stimg" style="height: 211px;"></div>
+		    	<img class="videoFrame " width="360" height="210" src="https://img.youtube.com/vi/A6I5nHqkGiw/maxresdefault.jpg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen  class="img-responsive img-box img-thumbnail"> 	
+		   </div>
 		</div>
 	</div>
 </div>
@@ -215,4 +217,14 @@ Asia Expeditions , Myanmar & Indochina – Destination Management Company is for
 		<div class="spacing"></div>
 	</div>
 <!-- end DISCOVER OUR UNIQUE EXPERIENCES -->
+<script type="text/javascript">
+	 $(document).ready(function(){  
+      $(".videoFrame").click(function(){
+      	// alert('a');
+      	$(".videoFrame").remove();
+        $('.add').append('<iframe  width="360" height="210" src="https://www.youtube.com/embed/A6I5nHqkGiw?controls=0&autoplay=1"></iframe>');
+      });
+   });
+</script>
+
 @endsection

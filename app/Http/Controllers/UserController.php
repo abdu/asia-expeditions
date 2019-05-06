@@ -48,6 +48,7 @@ class UserController extends Controller
     }
 
     public function createUser(Request $req){
+        
     	if ($req->dataAction == "btn_Save" ) {
     		if (!User::emailExit($req->email)) {
     			$auser = new User;
