@@ -6,9 +6,7 @@ hr,img {
     border: 0;
 }
 
-body,figure {
-    margin: 0;
-}
+
 
 .btn-group>.btn-group,.btn-toolbar .btn,.btn-toolbar .btn-group,.btn-toolbar .input-group,.col-xs-1,.col-xs-10,.col-xs-11,.col-xs-12,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9,.dropdown-menu {
     float: left;
@@ -1680,11 +1678,21 @@ dd {
 
 @media (min-width: 768px) {
     .act{
+        /*position: fixed;*/
+        transition: 0.5s;
+
         position: fixed;
         top:0;
         z-index:3;
 
     }
+
+    .in_act{
+        /*position:static;*/
+        transition:0.5 !important;
+        top:56px;   
+    }
+
     .wrapper-menu.in_act{
         position:static;
         top:80px !important;
@@ -1851,14 +1859,14 @@ pre code {
         width:970px;
     }
         .act{
-        position: fixed;
+        /*position: fixed;*/
         transition: 0.5s;
         top:0;
         z-index:3 ;
 
     }
     .in_act{
-        position:fixed;
+        /*position:fixed;*/
         transition:0.5;
         top:37px;
         z-index:1 ;
@@ -1879,14 +1887,14 @@ pre code {
         width:1170px;
     }
         .act{
-        position: fixed;
+        /*position: fixed;*/
         transition: 0.5s;
         top:0;
         z-index:3;
 
     }
     .in_act{
-        position:fixed;
+        /*position:fixed;*/
         transition:0.5;
         top:45px;
         z-index:1 ;

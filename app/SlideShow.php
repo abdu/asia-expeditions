@@ -10,7 +10,4 @@ class SlideShow extends Model
     protected $table = 'tbl_slide';
 
 
-    public function country(){
-    	return $this->belongsTo(Country::class);
-    }
 }

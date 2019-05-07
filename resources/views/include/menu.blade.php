@@ -50,33 +50,33 @@
 						  			<ul class="w3-dropdown-content w3-bar-block" style="text-transform: capitalize; ">
 						  				<div style=" padding: 10px 0px;">
 								          	<div class="col-md-12 w3-padding">
-								          		@if( isset(User::getUser()->email))
-									          		<a href="/account?active=profile"><span class="fa fa-user"></span>&nbsp;
-									          		{{ User::getUser()->first_name.' '.User::getUser()->last_name }}
+								          		@if( Auth::check())
+									          		<a href="{{route('account', ['active'=>'profile'])}}"><span class="fa fa-user"></span>&nbsp;
+									          		{{Auth::user()->fullname}}
 									          		</a>
 								          		@else
-								          			<a href="/register"><span class="fa fa-user"></span> 
+								          			<a href="{{route('register')}}"><span class="fa fa-user"></span> 
 								          			&nbsp; Your Account
 									          		</a>
 								          		@endif
 								          	</div>
 								          	<div class="col-md-12 w3-padding">
-								          		<a href="/account?active=order"><span class="fa fa-qrcode"></span> &nbsp; Your Order</a>
+								          		<a href="{{route('account', ['active'=>'order'])}}"><span class="fa fa-qrcode"></span> &nbsp; Your Order</a>
 								          	</div><div class="clearfix"></div>
 								          	<hr style="margin-bottom: 6px;">
 									        <div class="col-md-12">
 										        <div class="row">
-											        @if(isset(User::getUser()->email))
+											        @if(Auth::check())
 											          	<div class="col-md-12  w3-padding">
 												          	<i class="glyphicon glyphicon-log-out"></i> &nbsp;
-												          	<a href="/logout"> Sign Out</a>
+												          	<a href="{{route('logout')}}"> Sign Out</a>
 											          	</div>
 											        @else
 											          	<div class="col-md-6 w3-padding">
 												          	<a href="register">Register</a>
 											          	</div>
 											          	<div class="col-md-6 w3-padding">
-												          	<a href="/register">Login</a>
+												          	<a href="{{route('register')}}">Login</a>
 											          	</div>
 											        @endif
 										        </div>
@@ -134,7 +134,6 @@
 					    </span>
 			  		</div> 
 			  		<div class="clearfix"></div>
-		  		
 		  	</div>
 	  	</div>
   	</div>
@@ -149,7 +148,7 @@
 					<i class="fa fa-navicon menu-hidden-small"></i>
 				</button>
 				<a class="navbar-brand" href="{{url('/')}}">
-					<img class="img-responsive" src="/img/{{config('app.logo')}}" alt="Asia Expeditions-Myanmar& Indochina" title="Destination Management">
+					<img class="img-responsive" src="/img/{{config('app.logo')}}" alt="Asia Expeditions-Myanmar& Indochina" title="Destination Management" width="300px">
 				</a>				
 			</div>
 			<div class="collapse navbar-collapse js-navbar-collapse">

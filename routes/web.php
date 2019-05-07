@@ -111,7 +111,7 @@ Route::get('shopping-cart', ['uses' => 'CartController@getCart', 'as' => 'tour.s
 
 Route::get('remove-cart/{id}', ['uses' =>'CartController@removeCart', 'as' => 'tour.remove-cart']);
 
-Route::get('register', ['uses' => 'CartController@getChechout', 'as' => 'tour.checkout']);
+Route::get('register', 'CartController@getChechout')->name('register');
 
 Route::get('checkout', ['uses' => 'CartController@getChechout', 'as' => 'tour.checkout']);
 
@@ -119,14 +119,14 @@ Route::get('checkout', ['uses' => 'CartController@getChechout', 'as' => 'tour.ch
 Route::get("film/{film_locaton}", "HomeController@getFilm")->name('getFilm');
 Route::get("film/myanmar/{film_deail}", "HomeController@film_detail")->name('film_detail');
 
-Route::post('checkout', ['uses' => 'CartController@getCheckAccount', 'as' => 'check.account']);
+Route::post('checkout', "CartController@getCheckAccount")->name("registerCustomer");
 
 Route::group(['middleware' => ['isCustomer']], function () {
 	Route::get('payment', ['uses' => 'CartController@getPayment', 'as' => 'check.payment']);
 	Route::post('pay_link', ['uses' => 'CartController@linkPayment', 'as' => 'check.linkpayment']);
 	Route::get('inovice', ['uses' => 'CartController@getInvoice', 'as' => 'check.invoice']);
-    Route::get('account', ['uses' => 'CustomerController@getAccount', 'as' => 'get.account']);
-    Route::post('account', ['uses' => 'CustomerController@doAccount', 'as' => 'do.account']);
+    Route::get('account', 'CustomerController@getAccount')->name('account');
+    Route::post('account', 'CustomerController@doAccount')->name('doAccount');
     Route::post('editaccount', ['uses' => 'CustomerController@doCreateNewPassword', 'as' => 'edit.password']);
 	Route::get('logout', ['uses' => 'CustomerController@getLogout', 'as' => 'get.logout']);
 });

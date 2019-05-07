@@ -70,9 +70,9 @@
 	                <div class="panel-body row">
 	                	<div class="row">
 		                   	<div class=" col-md-12 ">
-			         		    <form class="form-horizontal" method="post" action="{{route('do.account')}}">
+			         		    <form class="form-horizontal" method="post" action="{{route('doAccount')}}">
 			         				{{ csrf_field() }}
-			         				  <input type="hidden" name="id" value="{{ User::getUser()->id }}"  />
+			         				  <input type="hidden" name="id" value="{{ Auth::user()->id }}"  />
 					                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
 						                <div class="panel-body">
 						                    <div class="row">
@@ -80,23 +80,16 @@
 							                    	<div class="form-group {{$errors->first('first_name') ? 'has-error' : ''}} ">
 							                        	<div class="col-md-12 col-xs-12">
 								                            <strong class="control-label" for="first_name">First Name</strong>
-								                            <input type="text" name="first_name" class="form-control" value="{{ User::getUser()->first_name }}"  />
+								                            <input type="text" name="first_name" class="form-control" value="{{Auth::user()->first_name }}"  />
 							                            </div>
 							                        </div>
 						                        </div>
-						                        <div class="col-md-4 col-xs-12 ">
-							                        <div class="form-group ">
-							                        	<div class="col-md-12 col-xs-12 ">
-								                            <strong  class="control-label" for="middle_name">Middle Name</strong>
-								                            <input type="type" name="middle_name" class="form-control" value="{{ User::getUser()->middle_name }}" />
-							                            </div>
-							                        </div>
-						                        </div>	 
+						                       
 						                        <div class="col-md-4 col-xs-12 ">
 							                        <div class="form-group {{$errors->first('last_name') ? 'has-error' : ''}}">
 							                        	<div class="col-md-12 col-xs-12 ">
 								                          	<strong class="control-label" for="last_name">Last Name</strong>
-								                            <input type="text" name="last_name" class="form-control" value="{{ User::getUser()->last_name }}" />
+								                            <input type="text" name="last_name" class="form-control" value="{{ Auth::user()->last_name }}" />
 							                            </div>
 							                        </div>
 						                        </div>
@@ -104,7 +97,7 @@
 						                    <div class="form-group {{$errors->first('nation') ? 'has-error' : ''}}">
 						                        <div class="col-md-12"><strong class="control-label" for="nation">Nationality</strong></div>
 						                        <div class="col-md-12">
-						                            <input type="text" class="form-control" name="nation" value="{{ User::getUser()->nation }}" />
+						                            <input type="text" class="form-control" name="nation" value="{{ Auth::user()->nationality }}" />
 						                        </div>
 						                    </div>
 						                    <div class="row">
@@ -112,7 +105,7 @@
 							                        <div class="form-group {{$errors->first('passport_number') ? 'has-error' : ''}}">
 							                        	<div class="col-md-12 col-xs-12 ">
 								                            <strong class="control-label" for="inputError">Passport Number</strong>
-								                            <input onkeyup="checkInp()" type="type" name="passport_number" class="form-control" value="{{ User::getUser()->passport_number }}" />
+								                            <input onkeyup="checkInp()" type="type" name="passport_number" class="form-control" value="{{ Auth::user()->passport }}" />
 							                            </div>
 							                        </div>
 						                        </div>	 
@@ -120,7 +113,7 @@
 							                        <div class="form-group {{$errors->first('expiry_date') ? 'has-error' : ''}}">
 							                        	<div class="col-md-12 col-xs-12 ">
 								                          	<strong class="control-label" for="inputError">Expiry Date</strong>
-								                            <input type="text" name="expiry_date" class="form-control" value="{{ User::getUser()->expiry_date }}" id="expiry_date"/>
+								                            <input type="text" name="expiry_date" class="form-control" value="{{ Auth::user()->expiry_date }}" id="expiry_date"/>
 							                            </div>
 							                        </div>
 						                        </div>
@@ -128,7 +121,7 @@
 						                    <div class="form-group {{$errors->first('address_street') ? 'has-error' : ''}}">
 						                        <div class="col-md-12"><strong class="control-label" for="inputError">Address Street</strong></div>
 						                        <div class="col-md-12">
-						                            <input type="text" name="address_street" class="form-control" value="{{ User::getUser()->address_street }}" />
+						                            <input type="text" name="address_street" class="form-control" value="{{ Auth::user()->address }}" />
 						                        </div>
 						                    </div>
 						                    <div class="row">
@@ -136,7 +129,7 @@
 							                        <div class="form-group {{$errors->first('town_city') ? 'has-error' : ''}}">
 							                        	<div class="col-md-12 col-xs-12 ">
 								                          	<strong class="control-label" for="inputError">Town / City</strong>
-								                            <input type="text" name="town_city" class="form-control" value="{{ User::getUser()->town_city }}" />
+								                            <input type="text" name="town_city" class="form-control" value="{{Auth::user()->province->province_name}}" />
 							                            </div>
 							                        </div>
 						                        </div>
@@ -229,7 +222,7 @@
 	                                <div class="col-md-12">
 	                                    <div class="form-group">
 	                                        <label class="control-label" for="email">Current Password</label>
-	                                        <input type="text"  class="form-control input-md" value="{{ decrypt( User::getUser()->password) }}" readonly="">
+	                                        <input type="text"  class="form-control input-md" value="{{Auth::user()->password_text}}" readonly="">
 	                                    </div>
 	                                </div>                               
 	                                <div class="col-md-12">

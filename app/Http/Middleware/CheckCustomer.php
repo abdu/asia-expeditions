@@ -21,11 +21,9 @@ class CheckCustomer
     {
         // return $next($request);
 
-        if (isset(User::getUser()->email)){
-
+        if (\Auth::check()){
             return $next($request);
         }else{
-            
             return redirect ('register');
         }
 
