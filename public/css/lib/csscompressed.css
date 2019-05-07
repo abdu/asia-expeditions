@@ -1641,15 +1641,15 @@ dd {
 
 @media (min-width: 768px) {
     .act{
-        position: fixed;
+        /*position: fixed;*/
         transition: 0.5s;
         top:0;
         z-index:3 ;
 
     }
     .in_act{
-        position:static;
-        transition:0.5;
+        /*position:static;*/
+        transition:0.5 !important;
         top:56px;
         z-index:1;
 
@@ -1813,14 +1813,14 @@ pre code {
         width:970px;
     }
         .act{
-        position: fixed;
+        /*position: fixed;*/
         transition: 0.5s;
         top:0;
         z-index:3 ;
 
     }
     .in_act{
-        position:fixed;
+        /*position:fixed;*/
         transition:0.5;
         top:37px;
         z-index:1 ;
@@ -1840,14 +1840,14 @@ pre code {
         width:1170px;
     }
         .act{
-        position: fixed;
+        /*position: fixed;*/
         transition: 0.5s;
         top:0;
         z-index:3;
 
     }
     .in_act{
-        position:fixed;
+        /*position:fixed;*/
         transition:0.5;
         top:37px;
         z-index:1 ;

@@ -33,11 +33,12 @@ class RegisterCustomer extends Mailable
      */
     public function build(Request $request)
     {
-
         return $this->from(config('app.email'))
                     ->view('emails.registercustomer')
                     ->with([
+                        'fullname' => $request->first_name." ".$request->last_name,
                         'email' => $request->email,
+                        'key'   => md5($request->email),
                         'password' => $request->password
                     ]);
            

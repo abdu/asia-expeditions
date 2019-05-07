@@ -73,8 +73,13 @@ class CartController extends Controller
         return redirect()->back()->with('message', 'your cart is has been removed...!');
     }
 
-    public function getChechout()
+    public function getChechout(Request $req)
     {
+        if(isset($req->key) && !empty($req->key)){
+            $user = User::where("md5", $req->key)->first();
+            $user->banned = 0;
+            $user->save();
+        }
         $oldcart = Session::get('cart');
         $cart = new Cart($oldcart);
         return view('cart.checkout', ['tours' => $cart->items]);
@@ -87,7 +92,7 @@ class CartController extends Controller
             'address_street' => 'required',
             'first_name' => 'required',
             'last_name' => 'required',
-            'nation' => 'required',
+            'nationality' => 'required',
             'town_city' => 'required',
             'expiry_date' => 'required',
             'country_state' => 'required',
@@ -95,42 +100,41 @@ class CartController extends Controller
             'email' => 'required',
             'password' => 'required',
         ]);
-        if ($validator->fails()) {
-            return back()
-                ->withErrors($validator)
-                ->withInput();
-        } else {
-            $cus = new Customer;
-            $cus->first_name = $req->first_name;
-            $cus->middle_name = $req->middle_name;
-            $cus->last_name = $req->last_name;
-            $cus->nation = $req->nation;
-            $cus->passport_number = $req->passport_number;
-            $cus->expiry_date = $req->expiry_date;
-            $cus->address_street = $req->address_street;
-            $cus->town_city = $req->town_city;
-            $cus->country_state = $req->country_state;
-            $cus->phone_number = $req->phone_number;
-            $cus->email = $req->email;
-            $cus->_token = $req->_token;
-            $cus->text_password = $req->password;
-            $cus->password = encrypt($req->password);
-            if (Customer::getExitEmail($req->email)) {
-                return back()
-                    ->withErrors($validator)
-                    ->withInput()
-                    ->with('message', 'Your email is already exists');
+        if (!$validator->fails()) {
+            if (User::getExitEmail($req->email)) {
+                return back()->withErrors($validator)->withInput()->with('message', 'Your email is already exists');
             } else {
+                $cus = new User;
+                $cus->first_name    = $req->first_name;
+                $cus->last_name     = $req->last_name;
+                $cus->fullname      = $req->first_name." ".$req->last_name;                
+                $cus->passport      = $req->passport_number;
+                $cus->md5           = md5($req->email);
+                $cus->expiry_date   = $req->expiry_date;
+                $cus->address       = $req->address_street;
+                $cus->province_id   = $req->town_city;
+                $cus->country_id    = $req->country_state;
+                $cus->nationality   = $req->nationality;
+                $cus->phone  = $req->phone_number;
+                $cus->email         = $req->email;
+                $cus->postal_code   = $req->zip_code;
+                $cus->role_id       = 7;
+                $cus->banned        = 1; //= 1 = inactive, 0 = active;
+                $cus->password      = bcrypt($req->password);
+                $cus->password_text = $req->password;
                 $cus->save();
                 Mail::to($req->email)->send(new RegisterCustomer());
-                $_SESSION['email'] = $req->email;
-                $_SESSION['timeOut'] = time() + 60 * 60 * 720;
-                if (empty(Session::get('cart')->items)) {
-                    return redirect('/shopping-cart');
-                } else {
-                    return redirect()->route('check.payment');
-                }
+                // $_SESSION['email'] = $req->email;
+                // $_SESSION['timeOut'] = time() + 60 * 60 * 720;
+                // if (empty(Session::get('cart')->items)) {
+                //     return redirect('/shopping-cart');
+                // } else {
+                //     return redirect()->route('check.payment');
+                // }
+                return back()->with(['icon'=> 'success',  'message'=> "Link has been sent to your email: ". $req->email]);
             }
+        }else{
+            return back()->withErrors($validator)->withInput();
         }
     }
 
@@ -138,48 +142,52 @@ class CartController extends Controller
     {
         $validator = Validator::make($req->all(), [
             'email_log' => 'required|email',
-            'password_log' => 'required|min:6',
+            'password_log' => 'required|min:6'
         ]);
-        if ($validator->fails()) {
-            return back()
-                ->withErrors($validator)
-                ->withInput()
-                ->with('loginError', 'Your email is not exists');
+
+        if (!$validator->fails() ) {
+
+            if ( \Auth::attempt(['email'=> $req->email_log, "password"=> $req->password_log, "banned"=> 0])) {
+                return redirect('/shopping-cart');
+            }
 
         } else {
-            $user = User::where('email', $req->email_log)->first();
-            if ($user->count() > 0) {
-                // if ($req->email_log == $user->email && encrypt($req->password_log) == $user->password) {
+            return back()->withErrors($validator)->withInput()->with('loginError', 'Your email is not exists');
 
-                if (\Auth::attempt(['email'=>$req->email_log, 'password'=>$req->password_log, 'banned'=>0], $req->remember)) {
-                    $_SESSION['email'] = $req->email_log;
-                    $_SESSION['timeOut'] = time() + 60 * 60 * 720;
-                    $itemWish = Wishlist::where('customer_id', User::getUser()->id)->get();
-                    // return $itemWish;
-                    if ($itemWish) {
-                        foreach ($itemWish as $key => $data) {
-                            $synData = Tour::find($data['item_id']);;
-                            $oldCart = Session::has('cart') ? Session::get('cart') : null;
-                            $cart = new Cart($oldCart);
-                            $cart->Synchronize($synData, $data->item_qty, $synData->tour_id);
-                            $req->session()->put('cart', $cart);
-                        }
-                    } else {
-                        foreach (Session::get('cart') as $key => $cart) {
-                            $addWish = new Wishlist;
-                            $addWish->customer_id = User::getUser()->id;
-                            $addWish->item_id = $cart['item']['tour_id'];
-                            $addWish->item_qty = $cart['qty'];
-                            $addWish->save();
-                        }
-                    }
-                    return redirect('/shopping-cart');
-                } else {
-                    return back()->withErrors($validator)->withInput()->with('loginError', 'Your email and password is not mutch !');
-                }
-            } else {
-                return back()->with('loginError', 'Your email is not exists');
-            }
+
+            // $user = User::where('email', $req->email_log)->first();
+            // if ($user->count() > 0) {
+            //     // if ($req->email_log == $user->email && encrypt($req->password_log) == $user->password) {
+
+            //     if (\Auth::attempt(['email'=>$req->email_log, 'password'=>$req->password_log, 'banned'=>0], $req->remember)) {
+            //         $_SESSION['email'] = $req->email_log;
+            //         $_SESSION['timeOut'] = time() + 60 * 60 * 720;
+            //         $itemWish = Wishlist::where('customer_id', User::getUser()->id)->get();
+            //         // return $itemWish;
+            //         if ($itemWish) {
+            //             foreach ($itemWish as $key => $data) {
+            //                 $synData = Tour::find($data['item_id']);;
+            //                 $oldCart = Session::has('cart') ? Session::get('cart') : null;
+            //                 $cart = new Cart($oldCart);
+            //                 $cart->Synchronize($synData, $data->item_qty, $synData->tour_id);
+            //                 $req->session()->put('cart', $cart);
+            //             }
+            //         } else {
+            //             foreach (Session::get('cart') as $key => $cart) {
+            //                 $addWish = new Wishlist;
+            //                 $addWish->customer_id = User::getUser()->id;
+            //                 $addWish->item_id = $cart['item']['tour_id'];
+            //                 $addWish->item_qty = $cart['qty'];
+            //                 $addWish->save();
+            //             }
+            //         }
+            //         return redirect('/shopping-cart');
+            //     } else {
+            //         return back()->withErrors($validator)->withInput()->with('loginError', 'Your email and password is not mutch !');
+            //     }
+            // } else {
+            //     return back()->with('loginError', 'Your email is not exists');
+            // }
         }
     }
 

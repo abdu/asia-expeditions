@@ -21,7 +21,8 @@ class CustomerController extends Controller
     }
 
     public function getAccount(){
-       return view('customer.index');
+        // return Auth::user()->id;
+        return view('customer.index');
     }
 
     public function doAccount(Request $req){

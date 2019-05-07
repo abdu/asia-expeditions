@@ -1,32 +1,30 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>{{config('name')}}</title>
-	<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
- 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
-</head>
-<body style="background: #eae0b8;">
-<a href="https://asia-expeditions.com/"  target="_blank" style="text-decoration: none; cursor: default;">
-	<center><img src="{{url('img')}}/{{config('app.logo')}}" style="width:40%;"></center></a>
-	<table>
+<div style="width: 689px; margin:0 auto">
+<table style="width:100%;text-align:center">
+	<tbody>
 		<tr>
-			<td>Email :</td><td>{{$email}}</td>
+			<td style="padding:0 0 20px 0;border-bottom:1px solid #e9edee">
+				<a href="#" style="display:block;margin:0 auto" target="_blank" alt="jngtravelpro logo" style="border:0px" class="CToWUd">
+					<img src="{{url('https://asia-expeditions.com/public/img/'.config('app.logo'))}}">
+				</a>
+			</td>
+		</tr> 
+		<tr>
+			<td colspan="2" style="padding:30px 0">
+				<p style="color:#1d2227;line-height:28px;font-size:22px;margin:12px 10px 20px 10px;font-weight:400">Hi {{$fullname}} it's great to meet you.</p>
+				<p style="margin:0 10px 10px 10px;padding:0">We'd like to make sure we got your email address right.</p>
+				<p>
+					<a style="display:inline-block;text-decoration:none;padding:15px 20px;background-color:#2196F3;border:1px solid #2baaed;border-radius:3px;color:#fff;font-weight:bold" href="{{route('registerCustomer', ['key'=> $key])}}">Yes, it's me – let's get started</a>
+				</p>
+				<p><strong>Your Account Email & Password</strong></p>
+				<p>Email: {{$email}}</p>
+				<p>Password: {{$password}}</p>
+			</td>
 		</tr>
 		<tr>
-			<td>Password:</td><td>{{$password}}</td>
+			<td colspan="2" style="padding:30px 0 0 0;border-top:1px solid #e9edee;color:#9b9fa5">
+				
+			</td>
 		</tr>
-	</table>
-	<p>You can login with your email and password <a href="https://asia-expeditions.com/checkout">Click here</a></p>
-</body>
-</html>
+	</tbody>
+</table>

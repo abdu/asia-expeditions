@@ -63,7 +63,12 @@ class User extends Authenticatable
     public function getUserAll(){
         return \DB::table('users');
     }
-     public function film(){
+    
+    public function film(){
         return $this->hasMany(Film::class);
+    }
+
+    public static function getExitEmail($email){
+        return self::select('email')->where('email', $email)->first();
     }
 }
