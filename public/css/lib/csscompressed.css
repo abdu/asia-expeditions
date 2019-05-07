@@ -6,9 +6,7 @@ hr,img {
     border: 0;
 }
 
-body,figure {
-    margin: 0;
-}
+
 
 .btn-group>.btn-group,.btn-toolbar .btn,.btn-toolbar .btn-group,.btn-toolbar .input-group,.col-xs-1,.col-xs-10,.col-xs-11,.col-xs-12,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9,.dropdown-menu {
     float: left;
@@ -1643,24 +1641,19 @@ dd {
     .act{
         /*position: fixed;*/
         transition: 0.5s;
+
+        position: fixed;
         top:0;
-        z-index:3 ;
+        z-index:3;
 
     }
+
     .in_act{
         /*position:static;*/
         transition:0.5 !important;
-        top:56px;
-        z-index:1;
-
+        top:56px;   
     }
-    .wrapper-menu {
-    background: #f5f8fa;
-    width: 100%;
-    box-shadow: -1px 2px 7px -3px;
 
-   
-}
     .dl-horizontal dt {
         float:left;
         width: 160px;
@@ -1827,12 +1820,13 @@ pre code {
 
     }
     .wrapper-menu {
-    background: #f5f8fa;
-    width: 100%;
-    box-shadow: -1px 2px 7px -3px;
-   
-   
-}
+        transition: 0.5s;   
+        background: #f5f8fa;
+        width: 100%;
+        box-shadow: -1px 2px 7px -3px;
+       
+       
+    }
 }
 
 @media (min-width: 1200px) {
@@ -1849,17 +1843,11 @@ pre code {
     .in_act{
         /*position:fixed;*/
         transition:0.5;
-        top:37px;
+        top:45px;
         z-index:1 ;
 
     }
-    .wrapper-menu {
-    background: #f5f8fa;
-    width: 100%;
-    box-shadow: -1px 2px 7px -3px;
-   
-   
-}
+
 }
 
 .row {
@@ -14780,16 +14768,17 @@ header h1 {
 
     }
     .in_act{
-        position:static;
+        position:fixed;
         transition:0.5;
-        top:75px;
+        top:80px;
         z-index:1;
 
     }
     .wrapper-menu {
-    background: #f5f8fa;
-    width: 100%;
-    box-shadow: -1px 2px 7px -3px;
+        transition: 0.5s;
+        background: #f5f8fa;
+        width: 100%;
+        box-shadow: -1px 2px 7px -3px;
    
 }
 }
@@ -14944,7 +14933,7 @@ a {
 }
 
 ul li iframe#twitter-widget-0 {
-    width: 23px!important;
+    width: 60px !important;
     height: 20px;
     margin: 4px 6px;
     border-radius: 0!important

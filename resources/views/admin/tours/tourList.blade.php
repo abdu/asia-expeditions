@@ -10,7 +10,7 @@ use App\components\Shared; ?>
         <div class="row">
             @include('admin.include.message')
             <h3 class="border">Tours List <i class="fa fa-angle-double-right"></i> 
-                <!-- <a style="line-height: 1.6;" href="{{route('tourForm')}}" class="btn btn-success btn-xs btn-flat">Create New Tour</a> -->
+                <a style="line-height: 1.6;" href="{{route('tourForm')}}" class="btn btn-success btn-xs btn-flat">Create New Tour</a>
             </h3>
        
             <form action="" method="get">

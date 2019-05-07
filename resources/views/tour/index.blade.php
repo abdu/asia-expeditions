@@ -10,7 +10,13 @@
     $img = explode('|', $string);
     use App\components\Shared;
 ?>
-
+<style type="text/css">
+    .amazingslider-box-1{
+     margin-left: 0px !important; 
+     border-width: 0px !important; 
+     border-style: 0px !important; 
+    }
+</style>
 
 
 <!-- modal send email -->
@@ -79,43 +85,63 @@
         <span>{{{$tour->country->country_name or ''}}}</span> / 
         <span>{{$tour->tour_name}}</span>
     </h1>
+           <ul class="list-unstyled ">
+                    <li style="float: left; padding: 0px 12px; margin-left: -11px;">
+                        <div class="fb-share-button" data-href="/{{{$tour->country->country_name or ''}}}/{{ $tour->slug}}" data-layout="button" data-size="small" data-mobile-iframe="false"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=/{{{$tour->country->country_name or ''}}}/{{ $tour->slug }} &amp;src={{Shared::getInstance()->urlResourceBig($tour->tour_photo, $tour->user_id) }}">facebook</a></div>
+                    </li>
+                    <li style="float: left;">
+                        <a class="twitter-share-button" href="http://twitter.com/share?url={{route('tourDetails', ['url'=> $tour->slug])}}&amp;text={{$tour->tour_name}}&amp; hashtags=Asia Expedition &amp;">
+                        <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        </a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+
     <div class="card">
         <div class="container-fliud">
             <div class="wrapper">
-                <div class="preview col-md-8 col-xs-12" style="padding: 0px;">
-                    <div class=" tab-content" style="background: none; padding:0px;">
-                        <div style="padding-top: 0px;" class="tab-pane active" id="pic" style="cursor: pointer;">
-                            <img class="lazy" data-src="{{Shared::getInstance()->urlResourceBig($tour->tour_photo, $tour->user_id) }}" /></div>
-                        @if(count($img) > 1)
-                            @foreach ($img as $key => $value) 
-                                <div style="padding-top: 0px;" class="tab-pane" id="{{$key}}" style="cursor: pointer;">
-                                    <img class="lazy" 
-                                    data-src="{{ Shared::getInstance()->urlResourceBig(trim($value), $tour->user_id) }}" />
-                                </div>
-                            @endforeach                 
-                        @endif
-                    </div>
-                    <ul class="preview-thumbnail nav nav-tabs">
-                        <li class="active">
-                            <a data-target="#pic" data-toggle="tab" >
-                                <img style="margin-top:6px; height:61px; width: 85px;" class="lazy" data-src="{{Shared::getInstance()->urlResource($tour->tour_photo, $tour->user_id)}}" />
-                            </a>
-                        </li>
-                        <?php
-                        if (count($img) > 1) {
-                            foreach ($img as $key => $value) {
-                                echo'<li>
-                                        <a data-target="#' . $key . '" data-toggle="tab">
-                                            <img style="margin-top:6px; height:61px; width: 85px;" class="lazy" data-src="' . Shared::getInstance()->urlResource(trim($value), $tour->user_id) . '"/>
-                                        </a>
-                                    </li>';
-                            }
-                        }
-                        ?>
-                        <div class="clear"></div>
-                    </ul>                   
-                </div>
+                <div class=" col-md-8 col-xs-12" style="padding: 0px;">
 
+    <!-- Insert to your webpage where you want to display the slider -->
+    <div id="amazingslider-wrapper-1" style="display:block;position:relative;max-width:626px;margin:0px auto 95px;margin-left: 0px;" >
+        <div id="amazingslider-1" style="display:block;position:relative;margin:0 auto;">
+            <ul class="amazingslider-slides" style="display:none;">
+                <li><img src="{{Shared::getInstance()->urlResourceBig($tour->tour_photo, $tour->user_id) }}"  title="" />
+                </li>
+                 @if(count($img) > 1)
+                    @foreach ($img as $key => $value) 
+                <li><img src="{{ Shared::getInstance()->urlResourceBig(trim($value), $tour->user_id) }}" alt=""  title="MtPopa-2298" />
+                </li>
+                    @endforeach
+                @endif
+                @if(isset($tour->video)? $tour->video:'' )
+                
+                    <li><img src="https://img.youtube.com/vi/{{isset($tour->video) ? $tour->video:''}}/0.jpg" />
+                <video preload="none" style="height: 352px !important;" src="https://www.youtube.com/embed/{{$tour->video}}?v={{$tour->video}}" ></video>
+                </li>
+            @endif
+             
+            </ul>
+            <ul class="amazingslider-thumbnails" style="display:none;">
+                <li><img src="{{Shared::getInstance()->urlResource($tour->tour_photo, $tour->user_id)}}" alt="" title="nimae" /></li>
+
+                  @if(count($img) > 1)
+                    @foreach ($img as $key => $value) 
+                <li><img src="{{Shared::getInstance()->urlResource(trim($value), $tour->user_id) }}" alt="" title="" /></li>
+                   @endforeach
+                @endif
+                 @if(isset($tour->video) ? $tour->video:'')
+               
+                   <li><img src="https://img.youtube.com/vi/{{isset($tour->video) ? $tour->video:''}}/0.jpg" /></li>
+                
+                @endif
+                
+            </ul>
+        </div>
+    </div>
+    <!-- End of body section HTML codes -->    
+
+                </div>
                 <div class=" col-md-4 col-xs-12" style="padding: 12px 0px;">
                     <div class="col-md-12" >            
                         <h3 style="margin-bottom: 0px;" class="price"> price: <span style="cursor: pointer;" data-toggle="popover" data-trigger="hover" data-content="Our special price" data-placement="top">${{$tour['tour_price']}}</span> <small style="text-transform: capitalize ">Per Person</small></h3>
@@ -142,7 +168,15 @@
                 </div>
             </div>
             <div class="clear"></div>
-            <div class="spacing"></div>
+
+      <!--       <div class="spacing">
+                
+                
+            </div>
+ -->
+    
+               
+
             <div id="content" style="margin-top: 24px; background: none;">
                 <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
                     <li class="active"><a href="#highlights" data-toggle="tab">Highlights</a></li>

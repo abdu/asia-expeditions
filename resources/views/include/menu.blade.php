@@ -137,8 +137,8 @@
 	  	</div>
   	</div>
 </div>
-<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="height: 50px;"></div>
-<div class="col-lg-6 col-md-6 col-sm-12 col-xs=12" style="height: 50px;"></div>
+<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="height: 60px;"></div>
+<div class="col-lg-6 col-md-6 col-sm-12 col-xs=12" style="height: 60px;"></div>
 <div class="wrapper-menu">
 	<div class="container">
 	  	<nav class="navbar navbar">		  	
@@ -189,5 +189,6 @@
 	  	</nav>
 	</div>
 </div>
+
 
 

@@ -46,7 +46,7 @@
                 <b><h3 style="margin-bottom: 15px; color: #d9d6d6;"><b>Latest Post</b></h3></b>
                 <ul class="list-unstyled">
                   @foreach(\App\OurNews::where([['post_type','=',1],['web','=',1]])->orderBy('id', 'DESC')->take(4)->get() as $new)
-                    <li style="width: 100%; text-align: left;" class="btn w3-padding-small"><i class="fa fa-arrow-circle-right"></i><a style="color: orange;" target="_blank" href="/ournews/{{$new->slug}}"> {!! str_limit($new['tour_name'], 42) !!}</a></li>
+                    <li style="width: 100%; text-align: left; overflow: hidden !important;" class="btn w3-padding-small"><i class="fa fa-arrow-circle-right"></i><a style="color: orange;" target="_blank" href="/ournews/{{$new->slug}}"> {!! str_limit($new['tour_name'], 42) !!}</a></li>
                   @endforeach                 
                   <li class="btn btn-block"><a target="_blank" class=" w3-btn w3-green w3-border w3-border-green w3-round-xlarge" href="/ournews">View More >></a></li>
                 </ul>
@@ -90,7 +90,7 @@
   <!--End of Zendesk Chat Script-->
 
 <script>
-    $(document).ready(function (){
+  
         $("#goTotop").click(function (){
             $('html, body').animate({
                 scrollTop: $(".header_info").offset().top
@@ -104,7 +104,7 @@
           }
         });
     $('[data-toggle="popover"]').popover();   
-    });
+
 
     $(function() {
         $('.lazy').lazy();

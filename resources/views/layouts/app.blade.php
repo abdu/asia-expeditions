@@ -15,6 +15,13 @@
 <script type="text/javascript" src="{{asset('js/compressed.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/jquery.lazy.min.js')}}"></script>
 
+  <!-- Insert to your webpage before the </head> -->
+  <!-- <script src="{{asset('sliderengine/jquery.js')}}"></script> -->
+    <script src="{{asset('sliderengine/amazingslider.js')}}"></script>
+    <link rel="stylesheet" type="text/css" href="{{asset('sliderengine/amazingslider-1.css')}}">
+    <script src="{{asset('sliderengine/initslider-1.js')}}"></script>
+    <!-- End of head section HTML codes -->
+
 <title>@yield('title') | {{config('app.name')}}</title>
 <style type="text/css">
 	form.gsc-search-box{
@@ -27,6 +34,15 @@
 		margin-bottom: 0px !important;
 	}
 </style>
+	<script type="text/javascript">
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11&appId=893916190733237";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+	</script>
 </head>
 <body>
 
