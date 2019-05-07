@@ -1450,8 +1450,47 @@ dt,kbd kbd,label {
 }
 
 @media (min-width: 768px) {
+    .set_width{
+        width: 1084px;
+
+    }
     .lead {
         font-size:21px
+    }
+
+}
+@media (min-width: 992px) {
+        .navbar-collapse.collapse {
+        display: block!important;
+        height: auto!important;
+        padding-bottom: 0;
+        overflow: visible!important
+    }
+      .navbar-toggle {
+    display: none !important;
+
+    }
+    .set_width{
+        width: 1084px;
+
+    }
+    #amazingslider-1{
+    width: 626px !important;
+    }
+  
+}
+@media (min-width: 1200px){ 
+       .navbar-collapse.collapse {
+        display: block!important;
+        height: auto!important;
+        padding-bottom: 0;
+        overflow: visible!important
+    }
+      .navbar-toggle {
+    display: none !important;
+    }
+ #amazingslider-1{
+    width: 760px !important;
     }
 }
 
@@ -1680,7 +1719,7 @@ dd {
 }
 
 .btn-group-vertical>.btn-group:after,.btn-toolbar:after,.clearfix:after,.container-fluid:after,.container:after,.dropdown-menu>li>a,.form-horizontal .form-group:after,.modal-footer:after,.modal-header:after,.navbar-collapse:after,.navbar-header:after,.navbar:after,.pager:after,.panel-body:after,.row:after {
-    clear: both
+    clear: both;
 }
 
 abbr[data-original-title],abbr[title] {
@@ -4138,10 +4177,12 @@ tbody.collapse.in {
 }
 
 .nav-tabs>li>a {
+    font-size: 12px;
     margin-right: 2px;
     line-height: 1.6;
     border: 1px solid transparent;
-    border-radius: 4px 4px 0 0
+    border-radius: 4px 4px 0 0;
+    padding: 10px 10px 10px 27px;
 }
 
 .nav-tabs>li>a:hover {
@@ -4293,12 +4334,7 @@ tbody.collapse.in {
         box-shadow: none
     }
 
-    .navbar-collapse.collapse {
-        display: block!important;
-        height: auto!important;
-        padding-bottom: 0;
-        overflow: visible!important
-    }
+
 
     .navbar-collapse.in {
         overflow-y: visible
@@ -4445,7 +4481,7 @@ tbody.collapse.in {
 
 @media (min-width: 768px) {
     .navbar-toggle {
-        display:none
+        display:block;
     }
 
     .navbar-nav {
@@ -12546,7 +12582,7 @@ h1,h2,h3,h4,h5,h6 {
 
 hr {
     border: 0;
-    border-top: 1px solid #eee;
+    border-top: 1px solid #e4b2b2;
     margin: 20px 0
 }
 

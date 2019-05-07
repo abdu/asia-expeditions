@@ -93,7 +93,7 @@
   
         $("#goTotop").click(function (){
             $('html, body').animate({
-                scrollTop: $(".header_info").offset().top
+                scrollTop: $(".top").offset().top
             }, 300);
         });
         $(window).scroll(function(){

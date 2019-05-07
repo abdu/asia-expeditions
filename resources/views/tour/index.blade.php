@@ -16,6 +16,11 @@
      border-width: 0px !important; 
      border-style: 0px !important; 
     }
+    .bor{
+    border: 1px solid #cccccc7a;    
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.13)
+    }
+ 
 </style>
 
 
@@ -100,56 +105,58 @@
     <div class="card">
         <div class="container-fliud">
             <div class="wrapper">
-                <div class=" col-md-8 col-xs-12" style="padding: 0px;">
+                <div class=" col-md-8 col-xs-12 bor" style="padding: 0px;">
 
-    <!-- Insert to your webpage where you want to display the slider -->
-    <div id="amazingslider-wrapper-1" style="display:block;position:relative;max-width:626px;margin:0px auto 95px;margin-left: 0px;" >
-        <div id="amazingslider-1" style="display:block;position:relative;margin:0 auto;">
-            <ul class="amazingslider-slides" style="display:none;">
-                <li><img src="{{Shared::getInstance()->urlResourceBig($tour->tour_photo, $tour->user_id) }}"  title="" />
-                </li>
-                 @if(count($img) > 1)
-                    @foreach ($img as $key => $value) 
-                <li><img src="{{ Shared::getInstance()->urlResourceBig(trim($value), $tour->user_id) }}" alt=""  title="MtPopa-2298" />
-                </li>
-                    @endforeach
-                @endif
-                @if(isset($tour->video)? $tour->video:'' )
-                
-                    <li><img src="https://img.youtube.com/vi/{{isset($tour->video) ? $tour->video:''}}/0.jpg" />
-                <video preload="none" style="height: 352px !important;" src="https://www.youtube.com/embed/{{$tour->video}}?v={{$tour->video}}" ></video>
-                </li>
-            @endif
-             
-            </ul>
-            <ul class="amazingslider-thumbnails" style="display:none;">
-                <li><img src="{{Shared::getInstance()->urlResource($tour->tour_photo, $tour->user_id)}}" alt="" title="nimae" /></li>
+                    <!-- Insert to your webpage where you want to display the slider -->
+                    <div id="amazingslider-wrapper-1" style="display:block;position:relative;max-width:626px;margin:0px auto 95px;margin-left: 0px;" >
+                        <div id="amazingslider-1" style="display:block;position:relative;margin:0 auto;">
+                            <ul class="amazingslider-slides" style="display:none;">
+                                <li><img src="{{Shared::getInstance()->urlResourceBig($tour->tour_photo, $tour->user_id) }}"  title="" />
+                                </li>
+                                 @if(count($img) > 1)
+                                    @foreach ($img as $key => $value) 
+                                <li><img src="{{ Shared::getInstance()->urlResourceBig(trim($value), $tour->user_id) }}" alt=""  title="MtPopa-2298" />
+                                </li>
+                                    @endforeach
+                                @endif
+                                @if(isset($tour->video)? $tour->video:'' )
+                                
+                                    <li><img src="https://img.youtube.com/vi/{{isset($tour->video) ? $tour->video:''}}/0.jpg" />
+                                <video preload="none" style="height: 352px !important;" src="https://www.youtube.com/embed/{{$tour->video}}?v={{$tour->video}}" ></video>
+                                </li>
+                            @endif
+                             
+                            </ul>
+                            <ul class="amazingslider-thumbnails" style="display:none;">
+                                <li><img src="{{Shared::getInstance()->urlResource($tour->tour_photo, $tour->user_id)}}" alt="" title="nimae" /></li>
 
-                  @if(count($img) > 1)
-                    @foreach ($img as $key => $value) 
-                <li><img src="{{Shared::getInstance()->urlResource(trim($value), $tour->user_id) }}" alt="" title="" /></li>
-                   @endforeach
-                @endif
-                 @if(isset($tour->video) ? $tour->video:'')
-               
-                   <li><img src="https://img.youtube.com/vi/{{isset($tour->video) ? $tour->video:''}}/0.jpg" /></li>
-                
-                @endif
-                
-            </ul>
-        </div>
-    </div>
-    <!-- End of body section HTML codes -->    
+                                  @if(count($img) > 1)
+                                    @foreach ($img as $key => $value) 
+                                <li><img src="{{Shared::getInstance()->urlResource(trim($value), $tour->user_id) }}" alt="" title="" /></li>
+                                   @endforeach
+                                @endif
+                                 @if(isset($tour->video) ? $tour->video:'')
+                               
+                                   <li><img src="https://img.youtube.com/vi/{{isset($tour->video) ? $tour->video:''}}/0.jpg" /></li>
+                                
+                                @endif
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End of body section HTML codes -->    
 
                 </div>
-                <div class=" col-md-4 col-xs-12" style="padding: 12px 0px;">
+                <div class=" col-md-4 col-xs-12 bor" style="padding: 12px 0px; text-align: center;">
                     <div class="col-md-12" >            
                         <h3 style="margin-bottom: 0px;" class="price"> price: <span style="cursor: pointer;" data-toggle="popover" data-trigger="hover" data-content="Our special price" data-placement="top">${{$tour['tour_price']}}</span> <small style="text-transform: capitalize ">Per Person</small></h3>
+                        <hr>
                         <div class="panel-body">
                             <div class="row">
                                 <p>Secure Payments : <img class="lazy" data-src="/img/paywith.png" style="height: 25px;"></p>
                             </div>
                         </div>  
+                        <hr>
                     </div>  
                     <div class="col-md-12">
                         <div class="input-group">
@@ -168,39 +175,36 @@
                 </div>
             </div>
             <div class="clear"></div>
-
-      <!--       <div class="spacing">
-                
-                
-            </div>
- -->
-    
-               
-
-            <div id="content" style="margin-top: 24px; background: none;">
-                <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
-                    <li class="active"><a href="#highlights" data-toggle="tab">Highlights</a></li>
-                    <li><a href="#details" data-toggle="tab">Program Details</a></li>
-                    <li><a href="#service-include" data-toggle="tab">Price & Service Included</a></li>
-                    <li><a href="#preferrenced-hotel" data-toggle="tab">Accommodation</a></li>
-                </ul>
-                <div id="my-tab-content" class="tab-content" style="background: white;">
-                    <div class="tab-pane active" id="highlights">
-                        <p><?php echo html_entity_decode($tour['tour_intro']) ?></p>
-                    </div>
-                    <div class="tab-pane " id="details">
-                        <p><?php echo html_entity_decode($tour['tour_desc']) ?></p>
-                    </div>
-                    <div class="tab-pane " id="service-include">
-                        <p><?php echo html_entity_decode($tour['tour_remark']) ?></p>
-                    </div>
-                    <div class="tab-pane" id="preferrenced-hotel">
-                       @include('include.hotels')
-                    </div>
+        </div>
+    </div>
+      <div class="spacing"></div>
+    <div class="col-md-8" style="padding: 0px;">
+        <div id="" class="bor" style="margin-top:0; background-color: #eeeeee;">
+            <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+                <li class="active"><a href="#highlights" data-toggle="tab">Highlights</a></li>
+                <li><a href="#details" data-toggle="tab">Program Details</a></li>
+                <li><a href="#service-include" data-toggle="tab">Price & Service Included</a></li>
+                <li><a href="#preferrenced-hotel" data-toggle="tab">Accommodation</a></li>
+            </ul>
+            <div id="my-tab-content" class="tab-content" style="background: white;">
+                <div class="tab-pane active" id="highlights">
+                    <p><?php echo html_entity_decode($tour['tour_intro']) ?></p>
+                </div>
+                <div class="tab-pane " id="details">
+                    <p><?php echo html_entity_decode($tour['tour_desc']) ?></p>
+                </div>
+                <div class="tab-pane " id="service-include">
+                    <p><?php echo html_entity_decode($tour['tour_remark']) ?></p>
+                </div>
+                <div class="tab-pane" id="preferrenced-hotel">
+                   @include('include.hotels')
                 </div>
             </div>
         </div>
-    </div>  
+    </div>
+    <div class="col-md-4">
+        
+    </div>
 </div>
 
 <div class="spacing"></div>

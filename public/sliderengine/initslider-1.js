@@ -9,8 +9,8 @@ jQuery(document).ready(function(){
     jQuery("#amazingslider-1").amazingslider({
         sliderid:1,
         jsfolder:jsFolder,
-        width:560,
-        height:315,
+        width:900,
+        height:550,
         skinsfoldername:"",
         loadimageondemand:false,
         videohidecontrols:false,
@@ -228,17 +228,11 @@ jQuery(document).ready(function(){
             duration:1500,
             easing:"easeOutCubic"
         },
-        blocks: {
-            columncount:5,
+        cssslide: {
+            duration:1000,
+            easing:"ease",
             checked:true,
-            rowcount:5,
-            effects:"topleft,bottomright,top,bottom,random",
-            duration:1500,
-            easing:"easeOutCubic"
-        },
-        flip: {
-            duration:1500,
-            checked:true
+            effectdirection:0
         },
         slide: {
             duration:1000,
@@ -246,12 +240,7 @@ jQuery(document).ready(function(){
             checked:true,
             effectdirection:0
         },
-        fade: {
-            duration:1000,
-            easing:"easeOutCubic",
-            checked:true
-        },
-        transition:"tiles,slice,blocks,flip,slide,fade",
+        transition:"tiles,slice,cssslide,slide",
         scalemode:"fill",
         isfullscreen:false,
         textformat: {

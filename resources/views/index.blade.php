@@ -105,6 +105,8 @@ Asia Expeditions , Myanmar & Indochina – Destination Management Company is for
 	</div>
 	<div class="clearfix"></div>
 	<div class="spacing"></div>
+	<div class="col-md-12">
+	</div>
 	<div class="col-md-12">	
 		<?php
         $getTourEx = \App\Tour::where([['post_type','=', 0],['tour_type','=', 26 ], ['web','=', 1]])->orderBy('id', 'desc')->take(30)->get(); ?>

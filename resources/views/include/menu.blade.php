@@ -4,7 +4,8 @@
 	use App\components\Shared;
 ?>
 	@include('include.message')
-<div class="col-md-12 header_info">
+	<div class="top"></div>
+<div class="col-md-12 header_info ">
 	<div class="container">
   		<div class="row">
   			<div class="col-md-12">
@@ -139,9 +140,9 @@
   	</div>
 </div>
 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="height: 60px;"></div>
-<div class="col-lg-6 col-md-6 col-sm-12 col-xs=12" style="height: 60px;"></div>
+<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="height: 60px;"></div>
 <div class="wrapper-menu">
-	<div class="container">
+	<div class="container set_width">
 	  	<nav class="navbar navbar">		  	
 		    <div class="navbar-header">
 		    	<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
