@@ -90,20 +90,19 @@
   <!--End of Zendesk Chat Script-->
 
 <script>
+
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 100) {
+      $('#goTotop').fadeIn('slow');
+    } else {
+      $('#goTotop').fadeOut('slow');
+    }
+  });
   
-        $("#goTotop").click(function (){
-            $('html, body').animate({
-                scrollTop: $(".top").offset().top
-            }, 300);
-        });
-        $(window).scroll(function(){
-          if($(window).scrollTop() > 250 ){
-            $("#goTotop").css('display','block');
-          }else{
-            $("#goTotop").css('display','none');
-          }
-        });
-    $('[data-toggle="popover"]').popover();   
+  $('#goTotop').click(function(){
+    $('html, body').animate({scrollTop : 0},1500, 'easeInOutExpo');
+    return false;
+  }); 
 
 
     $(function() {

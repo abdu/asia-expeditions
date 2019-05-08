@@ -1,5 +1,5 @@
 <?php use App\components\Shared; ?>
-<div class="col-sm-4">
+<div class="col-sm-12">
     <span class="thumbnail text-center">
         <a class="img-card" href="{{route('tourDetails', ['url'=> $tour->slug])}}">
            <img class="lazy" data-src="{{Shared::getInstance()->urlResource($tour->tour_photo, $tour->user_id)}}"/>

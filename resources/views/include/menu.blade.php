@@ -11,7 +11,7 @@
   			<div class="col-md-12">
   			
 			  		<div class="pull-left" style="padding:5px 0px;">
-			  			<span>
+			  			<span class="a_hidden">
 			  				<b><i class="fa fa-phone"></i></b> +855 (23) 432 007  &nbsp;&nbsp; 
 			  				<a href="/contactus" data-toggle="popover" data-trigger="hover" data-content="Feel free to contact us any time " data-placement="bottom">
 			  					<i class="fa fa-envelope"></i>&nbsp;&nbsp;<span>Contact Us</span>
@@ -40,8 +40,8 @@
 			  		</div>	
 			  		<div class="pull-right" style="padding:0px 0px;">
 			  			<span class="wrap-shopping-cart">
-							<ul class="nav navbar-nav navbar-right" >
-								<li class="w3-dropdown-hover" style="padding: 2px 11px;">
+							<ul class="nav navbar-nav navbar-right" style=" margin: 0;">
+								<li class="w3-dropdown-hover" style="padding: 2px 11px; float: left;">
 						  			<span class="fa fa-user" style="background: #fecc24;
 									    padding: 5px 8px;
 									    border-radius: 50%;
@@ -84,7 +84,7 @@
 								        </div>
 						  			</ul>
 								</li>
-								<li class="w3-dropdown-hover" style="padding: 2px 11px;">
+								<li class="w3-dropdown-hover" style="padding: 2px 11px; float: left;">
 									<span class="fa fa-shopping-cart" style="background: #fecc24; padding: 5px 7px; border-radius: 50%; font-size: 19px; color: white;">
 									</span>
 									<ul class="w3-dropdown-content w3-bar-block" role="menu" style="width: 272px; text-transform: capitalize;">
@@ -138,8 +138,7 @@
 	  	</div>
   	</div>
 </div>
-<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="height: 60px;"></div>
-<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="height: 60px;"></div>
+<div style="height: 110px;"></div>
 <div class="wrapper-menu">
 	<div class="container set_width">
 	  	<nav class="navbar navbar">		  	
@@ -152,7 +151,7 @@
 				</a>				
 			</div>
 			<div class="collapse navbar-collapse js-navbar-collapse">
-				<ul class="nav navbar-nav navbar-right" style="margin: 17px -19px;">
+				<ul class="nav navbar-nav navbar-right" style="margin: 17px -19px; padding-left: auto;">
 					<!-- <li><a href="/contactus">Contact Us</a></li> -->
 					
 					<li class="dropdown">
@@ -166,7 +165,7 @@
 			        </li>
 		            <li><a href="{{route('getFilm', 'myanmar')}}">Myanmar Film</a></li>
 		            <li><a href="/ournews">Our News</a></li>		            
-		            <li>
+		            <li style="padding: 0 5px;">
 		            	<span style="padding-top: 14px; padding-bottom: 14px;" class="action-search"> 
 		            		<span class="fa fa-search search-show" style="font-size: 19px; padding-top: 14px; padding-bottom: 14px; cursor: pointer;"> </span>
 		            		<span class="glyphicon glyphicon-remove search-hide" style="font-size: 17.6px; display: none;padding-top: 14px; padding-bottom: 14px; cursor: pointer;"> </span>

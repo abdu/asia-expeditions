@@ -1458,16 +1458,7 @@ dt,kbd kbd,label {
 
 }
 @media (min-width: 992px) {
-        .navbar-collapse.collapse {
-        display: block!important;
-        height: auto!important;
-        padding-bottom: 0;
-        overflow: visible!important
-    }
-      .navbar-toggle {
-    display: none !important;
-
-    }
+ 
     .set_width{
         width: 1084px;
 
@@ -1680,31 +1671,26 @@ dd {
     .act{
         /*position: fixed;*/
         transition: 0.5s;
-
         position: fixed;
-        top:0;
-        z-index:3;
+        top:0px !important;
+        z-index:3 !important;
 
     }
-
-    .in_act{
+    .wrapper-menu.in_act{
         /*position:static;*/
         transition:0.5 !important;
-        top:56px;   
-    }
-
-    .wrapper-menu.in_act{
-        position:static;
-        top:80px !important;
-        z-index:1;
-
+      z-index:1;
+      top: 30px;
     }
     .wrapper-menu {
+        position:fixed;
         transition:all 0.5s;   
         background: #f5f8fa;
         width: 100%;
         box-shadow: -1px 2px 7px -3px;
-
+        z-index:1;
+        top: 30px;
+       
    
 }
     .dl-horizontal dt {
@@ -1868,7 +1854,6 @@ pre code {
     .in_act{
         /*position:fixed;*/
         transition:0.5;
-        top:37px;
         z-index:1 ;
 
     }
@@ -1877,8 +1862,6 @@ pre code {
     background: #f5f8fa;
     width: 100%;
     box-shadow: -1px 2px 7px -3px;
-   
-   
 }
 }
 
@@ -1889,15 +1872,15 @@ pre code {
         .act{
         /*position: fixed;*/
         transition: 0.5s;
-        top:0;
+        top:0px !important;
         z-index:3;
 
     }
     .in_act{
         /*position:fixed;*/
         transition:0.5;
-        top:45px;
         z-index:1 ;
+        top: 35px !important;
 
     }
     .wrapper-menu {
@@ -1905,6 +1888,7 @@ pre code {
         background: #f5f8fa;
         width: 100%;
         box-shadow: -1px 2px 7px -3px;
+        top: 34px;
    
    
 }
@@ -4331,10 +4315,10 @@ tbody.collapse.in {
     .navbar {
         border-radius:4px
     }
-
+/*
     .navbar-header {
         float: left
-    }
+    }*/
 
     .navbar-collapse {
         width: auto;
@@ -4426,7 +4410,7 @@ tbody.collapse.in {
     position: relative;
     float: right;
     margin-right: 15px;
-    padding: 9px 10px;
+    padding: 14px 0px;
     margin-top: 8px;
     margin-bottom: 8px;
     background-color: transparent;
@@ -4498,7 +4482,7 @@ tbody.collapse.in {
     }
 
     .navbar-nav>li {
-        float: left
+        /*float: left*/
     }
 
     .navbar-nav>li>a {
@@ -4632,7 +4616,7 @@ tbody.collapse.in {
     }
 
     .navbar-right {
-        float: right!important;
+        /*float: right!important;*/
         margin-right: -15px
     }
 
@@ -14820,24 +14804,26 @@ header h1 {
         .act{
         position: fixed;
         transition: 0.5s;
-        top:0;
-        z-index:3 ;
+        top:0px !important;
+        z-index:3 !important ;
 
     }
     .in_act{
         position:fixed;
         transition:0.5;
-        top:80px;
         z-index:1;
+        top: 30px !important ;
 
     }
     .wrapper-menu {
-        transition: 0.5s;
+        position: fixed;
+        transition: all 0.5s;
         background: #f5f8fa;
         width: 100%;
         box-shadow: -1px 2px 7px -3px;
-   
-}
+        z-index: 1;
+        top: 30px;   
+   }
 }
 
 a.shopping-cart {
@@ -15256,4 +15242,55 @@ ul li iframe#twitter-widget-0 div.widget .btn-o a.btn {
     cursor: pointer;
     width: 16px;
     height: 16px
+}
+@media (max-width: 527px)  {
+    .a_hidden{
+        display: none;
+    }
+}
+@media (min-width: 768px)  {
+
+
+}
+@media (max-width: 992px)  {
+
+   .hidden-xs {
+        display:none!important
+    }
+
+}
+@media (max-width: 991px)  {
+
+     #amazingslider-1 {
+    width: 718px !important;}
+}
+@media (max-width: 776px)  {
+
+     #amazingslider-1 {
+    width: 100% !important;
+}
+
+}
+@media (min-width: 1200px) {
+       .navbar-nav>li {
+        float: left
+    }
+     .navbar-right {
+        float: right!important;
+        margin-right: -15px
+    }
+    .navbar-header {
+    float: left;
+    }
+    .navbar-collapse.collapse {
+        display: block!important;
+        height: auto!important;
+        padding-bottom: 0;
+        overflow: visible!important
+    }
+      .navbar-toggle {
+    display: none !important;
+
+    }
+
 }
