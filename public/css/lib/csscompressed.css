@@ -1880,7 +1880,7 @@ pre code {
         /*position:fixed;*/
         transition:0.5;
         z-index:1 ;
-        top: 35px !important;
+        top: 33px !important;
 
     }
     .wrapper-menu {
@@ -1888,7 +1888,7 @@ pre code {
         background: #f5f8fa;
         width: 100%;
         box-shadow: -1px 2px 7px -3px;
-        top: 34px;
+        top: 33px;
    
    
 }

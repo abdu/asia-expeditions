@@ -233,19 +233,18 @@
             @endif
             <div class="row">   
                 <div class="col-md-12">           
-                    <div id="carousel-example-generic" class="carousel slide " data-ride="carousel">
-                        <div class="carousel-inner">
+                <section id="clients" class="wow fadeInUp" >
+                            <div class="container">                                     
+                                <div class="owl-carousel clients-carousel" style="height: auto;">
                             @foreach($tourLink->chunk(4) as $key => $chunkTour)
-                            <div class="item  {{$key == 0 ? 'active' : ''}}"> 
-                                <div class="row">
+                        
                                     @foreach($chunkTour as $tour)
                                         @include('include.item')
                                     @endforeach
-                                </div>
-                            </div>
-                            @endforeach                
-                        </div>
-                    </div>
+                          
+                            @endforeach
+                            </div></div></section>               
+                    
                 </div>
             </div>
         </div>

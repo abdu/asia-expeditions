@@ -46,62 +46,43 @@ About {{$coun['country_name']}} Tours Travel DMC Itineraries
 		?>
 		@if($get_province->count() > 0)
 		<div class="title text-center"><h2 ><b>Popular Places in</b><b style="text-transform: capitalize;"> {{$coun['country_name']}}</b></h2></div>
-		<div class="row">
 			@if($get_province->count() > 3 )
-		        <div class="row">
-		            <div class="col-md-9">
-		            </div>
-		             <div class="col-md-3">
-	                    <div class="controls pull-right " style="margin-bottom:5px;">
-	                        <a class="left fa fa-chevron-left btn btn-primary" href="#carousel-example"
-	                            data-slide="prev"></a>                        
-	                        <a  class="right fa fa-chevron-right btn btn-primary" href="#carousel-example"
-	                            data-slide="next"></a>
-	                    </div>
-	                </div>  
-	            </div>
             @endif
             <div class="row">   
-            	<div class="col-md-12">		       
-			        <div id="carousel-example" class="carousel slide " data-ride="carousel">
-			            <div class="carousel-inner">
-			            @foreach($get_province->chunk(3) as $key => $chunkprovince)
-							<div class="item  {{$key == 0 ? 'active' : ''}}"> 
-					    		<div class="row">
-					    		@foreach($chunkprovince as $pro)
-					    		<?php
-						    		
-						    		$countTour = \App\Tour::where(['province_id'=> $pro->province_id, 'web'=> 1])->count();
-					    		?>
-									<div class="col-sm-4">
-					                    <span class="thumbnail text-center">
-									        <a class="img-card" href="{{route('destination', [$coun->country_slug, $pro->slug])}}" title="{{$pro['province_name']}}">
-				                                <img class="lazy" data-src="{{Shared::getInstance()->urlResource($pro['province_picture'])}}" />
-				                            </a>
-				                            @if($countTour != 0)
-				                            <div class="tour_item_wrap col-md-12"><div class="atgrid__item__angle">{{$countTour}} Destination</div></div>
-				                            @endif
-					                        <h3><a class="text-danger" href="{{route('destination', [$coun->country_slug, $pro->slug])}}">
-					                        <p><b>{{ $pro->province_name }}</b></p></a></h3>
-				                            <span>{!! str_limit(strip_tags($pro->province_intro),85) !!}</span>  
-				                            <hr class="line">
-				                            <div class="row">
-				                                <div class="col-md-12 col-sm-12">
-				                                    <a style="font-weight:100;" href="{{route('destination', [$coun->country_slug, $pro->slug])}}" class=" w3-btn w3-white w3-border w3-border-green w3-round-xlarge"> View More</a>
-				                                </div>      
-				                             	<div class="clear"></div>                          
-				                            </div>
-					                    </span>
-					                </div>
-					                @endforeach
-					            </div>
-					        </div>	
-					    @endforeach		           
-			            </div>
-			        </div>
+            	<div class="col-md-12">	  
+        	     	<section id="clients" class="wow fadeInUp">
+				        <div class="container"> 		        			  		
+		                    <div class="owl-carousel clients-carousel" style="height: auto;">  			    			           
+				            	@foreach($get_province->chunk(3) as $key => $chunkprovince)						
+						    		@foreach($chunkprovince as $pro)
+						    		<?php	$countTour = \App\Tour::where(['province_id'=> $pro->province_id, 'web'=> 1])->count();	?>
+										<div class="col-sm-12">
+						                    <span class="thumbnail text-center">
+										        <a class="img-card" href="{{route('destination', [$coun->country_slug, $pro->slug])}}" title="{{$pro['province_name']}}">
+					                                <img class="lazy" data-src="{{Shared::getInstance()->urlResource($pro['province_picture'])}}" />
+					                            </a>
+					                            @if($countTour != 0)
+					                            <div class="tour_item_wrap col-md-12"><div class="atgrid__item__angle">{{$countTour}} Destination</div></div>
+					                            @endif
+						                        <h3><a class="text-danger" href="{{route('destination', [$coun->country_slug, $pro->slug])}}">
+						                        <p><b>{{ $pro->province_name }}</b></p></a></h3>
+					                            <span>{!! str_limit(strip_tags($pro->province_intro),85) !!}</span>  
+					                            <hr class="line">
+					                            <div class="row">
+					                                <div class="col-md-12 col-sm-12">
+					                                    <a style="font-weight:100;" href="{{route('destination', [$coun->country_slug, $pro->slug])}}" class=" w3-btn w3-white w3-border w3-border-green w3-round-xlarge"> View More</a>
+					                                </div>      
+					                             	<div class="clear"></div>                          
+					                            </div>
+						                    </span>
+						                </div>
+						            @endforeach			       
+						   		@endforeach		
+				    		</div>
+						</div>
+					</section>           			       
 		        </div>
 		    </div>
-		</div>
 		@endif 
 	</div>
 	<div class="clear"></div>
@@ -113,41 +94,29 @@ About {{$coun['country_name']}} Tours Travel DMC Itineraries
         @if($getTour->count() > 0)
         <div class="title text-center">
 			<h2><b>Popular Tours in</b><b style="text-transform: capitalize;"> {{$coun->country_name}}</b></h2>
-		</div>
-		<div class="row">
-			@if($getTour->count() > 3)
-	        <div class="row">
-	            <div class="col-md-9">
-	            </div>
-	             <div class="col-md-3">
-                    <div class="controls pull-right " style="margin-bottom:5px;">
-                        <a class="left fa fa-chevron-left btn btn-primary" href="#carousel-example-generic"
-                            data-slide="prev"></a>
-                        <a class="right fa fa-chevron-right btn btn-primary" href="#carousel-example-generic"    data-slide="next"></a>
-                    </div>
-                </div>  
-            </div>
-            @endif
+		</div>	
             <div class="row">   
-            	<div class="col-md-12">		       
-			        <div id="carousel-example-generic" class="carousel slide " data-ride="carousel">
-			            <div class="carousel-inner">
-			            @foreach($getTour->chunk(3) as $key => $chunkTour)
-							<div class="item  {{ $key == 0 ? 'active' : '' }}"> 
-					    		<div class="row">
+            	<div class="col-md-12">		   
+            	<section id="clients" class="wow fadeInUp">
+				        <div class="container"> 		        			  		
+		                    <div class="owl-carousel clients-carousel" style="height: auto;">  	    
+			  
+			            @foreach($getTour->chunk(3) as $key => $chunkTour)					
 					    			@foreach($chunkTour as $tour)
 										@include('include.item')
-					                @endforeach
-					            </div>
-					        </div>	
-					    @endforeach		           
-			            </div>
-			        </div>
+					                @endforeach					      
+					    @endforeach	
+					    		</div>
+						</div>
+					</section>  	           
+			       
 		        </div>
-		    </div>
-		</div>
+		    </div>	
 		@endif
 	</div>
-	</div>
+	
 </div>
+
+  <!-- Contact Form JavaScript File -->
+
 @endsection

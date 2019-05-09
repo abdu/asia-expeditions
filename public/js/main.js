@@ -52,7 +52,7 @@
 
   // Clients carousel (uses the Owl Carousel library)
   $(".clients-carousel").owlCarousel({
-    autoplay: false,
+    autoplay: true,
     dots: true,
     loop: true,
     responsive: { 0: { items: 2 }, 768: { items: 3 }, 900: { items: 3 }

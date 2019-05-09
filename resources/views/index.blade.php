@@ -17,9 +17,7 @@ Asia Expeditions , Myanmar & Indochina – Destination Management Company is for
 	use \App\Country;
 	$tourOne = \App\Tour::where('id', 1013)->first();
 ?>
-<!-- <link href="{{asset('/add_lib/lib/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet"> -->
-  <link href="{{asset('/add_lib/css/style.css')}}" rel="stylesheet">
-  <link href="{{asset('/add_lib/lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+
 @section('content')
 @include('include.menu')
 
@@ -64,62 +62,64 @@ Asia Expeditions , Myanmar & Indochina – Destination Management Company is for
 		   </div>
 		</div>
 	</div>
+	<div class="spacing"></div>
 </div>
 
-<div class="container">
+
 	<div class="clearfix"></div>
 	<div class="spacing"></div>
 	<div class="col-md-12">	
+
 		<?php
 	        $getTour = \App\Tour::where([['post_type','=', 0],['tour_type','=', 35 ], ['web','=', 1]])->orderBy('id', 'desc')->take(30)->get();
 	    ?>
         @if($getTour->count() > 0)
       	<div class="title text-center"><h2><b>DISCOVER OUR UNIQUE EXPERIENCES</b></h2></div>
-		<div class="row">
 			<div class="row">		             
             	<div class="col-md-12">   
             	<section id="clients" class="wow fadeInUp">  		       
-            		<div class="owl-carousel clients-carousel ">
-			            @foreach($getTour->chunk(3) as $key => $chunkTour)
-			    			@foreach($chunkTour as $tour)
-								@include('include.item')
-			                @endforeach				      
-					    @endforeach			           
-			  	    </div>
-			    </section>
-			@endif
+            		<div class="container">
+	            		<div class="owl-carousel clients-carousel ">
+				            @foreach($getTour->chunk(3) as $key => $chunkTour)
+				    			@foreach($chunkTour as $tour)
+				    		
+									@include('include.item')
+							
+				                @endforeach				      
+						    @endforeach			           
+				  	    </div>
+				  	</div>
+			    </section>			
 			</div>
 		</div>
-	</div>
+		@endif
 	<div class="clearfix"></div>
-	<div class="spacing"></div>
-	<div class="col-md-12">	
+		<div class="col-md-12">	
 		<?php
         $getTourEx = \App\Tour::where([['post_type','=', 0],['tour_type','=', 26 ], ['web','=', 1]])->orderBy('id', 'desc')->take(30)->get(); ?>
-        @if($getTourEx->count() > 0)
-      	<div class="title text-center"><h2><b>TAKE A LOOK AT OUR EXCURSION</b></h2></div>
-		<div class="row">		
-		    <div class="row">  
-		        <div class="col-md-12">
-		        	<section id="clients" class="wow fadeInUp">
-				        <div class="container"> 		        			  		
-		                    <div class="owl-carousel clients-carousel" style="height: auto;">
-		                        @foreach($getTourEx->chunk(3) as $key => $chunkTour)
-		                            @foreach($chunkTour as $tour)
-										@include('include.item')					
-		   					      	@endforeach 			            					  
-		   					    @endforeach       					   
-		      				</div>      			      
-				        </div>
-		    		</section>
-		    	</div>
-		    </div>
-		</div>
-		@endif
-	</div>
-	
-	<div class="spacing"></div>
-
+	        @if($getTourEx->count() > 0)
+	      	<div class="title text-center"><h2><b>TAKE A LOOK AT OUR EXCURSION</b></h2></div>
+				
+			    <div class="row">  
+			        <div class="col-md-12">
+			        	<section id="clients" class="wow fadeInUp" >
+					        <div class="container"> 		        			  		
+			                    <div class="owl-carousel clients-carousel" style="height: auto;">
+			                        @foreach($getTourEx->chunk(3) as $key => $chunkTour)
+			                            @foreach($chunkTour as $tour)
+			                 
+											@include('include.item')	
+									
+			   					      	@endforeach 			            					  
+			   					    @endforeach       					   
+			      				</div>      			      
+					        </div>
+			    		</section>
+			    	</div>
+			    </div>
+			@endif
+	    </div>
+		<div class="spacing"></div>
 	</div>
 	<div class="col-md-12" style="background-color: white;">
 		<div class="container">
@@ -184,33 +184,26 @@ Asia Expeditions , Myanmar & Indochina – Destination Management Company is for
 			</div>
 		</div>
 		<div class="clear"></div>
-		<div class="spacing"></div>
-		<div class="spacing"></div>
-		<div class="spacing"></div>
-	</div>
+		<div class="spacing"></div>	
+</div>
 
 
- <!-- JavaScript Libraries -->
 
-  <script src="{{asset('/add_lib/lib/wow/wow.min.js')}}"></script>
-  <script src="{{asset('/add_lib/lib/waypoints/waypoints.min.js')}}"></script>
-  <script src="{{asset('/add_lib/lib/counterup/counterup.min.js')}}"></script>
-  <script src="{{asset('/add_lib/lib/owlcarousel/owl.carousel.min.js')}}"></script>
-  <script src="{{asset('/add_lib/lib/isotope/isotope.pkgd.min.js')}}"></script>
-  <script src="{{asset('/add_lib/lib/touchSwipe/jquery.touchSwipe.min.js')}}"></script>
-  <!-- Contact Form JavaScript File -->
+
 
 
   <!-- Template Main Javascript File -->
-  <script src="js/main.js"></script>
+
 <script type="text/javascript">
-	 $(document).ready(function(){  
-      $(".videoFrame").click(function(){
-      	// alert('a');
-      	$(".videoFrame").remove();
-        $('.add').append('<iframe  width="360" height="210" src="https://www.youtube.com/embed/A6I5nHqkGiw?controls=0&autoplay=1"></iframe>');
-      });
-   });
+	$(document).ready(function(){  
+        $(".videoFrame").click(function(){
+	      	// alert('a');
+	      	$(".videoFrame").remove();
+	        $('.add').append('<iframe  width="360" height="210" src="https://www.youtube.com/embed/A6I5nHqkGiw?start=11&controls=0&autoplay=1"></iframe>');
+        });
+    });
+
 </script>
+
 
 @endsection

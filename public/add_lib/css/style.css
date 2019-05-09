@@ -9,42 +9,6 @@
 # General
 --------------------------------------------------------------*/
 
-body {
-  background: #fff;
-  color: #666666;
-  font-family: "Open Sans", sans-serif;
-}
-
-a {
-  color: #18d26e;
-  transition: 0.5s;
-}
-
-a:hover,
-a:active,
-a:focus {
-  color: #18d36e;
-  outline: none;
-  text-decoration: none;
-}
-
-p {
-  padding: 0;
-  margin: 0 0 30px 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  margin: 0 0 20px 0;
-  padding: 0;
-}
-
 /* Back to top button */
 
 .back-to-top {
@@ -1580,32 +1544,82 @@ body.mobile-nav-active #mobile-nav-toggle {
     display: inline;
   }
 }
- .owl-nav .owl-next,.owl-nav .owl-prev {
-    /* cursor: pointer; */
-    font-size: 0;
-    line-height: 0;
-    position: absolute;
-    top: 50%;
-    display: block;
-    width: 20px;
-    height: 20px;
-    padding: 0;
-    -webkit-transform: translate(0, -50%);
-    -ms-transform: translate(0, -50%);
-    transform: translate(0, -50%);
-    cursor: pointer;
-    color: transparent;
-    border: none;
-    outline: none;
-    background: black;
+.owl-next,.owl-prev{    
+  transition: .9s;
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  padding: 0;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  cursor: pointer;   
+  border: none;
+  outline: none;
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  margin-top: -25px;
+  opacity: 0;
+  box-shadow: 0 1px 2px black;
+  background-color: #03a1d1 !important;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+
+
+
 }
 .owl-next{
-right: -25px;
-}
-.owl-prev{
-left: -25px;
-
+  right: -25px;
+  background: url(http://localhost:8000/sliderengine/arrows-48-48-4.png) right top -4px;
+  background-position-x: 44px;
+ }
+   .owl-prev {
+    left: -25px;
+    background: url(http://localhost:8000/sliderengine/arrows-48-48-4.png) left top -4px;
+    background-position-x: -5px;
 }
 .owl-carousel{
   z-index: 0 !important;
+}
+
+.owl-next:after {
+  content: "";
+  background: #90EE90;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px!important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.owl-next:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+.owl-prev:after {
+  content: "";
+  background: #90EE90;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px!important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.owl-prev:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
 }
