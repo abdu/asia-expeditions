@@ -58,7 +58,20 @@
     responsive: { 0: { items: 2 }, 768: { items: 3 }, 900: { items: 3 }
     }
   });
-
+    $(".clients-carousel-1").owlCarousel({
+    autoplay: true,
+    dots: false,
+    loop: true,
+    responsive: { 0: { items: 1 }, 768: { items: 1 }, 900: { items: 1 }
+    }
+  });
+       $(".clients-carousel-2").owlCarousel({
+    autoplay: true,
+    dots: false,
+    loop: true,
+    responsive: { 0: { items: 1 }, 768: { items: 1 }, 900: { items: 1 }
+    }
+  });
   // Testimonials carousel (uses the Owl Carousel library)
   $(".testimonials-carousel").owlCarousel({
     autoplay: true,
