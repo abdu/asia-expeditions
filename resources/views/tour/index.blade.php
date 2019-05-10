@@ -2,14 +2,18 @@
 @section('title')
 {{{ $tour['tour_name'] or ''}}}
 @endsection
-@section('content')
-@include("include.menu")
-
 <?php
     $string = rtrim($tour['tour_picture'], '|');
     $img = explode('|', $string);
     use App\components\Shared;
 ?>
+<meta property="og:url"           content="{{route('tourDetails', ['url'=> $tour->slug])}}" />
+<meta property="og:title"         content="{{$tour->tour_name }}|Asia Expedition" />
+<meta property="og:description"   content="{{$tour->tour_intro }}" />
+<meta property="og:image"         content="{{Shared::getInstance()->urlResourceBig($tour->tour_photo, $tour->user_id)}}" />
+@section('content')
+@include("include.menu")
+
 <style type="text/css">
     .amazingslider-box-1{
      margin-left: 0px !important; 
@@ -25,6 +29,8 @@
 
 
 <!-- modal send email -->
+
+
 <div class="w3-container">
     <div id="id01" class="w3-modal">        
         <div class="w3-modal-content w3-card-12 w3-animate-zoom " >
@@ -91,15 +97,28 @@
         <span>{{$tour->tour_name}}</span>
     </h1>
            <ul class="list-unstyled ">
-                    <li style="float: left; padding: 0px 12px; margin-left: -11px;">
-                        <div class="fb-share-button" data-href="/{{{$tour->country->country_name or ''}}}/{{ $tour->slug}}" data-layout="button" data-size="small" data-mobile-iframe="false"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=/{{{$tour->country->country_name or ''}}}/{{ $tour->slug }} &amp;src={{Shared::getInstance()->urlResourceBig($tour->tour_photo, $tour->user_id) }}">facebook</a></div>
+                    <li style="float: left;">            
+                         <div id="fb-root"></div>
+                        <script>(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];
+                          if (d.getElementById(id)) return;
+                          js = d.createElement(s); js.id = id;
+                          js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2';
+                          fjs.parentNode.insertBefore(js, fjs);
+                        }(document, 'script', 'facebook-jssdk'));</script>
+                          <!-- Your share button code -->
+                           <div class="fb-share-button" 
+                            data-href="{{route('tourDetails', ['url'=> $tour->slug])}}" 
+                            data-layout="button_count" data-size="small">
+
+                          </div>        
                     </li>
-                    <li style="float: left;">
+                    <li style="float: left;margin: -3px 5px;">
                         <a class="twitter-share-button" href="http://twitter.com/share?url={{route('tourDetails', ['url'=> $tour->slug])}}&amp;text={{$tour->tour_name}}&amp; hashtags=Asia Expedition &amp;">
                         <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
                         </a>
                     </li>
                 </ul>
+             
                 <div class="clearfix"></div>
 
     <div class="card">
@@ -218,35 +237,56 @@
                 </h2>
             </div>        
             @if($tourLink->count() > 3)
-            <div class="row">
-                <div class="col-md-9">
-                </div>
-                <div class="col-md-3">
-                    <div class="controls pull-right " style="margin-bottom:5px;">
-                        <a class="left fa fa-chevron-left btn btn-primary" href="#carousel-example-generic"
-                           data-slide="prev"></a>
-                        <a  class="right fa fa-chevron-right btn btn-primary" href="#carousel-example-generic"
-                            data-slide="next"></a>
-                    </div>
-                </div>  
-            </div> 
-            @endif
-            <div class="row">   
+                    <div class="row">   
                 <div class="col-md-12">           
-                <section id="clients" class="wow fadeInUp" >
-                            <div class="container">                                     
-                                <div class="owl-carousel clients-carousel" style="height: auto;">
-                            @foreach($tourLink->chunk(4) as $key => $chunkTour)
-                        
+                    <section id="clients" class="wow fadeInUp" >
+                        <div class="container">                                     
+                            <div class="owl-carousel clients-carousel" style="height: auto;">
+                                @foreach($tourLink->chunk(4) as $key => $chunkTour)                        
                                     @foreach($chunkTour as $tour)
                                         @include('include.item')
-                                    @endforeach
-                          
-                            @endforeach
-                            </div></div></section>               
-                    
+                                    @endforeach                          
+                                 @endforeach
+                            </div>
+                        </div>
+                    </section>                                 
                 </div>
             </div>
+            @elseif($tourLink->count() == 2)
+            <div class="row">   
+                <div class="col-md-12">           
+                    <section id="clients" class="wow fadeInUp" >
+                        <div class="container">                                     
+                            <div class="owl-carousel clients-carousel-2" style="height: auto;">
+                                @foreach($tourLink->chunk(4) as $key => $chunkTour)                        
+                                    @foreach($chunkTour as $tour)
+                                        @include('include.item')
+                                    @endforeach                          
+                                 @endforeach
+                            </div>
+                        </div>
+                    </section>                                 
+                </div>
+            </div>
+             @elseif($tourLink->count() == 1)
+             <div class="row">   
+                <div class="col-md-12">           
+                    <section id="clients" class="wow fadeInUp" >
+                        <div class="container">                                     
+                            <div class="owl-carousel clients-carousel-1" style="height: auto;">
+                                @foreach($tourLink->chunk(4) as $key => $chunkTour)                        
+                                    @foreach($chunkTour as $tour)
+                                    <div class="col-md-4">                                                                    
+                                        @include('include.item')
+                                    </div>
+                                    @endforeach                          
+                                 @endforeach
+                            </div>
+                        </div>
+                    </section>                                 
+                </div>
+            </div>
+            @endif
         </div>
         @endif
     </div>  
