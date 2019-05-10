@@ -65,7 +65,7 @@
     responsive: { 0: { items: 1 }, 768: { items: 1 }, 900: { items: 1 }
     }
   });
-       $(".clients-carousel-2").owlCarousel({
+    $(".clients-carousel-2").owlCarousel({
     autoplay: true,
     dots: false,
     loop: true,

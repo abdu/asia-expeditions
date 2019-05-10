@@ -29,7 +29,7 @@
   <link href="{{asset('/add_lib/css/style.css')}}" rel="stylesheet">
   <link href="{{asset('/add_lib/lib/animate/animate.min.css')}}" rel="stylesheet">
   <link href="{{asset('/add_lib/lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
-  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+  <link href="/add_lib/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
   
   
@@ -48,17 +48,7 @@
 		margin-bottom: 0px !important;
 	}
 </style>
-	<script type="text/javascript">
-        (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11&appId=893916190733237";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
 
-
-	</script>
     <script type="text/javascript">
   $(document).ready(function(){  
         $('.clients-carousel').hover(function(){
@@ -68,6 +58,28 @@
           $('.owl-prev').css({"opacity":"0","background-position-x":"0px"});
           $('.owl-next').css({"opacity":"0","background-position-x":"40px"});
         });
+
+    // $("li.u span.u").hover(function(){
+    //   // alert('aaaa');
+    //     $('.u span.u').removeClass('fa .u span.u').addClass('fa fa-user-o');
+    // },function(){
+    //    $('.u span.u').removeClass('fa fa-user-o').addClass('fa fa-user');
+    // });    
+    // $("li.c span.c").hover(function(){
+    //   // alert('aaaa');
+    //     $('.c span.c').removeClass('fa fa-shopping-cart').addClass('fa fa-cart-arrow-down');
+    // },function(){
+    //    $('.c span.c').removeClass('fa fa-cart-arrow-down').addClass('fa fa-shopping-cart');
+    // });
+
+        $("li.u span.u").hover(function(){
+        $('.u span.u').toggleClass('fa-user fa-user-o', 1000);
+      });
+        $("li.c span.c").hover(function(){
+        $('.c span.c').toggleClass('fa-shopping-cart fa-cart-arrow-down', 1000);
+      });
+ 
+
    });
 </script>
 </head>

@@ -30,7 +30,7 @@ use App\components\Shared; ?>
             <div class="card">
 	            <ul class="nav nav-tabs" role="tablist">
                     @foreach(\App\Setting::where('type', 2)->get() as $key=>$set)
-                        <li class="{{$mice->id == $set->id ? 'active': ''}}"><a href="{{route('miceName', ['url'=> $set->slug])}}">{{$set->title}}</a></li>
+                        <li class="{{$set->title}}" ><a  data-id="{{$set->title}}" data-url="{{$set->slug}}">{{$set->title}}</a></li>
                     @endforeach
 
 	            </ul>	            
@@ -43,4 +43,31 @@ use App\components\Shared; ?>
         </div>
 	</div>
 </div>
+<script type="text/javascript">
+
+    $(document).ready(function(){
+         var baseUrl=location.protocol+'//'+location.host+"/";
+        $(document).on('click','li a',function(){
+           
+             var id = $(this).data("id");
+             var datau=$(this).data('url');              
+              $(this).addClass('active');
+            console.log(datau);
+            window.history.pushState("", "", baseUrl+"mice/"+datau)
+            $.ajax({
+                method: "GET",
+                url:baseUrl+"mice/"+datau,       
+                dataType: "json",
+           
+                success: function(html){  
+
+                },
+                error: function(error){
+                    alert("Error!");
+                    return false;
+                },         
+             });
+        })
+    }); 
+</script>
 @endsection

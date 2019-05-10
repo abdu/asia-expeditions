@@ -41,11 +41,11 @@
 			  		<div class="pull-right" style="padding:0px 0px;">
 			  			<span class="wrap-shopping-cart">
 							<ul class="nav navbar-nav navbar-right" style=" margin: 0;">
-								<li class="w3-dropdown-hover" style="padding: 2px 11px; float: left;">
-						  			<span class="fa fa-user" style="background: #fecc24;
+								<li class="w3-dropdown-hover u" style="padding: 2px 11px; float: left;">
+						  			<span class="fa fa-user u " style="background: #fecc24;
 									    padding: 5px 8px;
 									    border-radius: 50%;
-									    color: white; font-size: 19px;">
+									    color: white; font-size: 19px; transition: .9s">
 									</span>
 						  			<ul class="w3-dropdown-content w3-bar-block" style="text-transform: capitalize; ">
 						  				<div style=" padding: 10px 0px;">
@@ -84,8 +84,8 @@
 								        </div>
 						  			</ul>
 								</li>
-								<li class="w3-dropdown-hover" style="padding: 2px 11px; float: left;">
-									<span class="fa fa-shopping-cart" style="background: #fecc24; padding: 5px 7px; border-radius: 50%; font-size: 19px; color: white;">
+								<li class="w3-dropdown-hover c" style="padding: 2px 11px; float: left;">
+									<span class="fa fa-shopping-cart c" style="background: #fecc24; padding: 5px 7px; border-radius: 50%; font-size: 19px; color: white;transition: .9s">
 									</span>
 									<ul class="w3-dropdown-content w3-bar-block" role="menu" style="width: 272px; text-transform: capitalize;">
 						  			@if(Cart::totalCartQty() > 0)
