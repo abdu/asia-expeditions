@@ -172,7 +172,7 @@
                         <hr>
                         <div class="panel-body">
                             <div class="row">
-                                <p>Secure Payments : <img class="lazy" data-src="/img/paywith.png" style="height: 25px;"></p>
+                                <p>Secure Payments : <img class="lazy" data-src="{{asset('/public/img/paywith.png')}}" style="height: 25px;"></p>
                             </div>
                         </div>  
                         <hr>
