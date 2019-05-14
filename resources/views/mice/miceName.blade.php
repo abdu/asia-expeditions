@@ -30,7 +30,7 @@ use App\components\Shared; ?>
             <div class="card">
 	            <ul class="nav nav-tabs" role="tablist">
                     @foreach(\App\Setting::where('type', 2)->get() as $key=>$set)
-                        <li class="{{$set->title}}" ><a  data-id="{{$set->title}}" data-url="{{$set->slug}}">{{$set->title}}</a></li>
+                        <li class="{{$mice->id == $set->id ? 'active': ''}}"><a href="{{route('miceName', ['url'=> $set->slug])}}">{{$set->title}}</a></li>
                     @endforeach
 
 	            </ul>	            
@@ -43,7 +43,7 @@ use App\components\Shared; ?>
         </div>
 	</div>
 </div>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 
     $(document).ready(function(){
          var baseUrl=location.protocol+'//'+location.host+"/";
@@ -69,5 +69,5 @@ use App\components\Shared; ?>
              });
         })
     }); 
-</script>
+</script> -->
 @endsection

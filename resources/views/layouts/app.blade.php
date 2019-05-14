@@ -83,7 +83,7 @@
    });
 </script>
 </head>
-<body>
+<body >
 
 	@yield('content')
 	@include('include.footer')

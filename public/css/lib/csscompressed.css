@@ -15039,9 +15039,11 @@ ul li iframe#twitter-widget-0 div.widget .btn-o a.btn {
 
 @media (max-width: 480px) {
     .navbar-brand>img {
-        position:absolute;
+        height: 74px;
+        width: 215px;
+        position: absolute;
         left: 0;
-        top: -5px
+        top: 3px;
     }
 
     .tour_item_wrap {

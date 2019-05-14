@@ -8,9 +8,17 @@
     use App\components\Shared;
 ?>
 <meta property="og:url"           content="{{route('tourDetails', ['url'=> $tour->slug])}}" />
-<meta property="og:title"         content="{{$tour->tour_name }}|Asia Expedition" />
+<meta property="og:title"          content="{{$tour->tour_name }}|Asia Expedition" />
 <meta property="og:description"   content="{{$tour->tour_intro }}" />
 <meta property="og:image"         content="{{Shared::getInstance()->urlResourceBig($tour->tour_photo, $tour->user_id)}}" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@site_username">
+<meta name="twitter:title" content="Top 10 Things Ever">
+<meta name="twitter:description" content="Up than 200 characters.">
+<meta name="twitter:creator" content="@creator_username">
+<meta name="twitter:image" content="http://placekitten.com/250/250">
+<meta name="twitter:domain" content="YourDomain.com">
 @section('content')
 @include("include.menu")
 
@@ -112,10 +120,13 @@
 
                           </div>        
                     </li>
-                    <li style="float: left;margin: -3px 5px;">
-                        <a class="twitter-share-button" href="http://twitter.com/share?url={{route('tourDetails', ['url'=> $tour->slug])}}&amp;text={{$tour->tour_name}}&amp; hashtags=Asia Expedition &amp;">
-                        <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-                        </a>
+
+                    <li style="float: left;margin: -3px 5px;">                     
+                        <script async src="{{asset('/js/twitter.js')}}" charset="utf-8"></script>                      
+  <a class="twitter-share-button"
+  href="https://twitter.com/intent/tweet?text=Hello%20world"
+  data-size="small">
+Tweet</a>
                     </li>
                 </ul>
              
@@ -228,19 +239,19 @@
 
 <div class="spacing"></div>
 <div class="container">
-    <div class="col-md-12">
+  
         @if($tourLink->count() > 0)
-        <div class="row">
+       
             <div class="title text-left">
                 <h2><b>YOU MAY ALSO LIKE</b>
                     <div style="border: double #ddd;width: 100%;"></div>
                 </h2>
             </div>        
             @if($tourLink->count() > 3)
-                    <div class="row">   
+            <div class="row">   
                 <div class="col-md-12">           
                     <section id="clients" class="wow fadeInUp" >
-                        <div class="container">                                     
+                                                          
                             <div class="owl-carousel clients-carousel" style="height: auto;">
                                 @foreach($tourLink->chunk(4) as $key => $chunkTour)                        
                                     @foreach($chunkTour as $tour)
@@ -248,7 +259,7 @@
                                     @endforeach                          
                                  @endforeach
                             </div>
-                        </div>
+                       
                     </section>                                 
                 </div>
             </div>
@@ -256,7 +267,7 @@
             <div class="row">   
                 <div class="col-md-12">           
                     <section id="clients" class="wow fadeInUp" >
-                        <div class="container">                                     
+                                                        
                             <div class="owl-carousel clients-carousel-2" style="height: auto;">
                                 @foreach($tourLink->chunk(4) as $key => $chunkTour)                        
                                     @foreach($chunkTour as $tour)
@@ -264,15 +275,14 @@
                                     @endforeach                          
                                  @endforeach
                             </div>
-                        </div>
+                 
                     </section>                                 
                 </div>
             </div>
              @elseif($tourLink->count() == 1)
-             <div class="row">   
-                <div class="col-md-12">           
+                     
                     <section id="clients" class="wow fadeInUp" >
-                        <div class="container">                                     
+                                                         
                             <div class="owl-carousel clients-carousel-1" style="height: auto;">
                                 @foreach($tourLink->chunk(4) as $key => $chunkTour)                        
                                     @foreach($chunkTour as $tour)
@@ -282,13 +292,13 @@
                                     @endforeach                          
                                  @endforeach
                             </div>
-                        </div>
+                  
                     </section>                                 
-                </div>
-            </div>
+           
+       
             @endif
-        </div>
+       
         @endif
-    </div>  
+   
 </div>
 @endsection
