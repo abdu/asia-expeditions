@@ -3,6 +3,8 @@ namespace App;
 /**
 * 
 */
+
+use Session;
 class Cart
 {
 	public $items = null;
@@ -49,8 +51,18 @@ class Cart
 		$this->totalPrice += $item->tour_price;
 	}
 
-	public function Synchronize($item,$qty, $id){
-    	
+	public static function totalCartQty(){
+        $cartTotal = 0;  
+        if ( Session::has('cart') ) {
+       		$carts = Session()->get('cart');
+            foreach ($carts->items as $cart) {  
+                $cartTotal = $cartTotal + $cart['qty'];     
+            }
+        }
+        return $cartTotal;
+    }
+
+	public function Synchronize($item,$qty, $id){    	
     	$storedItem = ['qty' => 0, 'price' => $item->tour_price, 'itemId' => $item->tour_id, 'item' => $item];
 		if ($this->items) {
 			if (array_key_exists($id, $this->items)) {

@@ -2,7 +2,7 @@
 
     
 
-    if (!isset($_SESSION['email'])) {
+    if (!Auth::check()) {
 
         echo ("<script>location.href='https://asia-expeditions.com/checkout'</script>");
 
@@ -26,7 +26,6 @@ use App\components\Shared;
 
 use App\User;
 
-$userName = User::getUser()->first_name.' '.User::getUser()->middle_name.' '.User::getUser()->last_name;
 
 ?>
 
@@ -37,97 +36,43 @@ $userName = User::getUser()->first_name.' '.User::getUser()->middle_name.' '.Use
 @include('include.menu')
 
 @if($carts)
-
+<br>
     <table width='100%' border='2' cellpadding='2' bgcolor='#0074C4'>
-
         <tr>
-
-            <td bgcolor='#CED7EF' width='90%'>
-
-            <center>
-
-                <h2 class='co'><small>Process checkout Please click button Pay Now</small></h2></td>
-
-            </center>
-
+            <td bgcolor='#CED7EF' width='90%'><center><h2 class='co'><small>Process checkout Please click button Pay Now</small></h2></td></center>
         </tr>
-
     </table>
-
     <div class="spacing"></div>
-
     <div class="container">
-
         <div class="col-md-10 col-md-offset-1">
-
-
-
             <table class="table">
-
                 <thead>
-
                     <th>Photo</th>
-
                     <th>Description</th>
-
-                    <th class="text-right">Price</th>
-
+                    <th class="text-right">Unit Price</th>
                 </thead>
-
                 <tbody>
-
-                    <?php  $getTotal = '';?>
-
-
-
+                    <?php  $getTotal = 0;?>
                     @foreach($carts as $cart)
-
                         <tr>
-
-                            <td width="100"><img class="img-responsive thumbnail lazy" data-src="{{ Shared::getInstance()->urlResource($cart['item']['tour_picture']) }}"></td>
-
-                            <td>
-
-                                <div style="font-weight: 700;font-size: 14px;}">
-
-                                    {!! str_limit($cart['item']['tour_name'], 120) !!}
-                                </div>
-                                <div>
-                                    <small>{!! str_limit($cart['item']['tour_name'], 70) !!}</small>
-                                </div>
-
+                            <td width="100">
+                                <img width="100" height="65" class="lazy" data-src="{{Shared::getInstance()->urlResource($cart['item']['tour_photo'], $cart['item']['user_id'])}}">
                             </td>
-
-                                <?php
-
-                                $price = $cart['item']['tour_price'] * $cart['qty'];
-
-                                ?>
-
+                            <td>
+                                <div style="font-weight: 700;font-size: 14px;}">
+                                    {{ str_limit($cart['item']['tour_name'], 120) }}
+                                </div>
+                                <div><small>{{ str_limit($cart['item']['tour_name'], 70) }}</small></div>
+                            </td>
+                            <td><?php $price = $cart['item']['tour_price'] * $cart['qty'];?></td>
                             <td class="text-right"><b>${{ number_format($price, 2) }}</b></td>
-
                         </tr>
-
-                        <?php
-
-                            $getTotal = $getTotal + $price;
-
-                        ?>
-
+                        <?php $getTotal = $getTotal + $price;?>
                     @endforeach
-
-                    
-
                 </tbody>
-
             </table>
-
-        
-
-        <form action="{{ url('pay_link') }}" method="post" accept-charset="UTF-8">
-
+        <form action="{{ route('linkPayment') }}" method="post" accept-charset="UTF-8">
             {{ csrf_field() }}
-
             <input type="hidden" name="Title" value = "PHP VPC 3 Party Transacion">
 
             <!-- get user input -->

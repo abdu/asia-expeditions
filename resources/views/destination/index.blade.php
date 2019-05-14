@@ -23,11 +23,11 @@ About {{$coun['country_name']}} Tours Travel DMC Itineraries
 	<div class="col-md-8">
 		<div class="spacing"></div>
 		<b><h2 style="text-transform: uppercase;"><b>Welcome to {{$coun['country_name']}}</b></h2></b>
-		<p style="text-align: justify;"> <?php echo html_entity_decode($coun['country_intro']); ?></p>
+		<p style="text-align: justify;"> {{ strip_tags($coun['country_intro'])}}</p>
 	</div>
 	<div class="col-md-4" ng-app="">
 		<div class="spacing"></div><div class="spacing"></div>
-		<b><h4 align="center"><b>COUNTRY FACTS</b></h4></b>	
+		<b><h4 align="center"><b>COUNTRY FACTS</b></h4></b>	 
 		<div class="row">
 			<div class="col-md-12">
 				<ul class="list-unstyled">

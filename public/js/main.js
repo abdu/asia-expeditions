@@ -61,16 +61,16 @@
 
   $(".clients-carousel-1").owlCarousel({
     autoplay: true,
-    dots: true,
+    dots: false,
     loop: true,
-    responsive: { 0: { items: 2 }, 768: { items: 4 }, 900: { items: 6 }
+    responsive: { 0: { items: 1 }, 768: { items: 1 }, 900: { items: 1 }
     }
   });
   $(".clients-carousel-2").owlCarousel({
     autoplay: true,
-    dots: true,
+    dots: false,
     loop: true,
-    responsive: { 0: { items: 2 }, 768: { items: 4 }, 900: { items: 6 }
+    responsive: { 0: { items: 2 }, 768: { items: 2 }, 900: { items: 2 }
     }
   });
 

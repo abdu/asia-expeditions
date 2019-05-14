@@ -1,5 +1,5 @@
 <?php
-	use App\components\Cart;
+	use App\Cart;
 	use App\User;
 	use App\components\Shared;
 ?>
@@ -42,6 +42,7 @@
 			  			<span class="wrap-shopping-cart">
 							<ul class="nav navbar-nav navbar-right" style=" margin: 0;">
 								<li class="w3-dropdown-hover" style="padding: 2px 11px; float: left;">
+									<img src="{{Shared::getInstance()->urlResource(Auth::user()->picture, Auth::user()->id)}}">
 						  			<span class="fa fa-user" style="background: #fecc24;
 									    padding: 5px 8px;
 									    border-radius: 50%;
@@ -85,50 +86,13 @@
 						  			</ul>
 								</li>
 								<li class="w3-dropdown-hover" style="padding: 2px 11px; float: left;">
-									<span class="fa fa-shopping-cart" style="background: #fecc24; padding: 5px 7px; border-radius: 50%; font-size: 19px; color: white;">
+									<span>
+										<a href="{{route('getCart')}}">
+										<span class="fa fa-shopping-cart" style="padding: 5px 7px; border-radius: 50%; font-size: 28px; color: #fecc24;"></span>
+										<span style="position: absolute;top: 4px;color: white;background: #c71313;border-radius: 50%;padding: 0px 8px;right: 0px;font-size: 16px;">{{Cart::totalCartQty()}}</span>
+										</a>
 									</span>
-									<ul class="w3-dropdown-content w3-bar-block" role="menu" style="width: 272px; text-transform: capitalize;">
-						  			@if(Cart::totalCartQty() > 0)
-							        	@foreach(Session::get('cart')->items as $cart)
-								          	<div class="row" style=" padding: 8px 0px;">
-									          	<div class="col-md-12 w3-padding">
-										          	<a href="{{route('tourDetails', $cart['item']['slug'])}}">
-										          		<div class="col-xs-3">
-										          			<img class="img-responsive" src="{{Shared::getInstance()->urlResource($cart['item']['tour_photo'], $cart['item']['slug'])}}" style="margin-bottom: 0px;">
-										          		</div>
-										          		<div class="col-xs-5" style="padding-right: 0; padding-left: 0;">
-										          			<span style="font-size: 12px;">
-											          			{{str_limit($cart['item']['tour_name'],17)}}
-										          			</span>
-										          		</div>
-										          		<div class="col-xs-4" style="text-align: right;">
-										          			<span style="background-color: #fecc24;" class="badge">{{$cart['qty']}}</span>
-										          		</div>
-										          	</a>
-									          	</div>
-									        </div>
-								        @endforeach
-								        <hr>
-								        <div class="col-md-12">
-									        <div class="row">
-									          	<div class="col-md-6 col-md-6">
-									          		<a href="{{url('shopping-cart')}}" class="btn btn-primary btn-block btn-sm w3-margin-bottom">View Cart</a>
-									          	</div>
-									          	<div class="col-md-6 col-md-6">
-													<a class="btn btn-danger btn-sm btn-block" href="{{url('payment')}}">CHECKOUT</a>
-									          	</div>
-									        </div>
-									    </div>
-							        @else
-							        	<div class="col-md-12">
-									        <div class="row">
-									          	<div class="col-md-12 w3-padding-large">
-									          		<span> Your Cart empty <span class="fa fa-info-circle"></span></span>
-									          	</div>
-									        </div>
-									    </div>
-							        @endif
-							        </ul>
+									
 						        </li>
 					        </ul>
 					    </span>

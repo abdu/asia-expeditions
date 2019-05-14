@@ -178,7 +178,7 @@ use App\components\Shared;
                                     <div class="form-group">
                                         <div class="col-md-12"><strong > Zip / Postal Code</strong></div>
                                         <div class="col-md-12">
-                                            <input type="text" name="zip_code" class="form-control" value="{{ old('zip_code') }}" placeholder="Zip / Postal Code" />
+                                            <input type="text" name="zip_code" class="form-control" value="{{ old('zip_code') }}" />
                                         </div>
                                     </div>
                                 </div>

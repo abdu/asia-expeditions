@@ -19,9 +19,9 @@ class Wishlist extends Model
     		$editWish->save();
     	}else{
 	    	$wishlist = new self;
-	    	$wishlist->customer_id = User::getUser()->id;
-	    	$wishlist->item_id = $itemId;
-	    	$wishlist->item_qty = 1;
+	    	$wishlist->user_id    = \Auth::user()->id;
+	    	$wishlist->item_id    = $itemId;
+	    	$wishlist->item_qty   = 1;
 	    	$wishlist->created_at = $date;
 	    	$wishlist->updated_at = $date;
 	    	$wishlist->save();
