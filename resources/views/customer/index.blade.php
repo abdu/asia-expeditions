@@ -60,7 +60,6 @@
 				</ul>
 			</div>
         </div>
-
        <div class="tab-content" >
 			<div id="home" class="tab-pane  {{ $active == 'profile' ? 'active' : '' }} {{ $isActive }}" style="padding: 0;" >
 				<div class="panel panel-info" >
@@ -80,7 +79,7 @@
 							                    	<div class="form-group {{$errors->first('first_name') ? 'has-error' : ''}} ">
 							                        	<div class="col-md-12 col-xs-12">
 								                            <strong class="control-label" for="first_name">First Name</strong>
-								                            <input type="text" name="first_name" class="form-control" value="{{Auth::user()->first_name }}"  />
+								                            <input type="text" name="first_name" class="form-control" value="{{Auth::user()->first }}"  />
 							                            </div>
 							                        </div>
 						                        </div>
@@ -129,7 +128,7 @@
 							                        <div class="form-group {{$errors->first('town_city') ? 'has-error' : ''}}">
 							                        	<div class="col-md-12 col-xs-12 ">
 								                          	<strong class="control-label" for="inputError">Town / City</strong>
-								                            <input type="text" name="town_city" class="form-control" value="{{Auth::user()->province->province_name}}" />
+								                            <input type="text" name="town_city" class="form-control" value="{{isset(Auth::user()->province) ? Auth::user()->province->province_name : ''}}" />
 							                            </div>
 							                        </div>
 						                        </div>
@@ -137,29 +136,24 @@
 							                        <div class="form-group {{$errors->first('country_state') ? 'has-error':''}}">
 							                        	<div class="col-md-12 col-xs-12 ">
 								                          	<strong class="control-label" for="inputError">Country / State</strong>
-								                          	<input type="text" name="country_state" class="form-control" value="{{ User::getUser()->country_state }}" />								                          
-								                          	 	<!-- <select class="form-control" name="country_state"> 
-									                        	@foreach(\App\Country::all() as $state)
-									                        	<option value="{{$state['country_name']}}" >{{ $state['country_name'] }}</option>
-									                        	@endforeach 
-									                        </select>	 -->
+								                          	<input type="text" name="country_state" class="form-control" value="{{isset(Auth::user()->province) ? Auth::user()->country->nationality : ''}}" />	
 							                            </div>
 							                        </div>
 						                        </div>
 						                    </div>
 						                    <div class="form-group">
-						                        <div class="col-md-12"><strong > Zip / Postal Code</strong></div>
+						                        <div class="col-md-12"><strong> Zip / Postal Code</strong></div>
 						                        <div class="col-md-12">
-						                            <input type="text" name="zip_code" class="form-control" value="{{ User::getUser()->zip_code }}" />
+						                            <input type="text" name="zip_code" class="form-control" value="{{ isset(Auth::user()->country) ? Auth::user()->country->postal : '' }}" />
 						                        </div>
 						                    </div>
 						                    <div class="form-group {{$errors->first('phone_number') ? 'has-error' : ''}}">
 						                        <div class="col-md-12"><strong class="control-label" for="inputError">Phone Number</strong></div>
-						                        <div class="col-md-12"><input type="text" name="phone_number" class="form-control" value="{{ User::getUser()->phone_number }}" /></div>
+						                        <div class="col-md-12"><input type="text" name="phone_number" class="form-control" value="{{ Auth::user()->phone }}" /></div>
 						                    </div>
 						                    <div class="form-group {{$errors->first('email') ? 'has-error' : ''}} {{ session('message') ? 'has-error' : ''}}">
 						                        <div class="col-md-12"><strong class="control-label" for="inputError">Email Address</strong></div>
-						                        <div class="col-md-12"><input type="email" name="email" class="form-control" value="{{ User::getUser()->email }}"/></div>
+						                        <div class="col-md-12"><input type="email" name="email" class="form-control" value="{{ Auth::user()->email}}"/></div>
 						                    </div>
 						                   
 						                    <div class="form-group">
@@ -182,7 +176,10 @@
 		            </div>
 		            <div class="panel-body row">
 		                <div class="w3-container">
-		                @if(\App\Invoice::Where('customer_id', User::getUser()->id)->count() > 0)
+		                	<?php 
+		                	$getInvoice = \App\Invoice::where('user_id', Auth::user()->id)->orderBy('invoice_number')->get();
+		                	 ?>
+		                @if($getInvoice->count() > 0)
 							<table class="w3-table w3-striped">
 							    <tr>
 							      <th>Invoice No.</th>
@@ -190,7 +187,7 @@
 							      <th>Total Amount</th>
 							    </tr>
 
-							    @foreach(\App\Invoice::Where('customer_id', User::getUser()->id)->get() as $inv)
+							    @foreach($getInvoice as $inv)
 							    	<tr>
 							    		<td><a target="_blank" href="/inovice?inv_id={{ $inv['invoice_number'] }}"># {{ $inv['invoice_number'] }}</a></td>
 							    		<td>{{ date('d/m/Y', strtotime($inv['created_at'])) }}</td>
@@ -211,7 +208,7 @@
 			<div id="menu2" class="tab-pane" style="padding: 0;" >
 				<form action="{{ route('edit.password') }}" method="post">     
 	            	{{ csrf_field() }}  
-	            	<input type="hidden" name="email" value="{{ User::getUser()->email }}"  />
+	            	<input type="hidden" name="email" value="{{ Auth::user()->email }}"  />
 	                <div class="panel panel-info" >
 	                    <div class="panel-heading">
 	                        <h3 class="panel-title">Change Password</h3>

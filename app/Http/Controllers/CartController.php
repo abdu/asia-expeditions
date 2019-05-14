@@ -18,6 +18,8 @@ use App\Customer;
 use App\Invoice;
 use App\Wishlist;
 
+
+
 class CartController extends Controller
 {
     public function __construct()
@@ -32,6 +34,7 @@ class CartController extends Controller
         $cart = new Cart($oldCart);
         $cart->addToCart($tour, $id);
         $request->session()->put('cart', $cart);
+
         if (Auth::check()) {
             Wishlist::addWishlist($id);
         }
@@ -54,11 +57,9 @@ class CartController extends Controller
 
     public function getCart(Request $reqest)
     {
-        if (empty(Session::has('cart'))) {
-            return view('cart.shopping-cart', ['tours' => null]);
-        }
+        $oldCart = Session::has('cart') ? Session::get('cart') : null;  
         $oldcart = Session::get('cart');
-        $cart = new Cart($oldcart);
+        $cart = new Cart($oldcart);        
         return view('cart.shopping-cart', ['tours_cart' => $cart->items]);
     }
 
@@ -194,9 +195,9 @@ class CartController extends Controller
     public function getPayment()
     {
         if (empty(Session::get('cart')->items)) {
-            return redirect('/shopping-cart');
+            return redirect('shopping-cart');
         } else {
-            $userId = User::getUser()->id;
+            $userId = Auth::user()->id;
             $oldcart = Session::get('cart');
             $cart = new Cart($oldcart);
             return view('checkout.payment', ['carts' => $cart->items, 'userId' => $userId]);

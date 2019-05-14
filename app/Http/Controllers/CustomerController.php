@@ -15,13 +15,7 @@ use App\Invoice;
 
 class CustomerController extends Controller
 {
-    //
-    public function __construct(){
-        session_start();
-    }
-
     public function getAccount(){
-        // return Auth::user()->id;
         return view('customer.index');
     }
 
@@ -63,7 +57,8 @@ class CustomerController extends Controller
     }
 
     public function getLogout(){
-        session_destroy();
+        // session_destroy();
+        \Auth::logout();
         return redirect('register');
     }
 

@@ -107,7 +107,7 @@ Route::get('add-to-cart/{id}', ['uses' => 'CartController@addTocart', 'as' => 't
 
 Route::post('edit-cart/{id}', ['uses' => 'CartController@updateCart', 'as' => 'tour.editCart']);
 
-Route::get('shopping-cart', ['uses' => 'CartController@getCart', 'as' => 'tour.shopping-cart']);
+Route::get('shopping-cart', 'CartController@getCart')->name('getCart');
 
 Route::get('remove-cart/{id}', ['uses' =>'CartController@removeCart', 'as' => 'tour.remove-cart']);
 
@@ -123,18 +123,18 @@ Route::post('checkout', "CartController@getCheckAccount")->name("registerCustome
 
 Route::group(['middleware' => ['isCustomer']], function () {
 	Route::get('payment', ['uses' => 'CartController@getPayment', 'as' => 'check.payment']);
-	Route::post('pay_link', ['uses' => 'CartController@linkPayment', 'as' => 'check.linkpayment']);
+	Route::post('pay_link', 'CartController@linkPayment')->name("linkPayment");
 	Route::get('inovice', ['uses' => 'CartController@getInvoice', 'as' => 'check.invoice']);
     Route::get('account', 'CustomerController@getAccount')->name('account');
     Route::post('account', 'CustomerController@doAccount')->name('doAccount');
     Route::post('editaccount', ['uses' => 'CustomerController@doCreateNewPassword', 'as' => 'edit.password']);
-	Route::get('logout', ['uses' => 'CustomerController@getLogout', 'as' => 'get.logout']);
+	Route::get('logout', 'CustomerController@getLogout')->name("logout");
 });
 
 
 Route::get('/login', "UserController@getLogin")->name('login');
 Route::post('/clientLogin', "UserController@getDoLogin")->name('doLogin');
-Route::post('logout', 'UserController@getLogout')->name('logout');
+// Route::post('logout', 'UserController@getLogout')->name('logout');
 
 Route::group(['middleware' => ['isAdmin']], function () {
 	Route::group(['prefix'=> 'admin'], function () {

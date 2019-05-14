@@ -183,7 +183,7 @@ Tweet</a>
                         <hr>
                         <div class="panel-body">
                             <div class="row">
-                                <p>Secure Payments : <img class="lazy" data-src="{{asset('/public/img/paywith.png')}}" style="height: 25px;"></p>
+                                <p>Secure Payments : <img class="lazy" data-src="{{asset('/img/paywith.png')}}" style="height: 25px;"></p>
                             </div>
                         </div>  
                         <hr>
@@ -239,7 +239,11 @@ Tweet</a>
 
 <div class="spacing"></div>
 <div class="container">
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> dcb29106b28087986161da7049f232c056f88b8a
         @if($tourLink->count() > 0)
        
             <div class="title text-left">
@@ -250,6 +254,7 @@ Tweet</a>
             @if($tourLink->count() > 3)
             <div class="row">   
                 <div class="col-md-12">           
+<<<<<<< HEAD
                     <section id="clients" class="wow fadeInUp" >
                                                           
                             <div class="owl-carousel clients-carousel" style="height: auto;">
@@ -260,6 +265,16 @@ Tweet</a>
                                  @endforeach
                             </div>
                        
+=======
+                    <section id="clients" class="wow fadeInUp" >                                
+                        <div class="owl-carousel clients-carousel" style="height: auto;">
+                            @foreach($tourLink->chunk(4) as $key => $chunkTour)                        
+                                @foreach($chunkTour as $tour)
+                                    @include('include.item')
+                                @endforeach                          
+                             @endforeach
+                        </div>
+>>>>>>> dcb29106b28087986161da7049f232c056f88b8a
                     </section>                                 
                 </div>
             </div>
@@ -267,6 +282,7 @@ Tweet</a>
             <div class="row">   
                 <div class="col-md-12">           
                     <section id="clients" class="wow fadeInUp" >
+<<<<<<< HEAD
                                                         
                             <div class="owl-carousel clients-carousel-2" style="height: auto;">
                                 @foreach($tourLink->chunk(4) as $key => $chunkTour)                        
@@ -276,10 +292,20 @@ Tweet</a>
                                  @endforeach
                             </div>
                  
+=======
+                        <div class="owl-carousel clients-carousel-2" style="height: auto;">
+                            @foreach($tourLink->chunk(4) as $key => $chunkTour)                        
+                                @foreach($chunkTour as $tour)
+                                    @include('include.item')
+                                @endforeach                          
+                             @endforeach
+                        </div>
+>>>>>>> dcb29106b28087986161da7049f232c056f88b8a
                     </section>                                 
                 </div>
             </div>
              @elseif($tourLink->count() == 1)
+<<<<<<< HEAD
                      
                     <section id="clients" class="wow fadeInUp" >
                                                          
@@ -300,5 +326,24 @@ Tweet</a>
        
         @endif
    
+=======
+             <div class="row">   
+                <section id="clients" class="wow fadeInUp" >
+                    <div class="owl-carousel clients-carousel-1" style="height: auto;">
+                        @foreach($tourLink->chunk(4) as $key => $chunkTour)                        
+                            @foreach($chunkTour as $tour)
+                            <div class="col-md-4">                                                                    
+                                @include('include.item')
+                            </div>
+                            @endforeach                          
+                         @endforeach
+                    </div>
+                </section>                                 
+            </div>
+            @endif
+        
+        @endif
+
+>>>>>>> dcb29106b28087986161da7049f232c056f88b8a
 </div>
 @endsection
