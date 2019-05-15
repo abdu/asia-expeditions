@@ -89,7 +89,7 @@
 </script>
 </head>
 <body >
-
+@include('include.message')
 	@yield('content')
 	@include('include.footer')
   <script src="{{asset('/add_lib/lib/wow/wow.min.js')}}"></script>
