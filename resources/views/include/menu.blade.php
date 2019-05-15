@@ -48,7 +48,7 @@
 									@else
 						  				
 						  			@endif
-						  			<span class="fa fa-user" style="background: #fecc24;
+						  			<span class="fa fa-user u" style="background: #fecc24;
 									    padding: 5px 8px;
 									    border-radius: 50%;
 									    color: white; font-size: 19px; transition: .9s">
@@ -94,7 +94,7 @@
 								<li class="w3-dropdown-hover" style="padding: 2px 11px; float: left;">
 									<span>
 										<a href="{{route('getCart')}}">
-										<span class="fa fa-shopping-cart" style="padding: 5px 7px; border-radius: 50%; font-size: 28px; color: #fecc24;"></span>
+										<span class="fa fa-shopping-cart c" style="padding: 5px 7px; border-radius: 50%; font-size: 28px; color: #fecc24;"></span>
 										<span style="position: absolute;top: 4px;color: white;background: #c71313;border-radius: 50%;padding: 0px 6px;right: 7px;font-size: 12px;">{{Cart::totalCartQty()}}</span>
 										</a>
 

@@ -10,6 +10,8 @@
 <meta name=description content="@yield('description')">
 
 
+
+
 <link rel="stylesheet" type="text/css" href="{{asset('css/lib/csscompressed.css')}}">
 <link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
 <script type="text/javascript" src="{{asset('js/compressed.js')}}"></script>
@@ -47,6 +49,9 @@
 	table.gsc-search-box{
 		margin-bottom: 0px !important;
 	}
+  .add{
+    color: #4CAF50 !important;
+  }
 </style>
 
     <script type="text/javascript">
@@ -72,11 +77,11 @@
     //    $('.c span.c').removeClass('fa fa-cart-arrow-down').addClass('fa fa-shopping-cart');
     // });
 
-        $("li.u span.u").hover(function(){
-        $('.u span.u').toggleClass('fa-user fa-user-o', 1000);
+        $("li span.u").hover(function(){
+        $('span.u').toggleClass('fa-user fa-user add');
       });
-        $("li.c span.c").hover(function(){
-        $('.c span.c').toggleClass('fa-shopping-cart fa-cart-arrow-down', 1000);
+        $("li span.c").hover(function(){
+        $('span.c').toggleClass('fa-shopping-cart fa-cart-arrow-down');
       });
  
 
@@ -101,6 +106,7 @@
   <script src="/add_lib/lib/superfish/hoverIntent.js"></script>
   <script src="/add_lib/lib/superfish/superfish.min.js"></script> 
   <script src="/add_lib/lib/lightbox/js/lightbox.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 </body>
 </html>

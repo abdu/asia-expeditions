@@ -105,8 +105,8 @@
         <span>{{$tour->tour_name}}</span>
     </h1>
            <ul class="list-unstyled ">
-                    <li style="float: left;">            
-                         <div id="fb-root"></div>
+                <li style="float: left;">            
+                    <div id="fb-root"></div>
                         <script>(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];
                           if (d.getElementById(id)) return;
                           js = d.createElement(s); js.id = id;
@@ -118,17 +118,15 @@
                             data-href="{{route('tourDetails', ['url'=> $tour->slug])}}" 
                             data-layout="button_count" data-size="small">
 
-                          </div>        
-                    </li>
-
-                    <li style="float: left;margin: -3px 5px;">                     
-                        <script async src="{{asset('/js/twitter.js')}}" charset="utf-8"></script>                      
-  <a class="twitter-share-button"
-  href="https://twitter.com/intent/tweet?text=Hello%20world"
-  data-size="small">
-Tweet</a>
-                    </li>
-                </ul>
+                    </div>        
+                </li>
+                <li style="float: left;margin: -3px 5px;">                     
+                    <script async src="{{asset('https://platform.twitter.com/widgets.js')}}" charset="utf-8"></script>                      
+                      <a class="twitter-share-button"
+                      href="https://twitter.com/intent/tweet?text=Hello%20world"
+                      data-size="small">Tweet</a>
+                </li>
+            </ul>
              
                 <div class="clearfix"></div>
 

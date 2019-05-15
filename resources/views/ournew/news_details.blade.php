@@ -7,6 +7,19 @@
     $string = rtrim($news['tour_photo'], '|');
     $img = explode('|', $string);
 ?>
+
+<meta property="og:url"           content="{{route('DetailNew', $news->slug)}}" />
+<meta property="og:title"         content="{{$news['tour_name']}}|Asia Expedition" />
+<meta property="og:description"   content="{!! $news->tour_desc !!}" />
+<meta property="og:image"         content="{{Shared::getInstance()->urlResourceBig($news['tour_photo'], $news->user_id)}}" />
+
+<meta name="twitter:card"         content="summary">
+<meta name="twitter:site"         content="@site_username">
+<meta name="twitter:title"        content="{{$news['tour_name']}}">
+<meta name="twitter:description"  content="{!! $news->tour_desc !!}">
+<meta name="twitter:creator"      content="@creator_username">
+<meta name="twitter:image"        content="{{Shared::getInstance()->urlResourceBig($news['tour_photo'], $news->user_id)}}">
+<meta name="twitter:domain"       content="https://www.asia-expeditions.com">
 @section('content')
 @include('include.menu')
 <style type="text/css">
@@ -52,26 +65,28 @@
                             </div>
                             <div class="col-xs-12 col-sm-6">
                                 <ul class="list-unstyled ">
-                                    <li style="float: left; padding: 0px 12px;">
-                                        <div class="fb-share-button" data-href="{{route('DetailNew', $news->slug)}}"  data-size="small" >
-                                            <a class="fb-xfbml-parse-ignore" target="_blank" href="http://www.facebook.com/sharer.php?u={{route('DetailNew', $news->slug)}}" title="Share to Facebook">
-                                                <i class="fa fa-facebook-square  "></i>
-                                            </a>
-                                        </div>
+                                    <li style="float: left;">            
+                                        <div id="fb-root"></div>
+                                            <script>(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];
+                                              if (d.getElementById(id)) return;
+                                              js = d.createElement(s); js.id = id;
+                                              js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2';
+                                              fjs.parentNode.insertBefore(js, fjs);
+                                            }(document, 'script', 'facebook-jssdk'));</script>
+                                              <!-- Your share button code -->
+                                               <div class="fb-share-button" 
+                                                data-href="{{route('DetailNew', $news->slug)}}" 
+                                                data-layout="button_count" data-size="small">
+
+                                        </div>        
                                     </li>
-                                    <li style="float: left; padding: 0px 12px; ">
-                                        <a class="twitter-share-button" href="http://twitter.com/share?url={{route('DetailNew', $news->slug)}}&amp;text={{$news['tour_name']}}&amp;hover-shadowshtags=AsiaExpeditions&amp;">
-                                        <i class="fa fa-twitter-square "></i>
-                                        <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-                                        </a>
+                                    <li style="float: left;margin: -3px 5px;">                     
+                                        <script async src="{{asset('https://platform.twitter.com/widgets.js')}}" charset="utf-8"></script>                      
+                                          <a class="twitter-share-button"
+                                          href="https://twitter.com/intent/tweet?text={{$news['tour_name']}}&amp;{{route('DetailNew', $news->slug)}}"
+                                          data-size="small">Tweet</a>
                                     </li>
-                                    <li style="float: left; padding: 0px 12px;">
-                                        <a title="share on google+" href="https://plus.google.com/share?url={{route('DetailNew', $news->slug)}}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
-                                        <img class="lazy" data-src="https://www.gstatic.com/images/icons/gplus-16.png" alt="Share on Google+"/>
-                                        </a>
-                                    </li>
-                                    <div class="clear"></div>
-                                </ul>
+                                </ul>                  
                             </div>
                         </div>
                     </div>
