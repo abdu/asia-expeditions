@@ -232,118 +232,61 @@ Tweet</a>
             </div>
         </div>
     </div>
-    <div class="col-md-4">
-        
-    </div>
 </div>
 
 <div class="spacing"></div>
 <div class="container">
-<<<<<<< HEAD
-  
-=======
-
->>>>>>> dcb29106b28087986161da7049f232c056f88b8a
-        @if($tourLink->count() > 0)
-       
-            <div class="title text-left">
-                <h2><b>YOU MAY ALSO LIKE</b>
-                    <div style="border: double #ddd;width: 100%;"></div>
-                </h2>
-            </div>        
-            @if($tourLink->count() > 3)
-            <div class="row">   
-                <div class="col-md-12">           
-<<<<<<< HEAD
-                    <section id="clients" class="wow fadeInUp" >
-                                                          
-                            <div class="owl-carousel clients-carousel" style="height: auto;">
-                                @foreach($tourLink->chunk(4) as $key => $chunkTour)                        
-                                    @foreach($chunkTour as $tour)
-                                        @include('include.item')
-                                    @endforeach                          
-                                 @endforeach
-                            </div>
-                       
-=======
-                    <section id="clients" class="wow fadeInUp" >                                
-                        <div class="owl-carousel clients-carousel" style="height: auto;">
-                            @foreach($tourLink->chunk(4) as $key => $chunkTour)                        
-                                @foreach($chunkTour as $tour)
-                                    @include('include.item')
-                                @endforeach                          
-                             @endforeach
-                        </div>
->>>>>>> dcb29106b28087986161da7049f232c056f88b8a
-                    </section>                                 
-                </div>
-            </div>
-            @elseif($tourLink->count() == 2)
-            <div class="row">   
-                <div class="col-md-12">           
-                    <section id="clients" class="wow fadeInUp" >
-<<<<<<< HEAD
-                                                        
-                            <div class="owl-carousel clients-carousel-2" style="height: auto;">
-                                @foreach($tourLink->chunk(4) as $key => $chunkTour)                        
-                                    @foreach($chunkTour as $tour)
-                                        @include('include.item')
-                                    @endforeach                          
-                                 @endforeach
-                            </div>
-                 
-=======
-                        <div class="owl-carousel clients-carousel-2" style="height: auto;">
-                            @foreach($tourLink->chunk(4) as $key => $chunkTour)                        
-                                @foreach($chunkTour as $tour)
-                                    @include('include.item')
-                                @endforeach                          
-                             @endforeach
-                        </div>
->>>>>>> dcb29106b28087986161da7049f232c056f88b8a
-                    </section>                                 
-                </div>
-            </div>
-             @elseif($tourLink->count() == 1)
-<<<<<<< HEAD
-                     
-                    <section id="clients" class="wow fadeInUp" >
-                                                         
-                            <div class="owl-carousel clients-carousel-1" style="height: auto;">
-                                @foreach($tourLink->chunk(4) as $key => $chunkTour)                        
-                                    @foreach($chunkTour as $tour)
-                                    <div class="col-md-4">                                                                    
-                                        @include('include.item')
-                                    </div>
-                                    @endforeach                          
-                                 @endforeach
-                            </div>
-                  
-                    </section>                                 
-           
-       
-            @endif
-       
-        @endif
-   
-=======
-             <div class="row">   
-                <section id="clients" class="wow fadeInUp" >
-                    <div class="owl-carousel clients-carousel-1" style="height: auto;">
+    @if($tourLink->count() > 0)
+        <div class="title text-left">
+            <h2><b>YOU MAY ALSO LIKE</b>
+                <div style="border: double #ddd;width: 100%;"></div>
+            </h2>
+        </div>        
+        @if($tourLink->count() > 3)
+        <div class="row">   
+            
+                <section class="wow fadeInUp" >                                
+                    <div class="owl-carousel clients-carousel" style="height: auto;">
                         @foreach($tourLink->chunk(4) as $key => $chunkTour)                        
                             @foreach($chunkTour as $tour)
-                            <div class="col-md-4">                                                                    
                                 @include('include.item')
-                            </div>
+                            @endforeach                          
+                         @endforeach
+                    </div>
+                </section>                                 
+            
+        </div>
+        @elseif($tourLink->count() == 2)
+        <div class="row">   
+            <div class="col-md-12">           
+                <section class="wow fadeInUp">
+                    <div class="owl-carousel clients-carousel-2" style="height: auto;">
+                        @foreach($tourLink->chunk(4) as $key => $chunkTour)                        
+                            @foreach($chunkTour as $tour)
+                                @include('include.item')
                             @endforeach                          
                          @endforeach
                     </div>
                 </section>                                 
             </div>
-            @endif
-        
+        </div>
+        @elseif($tourLink->count() == 1)
+        <div class="row">   
+            <section class="wow fadeInUp" >
+                <div class="owl-carousel clients-carousel-1" style="height: auto;">
+                    <div class="row">
+                    @foreach($tourLink->chunk(4) as $key => $chunkTour)                        
+                        @foreach($chunkTour as $tour)
+                        <div class="col-md-4">                                                                    
+                            @include('include.item')
+                        </div>
+                        @endforeach                          
+                     @endforeach
+                     </div>
+                </div>              
+            </section>  
+        </div>                               
         @endif
-
->>>>>>> dcb29106b28087986161da7049f232c056f88b8a
+    @endif
 </div>
 @endsection

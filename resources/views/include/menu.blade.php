@@ -41,14 +41,14 @@
 			  		<div class="pull-right" style="padding:0px 0px;">
 			  			<span class="wrap-shopping-cart">
 							<ul class="nav navbar-nav navbar-right" style=" margin: 0;">
-<<<<<<< HEAD
-								<li class="w3-dropdown-hover u" style="padding: 2px 11px; float: left;">
-						  			<span class="fa fa-user u " style="background: #fecc24;
-=======
-								<li class="w3-dropdown-hover" style="padding: 2px 11px; float: left;">
-									<img src="{{Shared::getInstance()->urlResource(Auth::user()->picture, Auth::user()->id)}}">
+
+								<li class="w3-dropdown-hover" style="padding: 6px 12px; float: left;">
+									@if(Auth::check())
+										<img src="{{Shared::getInstance()->urlResource(Auth::user()->picture, Auth::user()->id)}}">
+									@else
+						  				
+						  			@endif
 						  			<span class="fa fa-user" style="background: #fecc24;
->>>>>>> dcb29106b28087986161da7049f232c056f88b8a
 									    padding: 5px 8px;
 									    border-radius: 50%;
 									    color: white; font-size: 19px; transition: .9s">
@@ -90,17 +90,14 @@
 								        </div>
 						  			</ul>
 								</li>
-<<<<<<< HEAD
-								<li class="w3-dropdown-hover c" style="padding: 2px 11px; float: left;">
-									<span class="fa fa-shopping-cart c" style="background: #fecc24; padding: 5px 7px; border-radius: 50%; font-size: 19px; color: white;transition: .9s">
-=======
+
 								<li class="w3-dropdown-hover" style="padding: 2px 11px; float: left;">
 									<span>
 										<a href="{{route('getCart')}}">
 										<span class="fa fa-shopping-cart" style="padding: 5px 7px; border-radius: 50%; font-size: 28px; color: #fecc24;"></span>
-										<span style="position: absolute;top: 4px;color: white;background: #c71313;border-radius: 50%;padding: 0px 8px;right: 0px;font-size: 16px;">{{Cart::totalCartQty()}}</span>
+										<span style="position: absolute;top: 4px;color: white;background: #c71313;border-radius: 50%;padding: 0px 6px;right: 7px;font-size: 12px;">{{Cart::totalCartQty()}}</span>
 										</a>
->>>>>>> dcb29106b28087986161da7049f232c056f88b8a
+
 									</span>
 									
 						        </li>
