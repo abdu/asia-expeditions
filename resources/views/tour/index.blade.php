@@ -1,4 +1,4 @@
-    @extends('layouts.app')
+@extends('layouts.app')
 @section('title')
 {{{ $tour['tour_name'] or ''}}}
 @endsection
@@ -79,7 +79,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="alert alert-success">
-                    <strong><i class="fa fa-check"></i>
+                    <strong><i class="fa fa-check-circle"></i>
                         <span class="text-danger">{{$tour['tour_name']}}</span> {{session('message')}}
                     </strong>
                 </div>
@@ -92,7 +92,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="alert alert-success">
-                    <strong><i class="fa fa-check"></i>
+                    <strong><i class="fa fa-check-circle"></i>
                         {{session('message-email')}}
                     </strong>
                 </div>
@@ -105,28 +105,26 @@
         <span>{{$tour->tour_name}}</span>
     </h1>
            <ul class="list-unstyled ">
-                <li style="float: left;">            
-                    <div id="fb-root"></div>
+
+                    <li style="float: left;">            
+                        <div id="fb-root"></div>
+
                         <script>(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];
                           if (d.getElementById(id)) return;
                           js = d.createElement(s); js.id = id;
                           js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2';
                           fjs.parentNode.insertBefore(js, fjs);
                         }(document, 'script', 'facebook-jssdk'));</script>
-                          <!-- Your share button code -->
-                           <div class="fb-share-button" 
-                            data-href="{{route('tourDetails', ['url'=> $tour->slug])}}" 
-                            data-layout="button_count" data-size="small">
+                        <div class="fb-share-button" data-href="{{route('tourDetails', ['url'=> $tour->slug])}}" data-layout="button_count" data-size="small">
+                        </div>        
+                    </li>
+                    <li style="float: left;margin: -3px 5px;">
+                        <a class="twitter-share-button" href="http://twitter.com/share?url={{route('tourDetails', ['url'=> $tour->slug])}}&amp;text={{$tour->tour_name}}&amp; hashtags=Asia Expedition &amp;">
+                        <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        </a>
+                    </li>
+                </ul>
 
-                    </div>        
-                </li>
-                <li style="float: left;margin: -3px 5px;">                     
-                    <script async src="{{asset('https://platform.twitter.com/widgets.js')}}" charset="utf-8"></script>                      
-                      <a class="twitter-share-button"
-                      href="https://twitter.com/intent/tweet?text=Hello%20world"
-                      data-size="small">Tweet</a>
-                </li>
-            </ul>
              
                 <div class="clearfix"></div>
 
@@ -134,41 +132,32 @@
         <div class="container-fliud">
             <div class="wrapper">
                 <div class=" col-md-8 col-xs-12 bor" style="padding: 0px;">
-
-                    <!-- Insert to your webpage where you want to display the slider -->
-                    <div id="amazingslider-wrapper-1" style="display:block;position:relative;max-width:626px;margin:0px auto 95px;margin-left: 0px;" >
+                    <div id="amazingslider-wrapper-1" style="display:block;position:relative;max-width:626px;margin:0px auto 95px;margin-left:0px;" >
                         <div id="amazingslider-1" style="display:block;position:relative;margin:0 auto;">
                             <ul class="amazingslider-slides" style="display:none;">
-                                <li><img src="{{Shared::getInstance()->urlResourceBig($tour->tour_photo, $tour->user_id) }}"  title="" />
+                                <li><img src="{{Shared::getInstance()->urlResourceBig($tour->tour_photo, $tour->user_id) }}"/>
                                 </li>
                                  @if(count($img) > 1)
                                     @foreach ($img as $key => $value) 
-                                <li><img src="{{ Shared::getInstance()->urlResourceBig(trim($value), $tour->user_id) }}" alt=""  title="MtPopa-2298" />
-                                </li>
+                                    <li><img src="{{ Shared::getInstance()->urlResourceBig(trim($value), $tour->user_id) }}" /></li>
                                     @endforeach
                                 @endif
                                 @if(isset($tour->video)? $tour->video:'' )
-                                
                                     <li><img src="https://img.youtube.com/vi/{{isset($tour->video) ? $tour->video:''}}/0.jpg" />
-                                <video preload="none" style="height: 352px !important;" src="https://www.youtube.com/embed/{{$tour->video}}?v={{$tour->video}}" ></video>
-                                </li>
-                            @endif
-                             
+                                    <video preload="none" style="height: 352px !important;" src="https://www.youtube.com/   embed/{{$tour->video}}?v={{$tour->video}}" ></video></li>
+                                @endif
                             </ul>
                             <ul class="amazingslider-thumbnails" style="display:none;">
-                                <li><img src="{{Shared::getInstance()->urlResource($tour->tour_photo, $tour->user_id)}}" alt="" title="nimae" /></li>
+                                <li><img src="{{Shared::getInstance()->urlResource($tour->tour_photo, $tour->user_id)}}" /></li>
 
-                                  @if(count($img) > 1)
+                                @if(count($img) > 1)
                                     @foreach ($img as $key => $value) 
-                                <li><img src="{{Shared::getInstance()->urlResource(trim($value), $tour->user_id) }}" alt="" title="" /></li>
+                                        <li><img src="{{Shared::getInstance()->urlResource(trim($value), $tour->user_id) }}" /></li>
                                    @endforeach
                                 @endif
-                                 @if(isset($tour->video) ? $tour->video:'')
-                               
+                                @if(isset($tour->video) ? $tour->video:'')
                                    <li><img src="https://img.youtube.com/vi/{{isset($tour->video) ? $tour->video:''}}/0.jpg" /></li>
-                                
                                 @endif
-                                
                             </ul>
                         </div>
                     </div>
@@ -186,15 +175,14 @@
                         </div>  
                         <hr>
                     </div>  
-                    <div class="col-md-12">
+                   <!--  <div class="col-md-12">
                         <div class="input-group">
                             <input type="text" class="form-control" name="start"  id="from" placeholder="Start Date" />
                             <span class="input-group-addon">To</span>
                             <input type="text" class="form-control" name="end" id="to" placeholder="End Date" />
                         </div>
-                    </div>                  
+                    </div>     -->              
                     <div class="clear"></div>
-                    <div class="spacing"></div>
                     <div class="col-md-12">
                         <div class="action">
                             <a  href="{{route('tour.addTocart', ['id' => $tour->id])}}" class="add-to-cart btn btn-default0 green" >add to cart</a> 

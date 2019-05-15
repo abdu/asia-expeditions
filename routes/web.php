@@ -52,7 +52,7 @@ Route::get('/destination/{country}/{province}', 'HomeController@showProvince')->
 Route::get('/mice','HomeController@getmice');
 Route::get('/mice/{name}','HomeController@getmiceName')->name('miceName');
 
-Route::get("/ourteam", "HomeController@ourteam");
+Route::get("ourteam", "HomeController@ourteam")->name("ourteam");
 
 Route::get("/ourteam/{name}", "HomeController@teamDetail")->name('teamDetail');
 
@@ -113,7 +113,7 @@ Route::get('remove-cart/{id}', ['uses' =>'CartController@removeCart', 'as' => 't
 
 Route::get('register', 'CartController@getChechout')->name('register');
 
-Route::get('checkout', ['uses' => 'CartController@getChechout', 'as' => 'tour.checkout']);
+Route::get('checkout', 'CartController@getChechout')->name('checkout');
 
 
 Route::get("film/{film_locaton}", "HomeController@getFilm")->name('getFilm');
@@ -122,7 +122,7 @@ Route::get("film/myanmar/{film_deail}", "HomeController@film_detail")->name('fil
 Route::post('checkout', "CartController@getCheckAccount")->name("registerCustomer");
 
 Route::group(['middleware' => ['isCustomer']], function () {
-	Route::get('payment', ['uses' => 'CartController@getPayment', 'as' => 'check.payment']);
+	Route::get('payment', 'CartController@getPayment')->name('payment');
 	Route::post('pay_link', 'CartController@linkPayment')->name("linkPayment");
 	Route::get('inovice', ['uses' => 'CartController@getInvoice', 'as' => 'check.invoice']);
     Route::get('account', 'CustomerController@getAccount')->name('account');
