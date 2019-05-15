@@ -3,8 +3,8 @@
 	use App\User;
 	use App\components\Shared;
 ?>
-	@include('include.message')
-	<div class="top"></div>
+	
+<div class="top"></div>
 <div class="col-md-12 header_info ">
 	<div class="container">
   		<div class="row">
@@ -40,19 +40,19 @@
 			  		</div>	
 			  		<div class="pull-right" style="padding:0px 0px;">
 			  			<span class="wrap-shopping-cart">
-							<ul class="nav navbar-nav navbar-right" style=" margin: 0;">
-
-								<li class="w3-dropdown-hover" style="padding: 6px 12px; float: left;">
+							<ul class="nav navbar-nav navbar-right" style=" margin: 0;">								
 									@if(Auth::check())
-										<img src="{{Shared::getInstance()->urlResource(Auth::user()->picture, Auth::user()->id)}}">
+									<li class="w3-dropdown-hover" style="padding: 4px 3px; float: left; width: 36px;">
+										<img width="29px" height="29px" src="https://system.asia-expeditions.com/storage/avata/thumbnail/{{Auth::user()->picture}}" class="img-circle">
 									@else
-						  				
+									<li class="w3-dropdown-hover" style="padding: 6px 12px; float: left;">
+							  			<span class="fa fa-user" style="background: #fecc24;
+										    padding: 5px 8px;
+										    border-radius: 50%;
+										    color: white; font-size: 19px; transition: .9s">
+										</span>	
 						  			@endif
-						  			<span class="fa fa-user" style="background: #fecc24;
-									    padding: 5px 8px;
-									    border-radius: 50%;
-									    color: white; font-size: 19px; transition: .9s">
-									</span>
+						  			
 						  			<ul class="w3-dropdown-content w3-bar-block" style="text-transform: capitalize; ">
 						  				<div style=" padding: 10px 0px;">
 								          	<div class="col-md-12 w3-padding">
@@ -161,5 +161,5 @@
 	</div>
 </div>
 
-
+<br>
 

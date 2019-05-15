@@ -61,7 +61,7 @@ class HomeController extends Controller
 
     public function teamDetail($teamid)
     {
-        $team = User::where('fullname', $teamid)->first();
+        $team = User::where('name', $teamid)->first();
         return view('ourteam.team_details', ['team' => $team]);
     }
 
