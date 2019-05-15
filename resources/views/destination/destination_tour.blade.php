@@ -3,10 +3,10 @@
 	{{$pro->province_name}} Destination 
 @endsection
 @section('description')
-	{!! $pro->province_intro !!}
+	{!! strip_tags($pro->province_intro) !!}
 @endsection
 @section('content')
-<?php $countryId = $count['country_id']; ?>
+<?php $countryId = $count['id']; ?>
 @include('include.menu')
 @include('include.slide')
 <div class="container" >
@@ -18,10 +18,11 @@
 	</div>
 	<div class="clear"></div>
 	<div class="spacing"></div>
-	<div class="col-md-12">
-		<div class="title text-center"><h2 style="text-transform: uppercase;"><b>POPULAR PLACES IN {{$pro['province_name']}}</b></h2></div>
-            
-		      <div class="row">   
+		<div class="col-md-12">
+		@if($getTourByProvince->count() >0)
+		<div class="title text-center"><h2 style="text-transform: uppercase;"><b>POPULAR PLACES IN {{$pro->province_name}}</b></h2>
+		</div>            
+		    <div class="row">   
                 <div class="col-md-12">            
                     <div id="carousel-example" class="carousel slide " data-ride="carousel">
                         <div class="carousel-inner">
@@ -29,7 +30,9 @@
                             <div class="item  {{$key == 0 ? 'active' : ''}}"> 
                                 <div class="row">
                                 @foreach($getTourChunk as $tour)
+                                <div class="col-md-4">
                                     @include('include.item')
+                                </div>
                                 @endforeach
                                 </div>
                             </div>  
@@ -38,6 +41,7 @@
                     </div>
                 </div>
             </div>
+        @endif
     	</div>
 	</div>
 	<div class="clear"></div>
