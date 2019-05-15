@@ -7,8 +7,11 @@
 				 swal({title:"{{ session('submessage') }}",text: "welcome for message here !", icon:"{{ session('get') }}",buttons:false});
 				});
 			</script>	
+		</div>
+	</div>
+@endif
 
-@if(session('message'))
+<!-- @if(session('message'))
 	<div class="row">
 		<div class="col-md-12">
 		    <div class="alert alert-success">
@@ -18,7 +21,7 @@
 
 		</div>
 	</div>
-@endif
+@endif -->
 
 <script type="text/javascript">
 	$(function(){
