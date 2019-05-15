@@ -5,8 +5,7 @@
 				$(function(){
 				 swal({title:"{{ session('submessage') }}",text: "welcome for message here !", icon:"{{ session('get') }}",buttons:false});
 				});
-			</script>
-			<!-- <center>{{ session('submessage') }} welcome for message here !</center> -->
+			</script>	
 		</div>
 	</div>
 @endif
