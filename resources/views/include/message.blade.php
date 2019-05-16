@@ -1,5 +1,6 @@
 
 @if(session('message'))
+
 	<script type="text/javascript">
 		$(function(){
 			let timerInterval
@@ -15,4 +16,5 @@
 @if(session('show_delete'))
 
 @endif
+
 

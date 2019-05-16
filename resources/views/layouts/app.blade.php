@@ -102,8 +102,7 @@
   <script src="{{asset('/add_lib/lib/owlcarousel/owl.carousel.min.js')}}"></script>
   <script src="{{asset('/add_lib/lib/isotope/isotope.pkgd.min.js')}}"></script>
   <script src="{{asset('/add_lib/lib/touchSwipe/jquery.touchSwipe.min.js')}}"></script>
- <script src="{{asset('/js/main.js')}}"></script>
-
+  <script src="{{asset('/js/main.js')}}"></script>
 
 
   <script src="/add_lib/lib/easing/easing.min.js"></script>
