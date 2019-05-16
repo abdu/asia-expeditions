@@ -43,7 +43,7 @@ use App\Wishlist;
 
 Route::get("/category/{name}", "CategoryController@getCategory")->name("category"); 
 
-Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index'] );
+Route::get('/', 'HomeController@index')->name('index');
 
 Route::resource('/destination', 'HomeController', [ 'only' => ['index','store','show','update','destroy']]);
 
@@ -130,7 +130,6 @@ Route::group(['middleware' => ['isCustomer']], function () {
     Route::post('editaccount', ['uses' => 'CustomerController@doCreateNewPassword', 'as' => 'edit.password']);
 	Route::get('logout', 'CustomerController@getLogout')->name("logout");
 });
-
 
 Route::get('/login', "UserController@getLogin")->name('login');
 Route::post('/clientLogin', "UserController@getDoLogin")->name('doLogin');
