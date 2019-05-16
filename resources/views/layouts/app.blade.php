@@ -33,6 +33,8 @@
   <link href="{{asset('/add_lib/lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
   <link href="/add_lib/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
+
+
   
   
 
@@ -51,7 +53,9 @@
 	}
   .add{
     color: #4CAF50 !important;
+ 
   }
+
 </style>
 
     <script type="text/javascript">
@@ -106,7 +110,8 @@
   <script src="/add_lib/lib/superfish/hoverIntent.js"></script>
   <script src="/add_lib/lib/superfish/superfish.min.js"></script> 
   <script src="/add_lib/lib/lightbox/js/lightbox.min.js"></script>
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+ 
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 
 </body>
 </html>

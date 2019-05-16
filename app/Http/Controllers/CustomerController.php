@@ -52,7 +52,7 @@ class CustomerController extends Controller
             $nd = Customer::Where('email', $req->email)->first();
             $nd->password  = encrypt($req->new_password);
             $nd->save();
-            return back()->with('messagep', 'you has been update password');
+            return back()->with('message', 'you has been update password');
         }
     }
 

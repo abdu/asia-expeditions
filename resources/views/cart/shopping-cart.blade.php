@@ -5,16 +5,7 @@
 @section('content')
 	@include("include.menu")
 	<div class="container"><br><br>
-		<!-- @if (session('message'))
-			<div class="row">
-				<div class="col-md-12">
-				    <div class="alert alert-success">
-						<strong><i class="fa fa-check"></i> {{session('message')}}</strong>
-					</div>
-				</div>
-			</div>
-		@endif	 -->
-		@include('include.message')
+
 		@if( isset($tours_cart) )
 		<div class="row">
 			<div class="col-md-12"><h3>Shopping Cart</h3><br> </div>
@@ -34,7 +25,7 @@
 					?>
 					<table class="table">
 						<tbody>
-						@foreach($tours_cart as $tour)	
+						@foreach($tours_cart as $tour)						
 							<tr>
 								<td width="116px">
 									<a href="{{route('tourDetails', $tour['item']['slug'])}}">
@@ -42,7 +33,7 @@
 									</a>
 								</td>
 								<td><a href="{{route('tourDetails', $tour['item']['slug'])}}">{{$tour['item']['tour_name']}}</a>
-									<div><a onclick="return confirm('Are your sure you want delete {{$tour['item']['tour_name']}} ?');" href="{{url('remove-cart', ['id' => $tour['item']['id']])}}" class="text-danger">Delete</a></div>
+									<div><a class="get_delete"   class="text-danger">Delete</a></div>
 								</td>
 								<td><strong class="price"><span class="text-muted">${{number_format($tour['item']['tour_price'],2)}}</span></strong> <small> Per Person</small></td>
 								<td class="text-center">
@@ -57,6 +48,7 @@
 								$totalPrice = ($tour['item']['tour_price'] * $tour['qty']);
 								$getTotal = $getTotal + $totalPrice; 
 							?>
+							@include('include.message_confirm')
 						@endforeach
 						</tbody>
 					</table>
@@ -111,4 +103,5 @@
 			</div>
 		@endif	
 	</div>
+
 @endsection

@@ -73,32 +73,7 @@
 </div>
 
 <!-- end modal send email -->
-<div class="container">
-    @if (session('message'))
-        <div class="spacing"></div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="alert alert-success">
-                    <strong><i class="fa fa-check-circle"></i>
-                        <span class="text-danger">{{$tour['tour_name']}}</span> {{session('message')}}
-                    </strong>
-                </div>
-            </div>
-        </div>
-    @endif  
-
-    @if (session('message-email'))
-        <div class="spacing"></div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="alert alert-success">
-                    <strong><i class="fa fa-check-circle"></i>
-                        {{session('message-email')}}
-                    </strong>
-                </div>
-            </div>
-        </div>
-    @endif  
+<div class="container">   
 
     <h1 class="product-title" style="background: #227eac;border: solid 1px #9E9E9E;box-shadow: 0px 0px 0px 0px;color: white; padding: 12px 0px 12px 0px;">
         <span>{{{$tour->country->country_name or ''}}}</span> / 

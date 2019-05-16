@@ -38,7 +38,7 @@ class CartController extends Controller
         if (Auth::check()) {
             Wishlist::addWishlist($id);
         }
-        return back()->with('message', 'has been added to your cart...!');
+        return back()->with(['message'=> 'has been added to your cart...!','get'=>'success']);
     }
 
     public function updateCart(Request $request, $id)
@@ -52,7 +52,7 @@ class CartController extends Controller
             // Wishlist::addWishlist($id);
             Wishlist::updateWishlist($id, $request);
         }
-        return redirect()->back()->with('message', 'your cart is has been update...!');
+        return redirect()->back()->with(['message'=>'your cart is has been update...!','get'=>'success']);
     }
 
     public function getCart(Request $reqest)
@@ -71,7 +71,7 @@ class CartController extends Controller
             isset(User::getUser()->email) ? Wishlist::delWishlist($id) : '';
             break;
         }
-        return redirect()->back()->with('message', 'your cart is has been removed...!');
+        return redirect()->back()->with('show_delete', 'your cart is has been removed...!');
     }
 
     public function getChechout(Request $req)
