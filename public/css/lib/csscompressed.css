@@ -1680,7 +1680,7 @@ dd {
         /*position:static;*/
         transition:0.5 !important;
       z-index:1;
-      top: 30px;
+      top: 39px;
     }
     .wrapper-menu {
         position:fixed;
@@ -1689,7 +1689,7 @@ dd {
         width: 100%;
         box-shadow: -1px 2px 7px -3px;
         z-index:1;
-        top: 30px;
+        top: 39px;
        
    
 }
@@ -1880,7 +1880,7 @@ pre code {
         /*position:fixed;*/
         transition:0.5;
         z-index:1 ;
-        top: 33px !important;
+        top: 40px !important;
 
     }
     .wrapper-menu {
@@ -1888,7 +1888,7 @@ pre code {
         background: #f5f8fa;
         width: 100%;
         box-shadow: -1px 2px 7px -3px;
-        top: 33px;
+        top: 40px;
    
    
 }
@@ -14815,7 +14815,7 @@ header h1 {
         position:fixed;
         transition:0.5;
         z-index:1;
-        top: 30px !important ;
+        top: 39px !important ;
 
     }
     .wrapper-menu {

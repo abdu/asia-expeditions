@@ -46,10 +46,10 @@
 										<img width="29px" height="29px" src="https://system.asia-expeditions.com/storage/avata/thumbnail/{{Auth::user()->picture}}" class="img-circle">
 									@else
 									<li class="w3-dropdown-hover" style="padding: 6px 12px; float: left;">
-							  			<span class="fa fa-user" style="background: #fecc24;
+							  			<span class="fa fa-user u" style="background: #fecc24;
 										    padding: 5px 8px;
 										    border-radius: 50%;
-										    color: white; font-size: 19px; transition: .9s">
+										    color: white; font-size: 19px;">
 										</span>	
 						  			@endif
 
@@ -94,8 +94,10 @@
 								<li class="w3-dropdown-hover" style="padding: 2px 11px; float: left;">
 									<span>
 										<a href="{{route('getCart')}}">
-										<span class="fa fa-shopping-cart " style="padding: 5px 7px; border-radius: 50%; font-size: 28px; color: #fecc24;"></span>
-										<span style="position: absolute;top: 4px;color: white;background: #c71313;border-radius: 50%;padding: 0px 6px;right: 7px;font-size: 12px;">{{Cart::totalCartQty()}}</span>
+
+										<span class="fa fa-shopping-cart c" style="padding: 5px 7px; border-radius: 50%; font-size: 28px; color: #fecc24;"></span>
+										<span style="position: absolute;top: 3px;color: white;background: #c71313;border-radius: 50%;padding: 0px 6px;right: 7px;font-size: 11px;font-weight: 700;box-shadow: 0 0 2px 0px #000;">{{Cart::totalCartQty()}}</span>
+<!-- >>>>>>> 9c05b06864329b9fc9eb71842fbc250eba929fe7 -->
 										</a>
 
 									</span>
@@ -109,7 +111,7 @@
 	  	</div>
   	</div>
 </div>
-<div style="height: 110px;"></div>
+<div style="height: 100px;"></div>
 <div class="wrapper-menu">
 	<div class="container set_width">
 	  	<nav class="navbar navbar">		  	
