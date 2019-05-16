@@ -10,9 +10,8 @@ class Wishlist extends Model
     //
     protected $table = 'tbl_wishlist';
 
-
     public static function addWishlist($itemId){
-    	$editWish = self::where('item_id', $itemId)->first();
+    	$editWish = self::where('tour_id', $itemId)->first();
     	$date = date('Y-m-d');
     	if ($editWish){
     		$editWish->item_qty++;  
@@ -29,7 +28,7 @@ class Wishlist extends Model
     }
 
     public static function updateWishlist($itemId, $req){    	
-    	$editWish = self::where('item_id', $itemId)->first();
+    	$editWish = self::where('tour_id', $itemId)->first();
     	$qty = 'txtqty_'.$itemId;
     	if ($editWish){
     		$editWish->item_qty = $req->$qty;
@@ -38,17 +37,11 @@ class Wishlist extends Model
     }
 
     public static function delWishlist($itemId){
-
-        self::where('item_id', $itemId)->delete();
+        self::where('tour_id', $itemId)->delete();
     }
 
     public static function clearWishlist(){
-        self::where('customer_id', User::getUser()->id)->delete();
+        self::where('customer_id', \Auth::user()->id)->delete();
     }
-
-
-
-
-
 
 }

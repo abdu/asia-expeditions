@@ -18,6 +18,6 @@
 	   function show_popup(){
 	      $(".swal-overlay").hide();
 	   };
-	   window.setTimeout( show_popup, 4000 ); // 5 seconds
+	   window.setTimeout( show_popup, 2000 ); // 5 seconds
 	});
 </script>

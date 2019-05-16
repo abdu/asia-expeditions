@@ -5,17 +5,8 @@
 @section('content')
 	@include("include.menu")
 	<div class="container"><br><br>
-		<!-- @if (session('message'))
-			<div class="row">
-				<div class="col-md-12">
-				    <div class="alert alert-success">
-						<strong><i class="fa fa-check"></i> {{session('message')}}</strong>
-					</div>
-				</div>
-			</div>
-		@endif	 -->
 		@include('include.message')
-		@if( isset($tours_cart) )
+		@if( isset($tours_cart) && !empty($tours_cart))
 		<div class="row">
 			<div class="col-md-12"><h3>Shopping Cart</h3><br> </div>
 			<div class="col-md-9">		

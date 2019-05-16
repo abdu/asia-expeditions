@@ -34,7 +34,6 @@ class CartController extends Controller
         $cart = new Cart($oldCart);
         $cart->addToCart($tour, $id);
         $request->session()->put('cart', $cart);
-
         if (Auth::check()) {
             Wishlist::addWishlist($id);
         }
@@ -57,26 +56,26 @@ class CartController extends Controller
 
     public function getCart(Request $reqest)
     {
-        $oldCart = Session::has('cart') ? Session::get('cart') : null;  
-        $oldcart = Session::get('cart');
-        $cart = new Cart($oldcart);        
+        $oldCart = Session::has('cart') ? Session::get('cart') : null;     
+        $cart = new Cart($oldCart);        
         return view('cart.shopping-cart', ['tours_cart' => $cart->items]);
     }
 
     public function removeCart(Request $request, $id)
     {
-        $session = Session::get('cart');
-        foreach ($session->items as $key => $cart) {
+        if (Session::has('cart') ) {
+            $session = Session::get('cart');
             unset($session->items[$id]);
-            isset(User::getUser()->email) ? Wishlist::delWishlist($id) : '';
-            break;
+            \Auth::check() ? Wishlist::delWishlist($id) : '';
         }
         return redirect()->back()->with('message', 'your cart is has been removed...!');
     }
 
     public function getChechout(Request $req)
     {
-        if(isset($req->key) && !empty($req->key)){
+        if (Auth::check()) {
+          return redirect()->route('index');
+        } else if(isset($req->key) && !empty($req->key)){
             $user = User::where("md5", $req->key)->first();
             $user->banned = 0;
             $user->save();
@@ -125,13 +124,6 @@ class CartController extends Controller
                 $cus->password_text = $req->password;
                 $cus->save();
                 Mail::to($req->email)->send(new RegisterCustomer());
-                // $_SESSION['email'] = $req->email;
-                // $_SESSION['timeOut'] = time() + 60 * 60 * 720;
-                // if (empty(Session::get('cart')->items)) {
-                //     return redirect('/shopping-cart');
-                // } else {
-                //     return redirect()->route('check.payment');
-                // }
                 return back()->with(['icon'=> 'success',  'message'=> "Link has been sent to your email: ". $req->email]);
             }
         }else{
@@ -147,48 +139,32 @@ class CartController extends Controller
         ]);
 
         if (!$validator->fails() ) {
-
             if ( \Auth::attempt(['email'=> $req->email_log, "password"=> $req->password_log, "banned"=> 0])) {
-                return redirect('/shopping-cart');
+                $itemWish = Wishlist::where('user_id', \Auth::user()->id)->get();
+                $oldCart = Session::has('cart') ? Session::get('cart') : null;
+                if ($itemWish->count() > 0) {
+                    // return "Fdsafdsaf";
+                    foreach ($itemWish as $key => $data) {
+                        $synData = Tour::find($data['tour_id']);                   
+                        $cart = new Cart($oldCart);
+                        $cart->Synchronize($synData, $data->item_qty, $synData->id);
+                        // $cart->EditCart($synData, $data['tour_id'], $synData);
+                        $req->session()->put('cart', $cart);
+                    }
+                } else {
+                    foreach (Session::get('cart')->items as $key => $cart) {
+                        $addWish = new Wishlist;
+                        $addWish->user_id = Auth::user()->id;
+                        $addWish->tour_id = $cart['item']['id'];
+                        $addWish->item_qty = $cart['qty'];
+                        $addWish->save();
+                    }
+                }
+                return redirect('shopping-cart');
             }
 
         } else {
             return back()->withErrors($validator)->withInput()->with('loginError', 'Your email is not exists');
-
-
-            // $user = User::where('email', $req->email_log)->first();
-            // if ($user->count() > 0) {
-            //     // if ($req->email_log == $user->email && encrypt($req->password_log) == $user->password) {
-
-            //     if (\Auth::attempt(['email'=>$req->email_log, 'password'=>$req->password_log, 'banned'=>0], $req->remember)) {
-            //         $_SESSION['email'] = $req->email_log;
-            //         $_SESSION['timeOut'] = time() + 60 * 60 * 720;
-            //         $itemWish = Wishlist::where('customer_id', User::getUser()->id)->get();
-            //         // return $itemWish;
-            //         if ($itemWish) {
-            //             foreach ($itemWish as $key => $data) {
-            //                 $synData = Tour::find($data['item_id']);;
-            //                 $oldCart = Session::has('cart') ? Session::get('cart') : null;
-            //                 $cart = new Cart($oldCart);
-            //                 $cart->Synchronize($synData, $data->item_qty, $synData->tour_id);
-            //                 $req->session()->put('cart', $cart);
-            //             }
-            //         } else {
-            //             foreach (Session::get('cart') as $key => $cart) {
-            //                 $addWish = new Wishlist;
-            //                 $addWish->customer_id = User::getUser()->id;
-            //                 $addWish->item_id = $cart['item']['tour_id'];
-            //                 $addWish->item_qty = $cart['qty'];
-            //                 $addWish->save();
-            //             }
-            //         }
-            //         return redirect('/shopping-cart');
-            //     } else {
-            //         return back()->withErrors($validator)->withInput()->with('loginError', 'Your email and password is not mutch !');
-            //     }
-            // } else {
-            //     return back()->with('loginError', 'Your email is not exists');
-            // }
         }
     }
 
@@ -251,7 +227,6 @@ class CartController extends Controller
         } else if ($req->vpc_TxnResponseCode == 'U') {
             return view('payment.transaction_fails', ['message' => '! Please verification your card security code']);
         } else if ($req->vpc_TxnResponseCode == 'I') {
-
             return view('payment.transaction_fails', ['message' => '! Your card security code verification failed']);
         } else {
             return view('payment.transaction_fails', ['message' => '! Your payment transaction is fails']);

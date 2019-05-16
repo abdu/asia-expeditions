@@ -59,7 +59,7 @@ class CustomerController extends Controller
     public function getLogout(){
         // session_destroy();
         \Auth::logout();
-        return redirect('register');
+        return redirect("/");
     }
 
   

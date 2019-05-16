@@ -15,8 +15,7 @@ class CheckAdmin
      */
     public function handle($request, Closure $next)
     {
-        if (\Auth::check()){
-
+        if (\Auth::check() && Auth::user()->role_id != 7){
             return $next($request);
         }else{
             return redirect ('login');
