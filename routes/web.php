@@ -185,6 +185,7 @@ Route::group(['middleware' => ['isAdmin']], function () {
 	   	Route::get('film', 'Admin\FilmController@filmList')->name('filmList');
 	   	Route::get('film/add', 'Admin\FilmController@filmForm')->name('filmForm');
 	   	Route::post('film/created', 'Admin\FilmController@filmCreate')->name('filmCreate');
+	   	Route::get('count-viewer','ViewerController@getviewer')->name('getviewer');
 	 	
 	});
 });

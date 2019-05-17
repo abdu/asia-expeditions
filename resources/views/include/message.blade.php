@@ -13,8 +13,3 @@
 		});
 	</script>
 @endif
-@if(session('show_delete'))
-
-@endif
-
-

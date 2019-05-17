@@ -2,6 +2,11 @@
 	.btn{
 		margin: 0 0.5rem !important;
 	}
+	.get_delete{
+		color: #bf5329;
+		font-weight: 600;
+	}
+	.get_delete:hover{color: #af3404;}
 </style>
 <script type="text/javascript">		
 	$('.get_delete').click(function(){
@@ -12,7 +17,6 @@
 			},
 			  	buttonsStyling: false,
 		})
-
 		swalWithBootstrapButtons.fire({
 		  	title: 'Are you sure?',
 		  	text: "You won't be able to revert this!",
@@ -24,18 +28,12 @@
 		}).then((result) => {
 		  if (result.value) {
 		  	window.location.href="{{url('remove-cart', ['id' => $tour['item']['id']])}}";
-		    swalWithBootstrapButtons.fire(
-			    'Deleted!',
-			    'Your file has been deleted.',
-			    'success'
-		    )
+		    swalWithBootstrapButtons.fire({ 
+			    title:'Deleted!',
+			    text:'Your file has been deleted.',
+			    type:'success',
+			    showConfirmButton: false,} )
 
-		  } else if (result.dismiss === Swal.DismissReason.cancel) {
-		    swalWithBootstrapButtons.fire(
-			    'Cancelled',
-			    'Your imaginary file is safe :)',
-			    'error'
-		    )
 		  }
 		})
 	});

@@ -70,6 +70,12 @@
                 <a href="{{route('getClientName', ['clientName' => Auth::user()->name])}}"><i class="fa fa-dashboard fa-fw"></i>Your Account</a>
             </li>        
             @endif
+            <li class="@yield('viewer')">
+                <a href="javascripe:void(0)"><i class="fa fa-users fa-fw"></i>Viewer<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li><a href="{{route('getviewer')}}">Viewer Lists</a></li>
+                </ul>
+            </li>
         </ul>
     </div>
 </div>

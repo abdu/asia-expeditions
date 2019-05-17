@@ -92,7 +92,7 @@
    });
 </script>
 </head>
-<body >
+<body>
 @include('include.message')
 	@yield('content')
 	@include('include.footer')

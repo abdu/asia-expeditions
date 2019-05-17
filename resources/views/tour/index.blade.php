@@ -32,6 +32,9 @@
     border: 1px solid #cccccc7a;    
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.13)
     }
+    .owl-stage{
+        transition: .7s !important;
+    }
  
 </style>
 
@@ -192,6 +195,52 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="col-md-1"></div>
+    <div class="col-md-3" style="padding: 0px; width: 31%; margin: 0 0 0 25px;">
+        <div id="" class="bor" style="margin-top:0; background-color: #eeeeee;">
+        <?php  $getTour = \App\Tour::getTourByWeek(); ?>   
+             <div class="title text-center">
+            <h4 style="font-weight: 500;margin-bottom: 0px;">TEST
+                <div style="border-bottom: 2px solid #ddd;width: 100%;  padding-top: 5px;"></div>
+            </h4>
+        </div>  
+            @foreach($getTour as $tour)
+            <section class="wow fadeInUp" >
+                <div class="owl-carousel clients-carousel-1" style="height: auto;">
+                                                            
+                        @foreach($getTour as $tour)
+                            <div class="list-group-item b_list">
+                                <div class="col-md-4">
+                                  <div class="row" style="text-align: center;padding-top:5px;">
+                                     <a href="{{route('tourDetails', ['url'=> $tour->slug])}}">                                 
+                                        <img src="{{Shared::getInstance()->urlResource($tour->tour_photo, $tour->user_id)}}" frameborder="0" allow="accelerometer;  ; encrypted-media; gyroscope; picture-in-picture" allowfullscreen  class="img-responsive img-box img-thumbnail" style="padding:0px;"> 
+                                     </a>
+                                  </div>
+                                </div>    
+                                <div class="col-md-8">
+                                    <h3 class="text-danger" style="font-size: 16px; font-weight: 500; margin: 5px 0;"><b> ${{Shared::money($tour->tour_price)}}</b>/<small>Per Person</small>
+                                    </h3>                              
+                                    <div>
+                                        <a href="{{route('tourDetails', ['url'=> $tour->slug])}}" >
+                                            <p style="font-size: 12px;">{!! str_limit($tour->tour_name,55) !!}</p>
+                                        </a>
+                                    </div>
+                                    <a style="font-weight:100;" href="{{route('tourDetails', ['url'=> $tour->slug])}}" class="btn btn-primary btn-xs">View Detail</a>
+                                        <div class="clearfix"></div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>                                                    
+                                       
+                     @endforeach
+
+                </div>              
+            </section> 
+            @endforeach
+ 
+     
+        </div> 
+        
     </div>
 </div>
 
