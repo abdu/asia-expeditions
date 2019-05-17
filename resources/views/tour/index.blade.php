@@ -78,7 +78,7 @@
 <!-- end modal send email -->
 <div class="container">   
 
-    <h1 class="product-title" style="background: #227eac;border: solid 1px #9E9E9E;box-shadow: 0px 0px 0px 0px;color: white; padding: 12px 0px 12px 0px;">
+    <h1 class="product-title" style="text-shadow: 0px 1px 2px black; color: #227eac;padding: 12px 0px 12px 0px;border-bottom: 3px double #bba5a5;">
         <span>{{{$tour->country->country_name or ''}}}</span> / 
         <span>{{$tour->tour_name}}</span>
     </h1>
@@ -199,17 +199,17 @@
     <div class="col-md-1"></div>
     <div class="col-md-3" style="padding: 0px; width: 31%; margin: 0 0 0 25px;">
         <div id="" class="bor" style="margin-top:0; background-color: #eeeeee;">
-        <?php  $getTour = \App\Tour::getTourByWeek(); ?>   
+        <?php  $getTour = \App\Tour::getTourByWeek($tour->id); ?>   
              <div class="title text-center">
-            <h4 style="font-weight: 500;margin-bottom: 0px;">TEST
+            <h4 style="font-weight: 500;margin-bottom: 0px;">RECENT VIEW
                 <div style="border-bottom: 2px solid #ddd;width: 100%;  padding-top: 5px;"></div>
             </h4>
         </div>  
-            @foreach($getTour as $tour)
+            @foreach($getTour->chunk(3) as $key => $chunkTour)
             <section class="wow fadeInUp" >
                 <div class="owl-carousel clients-carousel-1" style="height: auto;">
                                                             
-                        @foreach($getTour as $tour)
+                        @foreach($chunkTour as $tour)
                             <div class="list-group-item b_list">
                                 <div class="col-md-4">
                                   <div class="row" style="text-align: center;padding-top:5px;">
