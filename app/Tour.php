@@ -45,4 +45,22 @@ class Tour extends Model
             ->where(['cat.tour_id'=> $tour_id, 'tours.tour_status'=> 1])->orderBy('id', 'DESC')
             ->take(30);
     }
+    public static function getTourBycount(){
+        return $data = \DB::table('tbl_countview as v')
+                          ->select('t.*',\DB::Raw(' count(v.tour_id) as t'))                                   
+                          ->groupBy('v.tour_id')
+                          ->join('tours as t', 'v.tour_id', '=', 't.id')
+                          ->get();
+    }
+    public static function getTourByWeek($id=0){
+        $today    = date('Y-m-d');
+        $day      = date('Y-m-d',strtotime("-7 days"));
+        return $data = \DB::table('tbl_countview as v')
+                          ->select('t.*',\DB::Raw(' count(v.tour_id) as t'))                                   
+                          ->groupBy('v.tour_id')
+                          ->whereBetween('v.created_at', [$day,   $today])
+                          ->whereNotIn('t.id',[$id])                         
+                          ->join('tours as t', 'v.tour_id', '=', 't.id')
+                          ->get();
+    }
 }

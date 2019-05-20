@@ -16,7 +16,6 @@
 <link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
 <script type="text/javascript" src="{{asset('js/compressed.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/jquery.lazy.min.js')}}"></script>
- <link href="{{asset('add_lib/lib/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
 
 
   <!-- Insert to your webpage before the </head> -->
@@ -31,7 +30,7 @@
   <link href="{{asset('/add_lib/css/style.css')}}" rel="stylesheet">
   <link href="{{asset('/add_lib/lib/animate/animate.min.css')}}" rel="stylesheet">
   <link href="{{asset('/add_lib/lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
-  <link href="/add_lib/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+  
 
 
 
@@ -54,6 +53,27 @@
   .add{
     color: #4CAF50 !important;
  
+  }
+  .title h2:before{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 200px;
+    height: 1px;
+    background: #ddd;
+    top: 65px;
+    left: calc(50% - 95px);
+  }
+  .title h2:after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #18d26e;
+    top: 64px;
+    left: calc(50% - 20px);
+
   }
 
 </style>
@@ -92,11 +112,11 @@
    });
 </script>
 </head>
-<body >
+<body>
 @include('include.message')
 	@yield('content')
 	@include('include.footer')
-  <script src="{{asset('/add_lib/lib/wow/wow.min.js')}}"></script>
+  <!-- <script src="{{asset('/add_lib/lib/wow/wow.min.js')}}"></script> -->
   <script src="{{asset('/add_lib/lib/waypoints/waypoints.min.js')}}"></script>
   <script src="{{asset('/add_lib/lib/counterup/counterup.min.js')}}"></script>
   <script src="{{asset('/add_lib/lib/owlcarousel/owl.carousel.min.js')}}"></script>
@@ -105,10 +125,10 @@
   <script src="{{asset('/js/main.js')}}"></script>
 
 
-  <script src="/add_lib/lib/easing/easing.min.js"></script>
+<!--   <script src="/add_lib/lib/easing/easing.min.js"></script>
   <script src="/add_lib/lib/superfish/hoverIntent.js"></script>
-  <script src="/add_lib/lib/superfish/superfish.min.js"></script> 
-  <script src="/add_lib/lib/lightbox/js/lightbox.min.js"></script>
+  <script src="/add_lib/lib/superfish/superfish.min.js"></script>  -->
+  
  
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 

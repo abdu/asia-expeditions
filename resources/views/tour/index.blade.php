@@ -22,6 +22,71 @@
 <meta property="twitter:domain" content="https://asia-expeditions.com">
 
 @section('content')
+@include("include.menu")
+
+<style type="text/css">
+    .amazingslider-box-1{
+     margin-left: 0px !important; 
+     border-width: 0px !important; 
+     border-style: 0px !important; 
+    }
+    .bor{
+    border: 1px solid #cccccc7a;    
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.13)
+    }
+    .owl-stage{
+        transition: .7s !important;
+    }
+ 
+</style>
+
+
+<!-- modal send email -->
+
+
+<div class="w3-container">
+    <div id="id01" class="w3-modal">        
+        <div class="w3-modal-content w3-card-12 w3-animate-zoom " >
+            <div class="w3-center w3-col m6" ><br>
+                <span onclick="document.getElementById('id01').style.display = 'none'" class="w3-button w3-xmeduim w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
+                <div class="preview-pic tab-content">
+                    <div class="tab-pane active" id="pic-1"><img class="lazy" data-src="{{Shared::getInstance()->urlResource($tour->tour_photo, $tour->user_id)}}" /></div>                 
+                </div>
+                <h3 class="product-title" style="text-align: left;padding:10px;">{{htmlentities($tour['tour_name'])}}</h3>  
+                <h5 class="price" style="text-align: left;padding:10px;">price: <span data-toggle="popover" data-trigger="hover" data-content="Our Best Price" data-placement="bottom">${{$tour['tour_price']}} </span><small style="text-transform: capitalize">Per Person</small></h5>
+            </div>
+            <form class="w3-container w3-col m6" action="{{url('/tour/mail/to')}}" method="post">
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                <input type="hidden" name="id" value="{{ $tour->id }}">
+                <input type="hidden" name="tourName" value="{{ $tour->tour_name }}">
+                <div class="w3-section">
+                    <label><b>Email From</b></label>
+                    <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Email from" name="emailfrom" required>
+                    <label><b>Email to</b></label>
+                    <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Email To" name="emailto" required>
+                    <label><b>Your Name</b></label>
+                    <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder=" Your Name" name="tittle" required>   
+                    <textarea class="form-control" style="height: 106px;" rows="3" name="message" placeholder="Message here..!" required="required"></textarea>              
+                </div>
+                <div class="pull-right w3-padding-16">
+                    <button  type="submit" class="btn btn-primary">Send</button>
+                </div>
+            </form>         
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+
+<!-- end modal send email -->
+<div class="container">   
+
+    <h1 class="product-title" style="text-shadow: 0px 1px 2px black; color: #227eac;padding: 12px 0px 12px 0px;border-bottom: 3px double #bba5a5;">
+        <span>{{{$tour->country->country_name or ''}}}</span> / 
+        <span>{{$tour->tour_name}}</span>
+    </h1>
+
+
+@section('content')
     @include("include.menu")
     <style type="text/css">
         .amazingslider-box-1{

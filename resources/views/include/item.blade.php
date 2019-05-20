@@ -11,9 +11,9 @@
         </a>
         <h3 class="text-danger"> <b>${{Shared::money($tour->tour_price)}}</b> <small>Per Person</small></h3>
         <a href="{{route('tourDetails', ['url'=> $tour->slug])}}" >
-            <p><b>{!! str_limit($tour['tour_name'],120) !!}</b></p>
+            <p><b>{!! str_limit($tour->tour_name,120) !!}</b></p>
         </a>
-        <p style="text-align: center;">{!! str_limit(strip_tags($tour['Tourntro']),162) !!}</p>
+        
         <hr class="line">
         <div class="row">
             <div class="col-md-12 col-sm-12">

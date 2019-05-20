@@ -10,17 +10,28 @@ use App\Province;
 use App\Country;
 use App\HolidayType;
 use App\Category;
-use Illuminate\Support\Facades\Mail;;
+use Illuminate\Support\Facades\Mail;
+use App\CountView;
  
 class TourController extends Controller
 {
     //
     public function tourDetails($tour_slug){
-        $tour = Tour::where(['slug' => $tour_slug, 'web'=>1])->first();
+        $tour     = Tour::where(['slug' => $tour_slug, 'web'=>1])->first();
         $tourLink = Tour::where(['tour_type'=>$tour->tour_type, 'web'=>1, 'post_type'=> 0, 'province_id'=>$tour->province_id])
                     ->whereNotIn('id', [$tour->id])
                     ->orderBy('tour_name', 'ASC')->take(30)->get();
         $getHotel = $tour->supplier;
+        $ip       = \Request::ip(); 
+        $today    = date('Y-m-d 00:00:00');
+             if ( !CountView::Getdate($today, $ip , $tour->id)) {
+                $adds                 = new CountView;
+                $adds->ip             = $ip;                       
+                $adds->tour_id        = $tour->id;
+                $adds->user_id        = \Auth::id();
+                $adds->save();   
+            }
+
         return view("tour.index", compact('tour', 'tourLink', 'getHotel'));
     }
 
