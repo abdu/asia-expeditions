@@ -23,8 +23,9 @@
                 </thead>
                 <tbody>
                     @foreach($views as $view)
-                    <tr>
-                      <td >{{$view->fullname}}</td>
+                    <tr>     
+            <?php $data=\App\User::where('id',$view->user_id)->first();  ?>
+                      <td >{{isset($data->fullname)? $data->fullname:''}}</td>
                       <td>{{$view->tour_name}}</td>
                       <td>{{ $view->total }}</td>
         

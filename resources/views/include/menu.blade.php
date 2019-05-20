@@ -39,7 +39,7 @@
 			  		</div>	
 			  		<div class="pull-right" style="padding:0px 0px;">
 			  			<span class="wrap-shopping-cart">
-							<ul class="nav navbar-nav navbar-right" style=" margin: 0;">								
+							<ul class="nav navbar-nav navbar-right" style=" margin: 0;">			
 								@if(Auth::check())
 								<li class="w3-dropdown-hover" style="padding: 8px 3px; float: left; width: 36px;">
 									<img style="position: relative;top: -2px;" width="29px" height="29px" src="https://system.asia-expeditions.com/storage/avata/thumbnail/{{Auth::user()->picture}}" class="img-circle">

@@ -24,10 +24,9 @@ class CountView extends Model
 
     public static  function getcount_tour(){
          $data = \DB::table('tbl_countview as v')
-    ->select(\DB::Raw('t.tour_name, count(*) as total, v.tour_id as tour_id, u.fullname'))
-    ->groupBy(\DB::raw('(v.tour_id),(t.tour_name),(u.fullname)'))
+    ->select('v.*',\DB::Raw('t.tour_name, count(*) as total'))
+    ->groupBy('v.user_id',\DB::raw('(t.tour_name)'))
     ->join('tours as t', 'v.tour_id', '=', 't.id')
-    ->join('users as u', 'v.user_id', '=', 'u.id')
     ->get();
        return $data;
     }
