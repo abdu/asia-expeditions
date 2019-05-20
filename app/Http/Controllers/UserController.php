@@ -97,10 +97,9 @@ class UserController extends Controller
             'email' => 'required|email',
             'password' => 'required|min:6',
         ]);
-        // return $req->all();
         if(!$validator->fails()){
             if (\Auth::attempt(['email'=>$req->email, 'password'=>$req->password, 'banned'=>0], $req->remember)) {
-                return redirect()->intended('/admin');
+                return redirect()->intended('admin');
             }
             return back()->withInput()->with("message", "incorrect username or password");
         }else{            

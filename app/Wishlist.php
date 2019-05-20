@@ -19,7 +19,7 @@ class Wishlist extends Model
     	}else{
 	    	$wishlist = new self;
 	    	$wishlist->user_id    = \Auth::user()->id;
-	    	$wishlist->item_id    = $itemId;
+	    	$wishlist->tour_id    = $itemId;
 	    	$wishlist->item_qty   = 1;
 	    	$wishlist->created_at = $date;
 	    	$wishlist->updated_at = $date;

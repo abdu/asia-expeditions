@@ -9,7 +9,6 @@
 	<div class="container">
   		<div class="row">
   			<div class="col-md-12">
-  			
 			  		<div class="pull-left" style="padding:5px 0px;">
 			  			<span class="a_hidden">
 			  				<b><i class="fa fa-phone"></i></b> +855 (23) 432 007  &nbsp;&nbsp; 
@@ -41,67 +40,33 @@
 			  		<div class="pull-right" style="padding:0px 0px;">
 			  			<span class="wrap-shopping-cart">
 							<ul class="nav navbar-nav navbar-right" style=" margin: 0;">								
-									@if(Auth::check())
-									<li class="w3-dropdown-hover" style="padding: 4px 3px; float: left; width: 36px;">
-										<img width="29px" height="29px" src="https://system.asia-expeditions.com/storage/avata/thumbnail/{{Auth::user()->picture}}" class="img-circle">
-									@else
-									<li class="w3-dropdown-hover" style="padding: 6px 12px; float: left;">
-							  			<span class="fa fa-user u" style="background: #fecc24;
-										    padding: 5px 8px;
-										    border-radius: 50%;
-										    color: white; font-size: 19px;">
-										</span>	
+								@if(Auth::check())
+								<li class="w3-dropdown-hover" style="padding: 8px 3px; float: left; width: 36px;">
+									<img style="position: relative;top: -2px;" width="29px" height="29px" src="https://system.asia-expeditions.com/storage/avata/thumbnail/{{Auth::user()->picture}}" class="img-circle">
+								@else
+								<li class="w3-dropdown-hover" style="padding: 6px 12px; float: left;">
+						  			<span style="background: #fecc24;padding: 3px 7px;border-radius: 50%;color: white; font-size: 19px;">
+						  				<a style="color: #ffff;" href="{{route('register')}}"><i class="fa fa-user" ></i></a>
+						  			</span>	
 						  			@endif
-
-						  			<ul class="w3-dropdown-content w3-bar-block" style="text-transform: capitalize; ">
-						  				<div style=" padding: 10px 0px;">
-								          	<div class="col-md-12 w3-padding">
-								          		@if( Auth::check())
-									          		<a href="{{route('account', ['active'=>'profile'])}}"><span class="fa fa-user"></span>&nbsp;
-									          		{{Auth::user()->fullname}}
-									          		</a>
-								          		@else
-								          			<a href="{{route('register')}}"><span class="fa fa-user"></span> 
-								          			&nbsp; Your Account
-									          		</a>
-								          		@endif
-								          	</div>
-								          	<div class="col-md-12 w3-padding">
-								          		<a href="{{route('account', ['active'=>'order'])}}"><span class="fa fa-qrcode"></span> &nbsp; Your Order</a>
-								          	</div><div class="clearfix"></div>
-								          	<hr style="margin-bottom: 6px;">
-									        <div class="col-md-12">
-										        <div class="row">
-											        @if(Auth::check())
-											          	<div class="col-md-12  w3-padding">
-												          	<i class="glyphicon glyphicon-log-out"></i> &nbsp;
-												          	<a href="{{route('logout')}}"> Sign Out</a>
-											          	</div>
-											        @else
-											          	<div class="col-md-6 w3-padding">
-												          	<a href="register">Register</a>
-											          	</div>
-											          	<div class="col-md-6 w3-padding">
-												          	<a href="{{route('register')}}">Login</a>
-											          	</div>
-											        @endif
-										        </div>
-										    </div> 
-								        </div>
-						  			</ul>
+						  			@if(Auth::check())
+							  			<ul class="w3-dropdown-content w3-bar-block" style="text-transform: capitalize; padding-top: 25px; top: 42px;">
+											<li class="list-unstyled"><a class="col-md-12  w3-padding" href="{{route('account')}}">Account Info</a></li>
+											<li class="list-unstyled"><a class="col-md-12  w3-padding" href="{{route('logout')}}">Bookings</a></li>
+											<div class="clearfix"></div>
+											<hr style="margin-bottom: 6px;">
+											<li class="list-unstyled"><a class="col-md-12  w3-padding" href="{{route('logout')}}">Sign out</a></li>
+							  			</ul>
+						  			@endif
 								</li>
 
 								<li class="w3-dropdown-hover" style="padding: 2px 11px; float: left;">
 									<span>
 										<a href="{{route('getCart')}}">
-
-										<span class="fa fa-shopping-cart c" style="padding: 5px 7px; border-radius: 50%; font-size: 28px; color: #fecc24;"></span>
+										<span class="fa fa-shopping-cart " style="padding: 5px 7px; border-radius: 50%; font-size: 28px; color: #fecc24;"></span>
 										<span style="position: absolute;top: 3px;color: white;background: #c71313;border-radius: 50%;padding: 0px 6px;right: 7px;font-size: 11px;font-weight: 700;box-shadow: 0 0 2px 0px #000;">{{Cart::totalCartQty()}}</span>
-<!-- >>>>>>> 9c05b06864329b9fc9eb71842fbc250eba929fe7 -->
 										</a>
-
 									</span>
-									
 						        </li>
 					        </ul>
 					    </span>
@@ -111,7 +76,7 @@
 	  	</div>
   	</div>
 </div>
-<div style="height: 100px;"></div>
+<div style="height: 127px;"></div>
 <div class="wrapper-menu">
 	<div class="container set_width">
 	  	<nav class="navbar navbar">		  	

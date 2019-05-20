@@ -37,7 +37,7 @@ class CartController extends Controller
         if (Auth::check()) {
             Wishlist::addWishlist($id);
         }
-        return back()->with(['message'=> 'has been added to your cart...!','get'=>'success']);
+        return back()->with('message', 'has been added to your cart...!');
     }
 
     public function updateCart(Request $request, $id)
@@ -48,10 +48,10 @@ class CartController extends Controller
         $cart->EditCart($tour, $id, $request);
         $request->session()->put('cart', $cart);
         if (Auth::check()) {
-            // Wishlist::addWishlist($id);
             Wishlist::updateWishlist($id, $request);
+            return redirect()->back()->with('message', 'your cart is has been update...!');
         }
-        return redirect()->back()->with(['message'=>'your cart is has been update...!','get'=>'success']);
+        
     }
 
     public function getCart(Request $reqest)
@@ -63,12 +63,13 @@ class CartController extends Controller
 
     public function removeCart(Request $request, $id)
     {
+        // return $id;
         if (Session::has('cart') ) {
             $session = Session::get('cart');
             unset($session->items[$id]);
             \Auth::check() ? Wishlist::delWishlist($id) : '';
         }
-        return redirect()->back()->with('show_delete', 'your cart is has been removed...!');
+        return redirect()->back()->with('message', 'your cart is has been removed...!');
     }
 
     public function getChechout(Request $req)
@@ -143,24 +144,29 @@ class CartController extends Controller
                 $itemWish = Wishlist::where('user_id', \Auth::user()->id)->get();
                 $oldCart = Session::has('cart') ? Session::get('cart') : null;
                 if ($itemWish->count() > 0) {
-                    // return "Fdsafdsaf";
                     foreach ($itemWish as $key => $data) {
                         $synData = Tour::find($data['tour_id']);                   
                         $cart = new Cart($oldCart);
                         $cart->Synchronize($synData, $data->item_qty, $synData->id);
-                        // $cart->EditCart($synData, $data['tour_id'], $synData);
                         $req->session()->put('cart', $cart);
                     }
                 } else {
-                    foreach (Session::get('cart')->items as $key => $cart) {
-                        $addWish = new Wishlist;
-                        $addWish->user_id = Auth::user()->id;
-                        $addWish->tour_id = $cart['item']['id'];
-                        $addWish->item_qty = $cart['qty'];
-                        $addWish->save();
-                    }
+                    if (Session::has('cart')) {
+                        foreach (Session::get('cart')->items as $key => $cart) {
+                            $addWish = new Wishlist;
+                            $addWish->user_id = Auth::user()->id;
+                            $addWish->tour_id = $cart['item']['id'];
+                            $addWish->item_qty = $cart['qty'];
+                            $addWish->save();
+                        }
+                    }                    
                 }
-                return redirect('shopping-cart');
+
+                if( Cart::totalCartQty() > 0){
+                    return redirect()->route('getCart');
+                }else{
+                    return redirect()->route('index');
+                }
             }
 
         } else {

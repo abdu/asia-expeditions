@@ -84,7 +84,6 @@ class TourController extends Controller
     }
 
     public function getTourName(Request $req){
-
         $tour = Tour::Where([['tour_name', 'LIKE', '%'.$req->tour_name.'%'], ['web','=', 1], ['post_type','=', 0]])->take(12)->orderBy('tour_name', 'ASC')->paginate();
         return view('search.search_tour', ['tours' => $tour, 'result' => $req->tour_name]);
 
