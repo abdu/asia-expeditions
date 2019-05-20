@@ -43,7 +43,7 @@
 							<ul class="nav navbar-nav navbar-right" style=" margin: 0;">								
 									@if(Auth::check())
 									<li class="w3-dropdown-hover" style="padding: 4px 3px; float: left; width: 36px;">
-										<img width="29px" height="29px" src="https://system.asia-expeditions.com/storage/avata/thumbnail/{{Auth::user()->picture}}" class="img-circle">
+										<img width="29px" height="29px" src="{{Shared::getInstance()->urlResource(Auth::user()->picture)}}" class="img-circle">
 									@else
 									<li class="w3-dropdown-hover" style="padding: 6px 12px; float: left;">
 							  			<span class="fa fa-user u" style="background: #fecc24;

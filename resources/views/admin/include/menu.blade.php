@@ -14,11 +14,10 @@ use App\components\Shared;?>
         <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                 @if(Auth::user()->picture)
-                    <img width="40px;" src="{{Shared::getInstance()->urlResource(Auth::user()->picture)}}">
+                    <img width="40px;" height="40px;" style="border-radius: 50%;" src="{{Shared::getInstance()->urlResource(Auth::user()->picture)}}">
                 @else
-                    <i class="fa fa-user fa-fw"></i>
-                @endif
-                <i class="fa fa-caret-down"></i>
+                    <img width="40px;" height="40px;" style="border-radius: 50%;" src="">
+                @endif                
             </a>
             <ul class="dropdown-menu dropdown-user">
                 <li><a href="#">

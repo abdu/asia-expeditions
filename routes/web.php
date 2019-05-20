@@ -134,7 +134,7 @@ Route::group(['middleware' => ['isCustomer']], function () {
 
 Route::get('/login', "UserController@getLogin")->name('login');
 Route::post('/clientLogin', "UserController@getDoLogin")->name('doLogin');
-// Route::post('logout', 'UserController@getLogout')->name('logout');
+Route::post('logout', 'UserController@getLogout')->name('logout');
 
 Route::group(['middleware' => ['isAdmin']], function () {
 	Route::group(['prefix'=> 'admin'], function () {
