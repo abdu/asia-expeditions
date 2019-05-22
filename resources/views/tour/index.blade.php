@@ -26,17 +26,31 @@
 
 <style type="text/css">
     .amazingslider-box-1{
-     margin-left: 0px !important; 
-     border-width: 0px !important; 
-     border-style: 0px !important; 
+        margin-left: 0px !important; 
+        border-width: 0px !important; 
+        border-style: 0px !important; 
     }
     .bor{
-    border: 1px solid #cccccc7a;    
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.13)
+        border: 1px solid #cccccc7a;    
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.13)
     }
     .owl-stage{
         transition: .7s !important;
     }
+    label{
+        float: left;
+        font-size: 15px;
+        text-shadow: 0 0 black;
+    }
+    .add_size{
+        font-size: 15px;
+        height: 30px!important;
+        padding: 2px 8px!important;
+    }
+    .addcol{
+        color: red;
+    }
+   
  
 </style>
 
@@ -78,32 +92,12 @@
 </div>
 
 <!-- end modal send email -->
-<div class="container">   
 
-    <h1 class="product-title" style="text-shadow: 0px 1px 2px black; color: #227eac;padding: 12px 0px 12px 0px;border-bottom: 3px double #bba5a5;">
-        <span>{{{$tour->country->country_name or ''}}}</span> / 
-        <span>{{$tour->tour_name}}</span>
-    </h1>
-
-
-@section('content')
-    @include("include.menu")
-    <style type="text/css">
-        .amazingslider-box-1{
-            margin-left: 0px !important; 
-             border-width: 0px !important; 
-             border-style: 0px !important; 
-        }
-        .bor{
-            border: 1px solid #cccccc7a;    
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.13)
-        }
-    </style>
     <div class="container">
-        <h1 class="product-title" style="background: #227eac;border: solid 1px #9E9E9E;box-shadow: 0px 0px 0px 0px;color: white; padding: 12px 0px 12px 0px;">
+        <h3 class="product-title titles">
             <span>{{{$tour->country->country_name or ''}}}</span> / 
             <span>{{$tour->tour_name}}</span>
-        </h1>
+        </h3>
         <ul class="list-unstyled ">
             <li style="float: left;">            
                 <div id="fb-root"></div>
@@ -157,20 +151,87 @@
                         </div>
                     </div>
                     <div class=" col-md-4 col-xs-12 bor" style="padding: 12px 0px; text-align: center;">
-                        <div class="col-md-12" >            
-                            <h3 style="margin-bottom: 0px;" class="price"> price: <span style="cursor: pointer;" data-toggle="popover" data-trigger="hover" data-content="Our special price" data-placement="top">${{$tour['tour_price']}}</span> <small style="text-transform: capitalize ">Per Person</small></h3>
-                            <hr>
-                            <!-- <div class="panel-body">
-                                <div class="row">
-                                    <p>Secure Payments : <img class="lazy" data-src="{{asset('/public/img/paywith.png')}}" style="height: 25px;"></p>
-                                </div>
-                            </div>   -->
-                            <hr>
+                        <div class="col-md-12"  style="margin-bottom: -10;" >            
+                            <h4 style="margin: 4px 0 -8px 0;" class="price"> price: <span style="cursor: pointer;" data-toggle="popover" data-trigger="hover" data-content="Our special price" data-placement="top">${{$tour['tour_price']}}</span> <small style="text-transform: capitalize ">Per Person</small></h4>
+                            <hr>                  
+                           
                         </div>  
                         <div class="col-md-12">
-                            <div class="action">
-                                <a  href="{{route('tour.addTocart', ['id' => $tour->id])}}" class="add-to-cart btn btn-default0 green" >add to cart</a> 
-                            </div>
+                            <form action="{{route('get_tour_user')}}" method="post">
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                <div class="row">
+                                        <input type="hidden" name="tour_id" value="{{$tour->id}}">
+                                        <input type="hidden" name="slug" value="{{$tour->slug}}">                    
+                                        <input type="hidden" name="tour_price" value="{{$tour->tour_price}}">
+                                    <div class="form-group col-md-6">
+                                        <label for="inputfirst">First Name</label>
+                                        <input type="text" class="form-control add_size" id="" placeholder="first name" required="" name="fname">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="inputlast">Last Name</label>
+                                        <input type="text" class="form-control add_size" id="" placeholder="last name" required="" name="lname">
+                                    </div>
+
+                                    <div class="form-group col-md-6">
+                                        <label for="inputfirst">Email</label>
+                                        <input type="email" class="form-control add_size" id="eshow" placeholder="Your Email" required="" name="email">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="inputlast">Mobile</label>
+                                        <input type="text" class="form-control add_size" id="" placeholder="Your Phone Number"       name="mobile">
+                                    </div>
+                                       <div class="form-group col-md-6">
+                                        <label for="inputfirst">From Date</label>
+                                        <input type="date" class="form-control add_size" id="" placeholder="From Date:" required="" name="fdate">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="inputlast">To Date</label>
+                                        <input type="date" class="form-control add_size" id="" placeholder="To Date" required="" name="tdate">
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <label for="inputlast">Nationality</label>
+                                              <select class="form-control add_size" name="nationality">
+                                        @foreach(App\Country::orderBy('nationality')->get() as $con)
+                                            <option value="{{$con->id}}">{{$con->nationality}}</option>
+                                        @endforeach
+                                    </select>                                       
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <label for="inputlast">Additional Requests</label>
+                                        <textarea style="resize:vertical;" class="form-control" name="textarea" rows="3" >                                            
+                                        </textarea>
+                                     
+                                    </div>
+                                    <div id="notrobot">
+                                    <div class="form-group col-md-6">
+                                        <label for="inputfirst"></label>
+                                        <input type="text" class="form-control add_size" id="gettext" value="" readonly="" name="" 
+                                        style="background-color: #00000096;
+                                        color: #fff;text-align: center;
+                                        font-family: cursive;
+                                        font-size: 20;">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="inputlast"></label>
+                                        <input type="text" class="form-control add_size " id="myResult" placeholder="Pleace type" required="" name="">
+                                    </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-12 col-sm-12">
+                                    <div class="row">
+                                
+                                    <button type="submit" class=" add-to-cart btn btn-primary " id="btn"  style="float: left; width: 50%; padding-left: 14px;"><i class="fa fa-envelope" style="padding: 2px 5px 0px 0px;font-size: 18px;float: left; margin-left: -5px;"></i>SEND INQUIRY</button>                         
+                                    <div class="action" style="float: right; width: 50%;padding-right: 2px;">
+                                        <a  href="{{route('tour.addTocart', ['id' => $tour->id])}}" class="add-to-cart btn btn-default0 green" style="width: 100%;margin-left: 2px;
+                                         padding-left: 22px;" ><i class="fa fa-shopping-cart " style=" padding: 0px 5px 0px 0px;font-size: 20px;float: left; margin-left: -15px;"></i>add to cart</a> 
+                                    
+                                        
+                                    </div>
+                                </div>
+                                </div>
+                             
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -201,10 +262,49 @@
                     </div>
                 </div>
             </div>
+        </div>   
+        <div class="col-md-4" style="padding: 0px;">
+            <div id="" class="bor" style="margin-top:0; background-color: #eeeeee;">
+                <?php  $getTour = \App\Tour::getTourByWeek($tour->id); ?>   
+                <div class="title text-center">
+                    <h4 style="font-weight: 500;margin-bottom: 0px;">RECENT VIEW
+                        <div style="border-bottom: 2px solid #ddd;width: 100%;  padding-top: 6px;"></div>
+                    </h4>
+                </div>  
+                    @foreach($getTour->chunk(3) as $get)
+                    <section class="wow fadeInUp" >
+                        <div class="owl-carousel clients-carousel-1" style="height: auto;">
+                            @foreach($get as $tour)
+                                <div class="list-group-item b_list">
+                                    <div class="col-md-4">
+                                      <div class="row" style="text-align: center;padding-top:5px;">
+                                         <a href="{{route('tourDetails', ['url'=> $tour->slug])}}">                                 
+                                            <img src="{{Shared::getInstance()->urlResource($tour->tour_photo, $tour->user_id)}}" frameborder="0" allow="accelerometer;  ; encrypted-media; gyroscope; picture-in-picture" allowfullscreen  class="img-responsive img-box img-thumbnail" style="padding:0px;"> 
+                                         </a>
+                                      </div>
+                                    </div>    
+                                    <div class="col-md-8">
+                                        <h3 class="text-danger" style="font-size: 16px; font-weight: 500; margin: 5px 0;"><b> ${{Shared::money($tour->tour_price)}}</b>/<small>Per Person</small>
+                                        </h3>                              
+                                        <div>
+                                            <a href="{{route('tourDetails', ['url'=> $tour->slug])}}" >
+                                                <p style="font-size: 12px;">{!! str_limit($tour->tour_name,55) !!}</p>
+                                            </a>
+                                        </div>
+                                        <a style="font-weight:100;" href="{{route('tourDetails', ['url'=> $tour->slug])}}" class="btn btn-primary btn-xs">View Detail</a>
+                                            <div class="clearfix"></div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>                                                                                  
+                            @endforeach
+                        </div>              
+                    </section> 
+                    @endforeach            
+                </div>            
+            </div>
         </div>
-    </div>
+        <div class="spacing"></div>    
 
-    <div class="spacing"></div>
     <div class="container">
         @if($tourLink->count() > 0)
             <div class="title text-left">
@@ -245,18 +345,59 @@
                 <section class="wow fadeInUp" >
                     <div class="owl-carousel clients-carousel-1" style="height: auto;">
                         <div class="row">
-                        @foreach($tourLink->chunk(4) as $key => $chunkTour)                        
+                        @foreach($tourLink->chunk(4) as $key => $chunkTour)
                             @foreach($chunkTour as $tour)
-                            <div class="col-md-4">                                                                    
+                            <div class="col-md-4">                                             
                                 @include('include.item')
                             </div>
-                            @endforeach                          
+                            @endforeach              
                          @endforeach
                          </div>
-                    </div>              
-                </section>  
-            </div>                               
+                    </div>
+                </section>
+            </div>
             @endif
         @endif
     </div>
+     <script type="text/javascript">
+$(document).ready(function(){
+    let r = Math.random().toString(36).substring(7);
+    $('#gettext').val(r);
+
+  $('#myResult').on('keyup',function(){
+
+    var getdata = $(this).val();    
+    
+    if (getdata == r) {
+      $('#myResult').removeClass('addcol');
+         $('#btn').on('click',function(){
+         $('#myResult').val(getdata);
+    
+      });
+    }
+    else{
+       $('#myResult').addClass('addcol');
+       $('#myResult').attr('required', true);
+
+       $('#btn').on('click',function(){
+         $('#myResult').val('');
+    
+        });
+    }
+  });
+
+  $('#notrobot').css({'display':'none'});
+  $('#eshow').on('keyup', function(){
+      var eshow= $('#eshow').val();
+        if (eshow.length>0) {
+          $('#notrobot').css({'display':'block'});
+    console.log(eshow);
+  }
+  else{
+     $('#notrobot').css({'display':'none'});
+  }
+  });
+
+});
+</script>
 @endsection

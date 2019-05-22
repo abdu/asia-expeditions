@@ -9,7 +9,9 @@
 	.get_delete:hover{color: #af3404;}
 </style>
 <script type="text/javascript">		
-	$('.get_delete').click(function(){
+	$('.get_delete').on('click',function(){
+     var data_id = $(this).data('id');
+     console.log(data_id)
 		const swalWithBootstrapButtons = Swal.mixin({
 			customClass: {
 			    confirmButton: 'btn btn-success',
@@ -27,7 +29,7 @@
 		  	reverseButtons: true
 		}).then((result) => {
 		  if (result.value) {
-		  	window.location.href="{{url('remove-cart', ['id' => $tour['item']['id']])}}";
+		  	window.location.href= data_id;
 		    swalWithBootstrapButtons.fire({ 
 			    title:'Deleted!',
 			    text:'Your file has been deleted.',

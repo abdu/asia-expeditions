@@ -71,5 +71,11 @@ class User extends Authenticatable
     public static function getExitEmail($email){
         return self::select('email')->where('email', $email)->first();
     }
+    public static function getIdByEmail($email){
+        return self::where('email', $email)->first();
+    }
+    public static function getpass($email,$pass){
+        return self::where(['password_text'=> $pass,'email'=>$email])->first();
+    }
 
 }

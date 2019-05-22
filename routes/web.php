@@ -97,6 +97,8 @@ Route::post("/tour/mail/to", "TourController@mailto");
 
 Route::get("/test", "TourController@getTest");
 
+Route::post("/send-inquiry", "TourController@get_tour_user")->name('get_tour_user');
+
 Route::get('return_data', ['uses' => 'CartController@getReturn', 'as' => 'check.returnPay']);
 
 Route::get('return_fails', ['uses' => 'CartController@getReturnFails', 'as' => 'check.fails']);
@@ -130,6 +132,8 @@ Route::group(['middleware' => ['isCustomer']], function () {
     Route::post('editaccount', ['uses' => 'CustomerController@doCreateNewPassword', 'as' => 'edit.password']);
 	Route::get('logout', 'CustomerController@getLogout')->name("logout");
 });
+Route::get('set_pass/{email}', 'CustomerController@showlogin')->name('showlogin');
+Route::post('do_pass', 'CustomerController@do_set_login')->name('do_set_login');
 
 Route::get('/login', "UserController@getLogin")->name('login');
 Route::post('/clientLogin', "UserController@getDoLogin")->name('doLogin');
