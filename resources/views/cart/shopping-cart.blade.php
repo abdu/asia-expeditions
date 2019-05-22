@@ -29,7 +29,8 @@
 							<?php $getTotal = 0;?>
 							<table class="table">
 								<tbody>
-								@foreach($tours_cart as $tour)	
+								@foreach($tours_cart as $tour)
+								
 									<tr>
 										<td width="116px">
 											<a href="{{route('tourDetails', $tour['item']['slug'])}}">
@@ -37,7 +38,7 @@
 											</a>
 										</td>
 										<td><a href="{{route('tourDetails', $tour['item']['slug'])}}">{{$tour['item']['tour_name']}}</a>
-											<div><a href="{{url('remove-cart', ['id' => $tour['item']['id']])}}" class="text-danger get_delete">Delete</a></div>
+											<div><a href="#" data-id="{{url('remove-cart', ['id' => $tour['item']['id']])}}" class="text-danger get_delete">Delete</a></div>
 										</td>
 										<td><strong class="price"><span class="text-muted">${{number_format($tour['item']['tour_price'],2)}}</span></strong> <small> Per Person</small></td>
 										<td class="text-center">
@@ -52,6 +53,8 @@
 										$totalPrice = ($tour['item']['tour_price'] * $tour['qty']);
 										$getTotal = $getTotal + $totalPrice; 
 									?>
+<!-- add include confirm  delete  -->
+								@include('include.message_confirm')	
 								@endforeach
 								</tbody>
 							</table>

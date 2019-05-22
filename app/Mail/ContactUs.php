@@ -36,7 +36,7 @@ class ContactUs extends Mailable
 
         return $this->from($req->email)
                     ->view('emails.contactus')
-                    ->with(['data' => $this->data]);
+                    ->with(['data' =>'']);
                     // ->with([
                     //     'fullname' => $request->fullname,
                     //     'phone' => $request->phone,

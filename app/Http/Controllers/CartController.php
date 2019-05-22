@@ -34,10 +34,8 @@ class CartController extends Controller
         $cart = new Cart($oldCart);
         $cart->addToCart($tour, $id);
         $request->session()->put('cart', $cart);
-        if (Auth::check()) {
-            Wishlist::addWishlist($id);
-        }
-        return back()->with('message', 'has been added to your cart...!');
+        Auth::check()? Wishlist::addWishlist($id):'';        
+        return back()->with(['message'=>'has been added to your cart...!','get'=>'success']);
     }
 
     public function updateCart(Request $request, $id)
@@ -47,10 +45,8 @@ class CartController extends Controller
         $cart = new Cart($oldCart);
         $cart->EditCart($tour, $id, $request);
         $request->session()->put('cart', $cart);
-        if (Auth::check()) {
-            Wishlist::updateWishlist($id, $request);
-            return redirect()->back()->with('message', 'your cart is has been update...!');
-        }
+        \Auth::check() ? Wishlist::updateWishlist($id, $request) : '';
+        return redirect()->back()->with(['message'=>'your cart is has been update...!','get'=>'success']);
         
     }
 
@@ -69,7 +65,7 @@ class CartController extends Controller
             unset($session->items[$id]);
             \Auth::check() ? Wishlist::delWishlist($id) : '';
         }
-        return redirect()->back()->with('message', 'your cart is has been removed...!');
+        return redirect()->back();
     }
 
     public function getChechout(Request $req)
@@ -106,8 +102,8 @@ class CartController extends Controller
                 return back()->withErrors($validator)->withInput()->with('message', 'Your email is already exists');
             } else {
                 $cus = new User;
-                $cus->first_name    = $req->first_name;
-                $cus->last_name     = $req->last_name;
+                $cus->name          = $req->first_name;
+                $cus->last          = $req->last_name;
                 $cus->fullname      = $req->first_name." ".$req->last_name;                
                 $cus->passport      = $req->passport_number;
                 $cus->md5           = md5($req->email);
@@ -125,7 +121,7 @@ class CartController extends Controller
                 $cus->password_text = $req->password;
                 $cus->save();
                 Mail::to($req->email)->send(new RegisterCustomer());
-                return back()->with(['icon'=> 'success',  'message'=> "Link has been sent to your email: ". $req->email]);
+                return back()->with(['get'=> 'success',  'message'=> "Link has been sent to your email: ". $req->email]);
             }
         }else{
             return back()->withErrors($validator)->withInput();
@@ -141,7 +137,7 @@ class CartController extends Controller
 
         if (!$validator->fails() ) {
             if ( \Auth::attempt(['email'=> $req->email_log, "password"=> $req->password_log, "banned"=> 0])) {
-                $itemWish = Wishlist::where('user_id', \Auth::user()->id)->get();
+                $itemWish = Wishlist::where('customer_id', \Auth::user()->id)->get();
                 $oldCart = Session::has('cart') ? Session::get('cart') : null;
                 if ($itemWish->count() > 0) {
                     foreach ($itemWish as $key => $data) {

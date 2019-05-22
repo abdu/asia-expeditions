@@ -55,6 +55,33 @@ class CustomerController extends Controller
             return back()->with('message', 'you has been update password');
         }
     }
+    public function showlogin($get){
+        return view('customer.set_password', compact('get'));
+
+    }
+    public function do_set_login(Request $req){
+        if (!User::getpass($req->email,$req->new_password)) {
+            $validator = Validator::make($req->all(), [
+                'email' => 'required|email',
+                'new_password' => 'required|min:6',
+                're_password' => 'required_with:new_password|same:new_password|min:6'
+            ]);        
+            if(!$validator->fails()){
+                $nd = user::Where('email', $req->email)->first();
+                $nd->password  = bcrypt($req->new_password);
+                $nd->password_text  = $req->new_password;
+                $nd->save();
+                    if (\Auth::attempt(['email'=>$req->email, 'password'=>$req->new_password, 'banned'=>0])) {
+                        return redirect()->intended('/');
+                    }
+
+            }else{
+                return back()->withInput()->with(["message"=> "incorrect your confirm password",'get'=>'warning']);
+            }
+        }
+        return back()->withInput()->with(["message"=>"your user already",'get'=>'warning']);
+
+    }
 
     public function getLogout(){
         // session_destroy();

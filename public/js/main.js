@@ -63,7 +63,7 @@
     autoplay: true,
     dots: false,
     loop: true,
-    responsive: { 0: { items: 1 }, 768: { items: 1 }, 900: { items: 1 }
+    responsive: { 0: { items: 1 }, 768: { items: 2 }, 900: { items: 1 }
     }
   });
 

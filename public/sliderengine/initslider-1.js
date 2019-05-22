@@ -10,7 +10,7 @@ jQuery(document).ready(function(){
         sliderid:1,
         jsfolder:jsFolder,
         width:900,
-        height:550,
+        height:600,
         skinsfoldername:"",
         loadimageondemand:false,
         videohidecontrols:false,
@@ -216,10 +216,6 @@ jQuery(document).ready(function(){
         textpositionmarginbottom:24,
         lightboxshowtitle:true,
         socialmode:"mouseover",
-        tiles: {
-            duration:2000,
-            checked:true
-        },
         slice: {
             checked:true,
             effectdirection:0,
@@ -240,7 +236,7 @@ jQuery(document).ready(function(){
             checked:true,
             effectdirection:0
         },
-        transition:"tiles,slice,cssslide,slide",
+        transition:"slice,cssslide,slide",
         scalemode:"fill",
         isfullscreen:false,
         textformat: {
