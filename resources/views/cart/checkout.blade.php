@@ -12,23 +12,7 @@ use App\components\Shared;
 <div class="spacing"></div>
 <div class="container ">
     <div class="row ">
-        @if (session('message'))			
-        <div class="col-md-12">
-            <div class="alert alert-{{session('icon')}} no-bg" >
-                <strong><i class="fa fa-check"></i>
-                    {{session('message')}}
-                </strong>
-            </div>
-        </div>
-        @else			
-            <div class="col-md-12">
-                <div class="alert alert-success no-bg" >
-                    <strong>
-                        Welcome for our Register / Login form
-                    </strong>
-                </div>
-            </div>
-        @endif	
+
         @if (session('loginError'))			
         <div class="col-md-12">
             <div class="alert alert-danger no-bg" >
@@ -52,7 +36,8 @@ use App\components\Shared;
         </div>	
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 col-md-push-8 col-sm-push-8">
             <form  method="post" action="{{route('check.login')}}">
-                {{ csrf_field() }}
+            
+               {{ csrf_field() }}
                 <div class="panel panel-info">
                     <div class="panel-heading">
                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" 

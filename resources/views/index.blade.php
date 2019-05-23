@@ -255,3 +255,109 @@ Asia Expeditions , Myanmar & Indochina – Destination Management Company is for
 
 
 @endsection
+
+
+
+
+
+
+
+
+
+
+
+<form class="form-horizontal" method="post" action="https://www.asia-expeditions.com/account">
+			         				<input type="hidden" name="_token" value="oZCWRKEQivtqeRnQOOKS0OjjPTpIqCS3xRBBzPqY">
+			         				  <input type="hidden" name="id" value="70">
+					                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+						                <div class="panel-body">
+						                    <div class="row">
+						                    	<div class="col-md-4 col-xs-12 ">
+							                    	<div class="form-group  ">
+							                        	<div class="col-md-12 col-xs-12">
+								                            <strong class="control-label" for="first_name">First Name</strong>
+								                            <input type="text" name="first_name" class="form-control" value="">
+							                            </div>
+							                        </div>
+						                        </div>
+						                       
+						                        <div class="col-md-4 col-xs-12 ">
+							                        <div class="form-group ">
+							                        	<div class="col-md-12 col-xs-12 ">
+								                          	<strong class="control-label" for="last_name">Last Name</strong>
+								                            <input type="text" name="last_name" class="form-control" value="">
+							                            </div>
+							                        </div>
+						                        </div>
+						                    </div>
+						                    <div class="form-group ">
+						                        <div class="col-md-12"><strong class="control-label" for="nation">Nationality</strong></div>
+						                        <div class="col-md-12">
+						                            <input type="text" class="form-control" name="nation" value="">
+						                        </div>
+						                    </div>
+						                    <div class="row">
+						                   		<div class="col-md-6 col-xs-12 ">
+							                        <div class="form-group ">
+							                        	<div class="col-md-12 col-xs-12 ">
+								                            <strong class="control-label" for="inputError">Passport Number</strong>
+								                            <input onkeyup="checkInp()" type="type" name="passport_number" class="form-control" value="">
+							                            </div>
+							                        </div>
+						                        </div>	 
+						                        <div class="col-md-6 col-xs-12 ">
+							                        <div class="form-group ">
+							                        	<div class="col-md-12 col-xs-12 ">
+								                          	<strong class="control-label" for="inputError">Expiry Date</strong>
+								                            <input type="text" name="expiry_date" class="form-control" value="" id="expiry_date">
+							                            </div>
+							                        </div>
+						                        </div>
+						                    </div>	
+						                    <div class="form-group ">
+						                        <div class="col-md-12"><strong class="control-label" for="inputError">Address Street</strong></div>
+						                        <div class="col-md-12">
+						                            <input type="text" name="address_street" class="form-control" value="">
+						                        </div>
+						                    </div>
+						                    <div class="row">
+						                    	<div class="col-md-6 col-xs-12 ">
+							                        <div class="form-group ">
+							                        	<div class="col-md-12 col-xs-12 ">
+								                          	<strong class="control-label" for="inputError">Town / City</strong>
+								                            <input type="text" name="town_city" class="form-control" value="">
+							                            </div>
+							                        </div>
+						                        </div>
+						                        <div class="col-md-6 col-xs-12 ">
+							                        <div class="form-group ">
+							                        	<div class="col-md-12 col-xs-12 ">
+								                          	<strong class="control-label" for="inputError">Country / State</strong>
+								                          	<input type="text" name="country_state" class="form-control" value="">	
+							                            </div>
+							                        </div>
+						                        </div>
+						                    </div>
+						                    <div class="form-group">
+						                        <div class="col-md-12"><strong> Zip / Postal Code</strong></div>
+						                        <div class="col-md-12">
+						                            <input type="text" name="zip_code" class="form-control" value="">
+						                        </div>
+						                    </div>
+						                    <div class="form-group ">
+						                        <div class="col-md-12"><strong class="control-label" for="inputError">Phone Number</strong></div>
+						                        <div class="col-md-12"><input type="text" name="phone_number" class="form-control" value="+85586690603"></div>
+						                    </div>
+						                    <div class="form-group  ">
+						                        <div class="col-md-12"><strong class="control-label" for="inputError">Email Address</strong></div>
+						                        <div class="col-md-12"><input type="email" name="email" class="form-control" value="lyheng@golftravelmyanmar.com"></div>
+						                    </div>
+						                   
+						                    <div class="form-group">
+						                        <div class="col-md-6 col-sm-6 col-xs-12">
+						                            <button type="submit" class="w3-btn w3-blue btn-submit-fix">Change </button>
+						                        </div>
+						                    </div>
+						                </div>
+						            </div>
+						        </form>

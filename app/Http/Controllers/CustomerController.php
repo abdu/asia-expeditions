@@ -67,10 +67,11 @@ class CustomerController extends Controller
                 're_password' => 'required_with:new_password|same:new_password|min:6'
             ]);        
             if(!$validator->fails()){
-                $nd = user::Where('email', $req->email)->first();
-                $nd->password  = bcrypt($req->new_password);
-                $nd->password_text  = $req->new_password;
-                $nd->save();
+                $add                 = user::Where('email', $req->email)->first();
+                $add->password       = bcrypt($req->new_password);
+                $add->password_text  = $req->new_password;
+                $add->remember_token = $req->_token;
+                $add->save();
                     if (\Auth::attempt(['email'=>$req->email, 'password'=>$req->new_password, 'banned'=>0])) {
                         return redirect()->intended('/');
                     }

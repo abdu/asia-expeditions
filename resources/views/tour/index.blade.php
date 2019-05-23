@@ -198,7 +198,7 @@
                                     </div>
                                     <div class="form-group col-md-12">
                                         <label for="inputlast">Additional Requests</label>
-                                        <textarea style="resize:vertical;" class="form-control" name="textarea" rows="3" >                                            
+                                        <textarea style="resize:vertical; " class="form-control" name="textarea" rows="3" >                                            
                                         </textarea>
                                      
                                     </div>
@@ -265,13 +265,15 @@
         </div>   
         <div class="col-md-4" style="padding: 0px;">
             <div id="" class="bor" style="margin-top:0; background-color: #eeeeee;">
-                <?php  $getTour = \App\Tour::getTourByWeek($tour->id); ?>   
+                <?php   $getTour = \App\Tour::getTourByWeek($tour->id);
+                        $data    = round($getTour->count()/3); ?>  
                 <div class="title text-center">
                     <h4 style="font-weight: 500;margin-bottom: 0px;">RECENT VIEW
                         <div style="border-bottom: 2px solid #ddd;width: 100%;  padding-top: 6px;"></div>
+                    
                     </h4>
                 </div>  
-                    @foreach($getTour->chunk(3) as $get)
+                    @foreach($getTour->chunk($data) as $get)
                     <section class="wow fadeInUp" >
                         <div class="owl-carousel clients-carousel-1" style="height: auto;">
                             @foreach($get as $tour)

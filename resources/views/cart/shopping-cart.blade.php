@@ -100,7 +100,7 @@
 		@else
 		<div class=" text-center">
 			<h3>SHOPPING CART</h3>
-			<div><a href="">Home</a> | <a href="#">Shopping Cart</a></div><br>
+			<div><a href="/">Home</a> | <a href="#">Shopping Cart</a></div><br>
 		</div>
 			<div class="col-md-6 col-md-offset-3" style="text-align: center;">
 				<div class="alert alert-danger">
