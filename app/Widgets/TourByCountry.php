@@ -19,9 +19,7 @@ class TourByCountry extends AbstractWidget
     }
 
     public function getTourbyCountry($coun_Id ){
-
-
-        $getTour = \App\ProgramTour::where([['tour_country','=', $coun_Id ], ['web','=', 1]])->take(30)->get();    		
+        $getTour = \App\Tour::where([['tour_country','=', $coun_Id ], ['web','=', 1]])->take(30)->get();    		
         if ($getTour->count() > 0 ) {
             $i = 0;
             $item = '';

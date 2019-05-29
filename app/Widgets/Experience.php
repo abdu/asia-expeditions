@@ -24,7 +24,7 @@ class Experience extends AbstractWidget
     }
 
     public function getExperience($cat_id){
-    $getTour = \App\ProgramTour::Where([['tour_type', '=', $cat_id ], ['web','=', 1]])->take(30)->get();
+    $getTour = \App\Tour::Where([['tour_type', '=', $cat_id ], ['web','=', 1]])->take(30)->get();
         $i = 0;
         $item = null;
         foreach( $getTour  as $key => $tour){

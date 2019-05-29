@@ -59,6 +59,7 @@ class Tour extends Model
                           ->select('t.*',\DB::Raw(' count(v.tour_id) as t'))                                   
                           ->groupBy('v.tour_id')
                           ->whereBetween('v.created_at', [$day,   $today])
+                          ->where('t.post_type', 1)
                           ->whereNotIn('t.id',[$id])                         
                           ->join('tours as t', 'v.tour_id', '=', 't.id')
                           ->get();

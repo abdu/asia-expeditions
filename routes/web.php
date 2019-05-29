@@ -111,7 +111,7 @@ Route::post('edit-cart/{id}', ['uses' => 'CartController@updateCart', 'as' => 't
 
 Route::get('shopping-cart', 'CartController@getCart')->name('getCart');
 
-Route::get('remove-cart/{id}', ['uses' =>'CartController@removeCart', 'as' => 'tour.remove-cart']);
+Route::get('remove-cart/{id}', 'CartController@removeCart')->name("removeCart");
 
 Route::get('register', 'CartController@getChechout')->name('register');
 

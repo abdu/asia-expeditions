@@ -304,6 +304,14 @@
             </div>
         </div>
         <div class="spacing"></div>    
+        <div class="col-md-4" style="padding: 0px;">
+            <div lass="bor" style="margin-top:0; background-color: #eeeeee;">
+                <div class="title text-center">
+                    <h4 style="font-weight: 500;margin-bottom: 0px;">Policy</h4>
+
+                </div>           
+            </div>
+        </div>
 
     <div class="container">
         @if($tourLink->count() > 0)
