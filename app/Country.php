@@ -17,6 +17,10 @@ class Country extends Model
     public function tour(){
     	return $this->hasMany(Tour::class);
     }
+        public function user(){
+        return $this->belongsTo(User::class);
+
+    }
 
       public function film(){
         return $this->hasMany(Film::class);

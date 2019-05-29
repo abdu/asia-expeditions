@@ -198,8 +198,7 @@
                                     </div>
                                     <div class="form-group col-md-12">
                                         <label for="inputlast">Additional Requests</label>
-                                        <textarea style="resize:vertical; " class="form-control" name="textarea" rows="3" >                                            
-                                        </textarea>
+                                        <textarea style="resize:none; width: 100%;"  class="form-control" name="textarea" cols="8" rows="3" placeholder="Type your message" /></textarea>
                                      
                                     </div>
                                     <div id="notrobot">
@@ -266,7 +265,12 @@
         <div class="col-md-4" style="padding: 0px;">
             <div id="" class="bor" style="margin-top:0; background-color: #eeeeee;">
                 <?php   $getTour = \App\Tour::getTourByWeek($tour->id);
-                        $data    = round($getTour->count()/3); ?>  
+                        $data    = round($getTour->count()/3);
+                        if($data==0){
+                            $data =1;
+                        }
+                          ?>  
+                        
                 <div class="title text-center">
                     <h4 style="font-weight: 500;margin-bottom: 0px;">RECENT VIEW
                         <div style="border-bottom: 2px solid #ddd;width: 100%;  padding-top: 6px;"></div>
@@ -293,8 +297,28 @@
                                                 <p style="font-size: 12px;">{!! str_limit($tour->tour_name,55) !!}</p>
                                             </a>
                                         </div>
-                                        <a style="font-weight:100;" href="{{route('tourDetails', ['url'=> $tour->slug])}}" class="btn btn-primary btn-xs">View Detail</a>
-                                            <div class="clearfix"></div>
+                                            <?php
+                                            $today      = new DateTime('now', new DateTimeZone('Asia/bangkok'));
+                                            $ft         = $today->format('y-m-d h:i:s ');
+                                            $datetime1  = new DateTime($tour->date);
+                                            $datetime2  = new DateTime($ft);
+                                            $interval   = $datetime1->diff($datetime2);                         
+                                            $day        = '';
+                                            $hour       = '';
+                                            $min        = '';
+                                            if  ($interval->d>0){
+                                                $day    = $interval->d.' Day';
+                                            }else{
+                                                if ($interval->h>12) {
+                                                $day    ='Yesterday';
+                                                }else{
+                                                $hour   =  $interval->h.' Hour ';
+                                                $min    =$interval->i.' Minute';
+                                                }
+                                            }
+                                            ?>      
+                                        <div>{{isset($day)? $day: ''}}  {{isset($hour)? $hour: ''}} {{isset($min)? $min: ''}}</div>
+                                        <div class="clearfix"></div>
                                     </div>
                                     <div class="clearfix"></div>
                                 </div>                                                                                  

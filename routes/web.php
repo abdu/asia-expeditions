@@ -117,6 +117,8 @@ Route::get('register', 'CartController@getChechout')->name('register');
 
 Route::get('checkout', 'CartController@getChechout')->name('checkout');
 
+Route::get('supplier/report/{supplierId}/{supType}', 'SupplierController@getSupplierReport')->name('supplierReport');
+
 
 Route::get("film/{film_locaton}", "HomeController@getFilm")->name('getFilm');
 Route::get("film/myanmar/{film_deail}", "HomeController@film_detail")->name('film_detail');
@@ -131,6 +133,12 @@ Route::group(['middleware' => ['isCustomer']], function () {
     Route::post('account', 'CustomerController@doAccount')->name('doAccount');
     Route::post('editaccount', ['uses' => 'CustomerController@doCreateNewPassword', 'as' => 'edit.password']);
 	Route::get('logout', 'CustomerController@getLogout')->name("logout");
+
+	  	Route::get('window/uploaded', 'UploadController@fileUploaded_u')->name('fileUploaded_u');
+		Route::get('window/remove/fileUploaded', 'UploadController@removeFile_u')->name('removeFile_u');
+		Route::post("window/uploadfile", 'UploadController@uploadfile_u')->name('uploadfile_u');
+		Route::post("window/uploadfile/only", 'UploadController@uploadOnlyFile_u')->name('uploadOnlyFile_u');
+		Route::get("window/remove-image/logo", 'UploadController@RemoveLogo_u')->name('RemoveLogo_u');
 });
 Route::get('set_pass/{email}', 'CustomerController@showlogin')->name('showlogin');
 Route::post('do_pass', 'CustomerController@do_set_login')->name('do_set_login');

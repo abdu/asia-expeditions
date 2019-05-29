@@ -16,7 +16,9 @@ use App\components\Shared;
                     </div>
                 </div>    
                 <div class="col-md-7">
-                    <h3 style="font-size: 18px;"><a href="javascript:void(0)">{{$hotel->supplier_name}}</a><p></p></h3>
+                    <h3 style="font-size: 18px;">
+            <a href="{{route('supplierReport' ,['reportId' => $hotel->id,'type'=>'hotels'])}}?type=contract">{{$hotel->supplier_name}}</a>
+                    <p></p></h3>
                     <p>{!! str_limit(strip_tags( $hotel->supplier_intro), 1040) !!}</p>
                 </div>
                 <div class="clearfix"></div>

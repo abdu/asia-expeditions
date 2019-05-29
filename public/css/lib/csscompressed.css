@@ -15324,9 +15324,14 @@ ul li iframe#twitter-widget-0 div.widget .btn-o a.btn {
         padding-bottom: 0;
         overflow: visible!important
     }
-      .navbar-toggle {
+    .navbar-toggle {
     display: none !important;
 
+    }
+    .btborder {
+    text-transform: uppercase;
+    border-bottom: solid 7px #8fbc8f;
+    border-image: url(https://www.w3schools.com/css/border.png) 30 stretch;
     }
 
 }

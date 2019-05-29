@@ -46,6 +46,14 @@ class User extends Authenticatable
     public function tour(){
         return $this->hasMany(Tour::class);
     }
+        public function country(){
+        return $this->belongsTo(Country::class);
+
+    }
+          public function province(){
+        return $this->belongsTo(Province::class);
+
+    }
 
     public static function getUser(){
 

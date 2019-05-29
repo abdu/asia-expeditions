@@ -20,23 +20,24 @@ class CustomerController extends Controller
     }
 
     public function doAccount(Request $req){
+        // return $req->all();
         $cusA = Customer::Where('id', $req->id)->first();
-        $cusA->first_name = $req->first_name;
-        $cusA->middle_name = $req->middle_name;
-        $cusA->last_name = $req->last_name;
-        $cusA->nation = $req->nation;
-        $cusA->passport_number = $req->passport_number;
-        $cusA->email = $req->email;
-        $cusA->phone_number = $req->phone_number;
-        $cusA->expiry_date = $req->expiry_date;
-        $cusA->address_street = $req->address_street;
-        $cusA->town_city = $req->town_city;
-        $cusA->country_state = $req->country_state;
-        $cusA->zip_code = $req->zip_code;
+        $cusA->name = $req->first_name;
+        $cusA->last = $req->last_name;
+        $cusA->fullname = $req->first_name." ".$req->last_name;
+        $cusA->nationality = $req->nation;
+        $cusA->passport = $req->passport_number;
+        $cusA->expiry_date = $req->expiry_date;              
+        $cusA->address = $req->address_street;
+        $cusA->province_id = $req->town_city;
+        $cusA->country_id = $req->country_state;
+        $cusA->postal_code = $req->zip_code;
+        $cusA->phone = $req->phone_number;
+        $cusA->email = $req->email;  
         $cusA->created_at = date('Y-m-d');
         $cusA->updated_at = date('Y-m-d');
         $cusA->save();
-        return back();
+        return back()->with(['message'=> 'you has been update profile','get'=>'success']);;
     }
 
     public function doCreateNewPassword(Request $req){
@@ -47,12 +48,14 @@ class CustomerController extends Controller
         if ($validator->fails()) {
             return back()
                 ->withErrors($validator)
-                ->withInput();
+                ->withInput()
+                ->with(['message'=> 'incorrect your Re-New Password','get'=>'warning']);
         }else{
             $nd = Customer::Where('email', $req->email)->first();
-            $nd->password  = encrypt($req->new_password);
+            $nd->password       = encrypt($req->new_password);
+            $nd->password_text  = $req->new_password;
             $nd->save();
-            return back()->with('message', 'you has been update password');
+            return back()->with(['message'=> 'you has been update password','get'=>'success']);
         }
     }
     public function showlogin($get){
