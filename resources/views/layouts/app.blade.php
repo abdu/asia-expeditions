@@ -86,31 +86,11 @@
         },function(){
           $('.owl-prev').css({"opacity":"0","background-position-x":"0px"});
           $('.owl-next').css({"opacity":"0","background-position-x":"40px"});
-        });
-
-    // $("li.u span.u").hover(function(){
-    //   // alert('aaaa');
-    //     $('.u span.u').removeClass('fa .u span.u').addClass('fa fa-user-o');
-    // },function(){
-    //    $('.u span.u').removeClass('fa fa-user-o').addClass('fa fa-user');
-    // });    
-    // $("li.c span.c").hover(function(){
-    //   // alert('aaaa');
-    //     $('.c span.c').removeClass('fa fa-shopping-cart').addClass('fa fa-cart-arrow-down');
-    // },function(){
-    //    $('.c span.c').removeClass('fa fa-cart-arrow-down').addClass('fa fa-shopping-cart');
-    // });
-
-        $("li span.u").hover(function(){
-        $('span.u').toggleClass('fa-user fa-user add');
-      });
-        $("li span.c").hover(function(){
-        $('span.c').toggleClass('fa-shopping-cart fa-cart-arrow-down');
-      });
- 
+        }); 
 
    });
 </script>
+
 </head>
 <body>
 @include('include.message')

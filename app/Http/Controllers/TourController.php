@@ -113,6 +113,8 @@ class TourController extends Controller
             $adds->fullname    = $req->fname .' '. $req->lname;
             $adds->email       = $req->email; 
             $adds->phone       = $req->mobile;
+            $adds->role_id     = 7;
+            $adds->picture     = 'no_image.png';
             $adds->nationality = $req->nationality;        
                 if($adds->save()){
                  $add_item              = new ItemOrder;
@@ -123,7 +125,7 @@ class TourController extends Controller
                  $add_item->tdate       = $req->tdate;
                  $add_item->a_requests  = $req->textarea;
                  $add_item->save(); 
-                 Mail::to($req->email)->send(new SendInquiry($req->all()));       
+                 Mail::to($req->email)->bcc(config('app.email'))->send(new SendInquiry($req->all()));       
                 }                              
         return back()->with(["message"=> "Send Inquiry Success", 'get'=>'success']);
 

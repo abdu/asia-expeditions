@@ -50,18 +50,28 @@ class Tour extends Model
                           ->select('t.*',\DB::Raw(' count(v.tour_id) as t'))                                   
                           ->groupBy('v.tour_id')
                           ->join('tours as t', 'v.tour_id', '=', 't.id')
+                          ->where(['web'=>1,'tour_status'=>1])
                           ->get();
     }
     public static function getTourByWeek($id=0){
         $today    = date('Y-m-d');
         $day      = date('Y-m-d',strtotime("-7 days"));
         return $data = \DB::table('tbl_countview as v')
-                          ->select('t.*',\DB::Raw(' count(v.tour_id) as t'))                                   
+                          ->select('t.*',\DB::Raw(' count(v.tour_id) as t,v.date'))                                   
                           ->groupBy('v.tour_id')
                           ->whereBetween('v.created_at', [$day,   $today])
                           ->where('t.post_type', 1)
                           ->whereNotIn('t.id',[$id])                         
                           ->join('tours as t', 'v.tour_id', '=', 't.id')
+                          ->where(['t.web'=>1,'tour_status'=>1])
+                          ->get();
+    }
+     public static function getTourByUser(){
+        return $data = \DB::table('tbl_countview as v')
+                          ->select('t.*',\DB::Raw(' count(v.tour_id) as t'))                                   
+                          ->groupBy('v.tour_id')
+                          ->join('tours as t', 'v.tour_id', '=', 't.id')
+                          ->where(['v.user_id'=>\Auth::user()->id,'t.web'=>1,'t.tour_status'=>1])
                           ->get();
     }
 }
