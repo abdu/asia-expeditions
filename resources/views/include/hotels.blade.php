@@ -11,15 +11,16 @@ use App\components\Shared;
                 <div class="col-md-5">
                     <div class="row">
                         <div class="row-picture" >
-                            <img style="margin:0px;" data-src="{{Shared::getInstance()->urlResourceBig($hotel->supplier_photo, $hotel->user_id)}}" class="img-responsive lazy">
+                             <a target="_blank" href="{{route('supplierReport' ,['reportId' => $hotel->id,'type'=>'hotels'])}}?type=contract">
+                            <img style="margin:0px;" data-src="{{Shared::getInstance()->urlResourceBig($hotel->supplier_photo, $hotel->user_id)}}" class="img-responsive lazy"></a>
                         </div>
                     </div>
                 </div>    
                 <div class="col-md-7">
                     <h3 style="font-size: 18px;">
-            <a href="{{route('supplierReport' ,['reportId' => $hotel->id,'type'=>'hotels'])}}?type=contract">{{$hotel->supplier_name}}</a>
+            <a target="_blank" href="{{route('supplierReport' ,['reportId' => $hotel->id,'type'=>'hotels'])}}?type=contract">{{$hotel->supplier_name}}</a>
                     <p></p></h3>
-                    <p>{!! str_limit(strip_tags( $hotel->supplier_intro), 1040) !!}</p>
+                    <p>{!! str_limit(strip_tags( $hotel->supplier_intro), 200) !!}</p>
                 </div>
                 <div class="clearfix"></div>
             </div>

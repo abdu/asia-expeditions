@@ -182,17 +182,25 @@
                                     </div>
                                        <div class="form-group col-md-6">
                                         <label for="inputfirst">From Date</label>
-                                        <input type="date" class="form-control add_size" id="" placeholder="From Date:" required="" name="fdate">
+                                        <input type="text" id="date_start" class="form-control add_size" id="" placeholder="From Date:" required="" name="fdate">
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="inputlast">To Date</label>
-                                        <input type="date" class="form-control add_size" id="" placeholder="To Date" required="" name="tdate">
+                                        <input type="text" id="date_end" class="form-control add_size" id="" placeholder="To Date" required="" name="tdate">
                                     </div>
                                     <div class="form-group col-md-12">
                                         <label for="inputlast">Nationality</label>
                                               <select class="form-control add_size" name="nationality">
+                                                <?php 
+                                                $city='';
+                                                // if ( null !== \Request::city()) {
+                                                //     $city = isset(\Request::city()? \Request::city(): '');                                                  
+                                                // }
+                                                 ?>
+
+
                                         @foreach(App\Country::orderBy('nationality')->get() as $con)
-                                            <option value="{{$con->id}}">{{$con->nationality}}</option>
+                                            <option value="{{$con->id}}" {{$city == $con->nationality ? 'selected':''}}>{{$con->nationality}}</option>
                                         @endforeach
                                     </select>                                       
                                     </div>
@@ -212,7 +220,7 @@
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="inputlast"></label>
-                                        <input type="text" class="form-control add_size " id="myResult" placeholder="Pleace type" required="" name="">
+                                        <input type="text" class="form-control add_size " id="myResult" placeholder="please type" required="" name="">
                                     </div>
                                     </div>
 
@@ -267,7 +275,7 @@
                 <?php   $getTour = \App\Tour::getTourByWeek($tour->id);
                         $data    = round($getTour->count()/3);
                         if($data==0){
-                            $data =1;
+                           echo  $data =1;
                         }
                           ?>  
                         
@@ -294,7 +302,7 @@
                                         </h3>                              
                                         <div>
                                             <a href="{{route('tourDetails', ['url'=> $tour->slug])}}" >
-                                                <p style="font-size: 12px;">{!! str_limit($tour->tour_name,55) !!}</p>
+                                                <p style="font-size: 12px;height: 38px;">{!! str_limit($tour->tour_name,50) !!}</p>
                                             </a>
                                         </div>
                                             <?php
@@ -317,7 +325,7 @@
                                                 }
                                             }
                                             ?>      
-                                        <div>{{isset($day)? $day: ''}}  {{isset($hour)? $hour: ''}} {{isset($min)? $min: ''}}</div>
+                                        <div>{{isset($day)? $day: ''}}{{isset($hour)? $hour: ''}} {{isset($min)? $min: ''}}</div>
                                         <div class="clearfix"></div>
                                     </div>
                                     <div class="clearfix"></div>
@@ -326,7 +334,24 @@
                         </div>              
                     </section> 
                     @endforeach            
-                </div>            
+                </div> 
+                <div class="col-md-12 list-group-item" style="border: 1px solid #dfdfdfad;">
+                    <h4 style="font-weight: 500;" class="text-center">Term &amp; Conditions</h4><hr>
+
+                    <p><strong>DEPOSIT, PAYMENT &amp; CANCELLATION</strong><br>
+                    A 30% of total holiday price is required as deposit upon receiving confirmation email. The balance should be settled at least 30 days before arrival. There is service charge/bank charge for payment by credit card, swift or telegraphic transfer, all of which must be borne by the Clients, except CASH on arrival. Our bank information will be sent to you with our proforma-invoice.</p>
+
+                    <p>If you cancel your holiday, you must inform us in writing before the departure date. Based on your written instructions before your departure date, cancellation fees will be applied as follows:<br>
+                    45 days or more: No cancellation fee and your deposit will be refunded, however you will have to bear the bank charges for any refunds.</p>
+
+                    <ul>
+                        <li><span>44 days – 30 days: 30% of total tour package price</span></li>
+                        <li><span>29 days – 21 days: 50% of total tour package price</span></li>
+                        <li><span>20 days – 15 days: 75% of total tour package price</span></li>
+                        <li><span>14 day or no show: 100% of total tour package price</span></li>
+                        <li><span>After commencement of travel no refund either in full or in part, will be given for unused services included in the program unless it is directly caused by Asia Expeditions.</span></li>
+                    </ul>
+            </div>           
             </div>
         </div>
         <div class="spacing"></div>    
@@ -339,18 +364,16 @@
                 </h2>
             </div>        
             @if($tourLink->count() > 3)
-            <div class="row">   
-                
-                    <section class="wow fadeInUp" >                                
-                        <div class="owl-carousel clients-carousel" style="height: auto;">
-                            @foreach($tourLink->chunk(4) as $key => $chunkTour)                        
-                                @foreach($chunkTour as $tour)
-                                    @include('include.item')
-                                @endforeach                          
-                             @endforeach
-                        </div>
-                    </section>                                 
-                
+            <div class="row">                 
+                <section class="wow fadeInUp" >                                
+                    <div class="owl-carousel clients-carousel" style="height: auto;">
+                        @foreach($tourLink->chunk(4) as $key => $chunkTour)                        
+                            @foreach($chunkTour as $tour)
+                                @include('include.item')
+                            @endforeach                          
+                         @endforeach
+                    </div>
+                </section>               
             </div>
             @elseif($tourLink->count() == 2)
             <div class="row">   
@@ -389,41 +412,49 @@
 $(document).ready(function(){
     let r = Math.random().toString(36).substring(7);
     $('#gettext').val(r);
-
-  $('#myResult').on('keyup',function(){
-
-    var getdata = $(this).val();    
-    
-    if (getdata == r) {
-      $('#myResult').removeClass('addcol');
-         $('#btn').on('click',function(){
-         $('#myResult').val(getdata);
-    
-      });
-    }
-    else{
-       $('#myResult').addClass('addcol');
-       $('#myResult').attr('required', true);
-
-       $('#btn').on('click',function(){
-         $('#myResult').val('');
-    
-        });
-    }
-  });
-
-  $('#notrobot').css({'display':'none'});
-  $('#eshow').on('keyup', function(){
-      var eshow= $('#eshow').val();
+    $('#myResult').on('keyup',function(){
+        var getdata = $(this).val();    
+        if (getdata == r) {
+            $('#myResult').removeClass('addcol');
+                $('#btn').on('click',function(){
+                $('#myResult').val(getdata);        
+            });
+        }
+        else{
+            $('#myResult').addClass('addcol');
+            $('#myResult').attr('required', true);
+            $('#btn').on('click',function(){
+             $('#myResult').val('');    
+            });
+        }
+    });
+    $('#notrobot').css({'display':'none'});
+    $('#eshow').on('keyup', function(){
+        var eshow= $('#eshow').val();
         if (eshow.length>0) {
-          $('#notrobot').css({'display':'block'});
-    console.log(eshow);
-  }
-  else{
-     $('#notrobot').css({'display':'none'});
-  }
-  });
-
+            $('#notrobot').css({'display':'block'});
+        console.log(eshow);
+        }else{
+            $('#notrobot').css({'display':'none'});
+        }
+    });
 });
+
+    var formatdate = "yyyy-mm-dd";
+    var nowTemp = new Date();
+    var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(),nowTemp.getDate(), 0, 0, 0, 0);
+    $("#date_start").datepicker({         
+    }).on('changeDate', function(ev){             
+        $('#date_end').datepicker('show');       
+        $(this).datepicker('hide');        
+
+    }).data('datepicker');
+
+    $("#date_end").on('changeDate', function(ev){       
+         $(this).datepicker('hide');
+    }).data('datepicker');
+
+   
+
 </script>
 @endsection

@@ -62,7 +62,7 @@ class Tour extends Model
                           ->whereBetween('v.created_at', [$day,   $today])
                           ->whereNotIn('t.id',[$id])                         
                           ->join('tours as t', 'v.tour_id', '=', 't.id')
-                          ->where(['t.web'=>1,'tour_status'=>1])
+                          ->where(['t.web'=>1,'tour_status'=>1,'post_type'=>0])
                           ->get();
     }
      public static function getTourByUser(){
@@ -70,7 +70,7 @@ class Tour extends Model
                           ->select('t.*',\DB::Raw(' count(v.tour_id) as t'))                                   
                           ->groupBy('v.tour_id')
                           ->join('tours as t', 'v.tour_id', '=', 't.id')
-                          ->where(['v.user_id'=>\Auth::user()->id,'t.web'=>1,'t.tour_status'=>1])
+                          ->where(['v.user_id'=>\Auth::user()->id,'t.web'=>1,'t.tour_status'=>1, 'post_type'=>0])
                           ->get();
     }
 }
