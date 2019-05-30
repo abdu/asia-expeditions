@@ -49,15 +49,12 @@
     }
     .addcol{
         color: red;
-    }
-   
+    }  
  
 </style>
 
 
 <!-- modal send email -->
-
-
 <div class="w3-container">
     <div id="id01" class="w3-modal">        
         <div class="w3-modal-content w3-card-12 w3-animate-zoom " >
@@ -93,61 +90,59 @@
 
 <!-- end modal send email -->
 
-    <div class="container">
-        <h3 class="product-title titles">
-            <span>{{{$tour->country->country_name or ''}}}</span> / 
-            <span>{{$tour->tour_name}}</span>
-        </h3>
-        <ul class="list-unstyled ">
-            <li style="float: left;">            
-                <div id="fb-root"></div>
-                <script>(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];
-                  if (d.getElementById(id)) return;
-                  js = d.createElement(s); js.id = id;
-                  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2';
-                  fjs.parentNode.insertBefore(js, fjs);
-                }(document, 'script', 'facebook-jssdk'));</script>
-                   <div class="fb-share-button" data-href="{{route('tourDetails', ['url'=> $tour->slug])}}" data-layout="button_count" data-size="small">
-                </div>        
-            </li>
-            <li style="float: left;margin: -3px 5px;">
-                <a class="twitter-share-button" href="http://twitter.com/share?url={{route('tourDetails', ['url'=> $tour->slug])}}&amp;text={{$tour->tour_name}}&amp; hashtags=Asia Expedition &amp;">
-                <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-                </a>
-            </li>
-        </ul>
-        <div class="clearfix"></div>
-        <div class="card">
-            <div class="container-fliud">
-                <div class="wrapper">
-                    <div class=" col-md-8 col-xs-12 bor" style="padding: 0px;">
-                        <div id="amazingslider-wrapper-1" style="display:block;position:relative;max-width:626px;margin:0px auto 95px;margin-left:0px;" >
-                            <div id="amazingslider-1" style="display:block;position:relative;margin:0 auto;">
-                                <ul class="amazingslider-slides" style="display:none;">
-                                    <li><img src="{{Shared::getInstance()->urlResourceBig($tour->tour_photo, $tour->user_id) }}"/>
-                                    </li>
-                                     @if(count($img) > 1)
-                                        @foreach ($img as $key => $value) 
-                                        <li><img src="{{ Shared::getInstance()->urlResourceBig(trim($value), $tour->user_id) }}" /></li>
-                                        @endforeach
-                                    @endif
-                                    @if(isset($tour->video)? $tour->video:'' )
-                                        <li><img src="https://img.youtube.com/vi/{{isset($tour->video) ? $tour->video:''}}/0.jpg" />
-                                        <video preload="none" style="height: 352px !important;" src="https://www.youtube.com/   embed/{{$tour->video}}?v={{$tour->video}}" ></video></li>
-                                    @endif
-                                </ul>
-                                <ul class="amazingslider-thumbnails" style="display:none;">
-                                    <li><img src="{{Shared::getInstance()->urlResource($tour->tour_photo, $tour->user_id)}}" /></li>
-                                    @if(count($img) > 1)
-                                        @foreach ($img as $key => $value) 
-                                            <li><img src="{{Shared::getInstance()->urlResource(trim($value), $tour->user_id) }}" /></li>
-                                       @endforeach
-                                    @endif
-                                    @if(isset($tour->video) ? $tour->video:'')
-                                       <li><img src="https://img.youtube.com/vi/{{isset($tour->video) ? $tour->video:''}}/0.jpg" /></li>
-                                    @endif
-                                </ul>
-                            </div>
+<div class="container">
+    <h3 class="product-title titles">
+        <span>{{{$tour->country->country_name or ''}}}</span> / 
+        <span>{{$tour->tour_name}}</span>
+    </h3>
+    <ul class="list-unstyled ">
+        <li style="float: left;">            
+            <div id="fb-root"></div>
+            <script>(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2';
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+               <div class="fb-share-button" data-href="{{route('tourDetails', ['url'=> $tour->slug])}}" data-layout="button_count" data-size="small">
+            </div>        
+        </li>
+        <li style="float: left;margin: -3px 5px;">
+            <a class="twitter-share-button" href="http://twitter.com/share?url={{route('tourDetails', ['url'=> $tour->slug])}}&amp;text={{$tour->tour_name}}&amp; hashtags=Asia Expedition &amp;">
+            <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </a>
+        </li>
+    </ul><div class="clearfix"></div>
+    <div class="card">
+        <div class="container-fliud">
+            <div class="wrapper">
+                <div class=" col-md-8 col-xs-12 bor" style="padding: 0px;">
+                    <div id="amazingslider-wrapper-1" style="display:block;position:relative;max-width:626px;margin:0px auto 95px;margin-left:0px;" >
+                        <div id="amazingslider-1" style="display:block;position:relative;margin:0 auto;">
+                            <ul class="amazingslider-slides" style="display:none;">
+                                <li><img src="{{Shared::getInstance()->urlResourceBig($tour->tour_photo, $tour->user_id) }}"/>
+                                </li>
+                                 @if(count($img) > 1)
+                                    @foreach ($img as $key => $value) 
+                                    <li><img src="{{ Shared::getInstance()->urlResourceBig(trim($value), $tour->user_id) }}" /></li>
+                                    @endforeach
+                                @endif
+                                @if(isset($tour->video)? $tour->video:'' )
+                                    <li><img src="https://img.youtube.com/vi/{{isset($tour->video) ? $tour->video:''}}/0.jpg" />
+                                    <video preload="none" style="height: 352px !important;" src="https://www.youtube.com/   embed/{{$tour->video}}?v={{$tour->video}}" ></video></li>
+                                @endif
+                            </ul>
+                            <ul class="amazingslider-thumbnails" style="display:none;">
+                                <li><img src="{{Shared::getInstance()->urlResource($tour->tour_photo, $tour->user_id)}}" /></li>
+                                @if(count($img) > 1)
+                                    @foreach ($img as $key => $value) 
+                                        <li><img src="{{Shared::getInstance()->urlResource(trim($value), $tour->user_id) }}" /></li>
+                                   @endforeach
+                                @endif
+                                @if(isset($tour->video) ? $tour->video:'')
+                                   <li><img src="https://img.youtube.com/vi/{{isset($tour->video) ? $tour->video:''}}/0.jpg" /></li>
+                                @endif
+                            </ul>
                         </div>
                     </div>
                     <div class=" col-md-4 col-xs-12 bor" style="padding: 12px 0px; text-align: center;">
@@ -202,6 +197,7 @@
                                      
                                     </div>
                                     <div id="notrobot">
+
                                     <div class="form-group col-md-6">
                                         <label for="inputfirst"></label>
                                         <input type="text" class="form-control add_size" id="gettext" value="" readonly="" name="" 
@@ -212,121 +208,118 @@
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="inputlast"></label>
-                                        <input type="text" class="form-control add_size " id="myResult" placeholder="Pleace type" required="" name="">
+                                        <input type="text" class="form-control add_size " id="myResult" placeholder="please type" required="" name="">
                                     </div>
-                                    </div>
+                                </div>
 
-                                </div>
-                                <div class="col-md-12 col-sm-12">
-                                    <div class="row">
+                            </div>
+                            <div class="col-md-12 col-sm-12">
+                                <div class="row">
+                            
+                                <button type="submit" class=" add-to-cart btn btn-primary " id="btn"  style="float: left; width: 50%; padding-left: 14px;"><i class="fa fa-envelope" style="padding: 2px 5px 0px 0px;font-size: 18px;float: left; margin-left: -5px;"></i>SEND INQUIRY</button>                         
+                                <div class="action" style="float: right; width: 50%;padding-right: 2px;">
+                                    <a  href="{{route('tour.addTocart', ['id' => $tour->id])}}" class="add-to-cart btn btn-default0 green" style="width: 100%;margin-left: 2px;
+                                     padding-left: 22px;" ><i class="fa fa-shopping-cart " style=" padding: 0px 5px 0px 0px;font-size: 20px;float: left; margin-left: -15px;"></i>add to cart</a> 
                                 
-                                    <button type="submit" class=" add-to-cart btn btn-primary " id="btn"  style="float: left; width: 50%; padding-left: 14px;"><i class="fa fa-envelope" style="padding: 2px 5px 0px 0px;font-size: 18px;float: left; margin-left: -5px;"></i>SEND INQUIRY</button>                         
-                                    <div class="action" style="float: right; width: 50%;padding-right: 2px;">
-                                        <a  href="{{route('tour.addTocart', ['id' => $tour->id])}}" class="add-to-cart btn btn-default0 green" style="width: 100%;margin-left: 2px;
-                                         padding-left: 22px;" ><i class="fa fa-shopping-cart " style=" padding: 0px 5px 0px 0px;font-size: 20px;float: left; margin-left: -15px;"></i>add to cart</a> 
                                     
-                                        
-                                    </div>
                                 </div>
-                                </div>
-                             
-                            </form>
-                        </div>
+                            </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
-                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>   
+    <div class="col-md-8" style="padding: 25px 0 0 0 ;">
+        <div id="" class="bor" style="margin-top:0; background-color: #eeeeee;">
+            <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+                <li class="active"><a href="#highlights" data-toggle="tab">Highlights</a></li>
+                <li><a href="#details" data-toggle="tab">Program Details</a></li>
+                <li><a href="#service-include" data-toggle="tab">Price & Service Included</a></li>
+                <li><a href="#preferrenced-hotel" data-toggle="tab">Accommodation</a></li>
+            </ul>
+            <div id="my-tab-content" class="tab-content" style="background: white;">
+                <div class="tab-pane active" id="highlights">
+                    <p><?php echo html_entity_decode($tour['tour_intro']) ?></p>
+                </div>
+                <div class="tab-pane " id="details">
+                    <p><?php echo html_entity_decode($tour['tour_desc']) ?></p>
+                </div>
+                <div class="tab-pane " id="service-include">
+                    <p><?php echo html_entity_decode($tour['tour_remark']) ?></p>
+                </div>
+                <div class="tab-pane" id="preferrenced-hotel">
+                   @include('include.hotels')
+                </div>
             </div>
         </div>
-          <div class="spacing"></div>
-        <div class="col-md-8" style="padding: 0px;">
+    </div>  
+
+        <div class="col-md-4 padd" style="">
             <div id="" class="bor" style="margin-top:0; background-color: #eeeeee;">
-                <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
-                    <li class="active"><a href="#highlights" data-toggle="tab">Highlights</a></li>
-                    <li><a href="#details" data-toggle="tab">Program Details</a></li>
-                    <li><a href="#service-include" data-toggle="tab">Price & Service Included</a></li>
-                    <li><a href="#preferrenced-hotel" data-toggle="tab"> <i class="fa fa-hotel (alias)"></i> Accommodation</a></li>
-                </ul>
-                <div id="my-tab-content" class="tab-content" style="background: white;">
-                    <div class="tab-pane active" id="highlights">
-                        <p><?php echo html_entity_decode($tour['tour_intro']) ?></p>
-                    </div>
-                    <div class="tab-pane " id="details">
-                        <p><?php echo html_entity_decode($tour['tour_desc']) ?></p>
-                    </div>
-                    <div class="tab-pane " id="service-include">
-                        <p><?php echo html_entity_decode($tour['tour_remark']) ?></p>
-                    </div>
-                    <div class="tab-pane" id="preferrenced-hotel">
-                       @include('include.hotels')
-                    </div>
-                </div>
-            </div>
-        </div>   
-        <div class="col-md-4" style="padding: 0px;">
-            <div class="bor" style="margin-top:0; background-color: #eeeeee;">
                 <?php   
                     $getTour = \App\Tour::getTourByWeek($tour->id);
                     $data    = round($getTour->count()/3);
                     if($data==0){
-                        $data =1;
+                       echo  $data =1;
                     }
                 ?>  
-                
-                <div class="title text-center">
-                    <h4 style="font-weight: 500;">RECENT VIEW
-                        <div style="border-bottom: 2px solid #ddd;width: 100%;  padding-top: 6px;"></div>
-                    </h4>
-                </div>  
+                    <div class="title text-center">
+                        <h4 style="font-weight: 500;">RECENT VIEW
+                            <div style="border-bottom: 2px solid #ddd;width: 100%;  padding-top: 6px;"></div>
+                        </h4>
+                    </div>  
                     @foreach($getTour->chunk($data) as $get)
-                    <section class="wow fadeInUp" >
-                        <div class="owl-carousel clients-carousel-1" style="height: auto;">
-                            @foreach($get as $tour)
-                                <div class="list-group-item b_list">
-                                    <div class="col-md-4">
-                                      <div class="row" style="text-align: center;padding-top:5px;">
-                                         <a href="{{route('tourDetails', ['url'=> $tour->slug])}}">                                 
-                                            <img src="{{Shared::getInstance()->urlResource($tour->tour_photo, $tour->user_id)}}" frameborder="0" allow="accelerometer;  ; encrypted-media; gyroscope; picture-in-picture" allowfullscreen  class="img-responsive img-box img-thumbnail" style="padding:0px;"> 
-                                         </a>
-                                      </div>
-                                    </div>    
-                                    <div class="col-md-8">
-                                        <h3 class="text-danger" style="font-size: 16px; font-weight: 500; margin: 5px 0;"><b> ${{Shared::money($tour->tour_price)}}</b>/<small>Per Person</small>
-                                        </h3>                              
-                                        <div>
-                                            <a href="{{route('tourDetails', ['url'=> $tour->slug])}}" >
-                                                <p style="font-size: 12px;">{!! str_limit($tour->tour_name,55) !!}</p>
-                                            </a>
-                                        </div>
-                                            <?php
-                                            $today      = new DateTime('now', new DateTimeZone('Asia/bangkok'));
-                                            $ft         = $today->format('y-m-d h:i:s ');
-                                            $datetime1  = new DateTime($tour->date);
-                                            $datetime2  = new DateTime($ft);
-                                            $interval   = $datetime1->diff($datetime2);                         
-                                            $day        = '';
-                                            $hour       = '';
-                                            $min        = '';
-                                            if  ($interval->d>0){
-                                                $day    = $interval->d.' Day';
-                                            }else{
-                                                if ($interval->h>12) {
-                                                $day    ='Yesterday';
+                        <section class="wow fadeInUp" >
+                            <div class="owl-carousel clients-carousel-1" style="height: auto;">
+                                @foreach($get as $tour)
+                                    <div class="list-group-item b_list">
+                                        <div class="col-md-4">
+                                          <div class="row" style="text-align: center;padding-top:5px;">
+                                             <a href="{{route('tourDetails', ['url'=> $tour->slug])}}">                                 
+                                                <img src="{{Shared::getInstance()->urlResource($tour->tour_photo, $tour->user_id)}}" frameborder="0" allow="accelerometer;  ; encrypted-media; gyroscope; picture-in-picture" allowfullscreen  class="img-responsive img-box img-thumbnail" style="padding:0px;"> 
+                                             </a>
+                                          </div>
+                                        </div>    
+                                        <div class="col-md-8">
+                                            <h3 class="text-danger" style="font-size: 16px; font-weight: 500; margin: 5px 0;"><b> ${{Shared::money($tour->tour_price)}}</b>/<small>Per Person</small>
+                                            </h3>                              
+                                            <div>
+                                                <a href="{{route('tourDetails', ['url'=> $tour->slug])}}" >
+                                                    <p style="font-size: 12px;height: 38px;">{!! str_limit($tour->tour_name,50) !!}</p>
+                                                </a>
+                                            </div>
+                                                <?php
+                                                $today      = new DateTime('now', new DateTimeZone('Asia/bangkok'));
+                                                $ft         = $today->format('y-m-d h:i:s ');
+                                                $datetime1  = new DateTime($tour->date);
+                                                $datetime2  = new DateTime($ft);
+                                                $interval   = $datetime1->diff($datetime2);                         
+                                                $day        = '';
+                                                $hour       = '';
+                                                $min        = '';
+                                                if  ($interval->d>0){
+                                                    $day    = ($interval->d+1).' Day';
                                                 }else{
-                                                $hour   =  $interval->h.' Hour ';
-                                                $min    =$interval->i.' Minute';
+                                                    if ($interval->h>12) {
+                                                    $day    ='Yesterday';
+                                                    }else{
+                                                    $hour   =  $interval->h.' Hour ';
+                                                    $min    =$interval->i.' Minute';
+                                                    }
                                                 }
-                                            }
-                                            ?>      
-                                        <div>{{isset($day)? $day: ''}}  {{isset($hour)? $hour: ''}} {{isset($min)? $min: ''}}</div>
+                                                ?>      
+                                            <div>{{isset($day)? $day: ''}}{{isset($hour)? $hour: ''}} {{isset($min)? $min: ''}}</div>
+                                            <div class="clearfix"></div>
+                                        </div>
                                         <div class="clearfix"></div>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>                                                                                  
-                            @endforeach
-                        </div>              
-                    </section> 
+                                    </div>                                                                                  
+                                @endforeach
+                            </div>              
+                        </section> 
                     @endforeach            
-             
             </div>       
 
             <div class="col-md-12" style="  margin-bottom: 22px;background-color: #fff;border: 1px solid transparent;border-radius: 4px;box-shadow: 0 1px 1px rgba(0,0,0,.05);">
@@ -349,7 +342,8 @@
         </div>
         
 
-    <div class="container">
+</div><div class="spacing"></div>
+<div class="container">
         @if($tourLink->count() > 0)
             <div class="title text-left">
                 <h2><b>YOU MAY ALSO LIKE</b>
@@ -357,18 +351,16 @@
                 </h2>
             </div>        
             @if($tourLink->count() > 3)
-            <div class="row">   
-                
-                    <section class="wow fadeInUp" >                                
-                        <div class="owl-carousel clients-carousel" style="height: auto;">
-                            @foreach($tourLink->chunk(4) as $key => $chunkTour)                        
-                                @foreach($chunkTour as $tour)
-                                    @include('include.item')
-                                @endforeach                          
-                             @endforeach
-                        </div>
-                    </section>                                 
-                
+            <div class="row">                 
+                <section class="wow fadeInUp" >                                
+                    <div class="owl-carousel clients-carousel" style="height: auto;">
+                        @foreach($tourLink->chunk(4) as $key => $chunkTour)                        
+                            @foreach($chunkTour as $tour)
+                                @include('include.item')
+                            @endforeach                          
+                         @endforeach
+                    </div>
+                </section>               
             </div>
             @elseif($tourLink->count() == 2)
             <div class="row">   
@@ -402,46 +394,54 @@
             </div>
             @endif
         @endif
-    </div>
-     <script type="text/javascript">
-$(document).ready(function(){
-    let r = Math.random().toString(36).substring(7);
-    $('#gettext').val(r);
-
-  $('#myResult').on('keyup',function(){
-
-    var getdata = $(this).val();    
-    
-    if (getdata == r) {
-      $('#myResult').removeClass('addcol');
-         $('#btn').on('click',function(){
-         $('#myResult').val(getdata);
-    
-      });
-    }
-    else{
-       $('#myResult').addClass('addcol');
-       $('#myResult').attr('required', true);
-
-       $('#btn').on('click',function(){
-         $('#myResult').val('');
-    
+</div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        let r = Math.random().toString(36).substring(7);
+        $('#gettext').val(r);
+        $('#myResult').on('keyup',function(){
+            var getdata = $(this).val();    
+            if (getdata == r) {
+                $('#myResult').removeClass('addcol');
+                    $('#btn').on('click',function(){
+                    $('#myResult').val(getdata);        
+                });
+            }
+            else{
+                $('#myResult').addClass('addcol');
+                $('#myResult').attr('required', true);
+                $('#btn').on('click',function(){
+                 $('#myResult').val('');    
+                });
+            }
         });
-    }
-  });
+        $('#notrobot').css({'display':'none'});
+        $('#eshow').on('keyup', function(){
+            var eshow= $('#eshow').val();
+            if (eshow.length>0) {
+                $('#notrobot').css({'display':'block'});
+            console.log(eshow);
+            }else{
+                $('#notrobot').css({'display':'none'});
+            }
+        });
 
-  $('#notrobot').css({'display':'none'});
-  $('#eshow').on('keyup', function(){
-      var eshow= $('#eshow').val();
-        if (eshow.length>0) {
-          $('#notrobot').css({'display':'block'});
-    console.log(eshow);
-  }
-  else{
-     $('#notrobot').css({'display':'none'});
-  }
-  });
+        var formatdate = "yyyy-mm-dd";
+        var nowTemp = new Date();
+        var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(),nowTemp.getDate(), 0, 0, 0, 0);
+        
+        $("#date_start").datepicker({
+        }).on('changeDate', function(ev){             
+            $('#date_end').datepicker('show');       
+            $(this).datepicker('hide');
+        }).data('datepicker');
 
-});
+        $("#date_end").on('changeDate', function(ev){       
+             $(this).datepicker('hide');
+        }).data('datepicker');
+    });
+
+   
+
 </script>
 @endsection

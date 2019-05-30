@@ -31,6 +31,7 @@
   <link href="{{asset('/add_lib/lib/animate/animate.min.css')}}" rel="stylesheet">
   <link href="{{asset('/add_lib/lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
   
+  
 
 
 

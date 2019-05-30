@@ -119,6 +119,7 @@ class CartController extends Controller
                 $cus->banned        = 1; //= 1 = inactive, 0 = active;
                 $cus->password      = bcrypt($req->password);
                 $cus->password_text = $req->password;
+                $cus->picture       = 'me.png';
                 $cus->save();
                 Mail::to($req->email)->send(new RegisterCustomer());
                 return back()->with(['get'=> 'success',  'message'=> "Link has been sent to your email: ". $req->email]);

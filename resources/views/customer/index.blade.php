@@ -5,18 +5,12 @@
 <?php use App\components\Shared; ?>
 
 @section('content')
-
-  @include('include.menu')
-    <link href="{{asset('/css/material-dashboard.css')}}" rel="stylesheet" /> 
-    <script  type="text/javascript" src="{{asset('/js/uploadfile.js')}}" ></script>  
-
-
-
+<link href="{{asset('/css/material-dashboard.css')}}" rel="stylesheet" /> 
+<script  type="text/javascript" src="{{asset('/js/uploadfile.js')}}" ></script>
+  @include('include.menu')    
       <div class="content">
         <div class="container-f">
-          <div class="row">
-
-            
+          <div class="row">            
             <div class="col-lg-8 col-md-12">
               <div class="card">
                 <div class="card-header card-header-tabs card-header-primary">
@@ -32,7 +26,7 @@
                         </li>
                         <li class="nav-item">
                           <a class="nav-link" href="#messages" data-toggle="tab">
-                            <i class="fa fa-shopping-cart"></i> Your Order
+                            <i class="fa fa-envelope "></i> Your Send Inquiry
                             <div class="ripple-container"></div>
                           </a>
                         </li>
@@ -149,8 +143,29 @@
                     </div>
                     <div class="tab-pane" id="messages">
                       <table class="table">
-                        <div class="col-md-12">
-                            <span> Your Invoice is empty <span class="fa fa-info-circle"></span></span>
+                        <div class="col-md-12"><?php $getdata=\App\ItemOrder::where('customer_id', Auth::id())->get(); ?>
+
+                          <div class="card">
+                            @if($getdata->count()>0)
+                                <div class="card-header "><center> <h4 style="width: 150px;height: 40px; font-weight: 600!important; border-bottom:1px solid #2d95d09e;">Details</h4></center> </div>
+                                  @foreach($getdata as $item)
+                                    <div class="card-body">  
+                                     <p> Tour Name: {{$item->tour->tour_name}}</p>
+                                      <hr><br>
+                                      <p> From Date: {{$item->fdate}}</p>
+                                      <hr><br>
+                                      <p> To Date: {{$item->tdate}}</p>
+                                      <hr><br>
+                                      <p> Additional Requests : {{$item->a_requests}}</p>
+                                      <hr>
+                                    </div>
+
+                                  @endforeach
+                            
+                            @else
+                                <span> Your Tour Details is empty  <span class="fa fa-info-circle"></span></span>
+                            @endif
+                          </div>                            
                         </div>
                       </table>
                     </div>
@@ -197,21 +212,20 @@
             <div class="col-md-4 col-sm-12">
               <div class="card card-profile">
                 <div class="card-avatar">
-                    <div class="changep btnUploadFiles"data-type="single-img" data-toggle="modal" data-target="#myUpload"></div>
-                      <a href="#uploadfile" >
-                        @if(isset($data->picture) && !empty($data->picture))
-                            <img id="feature-img" src="{{isset($data->picture) ? Shared::getInstance()->urlResource($data->picture, Auth::user()->id) : '#' }}" style="width:100%;margin-bottom:12px;" class="btnUploadFiles" data-type="single-img" data-toggle="modal" data-target="#myUpload">
-                        @else
-                            <img id="feature-img" src="{{isset($data->picture) ? Shared::getInstance()->urlResource($data->picture, Auth::user()->id) : '#' }}" style="width:100%;display:none;margin-bottom:12px;" class="btnUploadFiles" data-type="single-img" data-toggle="modal" data-target="#myUpload">
-                        @endif
-                      </a>
+                  <div class="changep btnUploadFiles"data-type="single-img" data-toggle="modal" data-target="#myUpload"></div>
+                  <a href="#uploadfile" >
+                    @if(isset($data->picture) && !empty($data->picture))
+                      <img id="feature-img" src="{{isset($data->picture) ? Shared::getInstance()->urlResource($data->picture, Auth::user()->id) : '#' }}" style="width:100%;margin-bottom:12px;" class="btnUploadFiles" data-type="single-img" data-toggle="modal" data-target="#myUpload">
+                    @else
+                      <img id="feature-img" src="{{isset($data->picture) ? Shared::getInstance()->urlResource($data->picture, Auth::user()->id) : '#' }}" style="width:100%;display:none;margin-bottom:12px;" class="btnUploadFiles" data-type="single-img" data-toggle="modal" data-target="#myUpload">
+                    @endif
+                  </a>
                 </div>
                 <div class="card-body">
                   <h6 class="card-category text-gray">CEO / Co-Founder</h6>
                   <h4 class="card-title">Alec Thompson</h4>
                   <p class="card-description">
                     Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
-
                   </p>
                   <a href="#pablo" class="btn btn-primary btn-round">Follow</a>
                 </div>
@@ -256,23 +270,21 @@
                     </div>                     
                 </div>                
             </div>        
+
         </div>
-    </div>
+      </div>
 
 <script>
     $(document).ready(function () {
-    var formatdate = "yyyy-mm-dd";
-    var nowTemp = new Date();
-    var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
-    var book_date = $("#expiry_date").datepicker({
+      var formatdate = "yyyy-mm-dd";
+      var nowTemp = new Date();
+      var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
+      var book_date = $("#expiry_date").datepicker({
         format: formatdate,
-        onReder: function(date) {
-            //n return date.valueOf() < now.valueOf() ? 'disabled' : '';
-        }
-    }).on('changeDate', function(ev){
-        // $(".datepicker", this).hide();
-         $(this).datepicker('hide');
-    }).data('datepicker');
+        onReder: function(date) {}
+        }).on('changeDate', function(ev){       
+             $(this).datepicker('hide');
+        }).data('datepicker');
     });
 </script>
 

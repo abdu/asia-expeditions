@@ -4104,7 +4104,7 @@ tbody.collapse.in {
 
 .input-group-btn:last-child>.btn,.input-group-btn:last-child>.btn-group {
     z-index: 2;
-    margin-left: -1px
+    margin-left: -1px!important;
 }
 
 .nav {
@@ -5422,6 +5422,9 @@ a.thumbnail.active,a.thumbnail:focus,a.thumbnail:hover {
     margin-bottom: -1px;
     background-color: #fff;
     border: 1px solid #d3e0e9
+}
+.list-group-item:hover{
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
 }
 
 .list-group-item:first-child {
@@ -15253,6 +15256,7 @@ ul li iframe#twitter-widget-0 div.widget .btn-o a.btn {
     .a_hidden{
         display: none;
     }
+   
 
 }
 @media (min-width: 768px)  {
@@ -15264,6 +15268,7 @@ ul li iframe#twitter-widget-0 div.widget .btn-o a.btn {
         color: white;
         padding: 9px 0px 9px 10px;
     }
+    .padd{padding: 25px 0 0 0px;}
 
 
 }
@@ -15278,12 +15283,14 @@ ul li iframe#twitter-widget-0 div.widget .btn-o a.btn {
     }
 
 
+
 }
 @media (max-width: 992px)  {
 
    .hidden-xs {
         display:none!important
     }
+    
 
 }
 @media (max-width: 991px)  {
@@ -15299,6 +15306,13 @@ ul li iframe#twitter-widget-0 div.widget .btn-o a.btn {
 
 
 }
+@media (min-width: 992px)  {
+    .padd{
+        padding: 25px 0 0 15px;
+    }
+}
+
+ 
 @media (min-width: 1200px) {
      .titles{
         font-size: 20px;
@@ -15316,7 +15330,7 @@ ul li iframe#twitter-widget-0 div.widget .btn-o a.btn {
         margin-right: -15px
     }
     .navbar-header {
-    float: left;
+        float: left;
     }
     .navbar-collapse.collapse {
         display: block!important;
@@ -15325,13 +15339,17 @@ ul li iframe#twitter-widget-0 div.widget .btn-o a.btn {
         overflow: visible!important
     }
     .navbar-toggle {
-    display: none !important;
+        display: none !important;
 
     }
-    .btborder {
+ 
+    .padd{
+        padding: 25px 0 0 15px;
+    }
+
+}
+.btborder {
     text-transform: uppercase;
     border-bottom: solid 7px #8fbc8f;
     border-image: url(https://www.w3schools.com/css/border.png) 30 stretch;
-    }
-
 }
