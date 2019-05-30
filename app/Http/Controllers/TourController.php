@@ -114,7 +114,7 @@ class TourController extends Controller
             $adds->email       = $req->email; 
             $adds->phone       = $req->mobile;
             $adds->role_id     = 7;
-            $adds->picture     = 'no_image.png';
+            $adds->picture     = 'me.png';
             $adds->nationality = $req->nationality;        
                 if($adds->save()){
                  $add_item              = new ItemOrder;

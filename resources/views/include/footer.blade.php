@@ -1,13 +1,13 @@
 <div class="clear"></div>
 <footer>
   <div class="container-fluid">
-      <div class="col-md-3 col-xs-6  paddingtop-bottom ">
+      <div class="col-md-3 col-sm-6 col-xs-12  paddingtop-bottom ">
         <div class="col-md-12"><h6 class="heading7">EXPERT KNOWLEDGE</h6></div>
         <div class="col-md-12">
           @widget('Footer', ['f_type' => 1])
         </div>
       </div>
-      <div class="col-md-3 col-xs-6  paddingtop-bottom">
+      <div class="col-md-3 col-sm-6 col-xs-12  paddingtop-bottom">
         <div class="row">
           <div class="col-md-12"><h6 class="heading7">UESFUL LINKS</h6></div>
           <div class="col-md-12">
@@ -15,7 +15,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-3 col-xs-6  paddingtop-bottom">
+      <div class="col-md-3 col-sm-6 col-xs-12  paddingtop-bottom">
         <div class="row">
           <div class="col-md-12"><h6 class="heading7">FULL PROTECTED</h6> </div>     
           <div class="col-md-12">
@@ -23,10 +23,11 @@
           </div>
         </div>
       </div> 
-      <div class="col-md-3 col-xs-6  paddingtop-bottom">
+      <div class="col-md-3 col-sm-6  col-xs-12  paddingtop-bottom">
         <div class="row">
-            <div class="col-md-12"><h6 class="heading7">ENJOY WITH US</h6></div>     
-            <div>
+            <div class="col-sm-12"><h6 class="heading7">ENJOY WITH US</h6></div>     
+            <div class="col-sm-12">
+              <div class="row">
                 <p>Enter your email to get news udpate</p>
                 <form action="{{url('/')}}/getSubscrbe" method="post">
                     {{ csrf_field() }}
@@ -40,8 +41,9 @@
                         </span>
                     </div>
                 </form>
+              </div>
             </div>
-            <div class="col-sm-12 col-xs-12 ">           
+            <div class="col-sm-12 ">           
               <div class="row">
                 <b><h3 style="margin-bottom: 15px; color: #d9d6d6;"><b>Latest Post</b></h3></b>
                 <ul class="list-unstyled">
@@ -92,10 +94,14 @@
 <script>
 
   $(window).scroll(function() {
-    if ($(this).scrollTop() > 100) {
+    
+    if ($(this).scrollTop() > 90) {
       $('#goTotop').fadeIn('slow');
+      $('.wrapper-menu').removeClass('act');
+
     } else {
       $('#goTotop').fadeOut('slow');
+      
     }
   });
   
