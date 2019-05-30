@@ -136,7 +136,7 @@ class CartController extends Controller
         ]);
 
         if (!$validator->fails() ) {
-            if ( \Auth::attempt(['email'=> $req->email_log, "password"=> $req->password_log, "banned"=> 0])) {
+            if (\Auth::attempt(['email'=>$req->email_log, 'password'=>$req->password_log, 'banned'=>1])) {
                 $itemWish = Wishlist::where('user_id', \Auth::user()->id)->get();
                 $oldCart = Session::has('cart') ? Session::get('cart') : null;
                 if ($itemWish->count() > 0) {
@@ -163,15 +163,17 @@ class CartController extends Controller
                 }else{
                     return redirect()->route('index');
                 }
+            }else{
+                return "Fdsafdsafd";        
             }
+            
 
         } else {
             return back()->withErrors($validator)->withInput()->with('loginError', 'Your email is not exists');
         }
     }
 
-    public function getPayment()
-    {
+    public function getPayment() {
         if (empty(Session::get('cart')->items)) {
             return redirect('shopping-cart');
         } else {

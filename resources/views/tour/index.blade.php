@@ -190,11 +190,11 @@
                                     </div>
                                     <div class="form-group col-md-12">
                                         <label for="inputlast">Nationality</label>
-                                              <select class="form-control add_size" name="nationality">
-                                        @foreach(App\Country::orderBy('nationality')->get() as $con)
-                                            <option value="{{$con->id}}">{{$con->nationality}}</option>
-                                        @endforeach
-                                    </select>                                       
+                                        <select class="form-control add_size" name="nationality">
+                                            @foreach(App\Country::whereNotNull('nationality')->orderBy('nationality')->get() as $con)
+                                                <option value="{{$con->id}}">{{$con->nationality}}</option>
+                                            @endforeach
+                                        </select>                                       
                                     </div>
                                     <div class="form-group col-md-12">
                                         <label for="inputlast">Additional Requests</label>
@@ -244,7 +244,7 @@
                     <li class="active"><a href="#highlights" data-toggle="tab">Highlights</a></li>
                     <li><a href="#details" data-toggle="tab">Program Details</a></li>
                     <li><a href="#service-include" data-toggle="tab">Price & Service Included</a></li>
-                    <li><a href="#preferrenced-hotel" data-toggle="tab">Accommodation</a></li>
+                    <li><a href="#preferrenced-hotel" data-toggle="tab"> <i class="fa fa-hotel (alias)"></i> Accommodation</a></li>
                 </ul>
                 <div id="my-tab-content" class="tab-content" style="background: white;">
                     <div class="tab-pane active" id="highlights">
@@ -263,18 +263,18 @@
             </div>
         </div>   
         <div class="col-md-4" style="padding: 0px;">
-            <div id="" class="bor" style="margin-top:0; background-color: #eeeeee;">
-                <?php   $getTour = \App\Tour::getTourByWeek($tour->id);
-                        $data    = round($getTour->count()/3);
-                        if($data==0){
-                            $data =1;
-                        }
-                          ?>  
-                        
+            <div class="bor" style="margin-top:0; background-color: #eeeeee;">
+                <?php   
+                    $getTour = \App\Tour::getTourByWeek($tour->id);
+                    $data    = round($getTour->count()/3);
+                    if($data==0){
+                        $data =1;
+                    }
+                ?>  
+                
                 <div class="title text-center">
-                    <h4 style="font-weight: 500;margin-bottom: 0px;">RECENT VIEW
+                    <h4 style="font-weight: 500;">RECENT VIEW
                         <div style="border-bottom: 2px solid #ddd;width: 100%;  padding-top: 6px;"></div>
-                    
                     </h4>
                 </div>  
                     @foreach($getTour->chunk($data) as $get)
@@ -326,18 +326,28 @@
                         </div>              
                     </section> 
                     @endforeach            
-                </div>            
-            </div>
-        </div>
-        <div class="spacing"></div>    
-        <div class="col-md-4" style="padding: 0px;">
-            <div lass="bor" style="margin-top:0; background-color: #eeeeee;">
-                <div class="title text-center">
-                    <h4 style="font-weight: 500;margin-bottom: 0px;">Policy</h4>
+             
+            </div>       
 
-                </div>           
+            <div class="col-md-12" style="  margin-bottom: 22px;background-color: #fff;border: 1px solid transparent;border-radius: 4px;box-shadow: 0 1px 1px rgba(0,0,0,.05);">
+                <div class="title text-center"><h4 style="font-weight: 500;"> Terms & Conditions</h4></div>  
+                <p>A 30% of total holiday price is required as deposit upon receiving confirmation email. The balance should be settled at least 30 days before arrival. There is service charge/bank charge for payment by credit card, swift or telegraphic transfer, all of which must be borne by the Clients, except CASH on arrival. Our bank information will be sent to you with our proforma-invoice.</p>
+
+                <p>If you cancel your holiday, you must inform us in writing before the departure date. Based on your written instructions before your departure date, cancellation fees will be applied as follows:<br />
+                45 days or more: No cancellation fee and your deposit will be refunded, however you will have to bear the bank charges for any refunds.</p>
+
+                <ul>
+                    <li><span>44 days &ndash; 30 days: 30% of total tour package price</span></li>
+                    <li><span>29 days &ndash; 21 days: 50% of total tour package price</span></li>
+                    <li><span>20 days &ndash; 15 days: 75% of total tour package price</span></li>
+                    <li><span>14 day or no show: 100% of total tour package price</span></li>
+                    <li><span>After commencement of travel no refund either in full or in part, will be given for unused services included in the program unless it is directly caused by Asia Expeditions.</span></li>
+                </ul>
+            </div>     
+            
             </div>
         </div>
+        
 
     <div class="container">
         @if($tourLink->count() > 0)

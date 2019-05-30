@@ -22,9 +22,9 @@
                 <div class="card-header card-header-tabs card-header-primary">
                   <div class="nav-tabs-navigation">
                     <div class="nav-tabs-wrapper">
-                      <span class="nav-tabs-title">Tasks:</span>
+                      <!-- <span class="nav-tabs-title">Tasks:</span> -->
                       <ul class="nav nav-tabs" data-tabs="tabs">
-                        <li class="nav-item">
+                        <li class="nav-item active">
                           <a class="nav-link active" href="#profile" data-toggle="tab">
                             <i class="fa fa-user"></i> Your Account
                             <div class="ripple-container"></div>
@@ -103,25 +103,21 @@
                                       <div class="col-md-4 col-sm-12">
                                         <div class="form-group1">
                                           <label class="bmd-label-floating">Town / City</label>
-                                        
                                           <select class="form-control1" name="town_city">
-                                                @foreach(App\Province::orderBy('id')->get() as $pro)
-                                                    <option value="{{$pro->id}}" {{  $data->province_id== $pro->id ? 'selected':''}}>{{$pro->province_name}}</option>
-                                                @endforeach
+                                            @foreach(App\Province::orderBy('id')->get() as $pro)
+                                                <option value="{{$pro->id}}" {{  $data->province_id== $pro->id ? 'selected':''}}>{{$pro->province_name}}</option>
+                                            @endforeach
                                           </select>
-
                                         </div>
                                       </div>
                                       <div class="col-md-4 col-sm-12">
                                         <div class="form-group1">
                                           <label class="bmd-label-floating">Country / State</label>
-                                         
                                           <select class="form-control1" name="country_state">
-                                                @foreach(App\Country::orderBy('id')->get() as $con)
-                                                    <option value="{{$con->id}}" {{  $data->country_id== $con->id ? 'selected':''}}>{{$con->country_name}}</option>
-                                                @endforeach
+                                            @foreach(App\Country::orderBy('id')->get() as $con)
+                                              <option value="{{$con->id}}" {{  $data->country_id== $con->id ? 'selected':''}}>{{$con->country_name}}</option>
+                                            @endforeach
                                           </select>
-
                                         </div>
                                       </div>
                                     </div>
@@ -144,8 +140,7 @@
                                           <input type="text" class="form-control1" name="email" value="{{$data->email}}" required="">
                                         </div>
                                       </div>
-                                    </div>
-                          
+                                    </div>                          
                                     <button type="submit" class="btn btn-rose pull-right">Update Profile</button>
                                     <div class="clearfix"></div>
                                 </form>
@@ -225,7 +220,7 @@
                 <div class=" col-md-12 col-sm-12" >               
                     <?php $getself = \App\Tour::getTourByUser()?>
                     <div class="col-md-12 col-sm-12"style="border:0;box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);">                                             
-                    <h4 style="padding: 0px 0px 30px 0px;font-weight: 600!important;">RECENT VIEW</h4>
+                    <h4 style="padding: 0px 0px 30px 0px;font-weight: 600!important;">RECENT VIEWED</h4>
                         @foreach($getself as $datas)           
                         <div class="col-lg-3 col-md-3">
                             <div class="card card-product" style="margin-top: 10px;">

@@ -140,7 +140,7 @@ Route::group(['middleware' => ['isCustomer']], function () {
 		Route::post("window/uploadfile/only", 'UploadController@uploadOnlyFile_u')->name('uploadOnlyFile_u');
 		Route::get("window/remove-image/logo", 'UploadController@RemoveLogo_u')->name('RemoveLogo_u');
 });
-Route::get('set_pass/{email}', 'CustomerController@showlogin')->name('showlogin');
+Route::get('set_pass/{email}', 'CustomerController@showlogin')->name('showlogin'); 
 Route::post('do_pass', 'CustomerController@do_set_login')->name('do_set_login');
 
 Route::get('/login', "UserController@getLogin")->name('login');
