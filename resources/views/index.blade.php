@@ -167,8 +167,6 @@ Asia Expeditions , Myanmar & Indochina – Destination Management Company is for
 			    </div>
 			@endif
 	    </div>
-		<div class="spacing"></div>
-	
 	<div class="col-md-12" style="background-color: white;">
 		<div class="container">
 			<div class="row">
@@ -234,23 +232,13 @@ Asia Expeditions , Myanmar & Indochina – Destination Management Company is for
 		<div class="clear"></div>
 		<div class="spacing"></div>	
 </div>
-
-
-
-
-
-
-  <!-- Template Main Javascript File -->
-
 <script type="text/javascript">
 	$(document).ready(function(){  
         $(".videoFrame").click(function(){
-	      	// alert('a');
 	      	$(".videoFrame").remove();
 	        $('.add').append('<iframe  width="360" height="210" src="https://www.youtube.com/embed/A6I5nHqkGiw?start=11&controls=0&autoplay=1"></iframe>');
         });
     });
-
 </script>
 
 

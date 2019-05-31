@@ -114,7 +114,7 @@ class CartController extends Controller
                 $cus->nationality   = $req->nationality;
                 $cus->phone  = $req->phone_number;
                 $cus->email         = $req->email;
-                $cus->postal_code   = $req->zip_code;
+                $cus->postal        = $req->zip_code;
                 $cus->role_id       = 7;
                 $cus->banned        = 1; //= 1 = inactive, 0 = active;
                 $cus->password      = bcrypt($req->password);

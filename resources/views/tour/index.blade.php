@@ -145,6 +145,7 @@
                             </ul>
                         </div>
                     </div>
+                </div>
                     <div class=" col-md-4 col-xs-12 bor" style="padding: 12px 0px; text-align: center;">
                         <div class="col-md-12"  style="margin-bottom: -10;" >            
                             <h4 style="margin: 4px 0 -8px 0;" class="price"> price: <span style="cursor: pointer;" data-toggle="popover" data-trigger="hover" data-content="Our special price" data-placement="top">${{$tour['tour_price']}}</span> <small style="text-transform: capitalize ">Per Person</small></h4>
@@ -193,37 +194,32 @@
                                     </div>
                                     <div class="form-group col-md-12">
                                         <label for="inputlast">Additional Requests</label>
-                                        <textarea style="resize:none; width: 100%;"  class="form-control" name="textarea" cols="8" rows="3" placeholder="Type your message" /></textarea>
+                                        <textarea style="resize:none; width: 100%;" class="form-control" name="textarea" cols="8" rows="3" placeholder="Type your message" /></textarea>
                                      
                                     </div>
                                     <div id="notrobot">
-
-                                    <div class="form-group col-md-6">
-                                        <label for="inputfirst"></label>
-                                        <input type="text" class="form-control add_size" id="gettext" value="" readonly="" name="" 
-                                        style="background-color: #00000096;
-                                        color: #fff;text-align: center;
-                                        font-family: cursive;
-                                        font-size: 20;">
+                                        <div class="form-group col-md-6">
+                                            <label for="inputfirst"></label>
+                                            <input type="text" class="form-control add_size" id="gettext" value="" readonly="" name="" 
+                                            style="background-color: #00000096;
+                                            color: #fff;text-align: center;
+                                            font-family: cursive;
+                                            font-size: 20;">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="inputlast"></label>
+                                            <input type="text" class="form-control add_size " id="myResult" placeholder="please type" required="" name="">
+                                        </div>
                                     </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="inputlast"></label>
-                                        <input type="text" class="form-control add_size " id="myResult" placeholder="please type" required="" name="">
-                                    </div>
-                                </div>
-
                             </div>
                             <div class="col-md-12 col-sm-12">
                                 <div class="row">
-                            
-                                <button type="submit" class=" add-to-cart btn btn-primary " id="btn"  style="float: left; width: 50%; padding-left: 14px;"><i class="fa fa-envelope" style="padding: 2px 5px 0px 0px;font-size: 18px;float: left; margin-left: -5px;"></i>SEND INQUIRY</button>                         
-                                <div class="action" style="float: right; width: 50%;padding-right: 2px;">
-                                    <a  href="{{route('tour.addTocart', ['id' => $tour->id])}}" class="add-to-cart btn btn-default0 green" style="width: 100%;margin-left: 2px;
-                                     padding-left: 22px;" ><i class="fa fa-shopping-cart " style=" padding: 0px 5px 0px 0px;font-size: 20px;float: left; margin-left: -15px;"></i>add to cart</a> 
-                                
-                                    
+                                    <button type="submit" class=" add-to-cart btn btn-primary " id="btn"  style="float: left; width: 50%; padding-left: 14px;"><i class="fa fa-envelope" style="padding: 2px 5px 0px 0px;font-size: 18px;float: left; margin-left: -5px;"></i>SEND INQUIRY</button>                         
+                                    <div class="action" style="float: right; width: 50%;padding-right: 2px;">
+                                        <a  href="{{route('tour.addTocart', ['id' => $tour->id])}}" class="add-to-cart btn btn-default0 green" style="width: 100%;margin-left: 2px;
+                                         padding-left: 22px;" ><i class="fa fa-shopping-cart " style=" padding: 0px 5px 0px 0px;font-size: 20px;float: left; margin-left: -15px;"></i>add to cart</a> 
+                                    </div>
                                 </div>
-                            </div>
                             </div>
                         </form>
                     </div>
@@ -231,34 +227,33 @@
             </div>
             <div class="clear"></div>
         </div>
-    </div>   
-    <div class="col-md-8" style="padding: 25px 0 0 0 ;">
-        <div id="" class="bor" style="margin-top:0; background-color: #eeeeee;">
-            <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
-                <li class="active"><a href="#highlights" data-toggle="tab">Highlights</a></li>
-                <li><a href="#details" data-toggle="tab">Program Details</a></li>
-                <li><a href="#service-include" data-toggle="tab">Price & Service Included</a></li>
-                <li><a href="#preferrenced-hotel" data-toggle="tab">Accommodation</a></li>
-            </ul>
-            <div id="my-tab-content" class="tab-content" style="background: white;">
-                <div class="tab-pane active" id="highlights">
-                    <p><?php echo html_entity_decode($tour['tour_intro']) ?></p>
-                </div>
-                <div class="tab-pane " id="details">
-                    <p><?php echo html_entity_decode($tour['tour_desc']) ?></p>
-                </div>
-                <div class="tab-pane " id="service-include">
-                    <p><?php echo html_entity_decode($tour['tour_remark']) ?></p>
-                </div>
-                <div class="tab-pane" id="preferrenced-hotel">
-                   @include('include.hotels')
+          <div class="spacing"></div>
+        <div class="col-md-8" style="padding: 0px;">
+            <div id="" class="bor" style="margin-top:0; background-color: #eeeeee;">
+                <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+                    <li class="active"><a href="#highlights" data-toggle="tab">Highlights</a></li>
+                    <li><a href="#details" data-toggle="tab">Program Details</a></li>
+                    <li><a href="#service-include" data-toggle="tab">Price & Service Included</a></li>
+                    <li><a href="#preferrenced-hotel" data-toggle="tab"> <i class="fa fa-hotel (alias)"></i> Accommodation</a></li>
+                </ul>
+                <div id="my-tab-content" class="tab-content" style="background: white;">
+                    <div class="tab-pane active" id="highlights">
+                        <p><?php echo html_entity_decode($tour['tour_intro']) ?></p>
+                    </div>
+                    <div class="tab-pane " id="details">
+                        <p><?php echo html_entity_decode($tour['tour_desc']) ?></p>
+                    </div>
+                    <div class="tab-pane " id="service-include">
+                        <p><?php echo html_entity_decode($tour['tour_remark']) ?></p>
+                    </div>
+                    <div class="tab-pane" id="preferrenced-hotel">
+                       @include('include.hotels')
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>  
-
-        <div class="col-md-4 padd" style="">
-            <div id="" class="bor" style="margin-top:0; background-color: #eeeeee;">
+        </div>   
+        <div class="col-md-4" style="padding: 0px;">    
+            <div  class="bor" style="margin-top:0; background-color: #eeeeee;">
                 <?php   
                     $getTour = \App\Tour::getTourByWeek($tour->id);
                     $data    = round($getTour->count()/3);
@@ -266,60 +261,60 @@
                        echo  $data =1;
                     }
                 ?>  
-                    <div class="title text-center">
-                        <h4 style="font-weight: 500;">RECENT VIEW
-                            <div style="border-bottom: 2px solid #ddd;width: 100%;  padding-top: 6px;"></div>
-                        </h4>
-                    </div>  
-                    @foreach($getTour->chunk($data) as $get)
-                        <section class="wow fadeInUp" >
-                            <div class="owl-carousel clients-carousel-1" style="height: auto;">
-                                @foreach($get as $tour)
-                                    <div class="list-group-item b_list">
-                                        <div class="col-md-4">
-                                          <div class="row" style="text-align: center;padding-top:5px;">
-                                             <a href="{{route('tourDetails', ['url'=> $tour->slug])}}">                                 
-                                                <img src="{{Shared::getInstance()->urlResource($tour->tour_photo, $tour->user_id)}}" frameborder="0" allow="accelerometer;  ; encrypted-media; gyroscope; picture-in-picture" allowfullscreen  class="img-responsive img-box img-thumbnail" style="padding:0px;"> 
-                                             </a>
-                                          </div>
-                                        </div>    
-                                        <div class="col-md-8">
-                                            <h3 class="text-danger" style="font-size: 16px; font-weight: 500; margin: 5px 0;"><b> ${{Shared::money($tour->tour_price)}}</b>/<small>Per Person</small>
-                                            </h3>                              
-                                            <div>
-                                                <a href="{{route('tourDetails', ['url'=> $tour->slug])}}" >
-                                                    <p style="font-size: 12px;height: 38px;">{!! str_limit($tour->tour_name,50) !!}</p>
-                                                </a>
-                                            </div>
-                                                <?php
-                                                $today      = new DateTime('now', new DateTimeZone('Asia/bangkok'));
-                                                $ft         = $today->format('y-m-d h:i:s ');
-                                                $datetime1  = new DateTime($tour->date);
-                                                $datetime2  = new DateTime($ft);
-                                                $interval   = $datetime1->diff($datetime2);                         
-                                                $day        = '';
-                                                $hour       = '';
-                                                $min        = '';
-                                                if  ($interval->d>0){
-                                                    $day    = ($interval->d+1).' Day';
-                                                }else{
-                                                    if ($interval->h>12) {
-                                                    $day    ='Yesterday';
-                                                    }else{
-                                                    $hour   =  $interval->h.' Hour ';
-                                                    $min    =$interval->i.' Minute';
-                                                    }
-                                                }
-                                                ?>      
-                                            <div>{{isset($day)? $day: ''}}{{isset($hour)? $hour: ''}} {{isset($min)? $min: ''}}</div>
-                                            <div class="clearfix"></div>
+                <div class="title text-center">
+                    <h4 style="font-weight: 500;">RECENT VIEW
+                        <div style="border-bottom: 2px solid #ddd;width: 100%;  padding-top: 6px;"></div>
+                    </h4>
+                </div>  
+                @foreach($getTour->chunk($data) as $get)
+                    <section class="wow fadeInUp" >
+                        <div class="owl-carousel clients-carousel-1" style="height: auto;">
+                            @foreach($get as $tour)
+                                <div class="list-group-item b_list">
+                                    <div class="col-md-4">
+                                      <div class="row" style="text-align: center;padding-top:5px;">
+                                         <a href="{{route('tourDetails', ['url'=> $tour->slug])}}">                                 
+                                            <img src="{{Shared::getInstance()->urlResource($tour->tour_photo, $tour->user_id)}}" frameborder="0" allow="accelerometer;  ; encrypted-media; gyroscope; picture-in-picture" allowfullscreen  class="img-responsive img-box img-thumbnail" style="padding:0px;"> 
+                                         </a>
+                                      </div>
+                                    </div>    
+                                    <div class="col-md-8">
+                                        <h3 class="text-danger" style="font-size: 16px; font-weight: 500; margin: 5px 0;"><b> ${{Shared::money($tour->tour_price)}}</b>/<small>Per Person</small>
+                                        </h3>                              
+                                        <div>
+                                            <a href="{{route('tourDetails', ['url'=> $tour->slug])}}" >
+                                                <p style="font-size: 12px;height: 38px;">{!! str_limit($tour->tour_name,50) !!}</p>
+                                            </a>
                                         </div>
+                                            <?php
+                                            $today      = new DateTime('now', new DateTimeZone('Asia/bangkok'));
+                                            $ft         = $today->format('y-m-d h:i:s ');
+                                            $datetime1  = new DateTime($tour->date);
+                                            $datetime2  = new DateTime($ft);
+                                            $interval   = $datetime1->diff($datetime2);                         
+                                            $day        = '';
+                                            $hour       = '';
+                                            $min        = '';
+                                            if  ($interval->d>0){
+                                                $day    = ($interval->d+1).' Day';
+                                            }else{
+                                                if ($interval->h>12) {
+                                                $day    ='Yesterday';
+                                                }else{
+                                                $hour   =  $interval->h.' Hour ';
+                                                $min    =$interval->i.' Minute';
+                                                }
+                                            }
+                                            ?>      
+                                        <div>{{isset($day)? $day: ''}}{{isset($hour)? $hour: ''}} {{isset($min)? $min: ''}}</div>
                                         <div class="clearfix"></div>
-                                    </div>                                                                                  
-                                @endforeach
-                            </div>              
-                        </section> 
-                    @endforeach            
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>                                                                                  
+                            @endforeach
+                        </div>              
+                    </section> 
+                @endforeach            
             </div>       
 
             <div class="col-md-12" style="  margin-bottom: 22px;background-color: #fff;border: 1px solid transparent;border-radius: 4px;box-shadow: 0 1px 1px rgba(0,0,0,.05);">
@@ -329,19 +324,16 @@
                 <p>If you cancel your holiday, you must inform us in writing before the departure date. Based on your written instructions before your departure date, cancellation fees will be applied as follows:<br />
                 45 days or more: No cancellation fee and your deposit will be refunded, however you will have to bear the bank charges for any refunds.</p>
 
-                <ul>
+                <ul style="font-size: 13px">
                     <li><span>44 days &ndash; 30 days: 30% of total tour package price</span></li>
                     <li><span>29 days &ndash; 21 days: 50% of total tour package price</span></li>
                     <li><span>20 days &ndash; 15 days: 75% of total tour package price</span></li>
                     <li><span>14 day or no show: 100% of total tour package price</span></li>
                     <li><span>After commencement of travel no refund either in full or in part, will be given for unused services included in the program unless it is directly caused by Asia Expeditions.</span></li>
                 </ul>
-            </div>     
-            
-            </div>
+            </div>  
         </div>
-        
-
+    </div>
 </div><div class="spacing"></div>
 <div class="container">
         @if($tourLink->count() > 0)

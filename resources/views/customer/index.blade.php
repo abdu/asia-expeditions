@@ -68,7 +68,7 @@
                                         <div class="form-group1">
                                           <label class="bmd-label-floating">Nationality</label>                                
                                             <select class="form-control1" name="nation">
-                                              @foreach(App\Country::orderBy('nationality')->get() as $con)
+                                              @foreach(App\Country::whereNotNull('nationality')->orderBy('nationality')->get() as $con)
                                                 <option value="{{$con->id}}" {{ $data->nationality== $con->id ? 'selected':''}}>{{$con->nationality}}</option>
                                               @endforeach
                                             </select>
@@ -98,7 +98,7 @@
                                         <div class="form-group1">
                                           <label class="bmd-label-floating">Town / City</label>
                                           <select class="form-control1" name="town_city">
-                                            @foreach(App\Province::orderBy('id')->get() as $pro)
+                                            @foreach(App\Province::orderBy('province_name')->get() as $pro)
                                                 <option value="{{$pro->id}}" {{  $data->province_id== $pro->id ? 'selected':''}}>{{$pro->province_name}}</option>
                                             @endforeach
                                           </select>
@@ -108,7 +108,7 @@
                                         <div class="form-group1">
                                           <label class="bmd-label-floating">Country / State</label>
                                           <select class="form-control1" name="country_state">
-                                            @foreach(App\Country::orderBy('id')->get() as $con)
+                                            @foreach(App\Country::whereNotNull('country_name')->orderBy('id')->get() as $con)
                                               <option value="{{$con->id}}" {{  $data->country_id== $con->id ? 'selected':''}}>{{$con->country_name}}</option>
                                             @endforeach
                                           </select>
