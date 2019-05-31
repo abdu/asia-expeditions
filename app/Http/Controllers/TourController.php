@@ -118,7 +118,7 @@ class TourController extends Controller
             $adds->nationality = $req->nationality;        
                 if($adds->save()){
                  $add_item              = new ItemOrder;
-                 $add_item->item_id     = $req->tour_id;
+                 $add_item->tour_id     = $req->tour_id;
                  $add_item->customer_id = $adds->id;
                  $add_item->price       = $req->tour_price;
                  $add_item->fdate       = $req->fdate;
@@ -131,7 +131,7 @@ class TourController extends Controller
 
         }
             $add_item              = new ItemOrder;
-            $add_item->item_id     = $req->tour_id;
+            $add_item->tour_id     = $req->tour_id;
             $add_item->customer_id = User::getIdByEmail($req->email)->id;
             $add_item->price       = $req->tour_price;
             $add_item->fdate       = $req->fdate;

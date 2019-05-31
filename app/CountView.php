@@ -9,7 +9,7 @@ class CountView extends Model
       protected $table = 'tbl_countview';
 
        public static function Getdate($getde, $ip, $tour_id){
-       return self::where(['created_at'=> $getde, 'ip'=> $ip, 'tour_id'=> $tour_id])->first();
+       return self::where(['created_at'=> $getde, 'ip'=> $ip, 'tour_id'=> $tour_id,'user_id'=>\Auth::id()])->first();
     }
 
     public function tour(){
