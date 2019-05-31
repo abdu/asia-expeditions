@@ -12246,7 +12246,7 @@ fieldset[disabled] .form-group1.is-focused .togglebutton label {
 
 .table>thead>tr>th {
   border-bottom-width: 1px;
-  font-size: 1.0625rem;
+  font-size: 1.25rem;
   font-weight: 300;
 }
 
@@ -12290,7 +12290,7 @@ fieldset[disabled] .form-group1.is-focused .togglebutton label {
 }
 
 .table thead tr th {
-  font-size: 1.063rem;
+  font-size: 1.453rem;
 }
 
 .table .th-description {

@@ -40,7 +40,7 @@ use App\Wishlist;
 // 	return view('emails.sendtemplate.sendtemplate');
 // });
 
-
+Route::get('/sitemap.xml', 'SitemapController@index');
 Route::get("/category/{name}", "CategoryController@getCategory")->name("category"); 
 
 Route::get('/', 'HomeController@index')->name('index');

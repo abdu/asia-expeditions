@@ -44,132 +44,133 @@
                   <div class="tab-content">
                     <div class="tab-pane active" id="profile">
                       <table class="table">                    
-                            <div class="card-body">
-                                <?php $data=\App\User::where('id',Auth::user()->id)->first(); ?>
-                                <form action="{{route('doAccount')}}" method="post">
-                                    {{ csrf_field() }}
-                                    <input type="hidden"  name="id" value="{{$data->id}}">
-                                    <div class="row">          
-                                      <div class="col-md-6 col-sm-12">
-                                        <div class="form-group1">
-                                          <label class="bmd-label-floating">Fist Name</label>
-                                          <input type="text" class="form-control1" name="first_name" value="{{$data->name}}" required="">
-                                        </div>
-                                      </div>
-                                      <div class="col-md-6 col-sm-12">
-                                        <div class="form-group1">
-                                          <label class="bmd-label-floating">Last name</label>
-                                          <input type="text" class="form-control1" name="last_name" value="{{$data->last}}" required="">
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div class="row">
-                                      <div class="col-md-4 col-sm-12">
-                                        <div class="form-group1">
-                                          <label class="bmd-label-floating">Nationality</label>                                
-                                            <select class="form-control1" name="nation">
-                                              @foreach(App\Country::orderBy('nationality')->get() as $con)
-                                                <option value="{{$con->id}}" {{ $data->nationality== $con->id ? 'selected':''}}>{{$con->nationality}}</option>
-                                              @endforeach
-                                            </select>
-                                        </div>
-                                      </div>
-                                      <div class="col-md-4 col-sm-12">
-                                        <div class="form-group1">
-                                          <label class="bmd-label-floating">Passport Number</label>
-                                          <input type="text" class="form-control1" name="passport_number" value="{{isset($data->passport)? $data->passport: ''}}" required="">
-                                        </div>
-                                      </div>                            
-                                      <div class="col-md-4 col-sm-12">
-                                        <div class="form-group1">
-                                          <label class="bmd-label-floating">Expiry Date</label>
-                                          <input type="tett" class="form-control1" name="expiry_date" value="{{$data->expiry_date}}" id="expiry_date" required="">
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div class="row">
-                                      <div class="col-md-4 col-sm-12">
-                                        <div class="form-group1">
-                                          <label class="bmd-label-floating">Address Street</label>
-                                          <input type="text" class="form-control1"  name="address_street" value="{{$data->address}}" required="">
-                                        </div>
-                                      </div>
-                                      <div class="col-md-4 col-sm-12">
-                                        <div class="form-group1">
-                                          <label class="bmd-label-floating">Town / City</label>
-                                        
-                                          <select class="form-control1" name="town_city">
-                                                @foreach(App\Province::orderBy('id')->get() as $pro)
-                                                    <option value="{{$pro->id}}" {{  $data->province_id== $pro->id ? 'selected':''}}>{{$pro->province_name}}</option>
-                                                @endforeach
-                                          </select>
-
-                                        </div>
-                                      </div>
-                                      <div class="col-md-4 col-sm-12">
-                                        <div class="form-group1">
-                                          <label class="bmd-label-floating">Country / State</label>
-                                         
-                                          <select class="form-control1" name="country_state">
-                                                @foreach(App\Country::orderBy('id')->get() as $con)
-                                                    <option value="{{$con->id}}" {{  $data->country_id== $con->id ? 'selected':''}}>{{$con->country_name}}</option>
-                                                @endforeach
-                                          </select>
-
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div class="row">
-                                      <div class="col-md-4 col-sm-12">
-                                        <div class="form-group1">
-                                          <label class="bmd-label-floating"> Zip / Postal Code</label>
-                                          <input type="text" class="form-control1"  name="zip_code" value="{{$data->postal}}" required="">
-                                        </div>
-                                      </div>
-                                      <div class="col-md-4 col-sm-12">
-                                        <div class="form-group1">
-                                          <label class="bmd-label-floating">Phone Number</label>
-                                          <input type="text" class="form-control1" name="phone_number" value="{{$data->phone}}" required="">
-                                        </div>
-                                      </div>
-                                      <div class="col-md-4 col-sm-12">
-                                        <div class="form-group1">
-                                          <label class="bmd-label-floating">Email Address</label>
-                                          <input type="text" class="form-control1" name="email" value="{{$data->email}}" required="">
-                                        </div>
-                                      </div>
-                                    </div>
-                          
-                                    <button type="submit" class="btn btn-rose pull-right">Update Profile</button>
-                                    <div class="clearfix"></div>
-                                </form>
-                            </div>                            
+                        <div class="card-body">
+                          <?php $data=\App\User::where('id',Auth::user()->id)->first(); ?>
+                          <form action="{{route('doAccount')}}" method="post">
+                            {{ csrf_field() }}
+                            <input type="hidden"  name="id" value="{{$data->id}}">
+                            <div class="row">          
+                              <div class="col-md-6 col-sm-12">
+                                <div class="form-group1">
+                                  <label class="bmd-label-floating">Fist Name</label>
+                                  <input type="text" class="form-control1" name="first_name" value="{{$data->name}}" required="">
+                                </div>
+                              </div>
+                              <div class="col-md-6 col-sm-12">
+                                <div class="form-group1">
+                                  <label class="bmd-label-floating">Last name</label>
+                                  <input type="text" class="form-control1" name="last_name" value="{{$data->last}}" required="">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-4 col-sm-12">
+                                <div class="form-group1">
+                                  <label class="bmd-label-floating">Nationality</label>                                
+                                  <select class="form-control1" name="nation">
+                                    @foreach(App\Country::orderBy('nationality')->get() as $con)
+                                      <option value="{{$con->id}}" {{ $data->nationality== $con->id ? 'selected':''}}>{{$con->nationality}}</option>
+                                    @endforeach
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="col-md-4 col-sm-12">
+                                <div class="form-group1">
+                                  <label class="bmd-label-floating">Passport Number</label>
+                                  <input type="text" class="form-control1" name="passport_number" value="{{isset($data->passport)? $data->passport: ''}}" required="">
+                                </div>
+                              </div>                            
+                              <div class="col-md-4 col-sm-12">
+                                <div class="form-group1">
+                                  <label class="bmd-label-floating">Expiry Date</label>
+                                  <input type="tett" class="form-control1" name="expiry_date" value="{{$data->expiry_date}}" id="expiry_date" required="">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-4 col-sm-12">
+                                <div class="form-group1">
+                                  <label class="bmd-label-floating">Address Street</label>
+                                  <input type="text" class="form-control1"  name="address_street" value="{{$data->address}}" required="">
+                                </div>
+                              </div>
+                              <div class="col-md-4 col-sm-12">
+                                <div class="form-group1">
+                                  <label class="bmd-label-floating">Town / City</label>                                        
+                                  <select class="form-control1" name="town_city">
+                                    @foreach(App\Province::orderBy('id')->get() as $pro)
+                                      <option value="{{$pro->id}}" {{  $data->province_id== $pro->id ? 'selected':''}}>{{$pro->province_name}}</option>
+                                    @endforeach
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="col-md-4 col-sm-12">
+                                <div class="form-group1">
+                                  <label class="bmd-label-floating">Country / State</label>                                         
+                                  <select class="form-control1" name="country_state">
+                                    @foreach(App\Country::orderBy('id')->get() as $con)
+                                      <option value="{{$con->id}}" {{  $data->country_id== $con->id ? 'selected':''}}>{{$con->country_name}}</option>
+                                    @endforeach
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 col-sm-12">
+                                  <div class="form-group1">
+                                    <label class="bmd-label-floating"> Zip / Postal Code</label>
+                                    <input type="text" class="form-control1"  name="zip_code" value="{{$data->postal}}" required="">
+                                  </div>
+                                </div>
+                                <div class="col-md-4 col-sm-12">
+                                  <div class="form-group1">
+                                    <label class="bmd-label-floating">Phone Number</label>
+                                    <input type="text" class="form-control1" name="phone_number" value="{{$data->phone}}" required="">
+                                  </div>
+                                </div>
+                                <div class="col-md-4 col-sm-12">
+                                  <div class="form-group1">
+                                    <label class="bmd-label-floating">Email Address</label>
+                                    <input type="text" class="form-control1" name="email" value="{{$data->email}}" required="">
+                                  </div>
+                                </div>
+                            </div>                          
+                            <button type="submit" class="btn btn-rose pull-right">Update Profile</button><div class="clearfix"></div>
+                          </form>
+                        </div>                            
                       </table>
                     </div>
                     <div class="tab-pane" id="messages">
-                      <table class="table">
-                        <div class="col-md-12"><?php $getdata=\App\ItemOrder::where('customer_id', Auth::id())->get(); ?>
-
-                          
-                            @if($getdata->count()>0)
-                              @foreach($getdata as $item)
-                              <div class="card" style="margin-top: 0px;">
-                                <div class="card-header "><center> <h4 style="width: 150px;height: 35px; font-weight: 600!important; border-bottom:1px solid #2d95d09e;">Details</h4></center> 
-                                </div>
-                                <div class="card-body">  
-                                  <p> Tour Name: {{$item->tour->tour_name}}</p><hr>
-                                  <p> From Date: {{$item->fdate}}</p><hr>
-                                  <p> To Date: {{$item->tdate}}</p><hr>
-                                  <p> Additional Requests : {{$item->a_requests}}</p><hr>
-                                </div>
-                              </div>
-                              @endforeach                            
+                      <div class="table-responsive">
+                        <table class="table">
+                          <div class="col-md-12"><?php $getdata=\App\ItemOrder::where('customer_id', Auth::id())->get(); $n=1; ?>
+                            @if($getdata->count()>0)                              
+                              <thead class="text-primary">
+                                <tr> 
+                                  <th width="15">No</th>
+                                  <th>Tour Name</th>
+                                  <th>From Date</th>
+                                  <th>To Date</th>                                  
+                                  <th>Additional Requests</th>                                
+                                </tr>
+                              </thead>
+                              @foreach($getdata as $item)                            
+                                <tbody>
+                                  <tr>
+                                    <td>{{$n++}}</td>
+                                    <td>{{$item->tour->tour_name}}</td>
+                                    <td>{{$item->fdate}}</td>
+                                    <td>{{$item->tdate}}</td>
+                                    <td>{{str_limit($item->a_requests,120)}}</td>
+                                  </tr>
+                                </tbody>                     
+                              @endforeach                                                         
                             @else
                                 <span> Your Tour Details is empty  <span class="fa fa-info-circle"></span></span>
-                            @endif
-                                                      
-                        </div>
-                      </table>
+                            @endif                                                      
+                          </div>
+                        </table>
+                      </div>
                     </div>
                     <div class="tab-pane" id="settings">
                       <table class="table">
@@ -197,8 +198,7 @@
                                   <label class="bmd-label-floating">Re-New Password</label>
                                   <input type="password" class="form-control1" name="re_new_password" required="">
                                 </div>
-                              </div>
-                      
+                              </div>                      
                             </div>             
                             <button type="submit" class="btn btn-rose pull-right">Update Profile</button>
                             <div class="clearfix"></div>
@@ -210,7 +210,6 @@
                 </div>
               </div>
             </div>
-
             <div class="col-md-4 col-sm-12">
               <div class="card card-profile">
                 <div class="card-avatar">
@@ -273,19 +272,18 @@
           <div class="text-center" > {{ $getself->links() }} </div> 
         </div>
       </div>
-
 <script>
-    $(document).ready(function () {
-      var formatdate = "yyyy-mm-dd";
-      var nowTemp = new Date();
-      var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
-      var book_date = $("#expiry_date").datepicker({
-        format: formatdate,
-        onReder: function(date) {}
-        }).on('changeDate', function(ev){       
-             $(this).datepicker('hide');
-        }).data('datepicker');
-    });
+  $(document).ready(function () {
+    var formatdate = "yyyy-mm-dd";
+    var nowTemp = new Date();
+    var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
+    var book_date = $("#expiry_date").datepicker({
+      format: formatdate,
+      onReder: function(date) {}
+      }).on('changeDate', function(ev){       
+           $(this).datepicker('hide');
+      }).data('datepicker');
+  });
 </script>
 
        @include('include.user_upload')

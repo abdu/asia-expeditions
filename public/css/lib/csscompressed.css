@@ -15281,8 +15281,9 @@ ul li iframe#twitter-widget-0 div.widget .btn-o a.btn {
         color: white;
         padding: 9px 0px 9px 10px;
     }
-
-
+    .padd{
+        padding: 25px 0 0 0px;
+    }
 
 }
 @media (max-width: 992px)  {
@@ -15296,13 +15297,14 @@ ul li iframe#twitter-widget-0 div.widget .btn-o a.btn {
 @media (max-width: 991px)  {
 
      #amazingslider-1 {
-    width: 718px !important;}
+        width: 718px !important;
+    }
 }
 @media (max-width: 776px)  {
 
      #amazingslider-1 {
-    width: 100% !important;
-}
+        width: 100% !important;
+    }
 
 
 }
