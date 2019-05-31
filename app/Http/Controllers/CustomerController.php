@@ -21,28 +21,28 @@ class CustomerController extends Controller
 
     public function doAccount(Request $req){
         // return $req->all();
-        $cusA = Customer::Where('id', $req->id)->first();
-        $cusA->name = $req->first_name;
-        $cusA->last = $req->last_name;
-        $cusA->fullname = $req->first_name." ".$req->last_name;
+        $cusA              = User::find($req->id);
+        $cusA->name        = $req->first_name;
+        $cusA->last        = $req->last_name;
+        $cusA->fullname    = $req->first_name." ".$req->last_name;
         $cusA->nationality = $req->nation;
-        $cusA->passport = $req->passport_number;
+        $cusA->passport    = $req->passport_number;
         $cusA->expiry_date = $req->expiry_date;              
-        $cusA->address = $req->address_street;
+        $cusA->address     = $req->address_street;
         $cusA->province_id = $req->town_city;
-        $cusA->country_id = $req->country_state;
-        $cusA->postal_code = $req->zip_code;
-        $cusA->phone = $req->phone_number;
-        $cusA->email = $req->email;  
-        $cusA->created_at = date('Y-m-d');
-        $cusA->updated_at = date('Y-m-d');
+        $cusA->country_id  = $req->country_state;
+        $cusA->postal      = $req->zip_code;
+        $cusA->phone       = $req->phone_number;
+        $cusA->email       = $req->email;  
+        $cusA->created_at  = date('Y-m-d');
+        $cusA->updated_at  = date('Y-m-d');
         $cusA->save();
         return back()->with(['message'=> 'you has been update profile','get'=>'success']);;
     }
 
     public function doCreateNewPassword(Request $req){
         $validator = Validator::make($req->all(), [
-            'new_password' =>  'required|min:6',
+            'new_password'    =>  'required|min:6',
             're_new_password' =>  'required|min:6|same:new_password',           
         ]);
         if ($validator->fails()) {
@@ -65,12 +65,12 @@ class CustomerController extends Controller
     public function do_set_login(Request $req){
         if (!User::getpass($req->email,$req->new_password)) {
             $validator = Validator::make($req->all(), [
-                'email' => 'required|email',
+                'email'        => 'required|email',
                 'new_password' => 'required|min:6',
-                're_password' => 'required_with:new_password|same:new_password|min:6'
+                're_password'  => 'required_with:new_password|same:new_password|min:6'
             ]);        
             if(!$validator->fails()){
-                $add                 = user::Where('email', $req->email)->first();
+                $add                 = User::Where('email', $req->email)->first();
                 $add->password       = bcrypt($req->new_password);
                 $add->password_text  = $req->new_password;
                 $add->remember_token = $req->_token;

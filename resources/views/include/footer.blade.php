@@ -101,7 +101,7 @@
 
     } else {
       $('#goTotop').fadeOut('slow');
-      
+      $('.wrapper-menu').removeClass('act');
     }
   });
   

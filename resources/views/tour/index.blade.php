@@ -20,8 +20,11 @@
 <meta property="twitter:creator" content="{{Config('app.name')}}">
 <meta property="twitter:image:src" content="{{Shared::getInstance()->urlResourceBig($tour->tour_photo, $tour->user_id)}}">        
 <meta property="twitter:domain" content="https://asia-expeditions.com">
+<link rel="stylesheet" type="text/css" href="{{asset('sliderengine/amazingslider-1.css')}}">
+
 
 @section('content')
+<script src="{{asset('sliderengine/amazingslider.js')}}"></script>
 @include("include.menu")
 
 <style type="text/css">
@@ -251,15 +254,17 @@
                     </div>
                 </div>
             </div>
-        </div>   
-        <div class="col-md-4" style="padding: 0px;">    
-            <div  class="bor" style="margin-top:0; background-color: #eeeeee;">
-                <?php   
-                    $getTour = \App\Tour::getTourByWeek($tour->id);
-                    $data    = round($getTour->count()/3);
-                    if($data==0){
-                       echo  $data =1;
-                    }
+
+        </div>
+    </div>  
+
+        <div class="col-md-4 padd" style="">
+            <div id="" class="bor" style="margin-top:0; background-color: #eeeeee;">
+                <?php   $getTour = \App\Tour::getTourByWeek($tour->id);
+                        $data    = round($getTour->count()/3);
+                        if($data==0){
+                         $data =1;
+                        }
                 ?>  
                 <div class="title text-center">
                     <h4 style="font-weight: 500;">RECENT VIEW
@@ -421,7 +426,7 @@
         var formatdate = "yyyy-mm-dd";
         var nowTemp = new Date();
         var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(),nowTemp.getDate(), 0, 0, 0, 0);
-        
+
         $("#date_start").datepicker({
         }).on('changeDate', function(ev){             
             $('#date_end').datepicker('show');       

@@ -51,17 +51,18 @@ class UserController extends Controller
         
     	if ($req->dataAction == "btn_Save" ) {
     		if (!User::emailExit($req->email)) {
-    			$auser = new User;
-		    	$auser->first = $req->fullname;
-		    	$auser->name = $req->username;
-		    	$auser->remember_token = $req->_token;
-		    	$auser->web = 1;
-		    	$auser->password = bcrypt($req->password);
-		    	$auser->password_text = $req->password;
-		    	$auser->email = $req->email;
-		    	$auser->phone = $req->phone;
-		    	$auser->date = date('Y-m-d');
-		    	$auser->updated_at = date('Y-m-d');
+    			$auser                  = new User;
+		    	$auser->first           = $req->fullname;
+		    	$auser->name            = $req->username;
+		    	$auser->remember_token  = $req->_token;
+		    	$auser->web             = 1;
+		    	$auser->password        = bcrypt($req->password);
+		    	$auser->password_text   = $req->password;
+		    	$auser->email           = $req->email;
+		    	$auser->phone           = $req->phone;
+		    	$auser->date            = date('Y-m-d');
+		    	$auser->updated_at      = date('Y-m-d');
+                $auser->picture         ='me.png' 
 		    	$auser->save();
 		    	return response()
 	            ->json(['status' => 'Yes', 'message' => 'One user has been added']);
@@ -71,17 +72,17 @@ class UserController extends Controller
     		}   
     	}else{
     		// return $req->id;
-    		$euser = User::find($req->id);
-    		$euser->first = $req->fullname;
-    		$euser->name = $req->username;
+    		$euser                 = User::find($req->id);
+    		$euser->first          = $req->fullname;
+    		$euser->name           = $req->username;
     		$euser->remember_token = $req->_token;
-		    $euser->web = 1;
-    		$euser->password = bcrypt($req->password);
-    		$euser->password_text = $req->password;
-    		$euser->email = $req->email;
-    		$euser->phone = $req->phone;
-    		$euser->date = date('Y-m-d');
-	    	$euser->updated_at = date('Y-m-d');
+		    $euser->web            = 1;
+    		$euser->password       = bcrypt($req->password);
+    		$euser->password_text  = $req->password;
+    		$euser->email          = $req->email;
+    		$euser->phone          = $req->phone;
+    		$euser->date           = date('Y-m-d');
+	    	$euser->updated_at    = date('Y-m-d');
     		$euser->save();
     		return response()
             ->json(['status' => 'Yes', 'message' => 'Update Successfully']);
@@ -116,12 +117,12 @@ class UserController extends Controller
 
     public function updateUser(Request $req){
     	if ($req->action == 'enable') {
-    		$eUser = User::find($req->id);
+    		$eUser         = User::find($req->id);
 	    	$eUser->status = null;
 	    	$eUser->save();
     		return response()->json(['message'=> 'Successfully']);
     	}else{
-    		$eUser = User::find($req->id);
+    		$eUser         = User::find($req->id);
 	    	$eUser->status = 1;
 	    	$eUser->save();
     		return response()->json(['message'=> 'Successfully']);

@@ -29,9 +29,9 @@ class CartController extends Controller
 
     public function addTocart(Request $request, $id)
     {
-        $tour = Tour::find($id);
+        $tour    = Tour::find($id);
         $oldCart = Session::has('cart') ? Session::get('cart') : null;
-        $cart = new Cart($oldCart);
+        $cart    = new Cart($oldCart);
         $cart->addToCart($tour, $id);
         $request->session()->put('cart', $cart);
         Auth::check()? Wishlist::addWishlist($id):'';        
@@ -40,9 +40,9 @@ class CartController extends Controller
 
     public function updateCart(Request $request, $id)
     {
-        $tour = Tour::find($id);
+        $tour    = Tour::find($id);
         $oldCart = Session::has('cart') ? Session::get('cart') : null;
-        $cart = new Cart($oldCart);
+        $cart    = new Cart($oldCart);
         $cart->EditCart($tour, $id, $request);
         $request->session()->put('cart', $cart);
         \Auth::check() ? Wishlist::updateWishlist($id, $request) : '';
@@ -53,7 +53,7 @@ class CartController extends Controller
     public function getCart(Request $reqest)
     {
         $oldCart = Session::has('cart') ? Session::get('cart') : null;     
-        $cart = new Cart($oldCart);        
+        $cart    = new Cart($oldCart);        
         return view('cart.shopping-cart', ['tours_cart' => $cart->items]);
     }
 
@@ -86,16 +86,16 @@ class CartController extends Controller
     {
         $validator = Validator::make($req->all(), [
             'passport_number' => 'required',
-            'address_street' => 'required',
-            'first_name' => 'required',
-            'last_name' => 'required',
-            'nationality' => 'required',
-            'town_city' => 'required',
-            'expiry_date' => 'required',
-            'country_state' => 'required',
-            'phone_number' => 'required',
-            'email' => 'required',
-            'password' => 'required',
+            'address_street'  => 'required',
+            'first_name'      => 'required',
+            'last_name'       => 'required',
+            'nationality'     => 'required',
+            'town_city'       => 'required',
+            'expiry_date'     => 'required',
+            'country_state'   => 'required',
+            'phone_number'    => 'required',
+            'email'           => 'required',
+            'password'        => 'required',
         ]);
         if (!$validator->fails()) {
             if (User::getExitEmail($req->email)) {
@@ -112,7 +112,7 @@ class CartController extends Controller
                 $cus->province_id   = $req->town_city;
                 $cus->country_id    = $req->country_state;
                 $cus->nationality   = $req->nationality;
-                $cus->phone  = $req->phone_number;
+                $cus->phone         = $req->phone_number;
                 $cus->email         = $req->email;
                 $cus->postal        = $req->zip_code;
                 $cus->role_id       = 7;
@@ -132,27 +132,27 @@ class CartController extends Controller
     public function Login(Request $req)
     {
         $validator = Validator::make($req->all(), [
-            'email_log' => 'required|email',
+            'email_log'    => 'required|email',
             'password_log' => 'required|min:6'
         ]);
 
         if (!$validator->fails() ) {
             if (\Auth::attempt(['email'=>$req->email_log, 'password'=>$req->password_log, 'banned'=>1])) {
                 $itemWish = Wishlist::where('user_id', \Auth::user()->id)->get();
-                $oldCart = Session::has('cart') ? Session::get('cart') : null;
+                $oldCart  = Session::has('cart') ? Session::get('cart') : null;
                 if ($itemWish->count() > 0) {
                     foreach ($itemWish as $key => $data) {
                         $synData = Tour::find($data['tour_id']);                   
-                        $cart = new Cart($oldCart);
+                        $cart    = new Cart($oldCart);
                         $cart->Synchronize($synData, $data->item_qty, $synData->id);
                         $req->session()->put('cart', $cart);
                     }
                 } else {
                     if (Session::has('cart')) {
                         foreach (Session::get('cart')->items as $key => $cart) {
-                            $addWish = new Wishlist;
-                            $addWish->user_id = Auth::user()->id;
-                            $addWish->tour_id = $cart['item']['id'];
+                            $addWish           = new Wishlist;
+                            $addWish->user_id  = Auth::user()->id;
+                            $addWish->tour_id  = $cart['item']['id'];
                             $addWish->item_qty = $cart['qty'];
                             $addWish->save();
                         }
@@ -178,9 +178,9 @@ class CartController extends Controller
         if (empty(Session::get('cart')->items)) {
             return redirect('shopping-cart');
         } else {
-            $userId = Auth::user()->id;
+            $userId  = Auth::user()->id;
             $oldcart = Session::get('cart');
-            $cart = new Cart($oldcart);
+            $cart    = new Cart($oldcart);
             return view('checkout.payment', ['carts' => $cart->items, 'userId' => $userId]);
         }
     }
@@ -193,35 +193,36 @@ class CartController extends Controller
     public function getReturn(Request $req)
     {
         if ($req->vpc_TxnResponseCode == '0') {
-            $amount = substr($req->vpc_Amount, 0, -2);
-            $inv = new Invoice;
-            $inv->merchant_transaction = $req->vpc_MerchTxnRef;
-            $inv->merchant_id = $req->vpc_Merchant;
-            $inv->order_info = $req->vpc_OrderInfo;
-            $inv->amount = $amount;
-            $inv->locale = $req->vpc_Locale;
-            $inv->invoice_number = $req->vpc_MerchTxnRef;
-            $inv->transaction_number = $req->vpc_TransactionNo;
+            $amount                     = substr($req->vpc_Amount, 0, -2);
+            $inv                        = new Invoice;
+            $inv->merchant_transaction  = $req->vpc_MerchTxnRef;
+            $inv->merchant_id           = $req->vpc_Merchant;
+            $inv->order_info            = $req->vpc_OrderInfo;
+            $inv->amount                = $amount;
+            $inv->locale                = $req->vpc_Locale;
+            $inv->invoice_number        = $req->vpc_MerchTxnRef;
+            $inv->transaction_number    = $req->vpc_TransactionNo;
             $inv->bank_authorization_id = $req->vpc_MerchTxnRef;
-            $inv->batch_number = $req->vpc_BatchNo;
-            $inv->card_type = $req->vpc_Card;
-            $inv->customer_id = $req->vpc_OrderInfo; //get customer Id when customer login
-            if ($inv->save())
+            $inv->batch_number          = $req->vpc_BatchNo;
+            $inv->card_type             = $req->vpc_Card;
+            $inv->customer_id           = $req->vpc_OrderInfo; //get customer Id when customer login
+            if ($inv->save()){ 
                 $oldcart = Session::get('cart');
-            $cart = new Cart($oldcart);
-            foreach ($cart->items as $key => $item) {
-                $ord = new ItemOrder;
-                $ord->item_id = $item['item']['tour_id'];
-                $ord->item_qty = $item['qty'];
-                $ord->price = $item['item']['tour_price'];
-                $ord->invoice_number = $req->vpc_MerchTxnRef;
-                $ord->customer_id = $req->vpc_OrderInfo;
-                $ord->created_at = date('Y-m-d H:m:s');
-                $ord->updated_at = date('Y-m-d H:m:s');
-                if ($ord->save()) {
-                    Mail::to(config('app.email'))->send(new CustomerPaid());
-                    Session::forget('cart');
-                    Wishlist::clearWishlist($req->vpc_OrderInfo);
+                $cart    = new Cart($oldcart);
+                foreach ($cart->items as $key => $item) {
+                    $ord                 = new ItemOrder;
+                    $ord->item_id        = $item['item']['tour_id'];
+                    $ord->item_qty       = $item['qty'];
+                    $ord->price          = $item['item']['tour_price'];
+                    $ord->invoice_number = $req->vpc_MerchTxnRef;
+                    $ord->customer_id    = $req->vpc_OrderInfo;
+                    $ord->created_at     = date('Y-m-d H:m:s');
+                    $ord->updated_at     = date('Y-m-d H:m:s');
+                    if ($ord->save()) {
+                        Mail::to(config('app.email'))->send(new CustomerPaid());
+                        Session::forget('cart');
+                        Wishlist::clearWishlist($req->vpc_OrderInfo);
+                    }
                 }
             }
             return redirect()->route('check.invoice', ['inv_id' => $req->vpc_MerchTxnRef]);

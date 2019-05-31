@@ -20,8 +20,8 @@
 
   <!-- Insert to your webpage before the </head> -->
   <!-- <script src="{{asset('sliderengine/jquery.js')}}"></script> -->
-    <script src="{{asset('sliderengine/amazingslider.js')}}"></script>
-    <link rel="stylesheet" type="text/css" href="{{asset('sliderengine/amazingslider-1.css')}}">
+    
+    
     <script src="{{asset('sliderengine/initslider-1.js')}}"></script>
     <!-- End of head section HTML codes -->
      <!-- JavaScript Libraries -->
@@ -30,7 +30,7 @@
   <link href="{{asset('/add_lib/css/style.css')}}" rel="stylesheet">
   <link href="{{asset('/add_lib/lib/animate/animate.min.css')}}" rel="stylesheet">
   <link href="{{asset('/add_lib/lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
-  
+
   
 
 
@@ -103,6 +103,7 @@
   <script src="{{asset('/add_lib/lib/owlcarousel/owl.carousel.min.js')}}"></script>
   <script src="{{asset('/add_lib/lib/isotope/isotope.pkgd.min.js')}}"></script>
   <script src="{{asset('/add_lib/lib/touchSwipe/jquery.touchSwipe.min.js')}}"></script>
+  <script  type="text/javascript" src="{{asset('/js/uploadfile.js')}}" ></script>
   <script src="{{asset('/js/main.js')}}"></script>
 
 
