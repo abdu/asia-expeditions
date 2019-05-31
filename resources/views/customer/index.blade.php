@@ -143,14 +143,15 @@
                     <div class="tab-pane" id="messages">
                       <div class="table-responsive">
                         <table class="table">
-                          <div class="col-md-12"><?php $getdata=\App\ItemOrder::where('customer_id', Auth::id())->get(); $n=1; ?>
+                          <div class="col-md-12"><?php $getdata=\App\ItemOrder::where('user_id', Auth::id())->get(); $n=1; ?>
                             @if($getdata->count()>0)                              
                               <thead class="text-primary">
                                 <tr> 
                                   <th width="15">No</th>
-                                  <th>Tour Name</th>
-                                  <th>From Date</th>
-                                  <th>To Date</th>                                  
+                                  <th>Price/Pax</th>
+                                  <th width="370" >Tour Name</th>
+                                  <th width="300">From & To Date</th>
+                                  <th>Pax No</th>                                  
                                   <th>Additional Requests</th>                                
                                 </tr>
                               </thead>
@@ -158,9 +159,10 @@
                                 <tbody>
                                   <tr>
                                     <td>{{$n++}}</td>
-                                    <td>{{$item->tour->tour_name}}</td>
-                                    <td>{{$item->fdate}}</td>
-                                    <td>{{$item->tdate}}</td>
+                                    <th>{{$item->price}}</th>
+                                    <td><a href="{{route('tourDetails', ['url'=> $item->tour->slug])}}">{{$item->tour->tour_name}}</a></td>
+                                    <td>{{$item->fdate}} <i class="fa fa-arrow-circle-right"></i> {{$item->tdate}}</td>
+                                    <th>{{$item->pax_no}}</th>
                                     <td>{{str_limit($item->a_requests,120)}}</td>
                                   </tr>
                                 </tbody>                     
@@ -223,22 +225,53 @@
                   </a>
                 </div>
                 <div class="card-body">
-                  <h6 class="card-category text-gray">CEO / Co-Founder</h6>
-                  <h4 class="card-title">Alec Thompson</h4>
-                  <p class="card-description">
-                    Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+                  <h6 class="card-category text-gray"></h6>
+                  <h4 class="card-title">{{$data->fullname}}</h4>
+                  <p class="card-description">{{$data->email}}
+                   
                   </p>
-                  <a href="#pablo" class="btn btn-primary btn-round">Follow</a>
+                  <a class="btn btn-rose  btnUploadFiles" data-type="single-img" data-toggle="modal" data-target="#myUpload" href="#pablo">Upload Profle Photo</a>
                 </div>
               </div>
             </div>
-
-            <div class=" col-md-12 col-sm-12" >               
+            <div class="col-lg-12 col-md-12 col-sm-12" >               
                   <?php $getself = \App\Tour::getTourByUser();?>
               <div class="col-md-12 col-sm-12"style="border:0;box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);">
-                <h4 style="padding: 0px 0px 30px 0px;font-weight: 600!important;">RECENT VIEW</h4>
-                  @foreach($getself as $datas)           
-                    <div class="col-lg-3 col-md-3">
+                <h4 style="padding:0px;font-weight: 600!important;">RECENT VIEWED</h4>  
+                @if($getself->count() >4)             
+                  <div class="owl-carousel clients-carousel four" style="height: auto;">                   
+                    @foreach($getself as $datas)                      
+                      <div class="col-lg-12 col-md-12">
+                        <div class="card card-product" style="margin-top: 10px;">
+                          <div class="card-image" data-header-animation="">
+                            <a href="{{route('tourDetails', ['url'=> $datas->slug])}}">                                        
+                              <img class="img lazy" data-src="{{Shared::getInstance()->urlResource($datas->tour_photo, $datas->user_id)}}" style="width: 100%;" /></a>
+                          </div>
+                          <div class="stats text-center">
+                            <p class="category"><i class="fa fa-map-marker"></i> Barcelona, Spain</p>
+                          </div>
+                          <div class="card-content" style="padding: 0px 15px 0px 15px;">                
+                            <h3 class="card-title" style="height: 50px;">
+                                <a href="{{route('tourDetails', ['url'=> $datas->slug])}}">{!! str_limit($datas->tour_name,120) !!}</a>
+                            </h3>
+                            <div class="card-description"></div>
+                          </div>
+                          <div class="card-footer">
+                            <div class=" price text-center">
+                                <h3 style="margin:margin: 9px 0 9px;"> <b>${{Shared::money($datas->tour_price)}}</b> <small>Per Person</small></h3>
+                            </div>                                                         
+                          </div>
+                          <div class="text-center" style="margin: -30px 0px 0px -15px;padding-bottom: 10px;">
+                              <a href="{{route('tourDetails', ['url'=> $datas->slug])}}">
+                              <button class="btn btn-rose " >View More</button></a>
+                          </div>
+                        </div>
+                      </div>                     
+                    @endforeach
+                  </div>
+                @else
+                  @foreach($getself as $datas)
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                       <div class="card card-product" style="margin-top: 10px;">
                         <div class="card-image" data-header-animation="">
                           <a href="{{route('tourDetails', ['url'=> $datas->slug])}}">                                        
@@ -257,20 +290,20 @@
                         <div class="card-footer">
                             <div class=" price text-center">
                                 <h3 style="margin:margin: 9px 0 9px;"> <b>${{Shared::money($datas->tour_price)}}</b> <small>Per Person</small></h3>
-                            </div>                                
-                            
+                            </div>                                                       
                         </div>
                         <div class="text-center" style="margin: -30px 0px 0px -15px;padding-bottom: 10px;">
                             <a href="{{route('tourDetails', ['url'=> $datas->slug])}}">
-                                <button class="btn btn-rose " >View More</button></a>
+                              <button class="btn btn-rose " >View More</button></a>
                         </div>
                       </div>
-                    </div> 
-                  @endforeach                     
+                    </div>
+                  @endforeach
+                @endif
               </div>                     
             </div>                                          
           </div> 
-          <div class="text-center" > {{ $getself->links() }} </div> 
+       
         </div>
       </div>
 <script>

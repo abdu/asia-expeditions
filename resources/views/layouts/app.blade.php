@@ -105,6 +105,7 @@
   <script src="{{asset('/add_lib/lib/touchSwipe/jquery.touchSwipe.min.js')}}"></script>
   <script  type="text/javascript" src="{{asset('/js/uploadfile.js')}}" ></script>
   <script src="{{asset('/js/main.js')}}"></script>
+  <script src="{{asset('sliderengine/amazingslider.js')}}"></script>
 
 
 <!--   <script src="/add_lib/lib/easing/easing.min.js"></script>

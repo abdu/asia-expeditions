@@ -115,6 +115,7 @@ html { -webkit-text-size-adjust: none; -ms-text-size-adjust: none;}
                             <p>Tour Name  : <a href="{{route('tourDetails', ['url'=> $getdata->slug])}}" style="text-decoration: none;">{{$getdata->tour_name}}</a></p>
                             <p>From Date  : {{$data['fdate']}}</p>
                             <p>To Date    : {{$data['tdate']}}</p>
+                            <p>Pax No    : {{$data['pax']}}</p>
                             <p>Additional Requests : {{$data['textarea']}}</p>
 
                               </span>

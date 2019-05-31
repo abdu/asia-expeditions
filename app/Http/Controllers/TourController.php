@@ -123,6 +123,7 @@ class TourController extends Controller
                 $add_item->price       = $req->tour_price;
                 $add_item->fdate       = $req->fdate;
                 $add_item->tdate       = $req->tdate;
+                $add_item->pax_no      = $req->pax;
                 $add_item->a_requests  = $req->textarea;
                 $add_item->save(); 
                 Mail::to($req->email)->bcc(config('app.email'))->send(new SendInquiry($req->all()));       
@@ -135,6 +136,7 @@ class TourController extends Controller
         $add_item->price       = $req->tour_price;
         $add_item->fdate       = $req->fdate;
         $add_item->tdate       = $req->tdate;
+        $add_item->pax_no      = $req->pax;
         $add_item->a_requests  = $req->textarea;
         $add_item->save();
         Mail::to($req->email)->bcc(config('app.email'))->send(new SendInquiry($req->all()));

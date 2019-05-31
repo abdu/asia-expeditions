@@ -24,7 +24,7 @@
 
 
 @section('content')
-<script src="{{asset('sliderengine/amazingslider.js')}}"></script>
+
 @include("include.menu")
 
 <style type="text/css">
@@ -179,20 +179,28 @@
                                         <label for="inputlast">Mobile</label>
                                         <input type="text" class="form-control add_size" id="" placeholder="Your Phone Number"       name="mobile">
                                     </div>
-                                       <div class="form-group col-md-6">
+                                    <div class="form-group col-md-6">
                                         <label for="inputfirst">From Date</label>
-                                        <input type="date" class="form-control add_size" id="" placeholder="From Date:" required="" name="fdate">
+                                        <input type="text" id="date_start" class="form-control add_size" id="" placeholder="From Date:" required="" name="fdate" autocomplete="off">
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="inputlast">To Date</label>
-                                        <input type="date" class="form-control add_size" id="" placeholder="To Date" required="" name="tdate">
+                                        <input type="text" id="date_end" class="form-control add_size" id="" placeholder="To Date" required="" name="tdate" autocomplete="off">
                                     </div>
-                                    <div class="form-group col-md-12">
+                                    <div class="form-group col-md-6">
                                         <label for="inputlast">Nationality</label>
                                         <select class="form-control add_size" name="nationality">
                                             @foreach(App\Country::whereNotNull('nationality')->orderBy('nationality')->get() as $con)
                                                 <option value="{{$con->id}}">{{$con->nationality}}</option>
                                             @endforeach
+                                        </select>                                       
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="inputlast">Pax No.</label>
+                                        <select class="form-control custom-select add_size" name="pax">
+                                            <?php for ($i=1; $i <=30 ; $i++): ?>
+                                                <option value="{{$i}}">{{$i}}</option>
+                                            <?php endfor; ?>
                                         </select>                                       
                                     </div>
                                     <div class="form-group col-md-12">
@@ -230,8 +238,8 @@
             </div>
             <div class="clear"></div>
         </div>
-          <div class="spacing"></div>
-        <div class="col-md-8" style="padding: 0px;">
+          
+        <div class="col-md-8" style="padding: 25px 0 0 0px;">
             <div id="" class="bor" style="margin-top:0; background-color: #eeeeee;">
                 <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
                     <li class="active"><a href="#highlights" data-toggle="tab">Highlights</a></li>
@@ -268,8 +276,9 @@
                 ?>  
                 <div class="title text-center">
                     <h4 style="font-weight: 500;">RECENT VIEW
-                        <div style="border-bottom: 2px solid #ddd;width: 100%;  padding-top: 6px;"></div>
+                        
                     </h4>
+                    <div style="border-bottom: 2px solid #ddd;width: 100%;  padding-top: 0px;"></div>
                 </div>  
                 @foreach($getTour->chunk($data) as $get)
                     <section class="wow fadeInUp" >
@@ -322,7 +331,7 @@
                 @endforeach            
             </div>       
 
-            <div class="col-md-12" style="  margin-bottom: 22px;background-color: #fff;border: 1px solid transparent;border-radius: 4px;box-shadow: 0 1px 1px rgba(0,0,0,.05);">
+            <div class="col-md-12 list-group-item padd" style="  margin-bottom: 22px;background-color: #fff;border: 1px solid transparent;border-radius: 4px;box-shadow:0 1px 1px rgb(60, 62, 64);">
                 <div class="title text-center"><h4 style="font-weight: 500;"> Terms & Conditions</h4></div>  
                 <p>A 30% of total holiday price is required as deposit upon receiving confirmation email. The balance should be settled at least 30 days before arrival. There is service charge/bank charge for payment by credit card, swift or telegraphic transfer, all of which must be borne by the Clients, except CASH on arrival. Our bank information will be sent to you with our proforma-invoice.</p>
 

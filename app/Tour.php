@@ -75,6 +75,6 @@ class Tour extends Model
                           ->groupBy('v.tour_id')
                           ->join('tours as t', 'v.tour_id', '=', 't.id')
                           ->where(['v.user_id'=>\Auth::user()->id,'t.web'=>1,'t.tour_status'=>1, 'post_type'=>0])
-                          ->paginate(4);
+                          ->get();
     }
 }
