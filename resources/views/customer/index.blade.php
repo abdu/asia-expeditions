@@ -143,9 +143,8 @@
                     </div>
                     <div class="tab-pane" id="messages">
                       <table class="table">
-                        <div class="col-md-12"><?php $getdata=\App\ItemOrder::where('customer_id', Auth::id())->get(); ?>
-
-                          
+                        <div class="col-md-12">
+                            <?php $getdata=\App\ItemOrder::where('user_id', Auth::id())->orderBy('created_at', "ASC")->get(); ?>
                             @if($getdata->count()>0)
                               @foreach($getdata as $item)
                               <div class="card" style="margin-top: 0px;">

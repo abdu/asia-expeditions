@@ -34,7 +34,7 @@ class SendInquiry extends Mailable
      */
     public function build()
     {
-        return $this->from(config('app.email'),'Asia Expeditions')
+        return $this->from(config('app.email'))->subject(config('app.name'))
             ->view('emails.mail_inquiry')
             ->with([
                 'data' => $this->data          

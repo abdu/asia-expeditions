@@ -9,7 +9,6 @@ class Category extends Model
     //
     protected $table = 'business';
 
-
     public function getAllUser(){
     	return $this->belongsTo('App\User');
     }
