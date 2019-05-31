@@ -16,7 +16,7 @@
                 <div class="card-header card-header-tabs card-header-primary">
                   <div class="nav-tabs-navigation">
                     <div class="nav-tabs-wrapper">
-                      <span class="nav-tabs-title">Tasks:</span>
+                      <!-- <span class="nav-tabs-title">Tasks:</span> -->
                       <ul class="nav nav-tabs" data-tabs="tabs">
                         <li class="nav-item active">
                           <a class="nav-link active" href="#profile" data-toggle="tab">
@@ -232,6 +232,7 @@
                 </div>
               </div>
             </div>
+
             <div class=" col-md-12 col-sm-12" >               
                   <?php $getself = \App\Tour::getTourByUser();?>
               <div class="col-md-12 col-sm-12"style="border:0;box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);">

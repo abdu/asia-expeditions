@@ -1,34 +1,14 @@
 <?php
-
-    
-
     if (!Auth::check()) {
-
         echo ("<script>location.href='https://asia-expeditions.com/checkout'</script>");
-
     }
-
 ?>
-
-
-
 @extends('layouts.app')
-
-@section('title')
-
-    Payment Page
-
-@endsection
-
+@section('title', 'Payment Page')
 <?php
-
-use App\components\Shared;
-
-use App\User;
-
-
+    use App\components\Shared;
+    use App\User;
 ?>
-
 
 
 @section('content')
@@ -49,7 +29,8 @@ use App\User;
                 <thead>
                     <th>Photo</th>
                     <th>Description</th>
-                    <th class="text-right">Unit Price</th>
+                    <th>Pax & Price</th>
+                    <th class="text-right">Total Price</th>
                 </thead>
                 <tbody>
                     <?php  $getTotal = 0;?>
@@ -64,8 +45,10 @@ use App\User;
                                 </div>
                                 <div><small>{{ str_limit($cart['item']['tour_name'], 70) }}</small></div>
                             </td>
-                            <td><?php $price = $cart['item']['tour_price'] * $cart['qty'];?></td>
-                            <td class="text-right"><b>${{ number_format($price, 2) }}</b></td>
+                            <td>{{$cart['qty']}} x {{$cart['item']['tour_price']}}</td>
+                            <?php $price = $cart['item']['tour_price'] * $cart['qty'];?>
+                            <td class="text-right">{{Shared::money($price) }}</td>
+                            <!-- <td class="text-right"><b>${{ number_format($price, 2) }}</b></td> -->
                         </tr>
                         <?php $getTotal = $getTotal + $price;?>
                     @endforeach

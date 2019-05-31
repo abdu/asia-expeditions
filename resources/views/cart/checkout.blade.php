@@ -106,7 +106,7 @@ use App\components\Shared;
                                 <div class="col-md-12"><strong class="control-label" for="nation">Nationality*</strong></div>
                                 <div class="col-md-12">
                                     <select class="form-control" name="nationality">
-                                        @foreach(App\Country::orderBy('nationality')->get() as $con)
+                                        @foreach(App\Country::whereNotNull('nationality')->orderBy('nationality')->get() as $con)
                                             <option value="{{$con->id}}">{{$con->nationality}}</option>
                                         @endforeach
                                     </select>
@@ -150,7 +150,7 @@ use App\components\Shared;
                                         <div class="col-md-12 col-xs-12 ">
                                             <strong class="control-label" for="inputError">Country / State*</strong>
                                             <select class="form-control" name="country_state"> 
-                                                @foreach(\App\Country::where("country_status", 1)->orderBy("nationality")->get() as $state)
+                                                @foreach(\App\Country::where("country_status", 1)->orderBy("country_name")->get() as $state)
                                                 <option value="{{$state->id}}" {{old('country_state') == $state->id ? 'selected':''}}>{{ $state->country_name }}</option>
                                                 @endforeach 
                                             </select>

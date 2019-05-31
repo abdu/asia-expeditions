@@ -57,15 +57,19 @@ class Tour extends Model
         $today    = date('Y-m-d');
         $day      = date('Y-m-d',strtotime("-7 days"));
         return $data = \DB::table('tbl_countview as v')
-                          ->select('t.*',\DB::Raw(' count(v.tour_id) as t,v.date'))                                   
+                          ->select('t.*',\DB::Raw(' count(v.tour_id) as t, v.date'))                                   
                           ->groupBy('v.tour_id')
                           ->whereBetween('v.created_at', [$day,   $today])
                           ->whereNotIn('t.id',[$id])                         
                           ->join('tours as t', 'v.tour_id', '=', 't.id')
+
                           ->where(['t.web'=>1,'tour_status'=>1,'post_type'=>0])
                           ->get();
     }
-     public static function getTourByUser(){
+
+
+
+    public static function getTourByUser(){
         return $data = \DB::table('tbl_countview as v')
                           ->select('t.*',\DB::Raw(' count(v.tour_id) as t'))                                   
                           ->groupBy('v.tour_id')

@@ -6,6 +6,10 @@
 @section('content')
 @include('include.menu')
 <br>
+ <style type="text/css">
+            .addcol{color: #002aff; }
+            .addcol1:focus{color: red; border-color: red;}
+          </style>
 <div class="container">
 	<div class="col-md-6 ">
 	    <div style="height: 270px; overflow: hidden;">
@@ -59,9 +63,17 @@
 	                            <div class="input-group">
 	                                <span class="input-group-addon"><span class="fa fa-envelope-o"></span>
 	                                </span>
-	                                <input type="email" name="email" class="form-control" id="email" placeholder="Email address" required="required" />
+	                                <input type="email" class="form-control" name="email" id="eshow" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" required="" />
 	                            </div>
-	                        </div>		                       
+	                        </div>
+                        	<div class="row" id="notrobot">
+                        		<div class="col-md-3">
+                        			<input type="text" id="num1" class="form-control textbox_color"   style="float: left; text-align: center;" disabled></div>
+                        		<div class="col-md-3">
+                        			<input type="text" id="num2" class="form-control textbox_color" style="float: left; text-align: center;" disabled >
+                        		</div>
+                         		<div class="col-md-6"><input type="text" name="myResult" id="myResult" class="form-control textbox_color" placeholder="" required ></div>
+							</div>							              
 	                    </div>
 	                    <div class="col-md-6">
 	                        <div class="form-group">
@@ -78,6 +90,7 @@
                 </form>
             </div>
         </div>
+       
     </div>
     <div class="col-md-4">
     	<div class="col-md-12">
@@ -108,5 +121,48 @@
     </div>    	
 	<div class="spacing"></div>
 </div> <!-- /container -->  
+<script type="text/javascript">
+	$(document).ready(function(){
 
+	    var datanum1=Math.floor(Math.random() * 11)+1;
+	    var datanum2=Math.floor(Math.random() * 11)+1;
+	  $('#num1').val(datanum1);
+	  $('#num2').val(datanum2);
+	  $('#myResult').on('keyup',function(){
+
+	    var getdata=$(this).val();
+	    var total = datanum1 + datanum2;
+	    
+	    
+	    if (getdata == total) {
+	      $('#myResult').removeClass('addcol1');
+	         $('#btnContactUs').on('click',function(){
+	         $('#myResult').val(getdata);
+	    
+	      });
+	    }
+	    else{
+	       $('#myResult').addClass('addcol1');
+	       $('#myResult').attr('required', true);
+
+	       $('#btnContactUs').on('click',function(){
+	         $('#myResult').val('');
+	    
+	        });
+	    }
+	  });
+	  $('#notrobot').css({'display':'none'});
+	  $('#eshow').on('keyup', function(){
+	      var eshow= $('#eshow').val();
+	        if (eshow.length>0) {
+	          $('#notrobot').css({'display':'block'});
+	    console.log(eshow);
+	  }
+	  else{
+	     $('#notrobot').css({'display':'none'});
+	  }
+	  });
+
+	});
+</script>
 @endsection

@@ -166,22 +166,21 @@ html { -webkit-text-size-adjust: none; -ms-text-size-adjust: none;}
                                        <tr>
                                           <td align="center" valign="top">
                                              <a href="https://www.instagram.com/asiaexpeditions/" target="_blank" style="display: block; max-width: 19px;">
-                                                <img src="{{asset('img/soc_1.png')}}" alt="img" width="19" border="0" style="display: block; width: 19px;" />
+                                                <img src="{{asset('/public/img/soc_1.png')}}" alt="img" width="19" border="0" style="display: block; width: 19px;" />
                                              </a>
                                           </td>
                                           <td width="45" style="width: 45px; max-width: 45px; min-width: 45px;">&nbsp;</td>
                                           <td align="center" valign="top">
                                              <a href="https://www.facebook.com/AsiaExpeditionsDM" target="_blank" style="display: block; max-width: 18px;">
-                                                <img src="{{asset('img/soc_2.png')}}" alt="img" width="18" border="0" style="display: block; width: 18px;" />
+                                                <img src="{{asset('/public/img/soc_2.png')}}" alt="img" width="18" border="0" style="display: block; width: 18px;" />
                                              </a>
                                           </td>
                                           <td width="45" style="width: 45px; max-width: 45px; min-width: 45px;">&nbsp;</td>
                                           <td align="center" valign="top">
                                              <a href="https://twitter.com/AsiaExpeditions" target="_blank" style="display: block; max-width: 21px;">
-                                                <img src="{{asset('img/soc_3.png')}}" alt="img" width="21" border="0" style="display: block; width: 21px;" />
+                                                <img src="{{asset('/public/img/soc_3.png')}}" alt="img" width="21" border="0" style="display: block; width: 21px;" />
                                              </a>
-                                          </td>
-                                    
+                                          </td>                                    
                                        </tr>
                                     </table>
                                     <div style="height: 35px; line-height: 35px; font-size: 33px;">&nbsp;</div>
@@ -196,9 +195,6 @@ html { -webkit-text-size-adjust: none; -ms-text-size-adjust: none;}
                <td class="mob_pad" width="25" style="width: 25px; max-width: 25px; min-width: 25px;">&nbsp;</td>
             </tr>
          </table>
-         <!--[if (gte mso 9)|(IE)]>
-         </td></tr>
-         </table><![endif]-->
       </td>
    </tr>
 </table>

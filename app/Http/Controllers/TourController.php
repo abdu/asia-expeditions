@@ -98,10 +98,10 @@ class TourController extends Controller
     }
 
     public function getTourName(Request $req){
-        $tour = Tour::Where([['tour_name', 'LIKE', '%'.$req->tour_name.'%'], ['web','=', 1], ['post_type','=', 0]])
-                    ->take(12)
+        $tour = Tour::Where([['tour_name', 'LIKE', '%'.$req->tour_name.'%'], ['web','=', 1]])
+                    // ->take(12)
                     ->orderBy('tour_name', 'ASC')
-                    ->paginate();
+                    ->paginate(12);
         return view('search.search_tour', ['tours' => $tour, 'result' => $req->tour_name]);
 
     }
@@ -116,36 +116,29 @@ class TourController extends Controller
             $adds->role_id     = 7;
             $adds->picture     = 'me.png';
             $adds->nationality = $req->nationality;        
-                if($adds->save()){
-                 $add_item              = new ItemOrder;
-                 $add_item->tour_id     = $req->tour_id;
-                 $add_item->customer_id = $adds->id;
-                 $add_item->price       = $req->tour_price;
-                 $add_item->fdate       = $req->fdate;
-                 $add_item->tdate       = $req->tdate;
-                 $add_item->a_requests  = $req->textarea;
-                 $add_item->save(); 
-                 Mail::to($req->email)->bcc(config('app.email'))->send(new SendInquiry($req->all()));       
-                }                              
-        return back()->with(["message"=> "Send Inquiry Success", 'get'=>'success']);
-
+            if($adds->save()){
+                $add_item              = new ItemOrder;
+                $add_item->tour_id     = $req->tour_id;
+                $add_item->user_id     = $adds->id;
+                $add_item->price       = $req->tour_price;
+                $add_item->fdate       = $req->fdate;
+                $add_item->tdate       = $req->tdate;
+                $add_item->a_requests  = $req->textarea;
+                $add_item->save(); 
+                Mail::to($req->email)->bcc(config('app.email'))->send(new SendInquiry($req->all()));       
+            }                              
+            return back()->with(["message"=> "Send Inquiry Success", 'get'=>'success']);
         }
-            $add_item              = new ItemOrder;
-            $add_item->tour_id     = $req->tour_id;
-            $add_item->customer_id = User::getIdByEmail($req->email)->id;
-            $add_item->price       = $req->tour_price;
-            $add_item->fdate       = $req->fdate;
-            $add_item->tdate       = $req->tdate;
-            $add_item->a_requests  = $req->textarea;
-            $add_item->save();
-            Mail::to($req->email)->bcc(config('app.email'))->send(new SendInquiry($req->all()));
-            
+        $add_item              = new ItemOrder;
+        $add_item->tour_id     = $req->tour_id;
+        $add_item->user_id     = User::getIdByEmail($req->email)->id;
+        $add_item->price       = $req->tour_price;
+        $add_item->fdate       = $req->fdate;
+        $add_item->tdate       = $req->tdate;
+        $add_item->a_requests  = $req->textarea;
+        $add_item->save();
+        Mail::to($req->email)->bcc(config('app.email'))->send(new SendInquiry($req->all()));
         return back()->with(["message"=> "Send Inquiry Success", 'get'=>'success']);
-
-
-       
-
-
     } 
 }
 
