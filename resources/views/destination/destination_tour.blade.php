@@ -12,7 +12,7 @@
 <?php $tourLink = $getTourByProvince; ?>
 <div class="container" >
 	
-	<div class="col-md-6" >
+	<div class="col-md-12" >
 		<div class="spacing"></div>
 		<b><h2 align="center"><b>Welcome to {{$pro['province_name']}}</b></h2></b>
 		<p style="text-align: justify;"> <?php echo html_entity_decode($pro['province_intro']); ?></p>
