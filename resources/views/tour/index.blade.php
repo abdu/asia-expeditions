@@ -356,49 +356,10 @@
                     <div style="border: double #ddd;width: 100%;"></div>
                 </h2>
             </div>        
-            @if($tourLink->count() > 3)
-            <div class="row">                 
-                <section class="wow fadeInUp" >                                
-                    <div class="owl-carousel clients-carousel" style="height: auto;">
-                        @foreach($tourLink->chunk(4) as $key => $chunkTour)                        
-                            @foreach($chunkTour as $tour)
-                                @include('include.item')
-                            @endforeach                          
-                         @endforeach
-                    </div>
-                </section>               
-            </div>
-            @elseif($tourLink->count() == 2)
-            <div class="row">   
-                <div class="col-md-12">           
-                    <section class="wow fadeInUp">
-                        <div class="owl-carousel clients-carousel-2" style="height: auto;">
-                            @foreach($tourLink->chunk(4) as $key => $chunkTour)                        
-                                @foreach($chunkTour as $tour)
-                                    @include('include.item')
-                                @endforeach                          
-                             @endforeach
-                        </div>
-                    </section>                                 
-                </div>
-            </div>
-            @elseif($tourLink->count() == 1)
-            <div class="row">   
-                <section class="wow fadeInUp" >
-                    <div class="owl-carousel clients-carousel-1" style="height: auto;">
-                        <div class="row">
-                        @foreach($tourLink->chunk(4) as $key => $chunkTour)
-                            @foreach($chunkTour as $tour)
-                            <div class="col-md-4">                                             
-                                @include('include.item')
-                            </div>
-                            @endforeach              
-                         @endforeach
-                         </div>
-                    </div>
-                </section>
-            </div>
-            @endif
+
+            @include('include.item_slide')
+    
+ 
         @endif
 </div>
 <script type="text/javascript">

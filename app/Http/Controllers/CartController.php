@@ -137,7 +137,7 @@ class CartController extends Controller
         ]);
 
         if (!$validator->fails() ) {
-            if (\Auth::attempt(['email'=>$req->email_log, 'password'=>$req->password_log, 'banned'=>1])) {
+            if (\Auth::attempt(['email'=>$req->email_log, 'password'=>$req->password_log, 'banned'=>0])) {
                 $itemWish = Wishlist::where('user_id', \Auth::user()->id)->get();
                 $oldCart  = Session::has('cart') ? Session::get('cart') : null;
                 if ($itemWish->count() > 0) {

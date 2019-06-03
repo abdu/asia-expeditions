@@ -75,14 +75,6 @@
     }
   });
 
-  $(".clients-carousel-2").owlCarousel({
-    autoplay: true,
-    dots: false,
-    loop: true,
-    responsive: { 0: { items: 1 }, 768: { items: 2 }, 900: { items: 2 }
-    }
-  });
-
 
   // Testimonials carousel (uses the Owl Carousel library)
   $(".testimonials-carousel").owlCarousel({

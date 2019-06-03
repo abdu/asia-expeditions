@@ -24,8 +24,7 @@ Asia Expeditions , Myanmar & Indochina – Destination Management Company is for
 @include('include.slide')
 
 <!-- <div class="container"> -->
-<div class="col-md-12" style="background-color: white;">
-	
+<div class="col-md-12" style="background-color: white;">	
 	<div class="container">
 		<div class="spacing"></div>
 		<div class="col-md-8 col-xs-12">
@@ -64,109 +63,37 @@ Asia Expeditions , Myanmar & Indochina – Destination Management Company is for
 	</div>
 	<div class="spacing"></div>
 </div>
-
-
+<div class="container">		
+	<div class="col-md-12">	
+		<?php  $tourLink = \App\Tour::getTourBycount();  ?>
+	        @if($tourLink->count() > 0)
+	      		<div class="title text-center"><h2><b>POPULETION TOURS</b></h2></div>
+					@include('include.item_slide')
+			@endif
+	</div>
 	<div class="clearfix"></div>
 	<div class="spacing"></div>
-		<div class="col-md-12">	
-		<?php
-	        $getTour = \App\Tour::getTourBycount();
-	    ?>
-        @if($getTour->count() > 0)
-      	<div class="title text-center"><h2><b>POPULETION TOURS</b></h2></div>
-			<div class="row">		             
-            	<div class="col-md-12">   
-            	<section id="clients" class="wow fadeInUp">  		       
-            		<div class="container">
-	            		<div class="owl-carousel clients-carousel ">				           
-			    			@foreach($getTour as $tour)				    		
-								<div class="col-sm-12">
-								    <span class="thumbnail text-center">
-
-								        <a class="img-card" href="{{route('tourDetails', ['url'=> $tour->slug])}}">
-								           <img class="lazy" data-src="{{Shared::getInstance()->urlResource($tour->tour_photo, $tour->user_id)}}"/>
-								        </a>
-								        <a href="javascript:void(0)">
-								        	<span style="color: #223da5;"> 
-								        		<i style="font-size: 18px; margin-top: 12px;" class="fa fa-clock-o"></i> {{$tour->tour_daynight}} 
-								        	</span>
-								        </a>
-								        <h3 class="text-danger"> <b>${{Shared::money($tour->tour_price)}}</b> <small>Per Person</small></h3>
-								        <a href="{{route('tourDetails', ['url'=> $tour->slug])}}" >
-								            <p><b>{!! str_limit($tour->tour_name,120) !!}</b></p>
-								            	<!-- <h1>{{$tour->t}}</h1> -->
-								        </a>							    
-
-								        <hr class="line">
-
-								        <div class="row">
-								            <div class="col-md-12 col-sm-12">
-								                <a style="font-weight:100;" href="{{route('tourDetails', ['url'=> $tour->slug])}}" class="w3-btn w3-white w3-border w3-border-green w3-round-xlarge">View Detail</a>
-								            </div>                                          
-								        </div>
-								    </span>
-								</div>					
-			                @endforeach				      
-							           
-				  	    </div>
-				  	</div>
-			    </section>			
-			</div>
-		</div>
-		@endif
-	</div>
-	<div class="clearfix"></div>
 	<div class="col-md-12">	
-		<?php
-	        $getTour = \App\Tour::where([['post_type','=', 0],['tour_type','=', 35 ], ['web','=', 1]])->orderBy('id', 'desc')->take(30)->get();
-	    ?>
-        @if($getTour->count() > 0)
-      	<div class="title text-center"><h2><b>DISCOVER OUR UNIQUE EXPERIENCES</b></h2></div>
-			<div class="row">		             
-            	<div class="col-md-12">   
-            	<section id="clients" class="wow fadeInUp">  		       
-            		<div class="container">
-	            		<div class="owl-carousel clients-carousel ">
-				            @foreach($getTour->chunk(3) as $key => $chunkTour)
-				    			@foreach($chunkTour as $tour)
-				    		
-									@include('include.item')
-							
-				                @endforeach				      
-						    @endforeach			           
-				  	    </div>
-				  	</div>
-			    </section>			
-			</div>
-		</div>
-		@endif
+		<?php $tourLink = \App\Tour::where([['post_type','=', 0],['tour_type','=', 35 ], ['web','=', 1]])
+									->orderBy('id', 'desc')->take(30)->get(); ?>
+			@if($tourLink->count() > 0)
+		      	<div class="title text-center"><h2><b>DISCOVER OUR UNIQUE EXPERIENCES</b></h2></div>								    	
+				@include('include.item_slide')						
+			@endif
 	</div>
 	<div class="clearfix"></div>
-		<div class="col-md-12">	
-		<?php
-        $getTourEx = \App\Tour::where([['post_type','=', 0],['tour_type','=', 26 ], ['web','=', 1]])->orderBy('id', 'desc')->take(30)->get(); ?>
-	        @if($getTourEx->count() > 0)
+	<div class="spacing"></div>
+	<div class="col-md-12">	
+		<?php  $tourLink = \App\Tour::where([['post_type','=', 0],['tour_type','=', 26 ], ['web','=', 1]])->orderBy('id', 'desc')->take(30)->get(); ?>
+	        @if($tourLink->count() > 0)
 	      	<div class="title text-center"><h2><b>TAKE A LOOK AT OUR EXCURSION</b></h2></div>
-				
-			    <div class="row">  
-			        <div class="col-md-12">
-			        	<section id="clients" class="wow fadeInUp" >
-					        <div class="container"> 		        			  		
-			                    <div class="owl-carousel clients-carousel" style="height: auto;">
-			                        @foreach($getTourEx->chunk(3) as $key => $chunkTour)
-			                            @foreach($chunkTour as $tour)
-			                 
-											@include('include.item')	
-									
-			   					      	@endforeach 			            					  
-			   					    @endforeach       					   
-			      				</div>      			      
-					        </div>
-			    		</section>
-			    	</div>
-			    </div>
+				@include('include.item_slide')
+		
 			@endif
-	    </div>
+	</div>
+	<div class="clearfix"></div>
+	<div class="spacing"></div>
+</div>
 	<div class="col-md-12" style="background-color: white;">
 		<div class="container">
 			<div class="row">

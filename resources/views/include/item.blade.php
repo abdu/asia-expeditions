@@ -1,4 +1,5 @@
 <?php use App\components\Shared; ?>
+
 <div class="col-sm-12">
     <span class="thumbnail text-center">
         <a class="img-card" href="{{route('tourDetails', ['url'=> $tour->slug])}}">
