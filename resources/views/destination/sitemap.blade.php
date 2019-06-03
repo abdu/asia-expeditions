@@ -36,15 +36,15 @@ use \App\Country;
                 <li><a href="https://asia-expeditions.com/general-information"><strong>Holiday Types</strong></a></li>
             	<ul>
             		<li><a href="https://asia-expeditions.com/mice">M.I.C.E</a></li>
-            		@foreach(\App\HolidayType::where('web' , 1)->orderBy('business_name')->get() as $type)
-                        <li><a href="{{url('/')}}/category/{{$type->slug}}">{{$type->business_name}}</a></li>
+            		@foreach(\App\HolidayType::where('web' , 1)->orderBy('id')->get() as $type)
+                        <li><a href="{{url('/')}}/category/{{$type->slug}}">{{$type->name}}</a></li>
                     @endforeach            		
             	</ul>
               	<li><a href="https://asia-expeditions.com/contactus"><strong>Contact Us</strong></a></li>
               	<li><a href="https://asia-expeditions.com/ournews"><strong>Our News</strong></a></li>
               	<li><a href="javascript:void(0)"><strong>Tours </strong></a></li>
               	<ul>
-                  	@foreach(App\ProgramTour::where('web', 1)->get() as $tour)
+                  	@foreach(App\Tour::where('web', 1)->get() as $tour)
                 		<li><a href="{{url('tour',[ 'tour_id' => $tour->tour_slug ])}}">{{$tour['tour_name']}}</a></li>
                 	@endforeach
             	</ul>
