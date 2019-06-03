@@ -63,7 +63,7 @@ Asia Expeditions , Myanmar & Indochina – Destination Management Company is for
 	</div>
 	<div class="spacing"></div>
 </div>
-<div class="container">		
+	
 	<div class="col-md-12">	
 		<?php  $tourLink = \App\Tour::getTourBycount();  ?>
 	        @if($tourLink->count() > 0)
@@ -72,7 +72,6 @@ Asia Expeditions , Myanmar & Indochina – Destination Management Company is for
 			@endif
 	</div>
 	<div class="clearfix"></div>
-	<div class="spacing"></div>
 	<div class="col-md-12">	
 		<?php $tourLink = \App\Tour::where([['post_type','=', 0],['tour_type','=', 35 ], ['web','=', 1]])
 									->orderBy('id', 'desc')->take(30)->get(); ?>
@@ -81,8 +80,7 @@ Asia Expeditions , Myanmar & Indochina – Destination Management Company is for
 				@include('include.item_slide')						
 			@endif
 	</div>
-	<div class="clearfix"></div>
-	<div class="spacing"></div>
+	<div class="clearfix"></div>	
 	<div class="col-md-12">	
 		<?php  $tourLink = \App\Tour::where([['post_type','=', 0],['tour_type','=', 26 ], ['web','=', 1]])->orderBy('id', 'desc')->take(30)->get(); ?>
 	        @if($tourLink->count() > 0)
@@ -92,8 +90,6 @@ Asia Expeditions , Myanmar & Indochina – Destination Management Company is for
 			@endif
 	</div>
 	<div class="clearfix"></div>
-	<div class="spacing"></div>
-</div>
 	<div class="col-md-12" style="background-color: white;">
 		<div class="container">
 			<div class="row">

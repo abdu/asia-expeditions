@@ -1,8 +1,9 @@
 <?php use App\components\Shared; ?>
 
 @if($tourLink->count() > 3)
-	<div class="row">                 
-	    <section class="wow fadeInUp" >
+	<div class="row">
+	               
+	    <section id="clients" class="wow fadeInUp" >
 	    	<div class="container">                          
 		        <div class="owl-carousel clients-carousel" style="height: auto;">
 		            @foreach($tourLink as  $tour)
@@ -34,7 +35,7 @@
 		</section>               
 	</div>
 @else
-	<div class="row">
+	<div class="row"  style="margin-top: 50px;">
 	    @foreach($tourLink as  $tour)
 			<div class="col-sm-4">
 			    <span class="thumbnail text-center">
