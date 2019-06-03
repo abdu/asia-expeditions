@@ -3783,7 +3783,7 @@ tbody.collapse.in {
 }
 
 .dropdown-menu>li>a:focus,.dropdown-menu>li>a:hover {
-    border-left: 1px solid red;
+    border-left: 2px solid #18d26e;
     padding-left: 19px !important;
     padding: 0px;
     text-decoration: none;
