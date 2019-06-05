@@ -62,7 +62,7 @@ class UserController extends Controller
 		    	$auser->phone           = $req->phone;
 		    	$auser->date            = date('Y-m-d');
 		    	$auser->updated_at      = date('Y-m-d');
-                $auser->picture         ='me.png' 
+                $auser->picture         ='me.png';
 		    	$auser->save();
 		    	return response()
 	            ->json(['status' => 'Yes', 'message' => 'One user has been added']);

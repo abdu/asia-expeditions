@@ -15291,6 +15291,9 @@ ul li iframe#twitter-widget-0 div.widget .btn-o a.btn {
    .hidden-xs {
         display:none!important
     }
+    .year{
+        display: none;
+    }
     
 
 }
@@ -15312,6 +15315,10 @@ ul li iframe#twitter-widget-0 div.widget .btn-o a.btn {
     .padd{
         padding: 25px 0 0 15px;
     }
+    .year{
+        display: none;
+    }
+    
 }
 
  
@@ -15348,6 +15355,38 @@ ul li iframe#twitter-widget-0 div.widget .btn-o a.btn {
     .padd{
         padding: 25px 0 0 15px;
     }
+    .years{
+        margin-left: 40px!important;
+    }
+    .year{
+        transition: 1s;
+        text-align: center;
+        margin: 40px;
+        margin-left: -150px;
+        position: absolute;
+        width: 150px;   
+        height: 150px;
+        border-radius: 50%;        
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url('/img/ANNIVERSARY.png');
+        display: block;
+        z-index: 1;
+    }
+    .number{
+        margin-top: 30%;
+        padding: 5px;
+        font-size: 48px!important;
+        font-weight: 800!important;
+        text-transform: uppercase;
+        background: linear-gradient(to right, #ffa260 25%, #963011 75%);
+        -webkit-background-clip: text; 
+        -webkit-text-fill-color: transparent;
+        line-height:21px!important;
+        font-family: "Segoe UI",Arial,sans-serif!important;
+    }
+
 
 }
 .btborder {

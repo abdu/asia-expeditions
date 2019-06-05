@@ -79,7 +79,14 @@
 
 </style>
 
-    <script type="text/javascript">
+   
+
+</head>
+<body>
+@include('include.message')
+	@yield('content')
+	@include('include.footer')
+   <script type="text/javascript">
   $(document).ready(function(){  
         $('.clients-carousel').hover(function(){
           $('.owl-prev').css({"opacity":"1","background-position-x":"-5px"});
@@ -87,16 +94,11 @@
         },function(){
           $('.owl-prev').css({"opacity":"0","background-position-x":"0px"});
           $('.owl-next').css({"opacity":"0","background-position-x":"40px"});
-        }); 
-
+        });
+        
+        $('.year').addClass('years');  
    });
 </script>
-
-</head>
-<body>
-@include('include.message')
-	@yield('content')
-	@include('include.footer')
   <!-- <script src="{{asset('/add_lib/lib/wow/wow.min.js')}}"></script> -->
   <script src="{{asset('/add_lib/lib/waypoints/waypoints.min.js')}}"></script>
   <script src="{{asset('/add_lib/lib/counterup/counterup.min.js')}}"></script>
