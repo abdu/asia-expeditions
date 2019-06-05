@@ -17,6 +17,9 @@ storage/framework/sessions/cX3nmpqTABhm60JqmwDFL7XNQF5DLY3mri46KAPm
 storage/framework/sessions/9rgmoIDNUg0be9FWrwvvGxV6e2sOe1slUuftKfFS
 .env
 
-storage/framework/sessions/QD1p3bFQDZooamqLFXFJ4JhHMEeGTyl9BCLnweZj
+/vendor
+/storage
+/config
+/bootstrap
+/tests
 
-storage/framework/sessions/FBEi4kpDiyzAcL3f4pH4yUpqYYDWCxKwMp6mkLYq
