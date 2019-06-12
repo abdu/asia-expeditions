@@ -53,16 +53,16 @@ class Tour extends Model
                           ->where(['t.web'=>1,'t.tour_status'=>1])
                           ->get();
     }
-    public static function getTourByWeek($id=0){
+    public static function getTourByWeek($id){
         $today    = date('Y-m-d');
         $day      = date('Y-m-d',strtotime("-7 days"));
         return $data = \DB::table('tbl_countview as v')
-                          ->select('t.*',\DB::Raw(' count(v.tour_id) as t, v.date'))                                   
+                          ->select('t.*',\DB::Raw(' count(v.tour_id) as t, max(v.date) as date'))                      
                           ->groupBy('v.tour_id')
+                          ->orderBy('date','DESC')
                           ->whereBetween('v.created_at', [$day,   $today])
-                          ->whereNotIn('t.id',[$id])                         
-                          ->join('tours as t', 'v.tour_id', '=', 't.id')
-
+                          ->whereNotIn('t.id',[$id])
+                          ->join('tours as t', 'v.tour_id', '=', 't.id')                          
                           ->where(['t.web'=>1,'tour_status'=>1,'t.post_type'=>0])
                           ->get();
     }

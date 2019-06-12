@@ -104,3 +104,41 @@ background-color: #eeeeee4f;
   .addsize{width: 850px;
     height: 495px;}
   }
+.btn_popup{
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  padding: 0px;
+  border: 0px;
+  background: transparent;
+  overflow: hidden;
+  position: fixed;
+  z-index: 1;
+  width: 180px;
+  height: 30px;
+  left: 10px;
+  bottom: 0px;
+  display: block;
+}
+
+.form_popup{
+  transition: 1s;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  padding: 0px;
+  border: 0px;
+  background: transparent;
+  overflow: hidden;
+  position: fixed;
+  z-index: 16000002;
+  height: 0;
+  width: 290px;
+  left: 10px;
+  bottom: 0px;
+  border:1px solid #e0c7c78f;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 3px 2px;
+  background-color: #ffff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;  
+}

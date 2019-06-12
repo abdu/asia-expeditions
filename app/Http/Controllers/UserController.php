@@ -94,7 +94,7 @@ class UserController extends Controller
     }
 
     public function getDoLogin(Request $req){
-        return $validator = Validator::make($req->all(), [
+        $validator = Validator::make($req->all(), [
             'email' => 'required|email',
             'password' => 'required|min:6',
         ]);
