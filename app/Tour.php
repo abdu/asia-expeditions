@@ -49,6 +49,7 @@ class Tour extends Model
         return $data = \DB::table('tbl_countview as v')
                           ->select('t.*',\DB::Raw(' count(v.tour_id) as t'))                                   
                           ->groupBy('v.tour_id')
+                          ->orderBy('t','DESC')
                           ->join('tours as t', 'v.tour_id', '=', 't.id')
                           ->where(['t.web'=>1,'t.tour_status'=>1])
                           ->get();

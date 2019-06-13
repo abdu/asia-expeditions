@@ -75,7 +75,7 @@ return $req->name;
             $nmail->status      = 1;
             $nmail->save();
             Mail::to($req->email)->send(new Subscriber());
-            return back()->with(['submessage'=> 'Your email has been subsrcribe with us! Thanks you for join with us ', 'get'=>'success']);            
+            return back()->with(['message'=> 'Your email has been subsrcribe with us! Thanks you for join with us ', 'get'=>'success']);            
         } else {
             return back()->with(['message'=> 'Your email already subscribed','get'=>'warning']);
         }

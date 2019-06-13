@@ -27,7 +27,7 @@ class Subscriber extends Mailable
      */
     public function build()
     {
-        return $this->from(config('app.email'))
+        return $this->from(config('app.email'),config('app.name'))->subject(config('app.name'))
             ->view('emails.subscribe');
             
         // return $this->view('view.name');
