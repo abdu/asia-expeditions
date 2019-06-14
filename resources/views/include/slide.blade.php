@@ -1,3 +1,4 @@
+<div class="year"><h3 class="number">{{date('Y',strtotime("-2006 years"))/1}}<p style="font-size: 15px;margin-top: 10px;">YEARS</p></h3></div>
 <?php use \App\User; ?>
 <script type="text/javascript" src="/js/lib/jssor.slider-23.1.5.min.js"></script>
 <script type="text/javascript">
