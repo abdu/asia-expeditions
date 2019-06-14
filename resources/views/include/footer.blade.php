@@ -78,7 +78,35 @@
       <a id="goTotop" style="position: fixed; right: 19px; display: none; bottom: 25px; font-size: 35px; z-index: 999999999;" href="javascript:void(0)"><span class="fa fa-chevron-circle-up"></span></a>
     </div>
 </div>
+@if(isset($img)) @else
+<!-- start pop how to plan -->
+  <div class="btn_popup" style="transition: 0.1s;">    
+    <button id="pop" class="btn btn-success"  style="padding: 3px 12px; font-weight: 600;"> How to Plan<i class="fa fa-paper-plane-o" style="padding: 5px;"></i></button>
+  </div>
 
+  <div class="form_popup" style="transition: 1s;">
+    <div class="text-right" style="padding: 0 10px; cursor: pointer;" id="hid">
+      <i class="fa fa-times"></i>      
+    </div>    
+    <form action="{{url('/')}}/getSubscrbe" method="post" style="padding: 0 20px;">
+      {{ csrf_field() }}
+      <h3>Learn How to Plan Your Golf Holiday to Asia...</h3>
+      <p>Want to put together an unforgettable Asian golf holiday? Learn everything needed with this FREE 6-step trip planner.</p>
+      <div class="form-group">
+        <label>Your Name</label> <i class="fa fa-user"></i>          
+        <input class="form-control1" type="text" name="name" placeholder="Name" required="">
+        <label>Your Email</label> <i class="fa fa-envelope"></i> 
+        <input class="form-control1" type="email" name="email" placeholder="Email" required="">        
+        <input type="hidden" name="created_at" value="<?php echo date('Y-m-d H:i:s');?>">
+        <input type="hidden" name="updated_at" value="<?php echo date('Y-m-d H:i:s');?>"> 
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-success" style="width: 50%;">
+          <i class="fa fa-paper-plane-o" style="padding-right: 10px;"></i>Subscribe</button>
+      </div>
+    </form>    
+  </div>
+@endif
   <!--Start of Zendesk Chat Script-->
 <div>
   <script type="text/javascript">
@@ -108,8 +136,19 @@
   $('#goTotop').click(function(){
     $('html, body').animate({scrollTop : 0},1500, 'easeInOutExpo');
     return false;
-  }); 
+  });
 
+  $(document).ready(function(){
+    $('#pop').on('click',function(){
+      $('.form_popup').css({'height':'400px'});
+      $('.btn_popup').css({'height':'0px'});
+    });
+     $('#hid').on('click',function(){
+      $('.form_popup').css({'height':'0'});
+      $('.btn_popup').css({'height':'30px'});  
+    });     
+
+  });
 
     $(function() {
         $('.lazy').lazy();

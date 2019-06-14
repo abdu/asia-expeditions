@@ -104,3 +104,115 @@ background-color: #eeeeee4f;
   .addsize{width: 850px;
     height: 495px;}
   }
+.btn_popup{
+  
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  padding: 0px;
+  border: 0px;
+  background: transparent;
+  overflow: hidden;
+  position: fixed;
+  z-index: 1;
+  width: 180px;
+  height: 30px;
+  left: 10px;
+  bottom: 0px;
+  display: block;
+}
+
+.form_popup{
+  transition: 1s;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: -2px;
+  padding: 0px;
+  border: 0px;
+  background: transparent;
+  overflow: hidden;
+  position: fixed;
+  z-index: 16000002;
+  height: 0;
+  width: 290px;
+  left: 10px;
+  bottom: 0px;
+  border:1px solid #e0c7c78f;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 3px 2px;
+  background-color: #ffffff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;  
+}
+.form-control1 {
+  background: no-repeat center bottom, center calc(100% - 1px);
+  background-size: 0 100%, 100% 100%;
+  border: 0;
+  height: 36px;
+  transition: background 0s ease-out;
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 0;
+  font-size: 14px;
+  width: 100%;
+}
+
+.form-control1:focus,
+.bmd-form-group1.is-focused .form-control1 {
+  background-size: 100% 100%, 100% 100%;
+  transition-duration: 0.3s;
+  box-shadow: none;
+}
+
+.form-control1::-moz-placeholder {
+  color: #AAAAAA;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.form-control1:-ms-input-placeholder {
+  color: #AAAAAA;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.form-control1::-webkit-input-placeholder {
+  color: #AAAAAA;
+  font-weight: 400;
+  font-size: 14px;
+}
+.form-control1,
+.is-focused .form-control1 {
+  background-image: linear-gradient(to top, #9c27b0 2px, rgba(156, 39, 176, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px);
+}
+.form-control1::-ms-expand {
+  background-color: transparent;
+  border: 0;
+}
+
+.form-control1:focus {
+  color: #495057;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: #9acffa;
+  outline: 0;
+  box-shadow: none, 0 0 0 0.2rem rgba(33, 150, 243, 0.25);
+}
+
+.form-control1::placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+
+.form-control1:disabled,
+.form-control1[readonly] {
+  background-color: #e9ecef;
+  opacity: 1;
+}
+
+select.form-control1:not([size]):not([multiple]) {
+  /*height: calc(2.4375rem + 2px);*/
+}
+
+select.form-control1:focus::-ms-value {
+  color: #495057;
+  background-color: rgba(0, 0, 0, 0);
+}

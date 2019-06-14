@@ -40,6 +40,9 @@ use App\Wishlist;
 // 	return view('emails.sendtemplate.sendtemplate');
 // });
 
+Route::get('smail', function () {
+    return view('emails.subscribe');
+});
 Route::get('/sitemap.xml', 'SitemapController@index');
 Route::get("/category/{name}", "CategoryController@getCategory")->name("category"); 
 

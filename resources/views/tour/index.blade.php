@@ -309,7 +309,8 @@
                                             $day        = '';
                                             $hour       = '';
                                             $min        = '';
-                                            if($interval->h>0 and $interval->d == 0){
+
+                                            if($interval->h<12 and $interval->d == 0){
                                                 $hour   =  $interval->h.' Hour ';
                                             }elseif ($interval->h>12 and $interval->d == 0) {
                                                 $day    ='Yesterday';                                          
@@ -317,10 +318,9 @@
                                                 $day    = ($interval->d).' Days';
                                             }else{                                               
                                                 $min    =$interval->i.' Minute';
-                                                                                                                                          
-                                            }  
+                                            }                              
                                             ?>      
-                                        <div>{{isset($day)? $day: ''}}{{isset($hour)? $hour: ''}} {{isset($min)? $min: ''}}</div>
+                                        <div>{{isset($day)? $day: ''}}{{isset($hour)? $hour: ''}} {{isset($min)? $min: ''}}</div>                                      
                                         <div class="clearfix"></div>
                                     </div>
                                     <div class="clearfix"></div>

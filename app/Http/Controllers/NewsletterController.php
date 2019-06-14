@@ -39,12 +39,13 @@ class NewsletterController extends Controller
     }
 
     public function sendEmail(Request $req){
-
+return $req->name;
         $allEmail = explode(',', $req->email);
         Mail::bcc($allEmail)->send(new SendTemplate($req->all()));
-        $sentem = new SentEmail;
-        $sentem->email = $req->email;
-        $sentem->user_id = \Auth::user()->id;
+        $sentem                 = new SentEmail;
+        
+        $sentem->email          = $req->email;
+        $sentem->user_id        = \Auth::user()->id;
         $sentem->destination_id = $req->country;
         $sentem->save();
         return back()->with('submessage', 'Your template has been sent');
@@ -53,27 +54,28 @@ class NewsletterController extends Controller
     public function getEmailSubscribe(Request $req)
     {
         if (!EmailSubscriber::checkEmail($req->email)) {
-            $ip= \Request::ip();
-            $data = \Location::get($ip);            
-            $nmail = new EmailSubscriber;
-            $nmail->email = $req->email;
-            $nmail->ip = $ip;
+            $ip                 = \Request::ip();
+            $data               = \Location::get($ip);            
+            $nmail              = new EmailSubscriber;
+            $nmail->email       = $req->email;
+            $nmail->name       = $req->name;
+            $nmail->ip          = $ip;
             $nmail->countryName = $data->countryName;
             $nmail->countryCode = $data->countryCode;
-            $nmail->regionCode = $data->regionCode;
-            $nmail->regionName = $data->regionName;
-            $nmail->cityName = $data->cityName;
-            $nmail->zipCode = $data->zipCode;
-            $nmail->isoCode = $data->isoCode;
-            $nmail->postalCode = $data->postalCode;
-            $nmail->latitude = $data->latitude;
-            $nmail->longitude = $data->longitude;
-            $nmail->metroCode = $data->metroCode;
-            $nmail->areaCode = $data->areaCode;
-            $nmail->status = 1;
+            $nmail->regionCode  = $data->regionCode;
+            $nmail->regionName  = $data->regionName;
+            $nmail->cityName    = $data->cityName;
+            $nmail->zipCode     = $data->zipCode;
+            $nmail->isoCode     = $data->isoCode;
+            $nmail->postalCode  = $data->postalCode;
+            $nmail->latitude    = $data->latitude;
+            $nmail->longitude   = $data->longitude;
+            $nmail->metroCode   = $data->metroCode;
+            $nmail->areaCode    = $data->areaCode;
+            $nmail->status      = 1;
             $nmail->save();
             Mail::to($req->email)->send(new Subscriber());
-            return back()->with(['submessage'=> 'Your email has been subsrcribe with us! Thanks you for join with us ', 'get'=>'success']);            
+            return back()->with(['message'=> 'Your email has been subsrcribe with us! Thanks you for join with us ', 'get'=>'success']);            
         } else {
             return back()->with(['message'=> 'Your email already subscribed','get'=>'warning']);
         }
