@@ -317,7 +317,6 @@
                                                 $day    = ($interval->d).' Days';
                                             }else{                                               
                                                 $min    =$interval->i.' Minute';
-                                                                                                                                          
                                             }                              
                                             ?>      
                                         <div>{{isset($day)? $day: ''}}{{isset($hour)? $hour: ''}} {{isset($min)? $min: ''}}</div>                                      

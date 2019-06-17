@@ -51,7 +51,7 @@ class Tour extends Model
                           ->groupBy('v.tour_id')
                           ->orderBy('t','DESC')
                           ->join('tours as t', 'v.tour_id', '=', 't.id')
-                          ->where(['t.web'=>1,'t.tour_status'=>1])
+                          ->where(['t.web'=>1,'t.tour_status'=>1, 't.post_type'=>0])
                           ->get();
     }
     public static function getTourByWeek($id){
