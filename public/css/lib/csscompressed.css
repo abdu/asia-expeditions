@@ -3741,7 +3741,9 @@ tbody.collapse.in {
     border: 1px solid rgba(0,0,0,.15);
     border-radius: 4px;
     box-shadow: 0 6px 12px rgba(0,0,0,.175);
-    background-clip: padding-box
+    background-clip: padding-box;  
+    margin-top: -674px;
+    transition: all 1s cubic-bezier(0.68, -0.15, 0.46, 1.35) 0s;
 }
 
 .dropdown-menu-right,.dropdown-menu.pull-right {
@@ -12756,7 +12758,8 @@ a {
 
 .w3-dropdown-hover:hover .w3-dropdown-content {
     display: block;
-    z-index: 1
+    z-index: 1;
+    transition: 1s;
 }
 
 .w3-dropdown-hover:first-child,.w3-dropdown-click:hover {
@@ -12770,14 +12773,15 @@ a {
 }
 
 .w3-dropdown-content {
+    transition: 1s;
     cursor: auto;
     color: #000;
     background-color: #fff;
-    display: none;
+    /*display: none;*/
     position: absolute;
     min-width: 160px;
     margin: 0;
-    padding: 0
+    padding: 0;
 }
 
 .w3-check,.w3-radio {
@@ -15090,6 +15094,7 @@ ul li iframe#twitter-widget-0 div.widget .btn-o a.btn {
 }
 
 .datepicker {
+    z-index: 1;
     top: 0;
     left: 0;
     padding: 4px;
@@ -15183,6 +15188,7 @@ ul li iframe#twitter-widget-0 div.widget .btn-o a.btn {
 
 .datepicker td span {
     display: block;
+
     width: 47px;
     height: 54px;
     line-height: 54px;
@@ -15380,11 +15386,15 @@ ul li iframe#twitter-widget-0 div.widget .btn-o a.btn {
         font-size: 48px!important;
         font-weight: 800!important;
         text-transform: uppercase;
-        background: linear-gradient(to bottom right, #ffa260 25%, #963011 75%);
+        background:linear-gradient(to bottom right, #FFC107 25%, #FF9800 75%);
         -webkit-background-clip: text; 
         -webkit-text-fill-color: transparent;
         line-height:21px!important;
         font-family: "Segoe UI",Arial,sans-serif!important;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
     }
 
 
@@ -15394,4 +15404,5 @@ ul li iframe#twitter-widget-0 div.widget .btn-o a.btn {
     border-bottom: solid 7px #8fbc8f;
     border-image: url(https://www.w3schools.com/css/border.png) 30 stretch;
 }
+
 

@@ -31,7 +31,7 @@ class HolidayType extends AbstractWidget
         foreach ($getCat as $key => $value) {
             $litem .='<li><a href="/category/'.$value['slug'].'">'.$value['name'].'</a></li>';
         }
-        $data = '<ul class="dropdown-menu" role="menu"><li><a href="/mice">M.I.C.E</a></li>'.$litem.'</ul>';
+        $data = '<ul class="dropdown-menu hol" role="menu" style="margin-top: -900px;"><li><a href="/mice">M.I.C.E</a></li>'.$litem.'</ul>';
         return $data;
     }
 }

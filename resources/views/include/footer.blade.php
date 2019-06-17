@@ -94,9 +94,9 @@
       <p>Want to put together an unforgettable Asian golf holiday? Learn everything needed with this FREE 6-step trip planner.</p>
       <div class="form-group">
         <label>Your Name</label> <i class="fa fa-user"></i>          
-        <input class="form-control1" type="text" name="name" placeholder="Name" required="">
+        <input class="form-control2" type="text" name="name" placeholder="Name" required="">
         <label>Your Email</label> <i class="fa fa-envelope"></i> 
-        <input class="form-control1" type="email" name="email" placeholder="Email" required="">        
+        <input class="form-control2" type="email" name="email" placeholder="Email" required="">        
         <input type="hidden" name="created_at" value="<?php echo date('Y-m-d H:i:s');?>">
         <input type="hidden" name="updated_at" value="<?php echo date('Y-m-d H:i:s');?>"> 
       </div>

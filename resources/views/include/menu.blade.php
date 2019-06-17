@@ -41,7 +41,7 @@
 			  			<span class="wrap-shopping-cart">
 							<ul class="nav navbar-nav navbar-right" style=" margin: 0;">			
 								@if(Auth::check())
-								<li class="w3-dropdown-hover" style="padding: 8px 3px; float: left; width: 36px;">
+								<li class="w3-dropdown-hover h" style="padding: 8px 3px; float: left; width: 36px;">
 									<img style="position: relative;top: -2px;" width="29px" height="29px" src="{{Shared::getInstance()->urlResource(Auth::user()->picture, Auth::user()->id)}}" class="img-circle">
 								@else
 								<li class="w3-dropdown-hover" style="padding: 6px 12px; float: left;">
@@ -50,7 +50,7 @@
 						  			</span>	
 						  			@endif
 						  			@if(Auth::check())
-							  			<ul class="w3-dropdown-content w3-bar-block" style="text-transform: capitalize; padding-top: 25px; top: 42px;">
+							  			<ul class="w3-dropdown-content w3-bar-block" style=" transition:1s;text-transform: capitalize; padding-top: 25px; top: 42px; margin-right: -1000px;">
 											<li class="list-unstyled"><a class="col-md-12  w3-padding" href="{{route('account')}}">Account Info</a></li>
 											<li class="list-unstyled"><a class="col-md-12  w3-padding" href="{{route('logout')}}">Bookings</a></li>
 											<div class="clearfix"></div>
@@ -92,12 +92,12 @@
 				<ul class="nav navbar-nav navbar-right" style="margin: 17px -19px; padding-left: auto;">
 					<!-- <li><a href="/contactus">Contact Us</a></li> -->
 					
-					<li class="dropdown">
+					<li class="dropdown des">
 			          	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Destinations <span class="caret"></span></a>
 				           @widget('DestinationMenu')
 			        </li>		
 			        <li><a href="/general-information?active=visa-information">General Information</a></li>
-			        <li class="dropdown">
+			        <li class="dropdown hol">
 			          	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Holiday Types <span class="caret"></span></a>
 			          	@widget('HolidayType', ['web' => 1])
 			        </li>

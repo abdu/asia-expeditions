@@ -22,7 +22,6 @@
 <meta property="twitter:domain" content="https://asia-expeditions.com">
 <link rel="stylesheet" type="text/css" href="{{asset('sliderengine/amazingslider-1.css')}}">
 
-
 @section('content')
 
 @include("include.menu")
@@ -397,10 +396,10 @@
         var formatdate = "yyyy-mm-dd";
         var nowTemp = new Date();
         var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(),nowTemp.getDate(), 0, 0, 0, 0);
-
+        $('#date_start').datepicker('hide');
         $("#date_start").datepicker({
-        }).on('changeDate', function(ev){             
-            $('#date_end').datepicker('show');       
+        }).on('changeDate', function(ev){
+            $('#date_end').datepicker('show');     
             $(this).datepicker('hide');
         }).data('datepicker');
 
@@ -408,8 +407,6 @@
              $(this).datepicker('hide');
         }).data('datepicker');
     });
-
-   
 
 </script>
 @endsection

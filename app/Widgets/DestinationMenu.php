@@ -35,7 +35,7 @@ class DestinationMenu extends AbstractWidget
             $menu .='<li><a  href="/destination/'.$con->country_slug.'">'.$con->country_name.'</a></li>';
         }
 
-        $allCoun ='<ul class="dropdown-menu" role="menu">
+        $allCoun ='<ul class="dropdown-menu des" role="menu" style="margin-top: -674px;">
                     '.$menu.'    
                     </ul>';
         return $allCoun;

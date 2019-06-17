@@ -14,7 +14,8 @@
 
 <link rel="stylesheet" type="text/css" href="{{asset('css/lib/csscompressed.css')}}">
 <link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
-<script type="text/javascript" src="{{asset('js/compressed.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/uncompressed.js')}}"></script>
+<!-- <script type="text/javascript" src="{{asset('js/compressed.js')}}"></script> -->
 <script type="text/javascript" src="{{asset('js/jquery.lazy.min.js')}}"></script>
 
 
@@ -87,7 +88,7 @@
 	@yield('content')
 	@include('include.footer')
    <script type="text/javascript">
-  $(document).ready(function(){  
+  $(document).ready(function(){
         $('.clients-carousel').hover(function(){
           $('.owl-prev').css({"opacity":"1","background-position-x":"-5px"});
           $('.owl-next').css({"opacity":"1","background-position-x":"44px"});
@@ -95,12 +96,29 @@
           $('.owl-prev').css({"opacity":"0","background-position-x":"0px"});
           $('.owl-next').css({"opacity":"0","background-position-x":"40px"});
         });
+         $('.w3-dropdown-hover.h').hover(function(){
+          $('.w3-dropdown-content').css({"margin-right":"0px"," transition":"1s","display":"block"});
+        },function(){
+          $('.w3-dropdown-content').css({"margin-right":"-500px"," transition":"1s","display":"block"});
+        });
+
+        $('li.dropdown.des').hover(function(){
+          $('.dropdown-menu.des').css({"margin-top":"0px","display":"block"});
+        },function(){
+          $('.dropdown-menu.des').css({"margin-top":"-674px","display":"unset"});
+        });
+        $('li.dropdown.hol').hover(function(){
+          $('.dropdown-menu.hol').css({"margin-top":"0px","display":"block"});
+        },function(){
+          $('.dropdown-menu.hol').css({"margin-top":"-900px","display":"unset"});
+        });
         
-        $('.year').addClass('years');  
+        $('.year').addClass('years').append('<h3 class="number">{{date("Y",strtotime("-2006 years"))/1}}<p style="font-size: 15px;margin-top: 10px;">YEARS</p></h3>');
    });
 </script>
   <!-- <script src="{{asset('/add_lib/lib/wow/wow.min.js')}}"></script> -->
   <script src="{{asset('/add_lib/lib/waypoints/waypoints.min.js')}}"></script>
+  <script src="{{asset('/add_lib/lib/counterup/counterup.min.js')}}"></script>
   <script src="{{asset('/add_lib/lib/counterup/counterup.min.js')}}"></script>
   <script src="{{asset('/add_lib/lib/owlcarousel/owl.carousel.min.js')}}"></script>
   <script src="{{asset('/add_lib/lib/isotope/isotope.pkgd.min.js')}}"></script>
@@ -114,8 +132,8 @@
   <script src="/add_lib/lib/superfish/hoverIntent.js"></script>
   <script src="/add_lib/lib/superfish/superfish.min.js"></script>  -->
   
- 
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+  <script src="{{asset('js/lib/sweet2.min.js')}}"></script>
+  <!-- <script src="{{asset('public/js/lib/sweet2.min.js')}}"></script> -->
 
 </body>
 </html>

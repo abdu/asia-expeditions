@@ -143,7 +143,7 @@ background-color: #eeeeee4f;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;  
 }
-.form-control1 {
+.form-control2 {
   background: no-repeat center bottom, center calc(100% - 1px);
   background-size: 0 100%, 100% 100%;
   border: 0;
@@ -156,40 +156,40 @@ background-color: #eeeeee4f;
   width: 100%;
 }
 
-.form-control1:focus,
-.bmd-form-group1.is-focused .form-control1 {
+.form-control2:focus,
+.bmd-form-group1.is-focused .form-control2 {
   background-size: 100% 100%, 100% 100%;
   transition-duration: 0.3s;
   box-shadow: none;
 }
 
-.form-control1::-moz-placeholder {
+.form-control2::-moz-placeholder {
   color: #AAAAAA;
   font-weight: 400;
   font-size: 14px;
 }
 
-.form-control1:-ms-input-placeholder {
+.form-control2:-ms-input-placeholder {
   color: #AAAAAA;
   font-weight: 400;
   font-size: 14px;
 }
 
-.form-control1::-webkit-input-placeholder {
+.form-control2::-webkit-input-placeholder {
   color: #AAAAAA;
   font-weight: 400;
   font-size: 14px;
 }
-.form-control1,
-.is-focused .form-control1 {
+.form-control2,
+.is-focused .form-control2 {
   background-image: linear-gradient(to top, #9c27b0 2px, rgba(156, 39, 176, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px);
 }
-.form-control1::-ms-expand {
+.form-control2::-ms-expand {
   background-color: transparent;
   border: 0;
 }
 
-.form-control1:focus {
+.form-control2:focus {
   color: #495057;
   background-color: rgba(0, 0, 0, 0);
   border-color: #9acffa;
@@ -197,22 +197,22 @@ background-color: #eeeeee4f;
   box-shadow: none, 0 0 0 0.2rem rgba(33, 150, 243, 0.25);
 }
 
-.form-control1::placeholder {
+.form-control2::placeholder {
   color: #6c757d;
   opacity: 1;
 }
 
-.form-control1:disabled,
-.form-control1[readonly] {
+.form-control2:disabled,
+.form-control2[readonly] {
   background-color: #e9ecef;
   opacity: 1;
 }
 
-select.form-control1:not([size]):not([multiple]) {
+select.form-control2:not([size]):not([multiple]) {
   /*height: calc(2.4375rem + 2px);*/
 }
 
-select.form-control1:focus::-ms-value {
+select.form-control2:focus::-ms-value {
   color: #495057;
   background-color: rgba(0, 0, 0, 0);
 }
